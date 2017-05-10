@@ -1,0 +1,295 @@
+/*====================================
+    greeting
+======================================*/
+.contents_dammy {  
+  background: #f3f2ed url("../images/greeting/bg.png") no-repeat scroll center top / 100% auto;
+}
+.breadcrumb {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+.greeting-box-title {
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+.greeting-box-description {
+  font-size: 1.6em;
+  line-height: 1.6;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+.greeting-box ul {
+  width: 100%;
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.greeting-box ul li {
+  float: left;
+  width: 31.333333%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.greeting-box ul li h4 {
+  font-size: 1.4em;
+  color: #545454;
+  line-height: 1.6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+.greeting-box ul li h4 a {
+  color: #545454;
+}
+.greeting-box ul li h4 a:hover {
+  color: #0085b2;
+}
+
+
+
+/*====================================
+    dish
+======================================*/
+.dish-section02-title {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.dish-section02-des {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 1.6em;
+  line-height: 1.6;
+}
+.dish-section03 ul {
+  width: 100%;
+  display: inline-block;
+}
+.dish-section03 ul li {
+  width: 48%;
+  float: left;
+}
+.dish-section03 ul li.section03-left {
+  margin-right: 2%;
+}
+.dish-section03 ul li.section03-right {
+  margin-left: 2%;
+}
+.dish-section03 ul li h4 {
+  font-size: 1.6em;  
+  line-height: 1.6;
+  padding: 20px;
+  font-weight: normal;
+
+}
+.dish-section03 ul li h4 a {
+  color: #545454;
+}
+.dish-section03 ul li h4 a:hover {
+  color: #0085b2;
+}
+
+.dish-section04 {
+  margin-top: 40px;  
+}
+.dish-section04-des {
+  font-size: 1.6em;
+  line-height: 1.6;
+  padding: 20px;
+}
+.dish-section05-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.dish-section05 ul {
+  width: 100%;
+  display: inline-block;
+}
+.dish-section05 ul li {
+  width: calc(50% - 8px);
+  float: left;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.dish-section05 ul li:nth-child(2n+1){
+  margin-right: 8px;
+}
+.dish-section05 ul li:nth-child(2n+2){
+  margin-left: 8px;
+}
+.dish-map {
+  margin-top: 10px;
+}
+.dish-section06-title {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.dish-section06 ul {
+  width: 100%;
+  display: inline-block;
+}
+.dish-section06 ul li {
+  float: left;
+  width: 31.333333%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.dish-section06 ul li h4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.dish-section06 ul li p {
+  font-size: 1.4em;
+  line-height: 1.7;
+  padding-bottom: 20px;
+  text-align: left;
+}
+.dish-section07 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.dish-section07 ul {
+  width: 100%;
+  display: inline-block;
+}
+.dish-section07 ul li {
+  width: 48%;
+  float: left;
+}
+.dish-section07 ul li:nth-child(1) {
+  margin-right: 2%;
+}
+.dish-section07 ul li:nth-child(2) {
+  margin-left: 2%;
+}
+.dish-section07 ul li p {
+  font-size: 1.4em;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.dish-section07-lg {
+  padding-top: 30px;
+  text-align: right;
+  padding-bottom: 30px;
+}
+
+
+/*====================================
+    banquet
+======================================*/
+.banquet-section01 p {
+  font-size: 1.6em;
+  line-height: 1.6;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.banquet-section02 img {
+  margin-bottom: 50px;
+}
+.banquet-section03 ul {
+  width: 100%;
+  display: inline-block;
+}
+.banquet-section03 ul li {
+  width: 48%;
+  float: left;
+}
+.banquet-section03 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.banquet-section03 ul li.section03-left {
+  margin-right: 2%;
+}
+.banquet-section03 ul li.section03-right {
+  margin-left: 2%;
+}
+.banquet-section03 ul li h4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.banquet-section03 ul li p {
+  font-size: 1.4em;
+  line-height: 1.7;
+  padding-bottom: 20px;
+  text-align: left;
+}
+.banquet-section04 {
+  padding-bottom: 50px;
+}
+.banquet-section05 {
+  background: #D8DAE7;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+  display: inline-block;
+}
+.banquet-section05-content {
+  max-width: 688px;
+  margin: 0 auto;
+}
+.section05-title {
+  padding: 15px;
+}
+.banquet-section05 p {
+  font-size: 1.4em;
+  line-height: 1.7;
+  text-align: left;
+}
+@media only screen and (max-width: 640px) {
+  /*====================================
+    responsive greeting
+  ======================================*/
+  .greeting-box ul li {
+    width: 98%;
+  }
+  .greeting-box-title {
+    width: 90%;
+  }
+  .greeting-box-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /*====================================
+    responsive dish
+  ======================================*/
+  .dish-section03 ul li {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .dish-section06 ul li {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .dish-section07 ul li {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .dish-section07 ul li p {
+    padding-top: 15px;
+  }
+
+  /*====================================
+    responsive banquet
+  ======================================*/
+  .banquet-section05-content {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .banquet-section03 ul li {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+  }
+}

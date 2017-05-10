@@ -1,0 +1,313 @@
+@import "reset";
+@import "module";
+.wraper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.container {
+    @extend %clearfix;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+/*====================================
+            Header
+=====================================*/
+.header {
+    @extend %clearfix;
+    .contentH {
+        @extend %clearfix;
+        padding: 8px 15px 10px 15px;
+    }
+    .logo {
+        float: left;
+    }
+    .titleH {
+        font-size: 11px;
+        margin-bottom: 15px;
+        background: $color-1;
+        color: $color-a;
+        padding: 6px 0 6px 10px;
+    }
+    .txtH {
+        padding: 38px 0 0 30px;
+        float: left;
+    }
+    .rightH {
+        @extend %clearfix;
+        float: right;
+        padding-top: 28px;
+        #search_area {
+            float: left;
+            width: 229px;
+            position: relative;
+            .text2 {
+                text-indent: 5px;
+                height: 34px;
+                border: $color-2 1px solid;
+                width: 100%;
+            }
+            .submit {
+                cursor: pointer;
+                position: absolute;
+                right: 1px;
+                top: 1px;
+                width: 31px;
+                height: 32px;
+                background: url('../images/btnSearch.jpg') center;
+                // background: red;
+                border: none;
+            }
+        }
+        .linkH {
+            font-size: 12px;
+            float: left;
+            padding-top: 12px;
+            padding-left: 32px;
+        }
+    }
+}
+/*====================================
+            mainBody
+=====================================*/
+.mainBody {
+    @extend %clearfix;
+}
+
+.titleBlock {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 20px 15px;
+}
+/*====================================
+            blockSlider
+=====================================*/
+.blockSlider {
+    margin-bottom: 30px;
+    #slideMain {
+        position: relative;
+        border: 1px solid #e2e2e2;
+    }
+    .owl-controls {
+        z-index: 9;
+        position: absolute;
+        top: calc(50% - 29px);
+        width: 100%;
+    }
+    .owl-buttons {
+        position: relative;
+    }
+    .owl-prev {
+        position: absolute;
+        left: -18px;
+    }
+    .owl-next {
+        position: absolute;
+        right: -18px;
+    }
+}
+
+/*====================================
+            sidemenuArea
+=====================================*/
+.sidemenuArea {
+    float: left;
+    width: 266px;
+    padding-right: 27px;
+    dl {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    dt {
+        font-size: 12px;
+        background: $color-5;
+        color: $color-a;
+        padding: 7px 0 9px 9px;
+    }
+    dd {
+        color: #010101;
+        box-shadow: inset 0 0 0 0 #ddd;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        &:not(:first-child) {
+            border-bottom: 1px dotted $color-4;
+        }
+        a {
+            padding: 20px 14px;
+            display: block;
+            font-weight: bold;
+            font-size: 12px;
+            span {
+                padding-left: 5px;
+                font-size: 10px;
+            }
+        }
+        &:hover {
+          box-shadow: inset 300px 0 0 0 #ddd;
+        }
+    }
+    .outlet {
+        display: block;
+        padding: 32px 86px;
+        background: $color-5;
+        font-weight: bold;
+        color: $color-a;
+        box-shadow: inset 0 0 0 0 #ddd;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        &:hover {
+            box-shadow: inset 300px 0 0 0 #ddd;
+            color: #010101;
+        }
+    }
+}
+/*====================================
+            mainArea
+=====================================*/
+.mainArea {
+    @extend %clearfix;
+    float: right;
+    width: 934px;
+}
+
+/*====================================
+            banner
+=====================================*/
+.banner {
+    .txtBanner {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+}
+/*====================================
+            formYahoo
+=====================================*/
+.formYahoo {
+    h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+}
+/*====================================
+            blockProduct
+=====================================*/
+.blockProduct {
+    @extend %clearfix;
+    .listProduct {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    .item {
+        float: left;
+        width: 33.3333333%;
+        padding: 5px;
+        &:nth-child(-n+3) {
+            padding-top: 0;
+        }
+        >a{
+            display: block;
+            border: 2px solid #eee;
+        }
+        .avatar {
+            display: block;
+            border: 2px solid #eee;
+        }
+        dd {
+            padding-left: 5px;
+        }
+        .name {
+            display: block;
+            padding: 10px 0px 8px;
+            line-height: 24px;
+            color: $color-8;
+            text-decoration: underline;
+        }
+        .price {
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-9;
+        }
+        .note {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 24px;
+            color: $color-9;
+        }
+    }
+}
+
+/*====================================
+            paging
+=====================================*/
+.paging {
+    @extend %clearfix;
+    padding: 22px 26px;
+    font-size: 16px;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    li {
+        float: left;
+        a {
+            padding: 6px 26px;
+            display: block;
+        }
+        &:not(:first-child) {
+            border-left: 1px solid #b6b3b0;
+        }
+        &:nth-child(2), &:nth-child(9) {
+            border: none;
+        }
+    }
+}
+/*====================================
+            blockThumbnail
+=====================================*/
+.blockThumbnail {
+    @extend %clearfix;
+    margin-top: 50px;
+    .listThumbnail {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .item {
+        float: left;
+        width: 50%;
+        padding: 0 20px;
+    }
+    .thumbnail {
+        width: 453px;
+        height: 169px;
+        border: 2px solid #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desciption {
+        font-size: 12px;
+        line-height: 24px;
+        padding: 19px 8px;
+        margin-bottom: 16px;
+    }
+}
+
+/*====================================
+            footArea
+=====================================*/
+.footArea {
+    width: 100%;
+    text-align: center;
+    background: $color-1;
+    color: $color-a;
+    margin-top: 50px;
+    padding: 7px 0 6px 0;
+    h2 {
+        font-size: 11px;
+    }
+}

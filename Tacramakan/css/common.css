@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* CSS Document */
+	
+/* ///////////////////////////////////////////
+
+初期化
+
+////////////////////////////////////////////*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{  
+    margin: 0; padding:0;  
+}  
+table{  
+    border-collapse: collapse; border-spacing:0;
+}  
+fieldset, img{  
+    border: none;
+}  
+address, caption, cite, code, dfn, em, strong, th, var{  
+    font-style: normal; font-weight:normal;  
+}  
+ol, ul{  
+    list-style: none;  
+}  
+caption, th{  
+    text-align: left;  
+}  
+h1, h2, h3, h4, h5, h6{  
+    font-size:100%; font-weight:normal;}
+	  
+q:before, q:after{  
+    content:”;  
+}  
+abbr, acronym{  
+    border:0;  
+}  
+a{
+	cursor: pointer;
+	color:#333;
+}
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+figure{
+	margin: 0;
+	padding: 0;
+}
+/* ///////////////////////////////////////////
+
+Font
+
+////////////////////////////////////////////*/
+
+body {
+	font:16px/1.231 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','ＭＳ Ｐゴシック',sans-serif;
+		/* for IE6/7 */ 
+	*font-size:small; 
+	/* for IE Quirks Mode */
+	*font:x-small; 
+	color: #333;
+	line-height: 1.7;
+	height: 100%;}
+
+select,
+input,
+button,
+textarea,
+button {
+	font:99% arial,helvetica,clean,sans-serif;}
+
+button{
+	border: none;
+	background: none;
+	margin: 10px 0 0 0;}
+
+table {
+	font-size: inherit;
+	font: 100%;}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-family: monospace;
+	*font-size: 108%;
+	line-height: 100%;
+}
+.bold{
+	font-weight: bold;}
+
+
+.clearfix:after{
+	content: "";
+    clear: both;
+    height: 0;
+    display: block;
+    visibility: hidden;}
+
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;}
+  
+/* Hides from IE-mac \*/  
+* html .clearfix { height: 1%; }  
+.clearfix { display: block; }  
+/* End hide from IE-mac */  
+
+.clearfix:after {
+    content		: " ";
+    display		: block;
+    visibility	: hidden;
+    clear		: both;
+    height		: 0.1px;
+    font-size	: 0.1em;
+    line-height	: 0;}
+
+/* for IE7 */
+*:first-child+html .clearfix  {
+	min-height: 1%;
+	/*zoom	: 1;*/}
+
+/* for Mac IE */
+* html .clearfix {
+	display	: inline-table;}
+
+/* no Mac IE \*/
+* html .clearfix {
+	height	: 1%;}
+
+.clearfix {
+	display	: block;}

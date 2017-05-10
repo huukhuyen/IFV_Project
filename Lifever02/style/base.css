@@ -1,0 +1,1228 @@
+/*html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+nav ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+input, select {
+    vertical-align: middle;
+}
+img {
+    vertical-align: top;
+}
+ul, li {
+    list-style: none;
+}
+
+/*========================== base layout ============================*/
+
+body {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HiraKakuPro-W3', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+body p {
+    line-height: 1.5;
+}
+.main-wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+.banner-left {
+    padding: 25px 30px;
+}
+.description-banner {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.pc-on {
+    display: block !important;
+}
+.pc-off {
+    display: none !important;
+}
+.w100 {
+    width: 100%;
+}
+.bdTop-Pc {
+    border-top: 1px solid #dddddd;
+}
+
+/*========================== header styles ============================*/
+
+#ctnHeader {
+    padding: 12px 0;
+}
+
+/*========================== KV styles ============================*/
+
+#ctnKV .ctnKV-top {
+    position: relative;
+}
+#ctnKV .ctnKV-top .ctnKV-top_banner {
+    width: 52%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ctnKV .ctnKV-top .ctnKV-top_banner .btnKV {
+    text-align: center;
+}
+#ctnKV .ctnKV-top .ctnKV-top_banner .btnKV li {
+    display: inline-block;
+    width: 44%
+}
+#ctnKV .ctnKV-top .ctnKV-top_banner .btnKV li a {
+    display: block;
+}
+#ctnKV .ctnKV-top .ctnKV-top_banner .btnKV li a:hover {
+    opacity: 0.7;
+    transition: 1s opacity;
+}
+
+/*========================== section Products styles ============================*/
+
+.secProd {
+    padding: 0 30px 30px 30px;
+    /*margin: 25px 30px 55px;*/
+    background: url('../images/bg_main.jpg');
+}
+.secProd .secProd-text {
+    font-size: 15px;
+    text-align: center;
+}
+.secProd .secProd-notice {
+    font-size: 11px;
+}
+.secProd .secProd-content .items-tag {
+    position: absolute;
+    top: 0;
+    left: 12px;
+}
+.secProd .secProd-content {
+    /*padding: 0 30px;*/
+    overflow: hidden
+}
+.secProd .secProd-content .secProd-content_items {
+    font-size: 14px;
+    text-align: center;
+    width: 290px;
+    margin: 30px 0;
+    float: left;
+}
+.secProd .secProd-content .secProd-content_items:nth-child(2) {
+    width: 290px;
+    padding-left: 15px;
+}
+.secProd .secProd-content .secProd-content_items:nth-child(3) {
+    width: 290px;
+    padding-left: 15px;
+    border-right: none;
+}
+.secProd .secProd-content .items-mark img {}
+.secProd .secProd-content .items-text {
+    line-height: 1.5;
+}
+.secProd .secProd-content .items-01 {
+    background: #FFF;
+    position: relative;
+    /*padding-bottom: 20px;*/
+    height: 455px;
+}
+.secProd .secProd-content .items-01 .items-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.secProd .secProd-content .items-01 .items-image {
+    padding-top: 77px;
+    margin: 0 auto;
+}
+.secProd .secProd-content .items-01 .items-text {
+    color: #00adec;
+    position: absolute;
+    bottom: 15px;
+    width: 100%
+}
+.secProd .secProd-content .items-02 {
+    background: #FFF;
+    position: relative;
+    height: 220px;
+}
+.secProd .secProd-content .items-02 .items-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.secProd .secProd-content .items-02 .items-image {
+    text-align: center;
+    padding-top: 30px;
+}
+.secProd .secProd-content .items-02 .items-text {
+    color: #00adec;
+    position: absolute;
+    bottom: 15px;
+    width: 100%
+}
+.secProd .secProd-content .items-03 {
+    background: #FFF;
+    position: relative;
+    margin-top: 15px;
+    height: 220px;
+}
+.secProd .secProd-content .items-03 .items-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.secProd .secProd-content .items-03 .items-image {
+    text-align: center;
+    padding-top: 60px;
+}
+.secProd .secProd-content .items-03 .items-image img {
+    /*width: 160px*/
+}
+.secProd .secProd-content .items-03 .items-text {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    color: #00adec;
+}
+.secProd .secProd-content .items-04 {
+    background: #FFF;
+    position: relative;
+    height: 220px;
+}
+.secProd .secProd-content .items-04 .items-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.secProd .secProd-content .items-04 .items-image {
+    text-align: center;
+    padding-top: 40px;
+}
+.secProd .secProd-content .items-04 .items-image img {
+    /*width: 110px*/
+}
+.secProd .secProd-content .items-04 .items-text {
+    color: #00adec;
+    position: absolute;
+    bottom: 15px;
+    width: 100%
+}
+.secProd .secProd-content .items-05 {
+    margin-top: 15px;
+    background: #FFF;
+    position: relative;
+    /*padding: 20px 0 55px;*/
+    height: 220px;
+}
+.secProd .secProd-content .items-05 .items-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.secProd .secProd-content .items-05 .items-image {
+    padding-top: 20px;
+    text-align: center;
+}
+.secProd .secProd-content .items-05 .items-image img {
+    /*width: 122px*/
+}
+.secProd .secProd-content .items-05 .items-text {
+    color: #00adec;
+    position: absolute;
+    bottom: 15px;
+    width: 100%
+}
+
+/*========================== section navi button ============================*/
+
+.secNav {
+    padding: 50px 50px 20px;
+    text-align: center;
+    /*box-shadow: 0px 4px 5px rgba(0, 0, 0, .2);*/
+}
+.secNav .secNav-title {
+    color: #ff3870;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.secNav .secNav-text {
+    font-size: 14px;
+}
+.secNav .secNav-button {
+    margin: 30px 0;
+}
+.secNav .secNav-button li {
+    display: inline-block;
+    margin: 0 15px
+}
+.secNav .secNav-button li a:hover {
+    opacity: 0.6;
+    transition: 1s all;
+}
+.secNav .secNav-button li a>img {
+    /*width: 380px;*/
+}
+.secNav .secNav-anchor {
+    overflow: hidden;
+    margin-bottom: 20px
+}
+.secNav .secNav-anchor li {
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    vertical-align: top;
+    line-height: 1.4;
+}
+.secNav .secNav-anchor li a {
+    color: #ff3870;
+    display: inline-block;
+    text-decoration: none;
+}
+.secNav .secNav-anchor li a:hover {
+    opacity: 0.6;
+}
+.secNav .secNav-anchor li a:after {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 100%;
+    margin-top: 5px;
+    background: url(../images/ico_arr01.png) no-repeat 50% top;
+}
+
+/*========================== section Voice ============================*/
+
+.secVoice {
+    background: url('../images/bg_main_blue.jpg') repeat left top;
+    color: #fff;
+    text-align: center;
+    padding: 40px 30px 50px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .2);
+}
+.secVoice .secVoice-title {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.secVoice .secVoice-list {
+    overflow: hidden;
+}
+.secVoice .secVoice-list li {
+    float: left;
+    width: 33.333%;
+    margin-top: 30px;
+}
+.secVoice .secVoice-list li img {
+    width: 230px;
+}
+
+/*========================== section Charts ============================*/
+
+.secChart {
+    padding: 50px 30px;
+    background: url('../images/bg_main.jpg');
+}
+.secChart .secChart-title {
+    color: #ff3870;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.secChart .secChart-text {
+    text-align: center;
+}
+.secChart .secChart-items {
+    padding: 45px 0;
+    position: relative;
+}
+.secChart .secChart-items.left .items-content {
+    position: absolute;
+    left: 0;
+}
+.secChart .secChart-items.right .items-content {
+    position: absolute;
+    right: 0;
+}
+.secChart .secChart-items .items-content {
+    width: 240px;
+}
+.secChart .secChart-items .items-content .items-content_image {
+    margin-top: 35px;
+    text-align: center;
+}
+.secChart .secChart-items .items-content .items-content_text {
+    background: #00adec;
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 20;
+}
+.secChart .secChart-items .items-content .items-content_text .items-content_text--inner {
+    padding: 10px;
+    position: relative;
+    color: #fff;
+}
+
+/*.secChart .secChart-items .items-content .items-content_text .items-content_text--inner:before {
+	    content: '';
+	    position: absolute;
+	    display: block;
+	    background: #fff;
+	    bottom: -26px;
+	    right: -11px;
+	    width: 30px;
+	    height: 60px;
+	    transform: rotate(45deg);
+	    border-radius: 0 15px 15px 0;
+	}*/
+
+.secChart .secChart-items .items-content .items-content_text .items-content_text--inner:after {
+    content: '';
+    position: absolute;
+    right: calc(50% - 20px);
+    bottom: -20px;
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid #00adec;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+}
+.secChart .secChart-items .items-content .items-content_text h3 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1.2;
+}
+.secChart .secChart-items .items-content .items-content_text p {
+    font-size: 14px;
+}
+.secChart .secChart-items .items-charts {
+    position: relative;
+    z-index: 10;
+}
+.secChart .secChart-items.right .items-charts {
+    float: left;
+}
+.secChart .secChart-items.left .items-charts {
+    float: right;
+}
+.secChart .chartType02 {
+    display: table;
+    margin-bottom: 50px;
+}
+.secChart .chartType02>* {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.secChart .chartType02>div:nth-child(2) {
+    width: 80px;
+}
+.secChart .chartType02 .items-charts>span {
+    padding-top: 15px;
+    display: block;
+}
+
+/*========================== section Comment ============================*/
+
+.secComment {
+    background: url('../images/bg_main_blue.jpg') repeat left top;
+    color: #fff;
+    text-align: center;
+    padding: 40px 15px 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .2);
+}
+.secComment .secComment-title {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.secComment .secComment-list li {
+    display: inline-block;
+    width: 49%;
+    padding: 10px 15px 0;
+    margin: -10px 0 50px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.secComment .secComment-list li .comment-image {
+    float: left;
+    padding-right: 10px;
+}
+.secComment .secComment-list li .comment-text {
+    text-align: left;
+    overflow: hidden;
+}
+.secComment .secComment-list li .comment-text .comment-text_num {
+    display: block;
+    text-align: right;
+}
+
+/*========================== section Step ============================*/
+
+.secStep {
+    background: url('../images/bg_main.jpg');
+    padding: 40px 30px;
+    margin: 35px 0 0 0;
+}
+.secStep .secStep-title {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #00adec;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.secStep .secStep-list li {
+    width: 20%;
+    box-sizing: border-box;
+    ;
+    padding-right: 20px;
+    float: left;
+}
+.secStep .secStep-list li h3 {
+    background: #00adec;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 10px;
+}
+.secStep .secStep-list li h3:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: -15px;
+    top: calc(50% - 10px);
+    border-left: #00adec solid 15px;
+    border-top: transparent solid 10px;
+    border-bottom: transparent solid 10px;
+}
+.secStep .secStep-list li p {
+    font-size: 14px;
+}
+.secStep .secStep-list li p.step-notice {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #00adec;
+    min-height: 70px;
+}
+.secStep .secStep-list li:last-child {
+    padding-right: 0;
+}
+.secStep .secStep-list li:last-child h3:after {
+    display: none;
+}
+.secStep .secStep-tbl {
+    margin-top: 50px;
+}
+.secStep .secStep-tbl dl {
+    display: table;
+    width: 100%;
+    border-top: 1px solid #dddddd;
+}
+.secStep .secStep-tbl dl>* {
+    display: table-cell;
+    padding: 18px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: top;
+}
+.secStep .secStep-tbl dl>dt {
+    width: 115px;
+}
+
+/*========================== container Footer ============================*/
+
+#ctnFooter {
+    text-align: center;
+    padding-bottom: 145px;
+    /*padding: 50px 0;*/
+}
+
+/*========================== popup styles ============================*/
+
+.popup {
+    display: none;
+    left: -10000px;
+    position: fixed;
+}
+
+/*==========================
+============================
+Smart Phone 640 break point
+============================
+============================*/
+
+@media all and (max-width: 640px) {
+    /*========================== base layout ============================*/
+    body {
+        font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'HiraKakuPro-W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    }
+    .reset_width {
+        width: inherit!important;
+    }
+    .main-wrap {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .pc-on {
+        display: none !important;
+    }
+    .pc-off {
+        display: block !important;
+    }
+    .bdTop-Pc {
+        border-top: none;
+    }
+    /*========================== header styles ============================*/
+    #ctnHeader {
+        padding: 6px;
+    }
+    #ctnHeader img {
+        width: 18.75%;
+    }
+    /*========================== KV styles ============================*/
+    #ctnKV img {
+        width: 100%;
+    }
+    #ctnKV .ctnKV-top .ctnKV-top_banner {
+        width: 60%;
+        position: absolute;
+        top: 15%;
+        left: 2%;
+    }
+    #ctnKV .ctnKV-top .sm_button {
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+    }
+    #ctnKV .ctnKV-top .sm_button p {
+        text-align: center;
+        font-size: 10px;
+        padding: 5px 0;
+    }
+    #ctnKV .ctnKV-top .sm_button:after {
+        content: "";
+        clear: both;
+    }
+    #ctnKV .ctnKV-top .sm_button ul li {
+        float: left;
+        width: 50%;
+        padding-right: 5px;
+        box-sizing: border-box;
+    }
+    #ctnKV .ctnKV-top .sm_button ul li:last-child {
+        /*padding-left: 5px;*/
+    }
+    #ctnKV .ctnKV-top .ctnKV-top_banner .btnKV {
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+    }
+    #ctnKV .ctnKV-top .ctnKV-top_banner .btnKV li {
+        /*display: block;*/
+        float: left;
+        width: 50%;
+    }
+    /*========================== section Products styles ============================*/
+    .secProd {
+        /*margin: 15px;*/
+        padding: 0 10px 15px 10px;
+    }
+    .secProd .secProd-text {
+        font-size: 12px;
+        padding: 0px 24px;
+    }
+    .secProd .secProd-notice {
+        font-size: 10px;
+    }
+    .secProd .secProd-content {
+        overflow: auto;
+        margin: 10px 0;
+    }
+    .secProd .secProd-content .secProd-content_items ul {
+        height: 108px;
+    }
+    .secProd .secProd-content .secProd-content_items {
+        font-size: 12px;
+        text-align: left;
+        border-right: none;
+        width: auto;
+        margin: 0;
+        width: 100%;
+        display: inline-block;
+    }
+    .secProd .secProd-content .secProd-content_items .items-text {
+        font-size: 11px;
+    }
+    .secProd .secProd-content .secProd-content_items .items-mark img {
+        max-width: 50px;
+    }
+    .secProd .secProd-content .secProd-content_items .items-tag img {
+        max-width: 25px;
+    }
+    .secProd .secProd-content .items-01 {
+        height: inherit;
+    }
+    .secProd .secProd-content .secProd-content_items .item-1 {
+        order: 1;
+    }
+    .secProd .secProd-content .secProd-content_items .item-2 {
+        order: 4;
+        position: absolute;
+        order: 4;
+        top: 5px;
+        right: 10px;
+    }
+    .secProd .secProd-content .secProd-content_items .item-3 {
+        order: 3;
+    }
+    .secProd .secProd-content .secProd-content_items .item-4 {
+        order: 2;
+        width: 120px;
+    }
+    .secProd .secProd-content .secProd-content_items:nth-child(2) {
+        width: 100%;
+        padding: 0;
+    }
+    .secProd .secProd-content .secProd-content_items:nth-child(3) {
+        width: 100%;
+        padding: 0;
+    }
+    /* just SP */
+    .secProd .secProd-content .secProd-content_items ul {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-top: none;
+        position: relative;
+        padding: 8px 10px 8px 50px;
+        box-sizing: border-box;
+        margin: 0;
+        margin-bottom: 5px;
+        /*height: 108px;*/
+    }
+    .secProd .secProd-content .secProd-content_items ul li {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .secProd .secProd-content .secProd-content_items ul li.items-mark {
+        margin: 0;
+    }
+    .secProd .secProd-content .secProd-content_items ul li.items-text {
+        width: 50%;
+        width: 190px;
+        padding-left: 5%;
+        position: static;
+        top: auto;
+        right: auto;
+        /*padding: 15px;*/
+    }
+    .secProd .secProd-content .secProd-content_items ul li.items-image {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+    .secProd .secProd-content .secProd-content_items ul li img {
+        width: 100%
+    }
+    .secProd .secProd-content .secProd-content_items .items-02, .secProd .secProd-content .secProd-content_items .items-03 {
+        height: inherit;
+    }
+    .secProd .secProd-content .secProd-content_items .items-02 .items-image img {
+        max-width: 62px;
+    }
+    /* end just SP */
+    .secProd .secProd-content .items-mark img {
+        width: 100%;
+    }
+    .secProd .secProd-content .items-01 .items-image img {
+        /*width: 70%;*/
+        max-width: 52px;
+    }
+    .secProd .secProd-content .items-03 .items-image img {
+        max-width: 84px;
+    }
+    .secProd .secProd-content .items-04 .items-image img {
+        width: 75px;
+    }
+    .secProd .secProd-content .items-05 .items-image img {
+        max-width: 55px;
+    }
+    /*========================== section navi button ============================*/
+    .secNav {
+        padding: 12px;
+    }
+    .secNav .secNav-title {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .secNav .secNav-text {
+        font-size: 12px;
+    }
+    .secNav .secNav-button {
+        margin: 15px 0 0;
+    }
+    .secNav .secNav-button li {
+        display: block;
+        margin: 0;
+    }
+    .secNav .secNav-button li:first-child {
+        margin-bottom: 5px;
+    }
+    .secNav .secNav-button li a>img {
+        width: 100%;
+    }
+    /*========================== section Voice ============================*/
+    .secVoice {
+        padding: 25px 15px;
+    }
+    .secVoice .secVoice-title {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .secVoice .secVoice-text {
+        font-size: 12px;
+        text-align: left;
+    }
+    .secVoice .secVoice-list {
+        overflow: hidden;
+    }
+    .secVoice .secVoice-list li {
+        width: 50%;
+        margin-top: 15px;
+    }
+    .secVoice .secVoice-list li img {
+        width: 90%;
+    }
+    /*========================== section Charts ============================*/
+    .secChart {
+        padding: 25px 15px;
+    }
+    .secChart .secChart-title {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .secChart .secChart-text {
+        font-size: 12px;
+        text-align: left;
+    }
+    .secChart .secChart-items {
+        padding: 20px 0;
+    }
+    .secChart .secChart-items .items-content {
+        width: 100%;
+        display: inline-block;
+    }
+    .secChart .secChart-items.left .items-content {
+        position: static;
+        left: auto;
+    }
+    .secChart .secChart-items.right .items-content {
+        position: static;
+        right: auto;
+    }
+    /* just SP */
+    .secChart .secChart-items .items-content.last .items-content_image {
+        float: left;
+    }
+    .secChart .secChart-items .items-content.last .items-content_image img {
+        width: 60%;
+    }
+    .secChart .secChart-items .items-content.last .items-content_text .items-content_text--inner p {
+        float: right;
+    }
+    /* end just SP */
+    .secChart .secChart-items .items-content .items-content_image {
+        margin-top: 0;
+        width: 33%;
+        float: right;
+    }
+    .secChart .secChart-items .items-content .items-content_image img {
+        width: 100%;
+    }
+    .secChart .secChart-items .items-content .items-content_text {
+        background: #fff;
+        padding: 0;
+        display: inline;
+    }
+    .secChart .secChart-items .items-content .items-content_text .items-content_text--inner {
+        border: none;
+        padding: 0;
+        color: #000;
+        display: inline;
+    }
+    .secChart .secChart-items .items-content .items-content_text .items-content_text--inner:before {
+        display: none;
+    }
+    .secChart .secChart-items .items-content .items-content_text .items-content_text--inner:after {
+        display: none;
+    }
+    .secChart .secChart-items .items-content .items-content_text .items-content_text--inner p {
+        width: 65%;
+        float: left;
+        font-size: 12px;
+    }
+    .secChart .secChart-items .items-content .items-content_text h3 {
+        font-size: 14px;
+        text-align: center;
+        background: #00adec;
+        color: #fff;
+        position: relative;
+        margin-bottom: 10px;
+        padding: 3px;
+        border-radius: 5px;
+    }
+    .secChart .secChart-items .items-content .items-content_text h3 span {
+        display: block;
+        padding: 7px;
+    }
+    .secChart .secChart-items .items-content .items-content_text .items-content_text--inner h3:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 40px;
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid #00adec;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+    .secChart .secChart-items .items-content .items-content_text p {
+        font-size: 14px;
+    }
+    .secChart .secChart-items .items-charts {
+        float: none;
+        margin-top: 22px;
+    }
+    .secChart .secChart-items .items-charts .pc-off {
+        position: relative;
+    }
+    .secChart .secChart-items .items-charts .pc-off:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 33%;
+        left: 42%;
+        text-align: center;
+        height: 0;
+        width: 18%;
+        padding-bottom: 18%;
+        background: url(../images/ico_view.png) no-repeat left top;
+        background-size: 100% 100%;
+    }
+    .secChart .secChart-items .items-charts img {
+        width: 100%;
+    }
+    .secChart .chartType02 {
+        display: block;
+        margin-bottom: 0;
+    }
+    .secChart .chartType02>* {
+        display: block;
+    }
+    .secChart .chartType02>div:nth-child(2) {
+        width: auto;
+    }
+    .secChart .chartType02>div:nth-child(2) img {
+        width: 25px;
+        transform: rotate(90deg);
+        margin-top: 5px;
+    }
+    .secChart .chartType02 .items-charts>p img {
+        width: 100%;
+    }
+    .secChart .chartType02 .items-charts>span {
+        padding-top: 15px;
+        display: block;
+    }
+    .secChart .chartType02 .items-charts>p.pc-off {
+        position: relative;
+    }
+    .secChart .chartType02 .items-charts>p.pc-off:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 33%;
+        left: 42%;
+        text-align: center;
+        height: 0;
+        width: 18%;
+        padding-bottom: 18%;
+        background: url(../images/ico_view.png) no-repeat left top;
+        background-size: 100% 100%;
+    }
+    /*========================== section Comment ============================*/
+    .secComment {
+        padding: 25px 0 5px;
+    }
+    .secComment .secComment-title {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .secComment .secComment-list li {
+        width: 100%;
+        padding: 10px 15px 0;
+        margin: -10px 0 25px;
+    }
+    .secComment .secComment-list li .comment-image {
+        padding-right: 5px;
+        width: 22%;
+    }
+    .secComment .secComment-list li .comment-image img {
+        width: 100%;
+    }
+    .secComment .secComment-list li .comment-text {
+        font-size: 12px;
+    }
+    .secComment .secComment-list li .comment-text .comment-text_num {
+        display: block;
+        text-align: right;
+    }
+    /*========================== section Step ============================*/
+    .secStep {
+        padding: 25px 15px 10px;
+        margin-top: 0;
+    }
+    .secStep .secStep-title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .secStep .secStep-list li {
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        ;
+        padding-right: 0;
+        float: none;
+        margin-bottom: 22px;
+    }
+    .secStep .secStep-list li h3 {
+        font-size: 12px;
+        line-height: 1;
+        width: 22%;
+        padding: 10% 0 12%;
+        height: 0;
+        margin: 0;
+        float: left;
+    }
+    .secStep .secStep-list li h3:after {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: auto;
+        bottom: -6px;
+        right: calc(50% - 6px);
+        transform: rotate(45deg);
+    }
+    .secStep .secStep-list li .step-content {
+        overflow: hidden;
+    }
+    .secStep .secStep-list li p {
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .secStep .secStep-list li p.step-notice {
+        font-size: 14px;
+        min-height: 0;
+    }
+    .secStep .secStep-tbl {
+        margin-top: 0;
+    }
+    .secStep .secStep-tbl dl {
+        display: block;
+        padding: 10px 0;
+    }
+    .secStep .secStep-tbl dl>* {
+        display: block;
+        padding: 0;
+        font-size: 12px;
+    }
+    .secStep .secStep-tbl dl>dt {
+        width: auto;
+        font-weight: bold;
+    }
+    /*========================== container Footer ============================*/
+    #ctnFooter {
+        padding: 25px 15px;
+    }
+    #ctnFooter img {
+        width: 100%
+    }
+    /*========================== popup styles ============================*/
+    .popup {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, .9);
+    }
+    .popup .popup-inner {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .popup .popup-inner .popup-inner_content {
+        height: 100%;
+    }
+    .popup .popup-inner .popup-inner_content img {
+        width: 100%;
+    }
+    .popup .popup-inner.bigSize {
+        height: 70%;
+    }
+    .popup .popup-inner.bigSize .popup-inner_content {
+        overflow: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .popup .popup-inner.bigSize .popup-inner_content::-webkit-scrollbar {
+        height: 5px;
+    }
+    .popup .popup-inner.bigSize .popup-inner_content::-webkit-scrollbar-track {
+        background: #f1f1f1
+    }
+    .popup .popup-inner.bigSize .popup-inner_content::-webkit-scrollbar-thumb {
+        background: #bcbcbc
+    }
+    .popup .popup-inner.bigSize .popup-inner_content img {
+        width: auto;
+        height: 100%;
+    }
+    .popup .popup-inner .popup-inner_close {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        width: 14%;
+    }
+    .popup .popup-inner .popup-inner_close img {
+        width: 100%;
+    }
+}
+
+/*==========================
+============================
+End 640 break point
+============================
+============================*/
+
+
+/*========== helper ==========*/
+
+.cf-fix:after {
+    clear: both;
+    content: "";
+    line-height: 0;
+    height: 0;
+    display: block;
+}
+.txtYellow {
+    color: #ffea00;
+}
+.list-note01 {
+    padding-left: 1em;
+}
+.list-note01 li {
+    list-style: disc;
+}
+
+/*========== Effect fade top styles ==========*/
+
+.fadeTop {
+    opacity: 0;
+    transform: translate(0px, 100px);
+    transition: all 800ms;
+}
+.fadeTop.ef-slide {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
