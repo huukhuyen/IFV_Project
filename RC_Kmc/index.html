@@ -62,32 +62,32 @@
 				<img src="images/logoSlider.png" alt="">
 			</div>
 			<div class="sliderMain is_pc">
-				<div>
-					<img src="images/bgSlider01.jpg">
+				<div class="oc" style="background: url('images/bgSlider01.jpg')">
+					<img src="images/bgSlider01.png">
 				</div>
-				<div>
-					<img src="images/bgSlider02.jpg">
+				<div class="oc" style="background:  url('images/bgSlider02.jpg')">
+					<img src="images/bgSlider01.png">
 				</div>
-				<div>
-					<img src="images/bgSlider01.jpg">
+				<div class="oc" style="background:  url('images/bgSlider03.jpg')">
+					<img src="images/bgSlider01.png">
 				</div>
-				<div>
-					<img src="images/bgSlider03.jpg">
+				<div class="oc" style="background:  url('images/bgSlider04.jpg')">
+					<img src="images/bgSlider01.png">
 				</div>
 			</div>
 			<!-- for mobile -->
 			<div class="sliderMain is_mb">
-				<div>
-					<img src="images/slider_sp01.jpg">
+				<div class="oc" style="background: url('images/_slider_sp01.jpg') top no-repeat">
+					<img src="images/background_sp.png">
 				</div>
-				<div>
-					<img src="images/slider_sp01.jpg">
+				<div class="oc" style="background:  url('images/_slider_sp02.jpg') top no-repeat">
+					<img src="images/background_sp.png">
 				</div>
-				<div>
-					<img src="images/slider_sp01.jpg">
+				<div class="oc" style="background:  url('images/_slider_sp03.jpg') top no-repeat">
+					<img src="images/background_sp.png">
 				</div>
-				<div>
-					<img src="images/slider_sp01.jpg">
+				<div class="oc" style="background:  url('images/_slider_sp04.jpg') top no-repeat">
+					<img src="images/background_sp.png">
 				</div>
 			</div>
 			<!-- /Slider Main -->
@@ -115,7 +115,7 @@
 							<p class="txtI">湿式分級・洗浄施設により、<br class="is_pc">建設汚泥の <span class="red">ほぼ100%</span>を<br class="is_pc"> 土壌環境基準値以下へと処理します。
 							</p>
 							<a class="btnMore" href="#"><img class="btnNewsM is_pc" src="images/btnNews-ovoff.png" alt="詳細はこちら"></a>
-							<a class="btnMore" href="#"><img class="btnNewsM is_mb" src="images/btnNews-ovoff.png" alt="詳細はこちら"></a>
+							<a class="btnMore" href="#"><img class="btnNewsM is_mb" src="images/btnNews_sp.png" alt="詳細はこちら"></a>
 						</div>
 					</li>
 					<li class="item" onclick="location.href='#'" style="border: 5px solid rgb(237, 236, 234);">
@@ -127,7 +127,7 @@
 							<p class="txtI">業界では数少ない<span class="red">24時間対応</span>の中間処理施設です。<br class="is_pc">夜間工事をしている現場の受け入れをお助け致します。
 							</p>
 							<a class="btnMore" href="#"><img class="btnNewsM is_pc" src="images/btnNews-ovoff.png" alt="詳細はこちら"></a>
-							<a class="btnMore" href="#"><img class="btnNewsM is_mb" src="images/btnNews-ovoff.png" alt="詳細はこちら"></a>
+							<a class="btnMore" href="#"><img class="btnNewsM is_mb" src="images/btnNews_sp.png" alt="詳細はこちら"></a>
 						</div>
 					</li>
 					<li class="item" onclick="location.href='#'" style="border: 5px solid rgb(237, 236, 234);">
@@ -138,7 +138,7 @@
 							<h2 class="titleI"><img src="images/t04.png" class="is_pc"><span class="is_mb">トリータビリティテストによる<br class="is_mb">環境計測データ公開</span></h2>
 							<p class="txtI">地球環境保全に携わる事業者として、環境保全には特に力を注いでいます。そのために成分を調べる品質管理機器を導入し、トリータビリティテストを行い、その結果を公開しています。</p>
 							<a class="btnMore" href="#"><img class="btnNewsM is_pc" src="images/btnNews-ovoff.png" alt="詳細はこちら"></a>
-							<a class="btnMore" href="#"><img class="btnNewsM is_mb" src="images/btnNews-ovoff.png" alt="詳細はこちら"></a>
+							<a class="btnMore" href="#"><img class="btnNewsM is_mb" src="images/btnNews_sp.png" alt="詳細はこちら"></a>
 						</div>
 					</li>
 				</ul>
@@ -193,7 +193,7 @@
 		<div class="blockBtnBottom">
 			<div class="container">
 				<h2 class="title01"><img src="images/t07.png" class="is_pc"><span class="is_mb">お気軽に<br class="is_mb">お問合せください。</span></h2>
-				<h3>建設汚泥の運搬・処理にお困りの方はお気軽にご連絡下さい。</h3>
+				<h3>建設汚泥の運搬・処理にお困りの方は<br class="is_mb">お気軽にご連絡下さい。</h3>
 				<a href="#" class="btnOn is_pc"><img src="images/btnOn05.png" alt="お問い合わせ"></a>
 				<a href="#" class="btnOn is_mb"><img src="images/btn_05sp.png" alt="お問い合わせ"></a>
 			</div>
@@ -241,9 +241,10 @@
 			dots: true,
 			infinite: true,
 			autoplay: true,
-			autoplaySpeed: 2000,
+			autoplaySpeed: 8000,
 			fade: true,
 			arrows: false,
+			centerPadding: '60px',
 			// cssEase: 'ease-out'
 			cssEase: 'ease-in-out'
 		});

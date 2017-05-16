@@ -41,8 +41,8 @@
 	<!-- /header -->
 	<div class="navFixed">
 		<div class="logo">
-			<a href="/" class="is_pc hide_tb"><img src="../images/logo.png" alt=""></a>
-			<a href="/" class="is_mb is_tb"><img src="../images/logoMb.png" alt=""></a>
+			<a href="../" class="is_pc hide_tb"><img src="../images/logo.png" alt=""></a>
+			<a href="../" class="is_mb is_tb"><img src="../images/logoMb.png" alt=""></a>
 		</div>
 		<nav class="nav">
 			<ul>
@@ -60,20 +60,20 @@
 			<div class="container">
 				<ul class="list">
 					<li class="items active">
-						<div class="avatar"><a href="#"><img src="../images/subPage/listTop01.jpg" alt=""></a></div>
-						<h5 class="description"><a href="#">ご挨拶</a></h5>
+						<div class="avatar"><a href="#greeting"><img src="../images/subPage/listTop01.jpg" alt=""></a></div>
+						<h5 class="description"><a href="#greeting">ご挨拶</a></h5>
 					</li>
-					<li class="items">
-						<div class="avatar"><a href="#"><img src="../images/subPage/listTop.jpg" alt=""></a></div>
-						<h5 class="description"><a href="#">企業理念</a></h5>
+					<li class="items" href="block2">
+						<div class="avatar"><a href="#idea"><img src="../images/subPage/listTop.jpg" alt=""></a></div>
+						<h5 class="description"><a href="#idea">企業理念</a></h5>
 					</li>
-					<li class="items brd_b_none">
-						<div class="avatar"><a href="#"><img src="../images/subPage/listTop.jpg" alt=""></a></div>
-						<h5 class="description"><a href="#">会社概要</a></h5>
+					<li class="items brd_b_none" href="block3">
+						<div class="avatar"><a href="#company"><img src="../images/subPage/listTop.jpg" alt=""></a></div>
+						<h5 class="description"><a href="#company">会社概要</a></h5>
 					</li>
-					<li class="items">
-						<div class="avatar"><a href="#"><img src="../images/subPage/listTop.jpg" alt=""></a></div>
-						<h5 class="description"><a href="#">取得許可・免許</a></h5>
+					<li class="items" href="block4">
+						<div class="avatar"><a href="#license"><img src="../images/subPage/listTop.jpg" alt=""></a></div>
+						<h5 class="description"><a href="#license">取得許可・免許</a></h5>
 					</li>
 				</ul>
 			</div>
@@ -81,13 +81,13 @@
 		<!-- /blockListTop -->
 		<div class="blockSp06_01">
 			<div class="container">
-				<h2 class="titleBlock"><img src="../images/subPage/sp6_t01.png" alt="ご挨拶" class="is_pc"><span class="is_mb">ご挨拶</span></h2>
+				<h2 class="titleBlock" id="greeting"><img src="../images/subPage/sp6_t01.png" alt="ご挨拶" class="is_pc"><span class="is_mb">ご挨拶</span></h2>
 				<div class="contentblock">
 					<div class="avatar">
 						<img src="../images/subPage/sp6_img1.jpg" alt="">
 					</div>
 					<div class="description">
-						<p class="text">帯川社長からのメッセージがここに入ります。・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+						<p class="text">帯川社長からのメッセージがここに入ります。<br>・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
 						</p>
 						<p class="note is_pc"><img src="../images/subPage/sp6_note01.png" alt="代表取締役帯川 秀高"></p>
 						<p class="note is_mb"><span>代表取締役</span> <span class="bold">帯川 秀高</span></p>
@@ -98,7 +98,7 @@
 		<!-- /blockSp06_01 -->
 		<div class="blockSp06_02">
 			<div class="container">
-				<h2 class="titleBlock"><img src="../images/subPage/sp6_t02.png" alt="企業理念" class="is_pc"><span class="is_mb">企業理念</span></h2>
+				<h2 class="titleBlock" id="idea"><img src="../images/subPage/sp6_t02.png" alt="企業理念" class="is_pc"><span class="is_mb">企業理念</span></h2>
 				<h4 class="nameBlock"><img class="is_pc" src="../images/subPage/sp6_n2.png" alt=""><span class="is_mb">次世代の子供達により良い環境を作る</span></h4>
 				<p class="text">私達は企業活動を通じて、<br class="is_pc"> 地球環境（土、水、空気）をより良くすると共に
 					<br class="is_pc"> 次世代の子供たちが暮らしやすい、
@@ -109,7 +109,7 @@
 		<!-- /blockSp06_02 -->
 		<div class="blockSp06_03">
 			<div class="container">
-				<h2 class="titleBlock"><img src="../images/subPage/sp6_t03.png" alt="会社概要" class="is_pc"><span class="is_mb">会社概要</span></h2>
+				<h2 class="titleBlock" id="company"><img src="../images/subPage/sp6_t03.png" alt="会社概要" class="is_pc"><span class="is_mb">会社概要</span></h2>
 				<div class="table04_03">
 					<table class="table03">
 						<tbody>
@@ -125,8 +125,9 @@
 							</tr>
 							<tr>
 								<td>所在地</td>
-								<td><span class="pd_right_15">〒133-0073 東京都江戸川区鹿骨2-33-11</span><span><a href="#"><img class="is_mb" src="../images/subPage/btnTable.jpg" alt=""></a></span></td>
-								<td class="is_pc_tb"><a href=""><img src="../images/subPage/btnTable.jpg" alt=""></a></td>
+								<td><span class="pd_right_15">〒133-0073 東京都江戸川区鹿骨2-33-11</span><br>
+									<span class="is_mb"><a href="#">地図はこちら</a></span></td>
+								<td class="is_pc_tb"><a href=""><img src="../images/subPage/btnTable.jpg" alt="" class="is_pc"></a></td>
 							</tr>
 							<tr>
 								<td>TEL</td>
@@ -176,7 +177,7 @@
 		<!-- /blockSp06_03 -->
 		<div class="blockSp06_04">
 			<div class="container">
-				<h2 class="titleBlock"><img src="../images/subPage/sp6_t04.png" alt="取得許可・免許" class="is_pc"><span class="is_mb">取得許可・免許</span></h2>
+				<h2 class="titleBlock" id="license"><img src="../images/subPage/sp6_t04.png" alt="取得許可・免許" class="is_pc"><span class="is_mb">取得許可・免許</span></h2>
 				<div class="height720"></div>
 				<div class="boxSp04">
 					<h3 class="tBox"><img class="is_pc" src="../images/subPage/sp6_t05.png" alt="お気軽にお問合せください。"><span class="is_mb">お気軽にお問合せください。</span></h3>

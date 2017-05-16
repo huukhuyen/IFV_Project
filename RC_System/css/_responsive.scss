@@ -20,6 +20,10 @@
     .is_pc {
         display: none !important;
     }
+    .txt_indent_5 {
+        display: inline-block;
+        text-indent: -5px;
+    }
     .titleSection {
         span {
             font-weight: bold;
@@ -100,7 +104,7 @@
             }
             .text {
                 width: 100%;
-                font-size: 12px;
+                font-size: 11.5px;
                 line-height: 18px;
                 padding-left: 0;
             }
@@ -303,7 +307,8 @@
     .sectionAccess {
         padding: 50px 0 60px;
         .listMap {
-            padding: 18px;
+            border: none;
+            padding: 0;
         }
         .itemMap {
             padding-top: 5px;
@@ -339,16 +344,16 @@
             sectionAbout02
     -----------------------------------*/
     .sectionAbout02 {
-        padding: 50px 0px 60px 0;
+        padding: 50px 0 60px;
         .titleSection {
             padding-bottom: 23px;
         }
         .tableSection {
             tr {
                 td {
-                    padding: 12px;
+                    padding: 1% 2%;
                     &:first-child {
-                        width: 120px;
+                        width: 20%;
                     }
                     &:last-child {
                         width: 550px;
@@ -361,7 +366,7 @@
             sectionProduct01
     -----------------------------------*/
     .sectionProduct01 {
-        padding: 30px 0 70px 0;
+        padding: 30px 0 70px;
         .titleSection {
             padding-bottom: 20px;
         }
@@ -370,7 +375,7 @@
             sectionProduct02
     -----------------------------------*/
     .sectionProduct02 {
-        padding: 30px 0 60px 0;
+        padding: 30px 0 60px;
         .titleSection {
             padding-bottom: 20px;
         }
@@ -392,14 +397,14 @@
             padding-bottom: 20px;
         }
         .items {
-            padding: 0;
-            padding-bottom: 10px;
+            padding: 0 0 10px;
             width: 100%;
         }
         .titleItems {
+            text-align: left;
             padding-bottom: 10px;
         }
-        .listItems{
+        .listItems {
             margin: 0;
             &:not(:last-child) {
                 padding-bottom: 0;
@@ -417,7 +422,6 @@
             padding-left: 10px;
             .titleItems {
                 padding-top: 10px;
-                text-align: center;
             }
         }
     }
@@ -430,14 +434,13 @@
             padding-bottom: 20px;
         }
         .items {
-            padding: 0;
-            padding-bottom: 10px;
+            padding: 0 0 10px;
             width: 100%;
         }
         .titleItems {
             padding-bottom: 10px;
         }
-        .listItems{
+        .listItems {
             margin: 0;
             &:not(:last-child) {
                 padding-bottom: 0;
@@ -455,7 +458,7 @@
             padding-left: 10px;
             .titleItems {
                 padding-top: 10px;
-                text-align: center;
+                text-align: left;
             }
         }
     }
@@ -468,11 +471,10 @@
             padding-bottom: 20px;
         }
         .items {
-            padding: 0;
-            padding-bottom: 10px;
+            padding: 0 0 10px;
             width: 100%;
         }
-        .listItems{
+        .listItems {
             margin: 0;
             &:not(:last-child) {
                 padding-bottom: 0;
@@ -490,7 +492,7 @@
             padding-left: 10px;
             .titleItems {
                 padding-top: 10px;
-                text-align: center;
+                text-align: left;
             }
         }
     }
@@ -501,6 +503,66 @@
         padding-top: 45px;
         .titleSection {
             padding-bottom: 30px;
+        }
+    }
+    /*------------------
+            sectionProduct07
+    -----------------------------------*/
+    .sectionProduct07 {
+        padding: 50px 0;
+        .titleSection {
+            padding-bottom: 18px;
+        }
+        .item {
+            display: block;
+            padding: 10px;
+            background: none;
+            border: none!important;
+            .avatar {
+                max-width: inherit;
+                // width: 50%;
+                float: none;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            .description {
+                padding-left: 0;
+                float: none;
+            }
+            .btnMore {
+                position: relative;
+                display: block;
+                text-align: center;
+                clear: both;
+                right: 0;
+                bottom: 0;
+            }
+            .titleI {
+                text-align: left;
+                font-size: 20px;
+                max-width: 100%;
+                padding: 16px 0;
+                line-height: 25px;
+            }
+            .txtI {
+                max-width: 100%;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            br {
+                display: none;
+            }
+            .btnMore {
+                padding: 10px 0 5px;
+                img {
+                    margin: 0 auto;
+                }
+            }
         }
     }
     /*------------------

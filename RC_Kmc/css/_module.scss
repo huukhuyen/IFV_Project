@@ -121,8 +121,11 @@ a img {
     margin: 100px auto;
 }
 
-.slick-slide img {
-    width: 100%;
+.slick-slide {
+    // background-size: 100%;
+    img {
+        width: 100%;
+    }
 }
 
 .slick-prev:before,

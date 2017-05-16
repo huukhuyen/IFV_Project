@@ -11,7 +11,7 @@ abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,'游ゴシック  Medium', 'Helvetica Neue',  'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,'游ゴシック Medium', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, sans-serif;
   line-height: 1;
   font-size: 14px;
   color: #333;
@@ -597,10 +597,21 @@ a img:hover {
 =====================================*/
 .blockSlider {
   position: relative;
+  min-height: 720px;
+  background: url("../images/main_bg.jpg") no-repeat center top;
+}
+
+.blockSlider .sliderMain {
+  position: relative;
 }
 
 .blockSlider .sliderMain img {
   width: 100%;
+  bottom: 0;
+}
+
+.blockSlider .sliderMain .oc img {
+  min-height: 720px;
 }
 
 .blockSlider .logoSlider {
@@ -614,7 +625,6 @@ a img:hover {
 }
 
 .blockSlider .listSliderMain {
-  height: 780px;
   width: 100%;
   position: relative;
   top: 0;
@@ -637,24 +647,6 @@ a img:hover {
   opacity: 0;
   position: absolute;
   top: 0;
-}
-
-.blockSlider .listSliderMain > li:nth-child(1) {
-  background-image: url("../images/bgSlider01.jpg");
-}
-
-.blockSlider .listSliderMain > li:nth-child(2) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  transition: 500ms;
-  background-image: url("../images/bgSlider02.jpg");
-}
-
-.blockSlider .listSliderMain > li:nth-child(3) {
-  transition: 500ms;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-  background-image: url("../images/bgSlider03.jpg");
 }
 
 /*====================================
@@ -1224,7 +1216,7 @@ a img:hover {
 
 .blockTable02 .table02 {
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .blockTable02 .table02 th {
@@ -1626,10 +1618,10 @@ a img:hover {
 }
 
 .blockBtnBottom h3 {
-  font-family: -apple-system, BlinkMacSystemFont,'游ゴシック Medium', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, sans-serif;
   text-align: center;
   padding-bottom: 38px;
   font-size: 16px;
+  line-height: 22px;
 }
 
 /*====================================
@@ -1830,9 +1822,6 @@ a img:hover {
     float: none;
     min-width: 940px;
   }
-  .slick-dots {
-    display: none !important;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1862,9 +1851,6 @@ a img:hover {
   }
   .bgHeader {
     height: 72px;
-  }
-  .logoSlider {
-    display: none !important;
   }
   .is_pc_tb {
     display: none !important;
@@ -1905,6 +1891,7 @@ a img:hover {
     display: none !important;
   }
   .header {
+    background: #fff !important;
     position: fixed;
     width: 100%;
   }
@@ -1947,19 +1934,36 @@ a img:hover {
   /*------------------
             blockSlider
     -----------------------------------*/
+  .blockSlider {
+    min-height: 640px;
+  }
   .blockSlider .logoSlider {
+    display: block;
     width: 50%;
     height: 50%;
     overflow: auto;
     margin: auto;
     position: absolute;
-    top: 72px;
     left: 0;
     bottom: 0;
     right: 0;
   }
+  .blockSlider .sliderMain {
+    background: #fff;
+  }
+  .blockSlider .sliderMain .oc {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  .blockSlider .sliderMain .oc img {
+    min-height: 640px;
+  }
+  .blockSlider .slick-dots li {
+    margin: 0 5px;
+  }
   .owl-controls {
-    display: none !important;
+    display: block;
   }
   /*------------------
             blockNews
@@ -2121,7 +2125,7 @@ a img:hover {
     bottom: 0;
     right: 0;
     z-index: 9;
-    padding: 27px 20px;
+    padding: 27px 0px;
   }
   .block02 .txt02 {
     line-height: 22px;
@@ -2129,6 +2133,9 @@ a img:hover {
   /*------------------
             blockMap
     -----------------------------------*/
+  .blockMap {
+    margin-top: 20px;
+  }
   .blockMap .mapInfo {
     border: none;
     position: relative;
@@ -2138,7 +2145,8 @@ a img:hover {
     margin: 15px 3%;
   }
   .blockMap .mapInfo p {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 22px;
   }
   .blockMap #mapIframe {
     height: 320px;

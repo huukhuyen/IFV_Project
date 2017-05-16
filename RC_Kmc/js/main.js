@@ -132,6 +132,24 @@ $(document).ready(function() {
         $(this).css("pointer-events", "none");
     });
 
+
+    // Anime Scroll
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 150
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+
     // Scroll back to top
     var object = '#totop';
     var offset = 250;
