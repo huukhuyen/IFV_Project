@@ -14,7 +14,84 @@
 
 <body class="site-main">
     <!-- ============= Header ============= -->
-    <!-- require_once('block/header.tpl') -->
+<header class="header is_mb">
+    <div class="wrapheaderMb">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/nav_01.png" alt="">
+            </a>
+        </div>
+        <div class="toggle">
+            <img src="images/toggle.png" alt="">
+        </div>
+    </div>
+    <nav class="navHeader">
+        <ul>
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="about.html">会社案内</a></li>
+            <li><a href="product1.html">製品案内</a></li>
+			<li><a href="#">事業案内</a></li>
+			<li><a href="#">採用案内</a></li>
+            <li><a href="#">お問合わせ</a></li>
+            <!-- <li class="social">
+                <a href=""><img src="images/nav_06_mb.png" alt=""></a>
+                <a href=""><img src="images/nav_07_mb.png" alt=""></a>
+            </li> -->
+        </ul>
+    </nav>
+</header>
+<!-- /header -->
+<aside class="l-wrapper">
+    <div class="gnav">
+        <h1 class="logoNavLeft"><a href="/"><img src="images/nav_01.png" alt=""></a></h1>
+        <nav class="gnav-options">
+            <div class="gnav-body">
+                <ul class="gnav-primary-options">
+                    <li class="gnav-options_items">
+                        <a href="about.html"><img src="images/nav_02.png" alt=""></a>
+                        <!--  -->
+                        <div class="gnav-secondary-options">
+                            <ul>
+                                <li><a href="about.html">ご挨拶</a></li>
+                                <li><a href="about2.html">会社概要</a></li>
+                                <li><a href="about3.html">アクセス</a></li>
+								<li><a href="about4.html">LASの会</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnav-options_items">
+                        <a href="product1.html"><img src="images/nav_03.png" alt=""></a>
+                        <div class="gnav-secondary-options">
+                            <ul>
+                                <li><a href="product2.html">新聞社向け</a></li>
+                                <li><a href="product3.html">折込チラシ業向け</a></li>
+                                <li><a href="product4.html">その他システム・製品</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnav-options_items">
+                        <a href="#"><img src="images/nav_04.png" alt=""></a>
+                    </li>
+                    <li class="gnav-options_items">
+                        <a href="#"><img src="images/nav_05.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.gnav-options-->
+        <nav class="gnav-links">
+            <ul>
+                <li class="gnav-facebook">
+                    <a href="#"><img src="images/nav_06.png" alt=""></a>
+                </li>
+                <li class="gnav-map">
+                    <a href="about3.html"><img src="images/nav_07.png" alt=""></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
+<!-- Grand Menu -->
     <!-- ============= /Header ============= -->
 
     <section class="main-wrapper">
@@ -38,7 +115,7 @@
                         </div>
                     </li>
                     <!-- /items -->
-                    <li class="items active">
+                    <li class="items">
                         <div class="avatar">
                             <a href="about2.html"><img src="images/thumbnail_01.jpg" alt=""></a>
                         </div>
@@ -47,12 +124,21 @@
                         </div>
                     </li>
                     <!-- /items -->
-                    <li class="items">
+                    <li class="items active brd_bottom_none">
                         <div class="avatar">
                             <a href="about3.html"><img src="images/thumbnail_01.jpg" alt=""></a>
                         </div>
                         <div class="description">
                             <a href="about3.html">アクセス</a>
+                        </div>
+                    </li>
+                    <!-- /items -->
+					<li class="items">
+                        <div class="avatar">
+                            <a href="about4.html"><img src="images/thumbnail_01.jpg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="about4.html">LASの会</a>
                         </div>
                     </li>
                     <!-- /items -->
@@ -92,15 +178,20 @@
                                 <br>〒520-2277
                                 <br>滋賀県大津市関津4丁目772番地17
                                 <br>Tel. 077-536-3131 Fax. 077-536-3113
+								<br>地図は<a href="about3.html#a01">こちら</a>
                             </p>
                             <p>九州営業所】
                                 <br>〒841-0042
                                 <br>佐賀県鳥栖市酒井西町438-2
-                                <br>Tel. 0942-84-8335 Fax. 0942-84-8336</p>
+                                <br>Tel. 0942-84-8335 Fax. 0942-84-8336
+								<br>地図は<a href="about3.html#a02">こちら</a>
+							</p>
                             <p>【東京営業所】
                                 <br>〒101-0024
                                 <br>東京都千代田区神田和泉町1番地1-11 Y'Sクレスト301
-                                <br>Tel. 03-5809-1470 Fax. 03-5809-1469</p>
+                                <br>Tel. 03-5809-1470 Fax. 03-5809-1469
+								<br>地図は<a href="about3.html#a03">こちら</a>
+							</p>
                             <p>
                                 【京都オフィス】
                                 <br>〒604-0857
@@ -357,45 +448,38 @@
             </div>
         </div>
         <!-- /sectionAbout02 -->
-        <div class="sectionThumbnail is_pc">
-            <div class="container">
-                <ul class="listItems">
-                    <li class="items">
-                        <div class="avatar">
-                            <a href="about.html"><img src="images/thumbnail_01.jpg" alt=""></a>
-                        </div>
-                        <div class="description">
-                            <a href="about.html">ご挨拶</a>
-                        </div>
-                    </li>
-                    <!-- /items -->
-                    <li class="items active">
-                        <div class="avatar">
-                            <a href="about2.html"><img src="images/thumbnail_01.jpg" alt=""></a>
-                        </div>
-                        <div class="description">
-                            <a href="about2.html">会社概要</a>
-                        </div>
-                    </li>
-                    <!-- /items -->
-                    <li class="items">
-                        <div class="avatar">
-                            <a href="about3.html"><img src="images/thumbnail_01.jpg" alt=""></a>
-                        </div>
-                        <div class="description">
-                            <a href="about3.html">アクセス</a>
-                        </div>
-                    </li>
-                    <!-- /items -->
-                </ul>
-            </div>
-        </div>
+
         <!-- /sectionThumbnail -->
     </section>
     <!-- /Content body -->
 
     <!-- ============= Footer ============= -->
-    <!-- require_once('block/footer.tpl') -->
+<nav class="navFooter is_mb">
+    <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="about.html">会社案内</a></li>
+        <li><a href="product.html">製品情報</a></li>
+        <li><a href="#">事業案内</a></li>
+        <li><a href="#">採用情報</a></li>
+        <li><a href="#">アクセス</a></li>
+        <li><a href="#">お問合わせ</a></li>
+    </ul>
+</nav>
+<!-- /navFooter -->
+<footer class="footer">
+    <div class="container">
+        <h2 class="logoFooter"><img src="images/logoFooter.png" alt=""></h2>
+        <p class="textLogo">システマックは「次代のシステムをご提供」いたします</p>
+        <div class="linkF">
+            <p><a href="#">個人情報の取り扱いについて</a></p>
+            <p class="wall">|</p>
+            <p><a href="#">サイトご利用にあたって</a></p>
+        </div>
+    </div>
+    <div class="brd_bottom"></div>
+    <h4 class="copyright">Copyright (C) 2017 Systemac All Rights Reserved.</h4>
+</footer>
+
     <!-- ============= /Footer ============= -->
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>

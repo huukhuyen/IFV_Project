@@ -311,6 +311,8 @@ a img:hover {
   color: #686868;
   text-align: center;
   letter-spacing: 0.03em;
+  -webkit-perspective: 400px;
+          perspective: 400px;
 }
 
 .gnav a {
@@ -337,7 +339,14 @@ a img:hover {
   pointer-events: none;
 }
 
+.gnav .gnav-primary-options {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+}
+
 .gnav .gnav-primary-options > li {
+  position: relative;
   display: block;
   width: 100%;
   height: 90px;
@@ -364,80 +373,52 @@ a img:hover {
   background-color: #ede8e8;
 }
 
+.gnav .gnav-primary-options .gnav-options_items {
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
 .gnav .gnav-primary-options .gnav-options_items .gnav-secondary-options {
   padding-top: 165px;
+  margin-top: -150px;
 }
 
 .gnav .gnav-primary-options .gnav-options_items:nth-child(2) .gnav-secondary-options {
   padding-top: 255px;
+  margin-top: -240px;
 }
 
 .gnav .gnav-primary-options .gnav-options_items:nth-child(3) .gnav-secondary-options {
   padding-top: 345px;
+  margin-top: -330px;
 }
 
 .gnav .gnav-primary-options .gnav-options_items:nth-child(4) .gnav-secondary-options {
   padding-top: 435px;
+  margin-top: -420px;
 }
 
 .gnav .gnav-primary-options .gnav-options_items:hover .gnav-secondary-options {
   visibility: visible;
-  -webkit-transform: perspective(400) rotateY(90deg) translateX(0px);
-          transform: perspective(400) rotateY(90deg) translateX(0px);
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 
 .gnav .gnav-secondary-options {
-  position: absolute;
+  position: fixed;
+  font-size: 12px;
+  width: 200px;
+  left: 180px;
   top: 0;
-  left: 178px;
-  width: 0;
   height: 100vh;
   background-color: #ede8e8;
-  z-index: -9;
   visibility: hidden;
-  transition: .3s;
-  -webkit-transform: perspective(400) rotateY(60deg) scale(1, 1) translateX(-10px);
-          transform: perspective(400) rotateY(60deg) scale(1, 1) translateX(-10px);
-  overflow: hidden;
-  font-size: 12px;
-}
-
-.gnav .gnav-secondary-options li {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  display: table;
-}
-
-.gnav .gnav-secondary-options li:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(2) {
-  transition-delay: 0.15s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(3) {
-  transition-delay: 0.2s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(4) {
-  transition-delay: 0.25s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(5) {
-  transition-delay: 0.3s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(6) {
-  transition-delay: 0.35s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(7) {
-  transition-delay: 0.4s;
-}
-
-.gnav .gnav-secondary-options li:nth-child(8) {
-  transition-delay: 0.45s;
+  -webkit-transform: rotateY(78deg);
+          transform: rotateY(78deg);
+  -webkit-transform-origin: 0 0 0;
+      -ms-transform-origin: 0 0 0;
+          transform-origin: 0 0 0;
+  transition: all 0.3s;
 }
 
 .gnav .gnav-secondary-options li > a {
@@ -490,16 +471,6 @@ a img:hover {
 
 .ua-desktop .gnav .gnav-links li a:hover {
   background-color: #ede8e8;
-}
-
-.ua-desktop .gnav .gnav-primary-options > li:hover .gnav-secondary-options {
-  width: 200px;
-  opacity: 1;
-  z-index: 10;
-}
-
-.ua-desktop .gnav .gnav-primary-options > li:hover .gnav-secondary-options li {
-  opacity: 1;
 }
 
 /*------------------
@@ -595,6 +566,10 @@ a img:hover {
 /*====================================
             sectionSlider
 =====================================*/
+.sectionSlider {
+  min-height: 598px;
+}
+
 .sectionSlider .titleSection {
   position: absolute;
   z-index: 99;
@@ -606,6 +581,14 @@ a img:hover {
 
 .sectionSlider .titleSection img {
   max-width: 100% !important;
+}
+
+.m-slider .image {
+  height: 598px !important;
+}
+
+.slick-list.draggable {
+  height: 598px !important;
 }
 
 /*====================================
@@ -718,6 +701,17 @@ a img:hover {
 =====================================*/
 .sectionThumbnail {
   padding-top: 23px;
+}
+
+.sectionThumbnail.fixed {
+  transition-duration: 0ms;
+  background: #fff;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding-left: 180px;
 }
 
 .sectionThumbnail .listItems {
@@ -937,10 +931,10 @@ a img:hover {
 .sectionAccess .listMap {
   border: 1px solid #6878b1;
   border-radius: 3px;
-  padding: 35px   .sectionAccess .listMap;
+  padding: 35px;
 }
 
-.sectionAccess .listMap :not(:last-child) {
+.sectionAccess .listMap:not(:last-child) {
   border-bottom: none;
 }
 
@@ -1293,6 +1287,9 @@ a img:hover {
   .container {
     padding: 0 3%;
   }
+  .m-slider .image {
+    height: 598px !important;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -1314,6 +1311,18 @@ a img:hover {
   }
   .titleSection span {
     font-weight: bold;
+  }
+  .divider {
+    border-top: 1px solid #6878B1;
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+  .navHeader li a {
+    font-size: 14px;
+    background: url("../images/arrow_N.png") no-repeat 5%;
+    display: block;
+    color: #8a8a8a;
+    padding: 16px 20px 16px 40px;
   }
   /*----------Swap two div before and after----------*/
   .swapTwo {
@@ -1354,11 +1363,17 @@ a img:hover {
   /*------------------
             sectionSlider
     -----------------------------------*/
+  .sectionSlider {
+    min-height: inherit;
+  }
   .sectionSlider .titleSection img {
     width: 90%;
   }
   .m-slider .image {
-    height: 320px;
+    height: inherit;
+  }
+  .slick-list.draggable {
+    height: inherit;
   }
   /*------------------
             sectionNews
@@ -1487,6 +1502,11 @@ a img:hover {
   .sectionThumbnail {
     padding: 0;
   }
+  .sectionThumbnail.fixed {
+    background: #fff;
+    top: 62px;
+    padding-left: 0;
+  }
   .sectionThumbnail .container {
     padding: 0;
   }
@@ -1512,7 +1532,7 @@ a img:hover {
     content: "";
     position: absolute;
     left: 10px;
-    top: calc(50% - 5px);
+    top: 16px;
     width: 6px;
     height: 10px;
     background: url("../images/subPage/arrowTh.png") no-repeat;
@@ -1535,15 +1555,6 @@ a img:hover {
   .sectionThumbnail .items .description {
     padding-top: 0;
     line-height: 22px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
   .sectionThumbnail .items .description a {
     width: 100%;
@@ -1607,6 +1618,10 @@ a img:hover {
   .sectionAccess .itemMap:nth-child(3) {
     padding-top: 18px;
   }
+  .sectionAccess .itemMap iframe {
+    max-width: 100%;
+    height: 320px;
+  }
   /*------------------
             .sectionAbout01
     -----------------------------------*/
@@ -1620,7 +1635,7 @@ a img:hover {
     padding: 12px;
   }
   .sectionAbout01 .tableSection tr td:first-child {
-    width: 120px;
+    width: 26%;
   }
   /*------------------
             sectionAbout02
