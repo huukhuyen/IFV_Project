@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+
+@media screen and (max-width: 780px) {
+	
+	
+.sectionAbout02 .tableSection tr td:first-child{
+	width:20%;
+}
+
+.sectionAbout02 .tableSection tr td{
+	padding:1% 2%;
+}
+
+    /*------------------
+            access
+    -----------------------------------*/
+  
+  .sectionAccess .listMap {
+  border: none;
+  padding: 0;
+}
+
+  
+}

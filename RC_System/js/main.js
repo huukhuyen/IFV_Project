@@ -1,7 +1,30 @@
+var fadeTopEffect = {
+    setInit: function() {
+        $(window).scroll(function() {
+            $(".fadeTop").each(function() {
+                var elemPos = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight + 100) {
+                    $(this).addClass('ef-slide');
+                }
+            });
+        }).trigger("scroll");
+    },
+}
+
 $(document).ready(function() {
+    // Check version IE
+    if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+        $('body').append("<link rel='stylesheet' type='text/css' href='css/ieOnly.css' />");
+    }
+
+    // Slider-in menu left
+    $('.gnav').css("left", "0");
+
+    fadeTopEffect.setInit();
     // Show five news first : PC
     $('.contentSection .itemTopic:gt(4)').hide();
-
 
     // Show three news first : Mobile
     var widthBr = $(window).width();
@@ -24,6 +47,7 @@ $(document).ready(function() {
         $('.m-slider').css('height', heightSlider);
         $('.m-slider .image').css('height', heightSlider);
         $('.slick-list.draggable').css('height', heightSlider);
+
     }
 
     // Toggle nav mobile
@@ -39,6 +63,8 @@ $(document).ready(function() {
             $('.toggle img').attr('src', openNav);
         }
     });
+
+    // Hover images
 
     // Fixed menu list
     var indexListMenu = $('.sectionThumbnail').offset().top;

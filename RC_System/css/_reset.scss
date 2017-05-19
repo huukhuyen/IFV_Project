@@ -87,6 +87,10 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+*::-moz-selection {
+    background-color: #6878B1;
+    color: #fff;
+}
 :hover {
     -webkit-transition: 400ms;
     -moz-transition: 400ms;

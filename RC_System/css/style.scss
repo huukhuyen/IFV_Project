@@ -9,10 +9,11 @@
 .gnav {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -180px;
     width: 180px;
     min-height: 100vh;
     z-index: 1000;
+    transition-duration: 1s;
     // -webkit-transition: opacity 0.4s cubic-bezier(.215, .61, .355, 1)0s, height 0.3s cubic-bezier(.215, .61, .355, 1)0s, min-height 0.3s cubic-bezier(.215, .61, .355, 1)0s;
     // transition: opacity 0.4s cubic-bezier(.215, .61, .355, 1)0s, height 0.3s cubic-bezier(.215, .61, .355, 1)0s, min-height 0.3s cubic-bezier(.215, .61, .355, 1)0s;
     background-color: #f1eeee;
@@ -73,19 +74,19 @@
             perspective: 400px;
             .gnav-secondary-options {
                 // margin-left: -3px;
-                padding-top: 165px;
+                padding-top: 150px;
                 margin-top: -150px;
             }
             &:nth-child(2) .gnav-secondary-options {
-                padding-top: 255px;
+                padding-top: 240px;
                 margin-top: -240px;
             }
             &:nth-child(3) .gnav-secondary-options {
-                padding-top: 345px;
+                padding-top: 330px;
                 margin-top: -330px;
             }
             &:nth-child(4) .gnav-secondary-options {
-                padding-top: 435px;
+                padding-top: 420px;
                 margin-top: -420px;
             }
 
@@ -146,10 +147,12 @@
                 width: 200px;
                 height: 64px;
                 vertical-align: middle;
+                font-size: 14px;
                 color: #6878b1;
+                font-weight: bold;
                 &:hover {
                     background-color: #c5c6d7;
-                    color: #6878b1;
+                    color: #fff;
                 }
             }
         }
@@ -295,6 +298,8 @@
             sectionSlider
 =====================================*/
 .sectionSlider {
+    // position: relative;
+    // left: -180px;
     min-height:598px;
     .titleSection {
         position: absolute;
@@ -314,6 +319,9 @@
 .slick-list.draggable {
     height:598px!important;
 }
+.slick-dots li button{
+	width:64px!important;
+}
 /*====================================
             sectionNews
 =====================================*/
@@ -328,10 +336,28 @@
         img {
             margin: inherit;
         }
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
     }
     .itemTopic {
         @extend %clearfix;
         padding: 10px 0;
+        &:hover {
+            .text {
+                text-decoration: underline;
+                color: red;
+            }
+        }
+        a {
+            color: inherit;
+            &:hover {
+                color: red;
+                text-decoration: underline!important;
+            }
+        }
         .time {
             float: left;
             color: $color-5;
@@ -360,8 +386,19 @@
         width: 33.3333333%;
         padding: 0 13px;
     }
+    .description {
+        padding-top: 20px;
+    }
     .avatar {
-        padding-bottom: 20px;
+        width: 275px;
+        height: 180px;
+        overflow: hidden;
+        transition: transform 0.5s linear;
+        &:hover {
+            img {
+                transform: scale(1.2,1.2);
+            }
+        }
     }
     .titleItems {
         color: $color-a;
@@ -387,8 +424,19 @@
         width: 33.3333333%;
         padding: 0 13px;
     }
+    .description {
+        padding-top: 20px;
+    }
     .avatar {
-        padding-bottom: 20px;
+        width: 275px;
+        height: 180px;
+        overflow: hidden;
+        transition: transform 0.5s linear;
+        &:hover {
+            img {
+                transform: scale(1.2,1.2);
+            }
+        }
     }
     .titleItems {
         color: $color-a;
@@ -409,6 +457,7 @@
         right: 0;
         position: fixed;
         padding-left: 180px;
+        border-bottom:1px solid #eee;
     }
     .listItems {
         margin: 0 -10px;
@@ -616,6 +665,7 @@
         &:nth-child(3) {
             padding-top: 35px;
             width: 100%;
+            padding-bottom: 20px;
         }
         iframe {
             max-width: 800px;
@@ -629,6 +679,21 @@
     }
     .text {
         padding-top: 20px;
+    }
+    .linkMap {
+        clear: both;
+        display: block;
+        // width: 55%;
+        margin: auto;
+        // padding: 10px;
+        // background: $color-1;
+        // color: $color-a;
+        text-align: center;
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
     }
 }
 /*====================================
@@ -699,7 +764,18 @@
         padding: 0 13px;
     }
     .avatar {
-        padding-bottom: 20px;
+        width: 275px;
+        height: 180px;
+        overflow: hidden;
+        transition: transform 0.5s linear;
+        &:hover {
+            img {
+                transform: scale(1.2,1.2);
+            }
+        }
+    }
+    .description {
+        padding-top: 20px;
     }
     .titleItems {
         color: $color-a;
@@ -726,7 +802,18 @@
         padding: 0 13px;
     }
     .avatar {
-        padding-bottom: 20px;
+        width: 275px;
+        height: 180px;
+        overflow: hidden;
+        transition: transform 0.5s linear;
+        &:hover {
+            img {
+                transform: scale(1.2,1.2);
+            }
+        }
+    }
+    .description {
+        padding-top: 20px;
     }
     .titleItems {
         line-height: 30px;
@@ -755,7 +842,18 @@
         padding: 0 13px;
     }
     .avatar {
-        padding-bottom: 20px;
+        width: 275px;
+        height: 180px;
+        overflow: hidden;
+        transition: transform 0.5s linear;
+        &:hover {
+            img {
+                transform: scale(1.2,1.2);
+            }
+        }
+    }
+    .description {
+        padding-top: 20px;
     }
     .titleItems {
         color: $color-a;
@@ -844,10 +942,18 @@
             navFooter
 =====================================*/
 .navFooter {
+    @extend %clearfix;
+    border-top: 2px solid $color-8;
+    border-bottom: 2px solid $color-8;
     li {
-        &:first-child {
+        float: left;
+        width: 50%;
+        &:nth-child(odd) {
+            border-right: 2px solid $color-8;
+        }
+        &:nth-child(7) {
             a {
-                border-top: 2px solid $color-8;
+                border-bottom: none;
             }
         }
         a {
@@ -857,6 +963,15 @@
             border-bottom: 2px solid $color-8;
         }
     }
+}
+/*====================================
+            paralaxArea
+=====================================*/
+.paralaxArea {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: url('../images/paralax.jpg')center fixed;
 }
 /*====================================
             footer

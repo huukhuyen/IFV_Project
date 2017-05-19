@@ -213,3 +213,16 @@ a img {
 .w80 {
     width: 80px;
 }
+.brd_b_none {
+    border-bottom: none!important;
+}
+
+.fadeTop {
+    opacity: 0;
+    transform: translate(0px, 100px);
+    transition: all 1.5s;
+}
+.fadeTop.ef-slide {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
