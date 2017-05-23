@@ -117,8 +117,13 @@ img {
   outline: 0;
 }
 
-a {
-  color: #6878b1;
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+vlink {
+  color: inherit;
 }
 
 small {
@@ -223,6 +228,7 @@ a img:hover {
 
 .noteItems {
   line-height: 23px;
+  color: #2e2e2e;
 }
 
 .wrapWipe {
@@ -331,6 +337,7 @@ a img:hover {
   width: 180px;
   min-height: 100vh;
   z-index: 1000;
+  bottom: 0;
   transition-duration: 1s;
   background-color: #f1eeee;
   color: #686868;
@@ -435,7 +442,7 @@ a img:hover {
   width: 200px;
   left: 180px;
   top: 0;
-  height: 100vh;
+  height: 1000px;
   background-color: #ede8e8;
   visibility: hidden;
   -webkit-transform: rotateY(78deg);
@@ -443,7 +450,7 @@ a img:hover {
   -webkit-transform-origin: 0 0 0;
       -ms-transform-origin: 0 0 0;
           transform-origin: 0 0 0;
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 
 .gnav .gnav-secondary-options li > a {
@@ -452,7 +459,7 @@ a img:hover {
   position: relative;
   display: table-cell;
   width: 200px;
-  height: 64px;
+  height: 67px;
   vertical-align: middle;
   font-size: 14px;
   color: #6878b1;
@@ -581,6 +588,12 @@ a img:hover {
 /*====================================
             main-wrapper
 =====================================*/
+.wrapRelative {
+  z-index: 99;
+  position: relative;
+  top: 598px;
+}
+
 .main-wrapper {
   top: 0;
   bottom: 0;
@@ -588,22 +601,31 @@ a img:hover {
   height: 100%;
   position: relative;
   padding-left: 180px;
+  background: #fff;
 }
 
 /*====================================
             sectionSlider
 =====================================*/
 .sectionSlider {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
   min-height: 598px;
 }
 
 .sectionSlider .titleSection {
   position: absolute;
   z-index: 99;
-  top: calc(50% - 50px);
+  top: 290px;
   text-align: center;
   display: block;
   width: 100%;
+  transition-duration: 1.2s;
+  opacity: 0;
+  left: 90px;
 }
 
 .sectionSlider .titleSection img {
@@ -618,8 +640,13 @@ a img:hover {
   height: 598px !important;
 }
 
+.slick-dots {
+  left: 90px;
+}
+
 .slick-dots li button {
-  width: 64px !important;
+  width: 50px !important;
+  margin: 0 5px !important;
 }
 
 /*====================================
@@ -702,28 +729,41 @@ a img:hover {
   padding: 0 13px;
 }
 
+.sectionService .items a:hover {
+  text-decoration: none;
+}
+
+.sectionService .items:hover .titleItems {
+  color: red;
+}
+
+.sectionService .items:hover .noteItems {
+  text-decoration: underline;
+  color: red;
+}
+
 .sectionService .description {
   padding-top: 20px;
 }
 
 .sectionService .avatar {
   width: 275px;
-  height: 180px;
   overflow: hidden;
-  transition: -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 .sectionService .avatar:hover img {
-  -webkit-transform: scale(1.2, 1.2);
-      -ms-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .sectionService .titleItems {
-  color: #fff;
+  color: #6878b1;
   padding-bottom: 15px;
+  padding-top: 25px;
 }
 
 /*====================================
@@ -751,28 +791,41 @@ a img:hover {
   padding: 0 13px;
 }
 
+.sectionProduct .items a:hover {
+  text-decoration: none;
+}
+
+.sectionProduct .items:hover .titleItems {
+  color: red;
+}
+
+.sectionProduct .items:hover .noteItems {
+  text-decoration: underline;
+  color: red;
+}
+
 .sectionProduct .description {
   padding-top: 20px;
 }
 
 .sectionProduct .avatar {
   width: 275px;
-  height: 180px;
   overflow: hidden;
-  transition: -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 .sectionProduct .avatar:hover img {
-  -webkit-transform: scale(1.2, 1.2);
-      -ms-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .sectionProduct .titleItems {
-  color: #fff;
+  color: #6878b1;
   padding-bottom: 15px;
+  padding-top: 25px;
 }
 
 /*====================================
@@ -792,6 +845,7 @@ a img:hover {
   position: fixed;
   padding-left: 180px;
   border-bottom: 1px solid #eee;
+  height: 150px;
 }
 
 .sectionThumbnail .listItems {
@@ -1010,7 +1064,6 @@ a img:hover {
 
 .sectionAccess .listMap {
   border: 1px solid #6878b1;
-  border-radius: 3px;
   padding: 35px;
 }
 
@@ -1067,6 +1120,7 @@ a img:hover {
             sectionProduct01
 =====================================*/
 .sectionProduct01 {
+  font-size: 16px;
   padding: 60px 0 140px;
 }
 
@@ -1137,6 +1191,23 @@ a img:hover {
   padding: 0 13px;
 }
 
+.sectionProduct03 .items a:hover {
+  text-decoration: none;
+}
+
+.sectionProduct03 .items:hover .titleItems {
+  color: red;
+}
+
+.sectionProduct03 .items:hover .titleItems a {
+  color: red;
+}
+
+.sectionProduct03 .items:hover .noteItems {
+  text-decoration: underline;
+  color: red;
+}
+
 .sectionProduct03 .avatar {
   width: 275px;
   height: 180px;
@@ -1147,9 +1218,9 @@ a img:hover {
 }
 
 .sectionProduct03 .avatar:hover img {
-  -webkit-transform: scale(1.2, 1.2);
-      -ms-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .sectionProduct03 .description {
@@ -1159,6 +1230,10 @@ a img:hover {
 .sectionProduct03 .titleItems {
   color: #fff;
   padding-bottom: 15px;
+}
+
+.sectionProduct03 .titleItems a {
+  color: #6878b1;
 }
 
 /*====================================
@@ -1186,6 +1261,23 @@ a img:hover {
   padding: 0 13px;
 }
 
+.sectionProduct04 .items a:hover {
+  text-decoration: none;
+}
+
+.sectionProduct04 .items:hover .titleItems {
+  color: red;
+}
+
+.sectionProduct04 .items:hover .titleItems a {
+  color: red;
+}
+
+.sectionProduct04 .items:hover .noteItems {
+  text-decoration: underline;
+  color: red;
+}
+
 .sectionProduct04 .avatar {
   width: 275px;
   height: 180px;
@@ -1196,9 +1288,9 @@ a img:hover {
 }
 
 .sectionProduct04 .avatar:hover img {
-  -webkit-transform: scale(1.2, 1.2);
-      -ms-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .sectionProduct04 .description {
@@ -1209,6 +1301,10 @@ a img:hover {
   line-height: 30px;
   color: #fff;
   padding-bottom: 15px;
+}
+
+.sectionProduct04 .titleItems a {
+  color: #6878b1;
 }
 
 /*====================================
@@ -1237,6 +1333,23 @@ a img:hover {
   padding: 0 13px;
 }
 
+.sectionProduct05 .items a:hover {
+  text-decoration: none;
+}
+
+.sectionProduct05 .items:hover .titleItems {
+  color: red;
+}
+
+.sectionProduct05 .items:hover .titleItems a {
+  color: red;
+}
+
+.sectionProduct05 .items:hover .noteItems {
+  text-decoration: underline;
+  color: red;
+}
+
 .sectionProduct05 .avatar {
   width: 275px;
   height: 180px;
@@ -1247,9 +1360,9 @@ a img:hover {
 }
 
 .sectionProduct05 .avatar:hover img {
-  -webkit-transform: scale(1.2, 1.2);
-      -ms-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .sectionProduct05 .description {
@@ -1259,6 +1372,10 @@ a img:hover {
 .sectionProduct05 .titleItems {
   color: #fff;
   padding-bottom: 15px;
+}
+
+.sectionProduct05 .titleItems a {
+  color: #6878b1;
 }
 
 /*====================================
@@ -1293,12 +1410,7 @@ a img:hover {
 .sectionProduct07 .item {
   cursor: pointer;
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: table;
   padding: 14px;
   padding: 18px 11px 18px 19px;
   border: 5px solid #eeeeee;
@@ -1317,15 +1429,16 @@ a img:hover {
 }
 
 .sectionProduct07 .item .avatar {
+  display: table-cell;
   max-width: 375px;
-  width: 100%;
   transition-duration: 400ms;
-  float: left;
+  vertical-align: middle;
 }
 
 .sectionProduct07 .item .description {
+  display: table-cell;
   padding-left: 50px;
-  float: left;
+  vertical-align: middle;
 }
 
 .sectionProduct07 .item .titleI {
@@ -1386,14 +1499,17 @@ a img:hover {
 .paralaxArea {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 360px;
   background: url("../images/paralax.jpg") center fixed;
+  background-size: cover;
 }
 
 /*====================================
             footer
 =====================================*/
 .footer {
+  background: #fff;
+  position: relative;
   padding-top: 100px;
   padding-left: 180px;
 }
@@ -1419,11 +1535,16 @@ a img:hover {
   max-width: 425px;
   width: 100%;
   margin: auto;
+  font-size: 12px;
 }
 
 .footer .linkF a {
-  font-weight: bold;
   color: #2e2e2e;
+}
+
+.footer .linkF a:hover {
+  text-decoration: underline;
+  color: red;
 }
 
 .footer .copyright {
@@ -1517,15 +1638,29 @@ a img:hover {
   /*------------------
             main-wrapper
     -----------------------------------*/
+  .wrapRelative {
+    top: 0;
+  }
   .main-wrapper {
     padding-left: 0;
     padding-top: 61px;
   }
   /*------------------
+            paralaxSP
+    -----------------------------------*/
+  .paralaxArea {
+    height: 320px;
+    background: url("../images/paralax.jpg") center fixed;
+  }
+  /*------------------
             sectionSlider
     -----------------------------------*/
   .sectionSlider {
+    position: relative;
     min-height: inherit;
+  }
+  .sectionSlider .titleSection {
+    left: 0;
   }
   .sectionSlider .titleSection img {
     width: 90%;
@@ -1535,6 +1670,11 @@ a img:hover {
   }
   .slick-list.draggable {
     height: inherit;
+  }
+  .slick-dots li button {
+    width: 40px !important;
+    margin: 0 6px !important;
+    left: 0;
   }
   /*------------------
             sectionNews
@@ -1597,6 +1737,7 @@ a img:hover {
     float: left;
     width: 50%;
     padding-bottom: 0;
+    height: auto;
   }
   .sectionService .description_mb {
     font-size: 14px;
@@ -1653,6 +1794,7 @@ a img:hover {
     -----------------------------------*/
   .sectionBreadcrumb {
     min-height: inherit;
+    height: 120px;
   }
   .sectionBreadcrumb .content {
     padding: 15px;
@@ -1981,6 +2123,7 @@ a img:hover {
     border: none !important;
   }
   .sectionProduct07 .item .avatar {
+    display: block;
     max-width: inherit;
     float: none;
     margin: 0 auto;
@@ -1992,6 +2135,7 @@ a img:hover {
     margin-bottom: 10px;
   }
   .sectionProduct07 .item .description {
+    display: block;
     padding-left: 0;
     float: none;
   }

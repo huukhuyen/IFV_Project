@@ -19,7 +19,14 @@ $font-family-w6: 'Noto Sans Japanese', sans-serif; // h1,
 //     font-family: $font-family-w6;
 // }
 a {
-    color: $color-1;
+    // color: $color-a;
+    &:hover {
+        color: red;
+        text-decoration: underline;
+    }
+}
+vlink {
+    color:inherit;
 }
 small {
     font-size: 80%;
@@ -122,6 +129,7 @@ a img {
 }
 .noteItems {
     line-height: 23px;
+    color:#2e2e2e;
 }
 // .owl-theme .owl-controls .owl-page span {
 //     width: 15px;
@@ -226,3 +234,8 @@ a img {
     opacity: 1;
     transform: translate(0px, 0px);
 }
+
+// @keyframes imgSlider {
+//     0%   {top: calc(50% - 0px); opacity: 0}
+//     100% {top: calc(50% - 50px); opacity: 1}
+// }

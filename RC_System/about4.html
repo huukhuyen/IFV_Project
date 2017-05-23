@@ -192,6 +192,21 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        // Check safari
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+            $('body').append("<link rel='stylesheet' type='text/css' href='css/ieOnly.css' />");
+            $('.fadeTop').css({
+                "transform": "translate(0px, 0px)",
+                "opacity": "1"
+            });
+            $('.gnav').css("left", "0");
+            $('.sectionSlider .titleSection').css({
+                "opacity": "1",
+                "top": "253px"
+            });
+        }
+    </script>
 </body>
 
 </html>

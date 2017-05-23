@@ -22,6 +22,12 @@ $(document).ready(function() {
     // Slider-in menu left
     $('.gnav').css("left", "0");
 
+    // Fade title slider
+    $('.sectionSlider .titleSection').css({
+        "opacity": "1",
+        "top": "253px"
+    });
+
     fadeTopEffect.setInit();
     // Show five news first : PC
     $('.contentSection .itemTopic:gt(4)').hide();
