@@ -13,10 +13,10 @@
         <ul>
             <li><a href="index.html">トップページ</a></li>
             <li><a href="about.html">会社案内</a></li>
-            <li><a href="product1.html">製品案内</a></li>
-			<li><a href="#">事業案内</a></li>
-			<li><a href="#">採用案内</a></li>
-            <li><a href="#">お問合わせ</a></li>
+            <li><a href="product.html">製品案内</a></li>
+			<li><a href="service.html">事業案内</a></li>
+			<li><a href="recruit.html">採用案内</a></li>
+            <li><a href="contact.html">お問合わせ</a></li>
             <!-- <li class="social">
                 <a href=""><img src="images/nav_06_mb.png" alt=""></a>
                 <a href=""><img src="images/nav_07_mb.png" alt=""></a>
@@ -44,10 +44,11 @@
                         </div>
                     </li>
                     <li class="gnav-options_items">
-                        <a href="product1.html"><img src="images/nav_03.png" alt=""></a>
+                        <a href="product.html"><img src="images/nav_03.png" alt=""></a>
                         <div class="gnav-secondary-options">
                             <ul>
-                                <li><a href="product2.html">新聞社向け</a></li>
+                                <li><a href="product.html">製品案内トップ</a></li>
+								<li><a href="product2.html">新聞社向け</a></li>
                                 <li><a href="product3.html">折込チラシ業向け</a></li>
                                 <li><a href="product4.html">その他管理システム</a></li>
                             </ul>
@@ -66,10 +67,10 @@
         <nav class="gnav-links">
             <ul>
                 <li class="gnav-facebook">
-                    <a href="#"><img src="images/nav_06.png" alt=""></a>
+                    <a href="contact.html"><img src="images/nav_06.png" alt=""></a>
                 </li>
                 <li class="gnav-map">
-                    <a href="about3.html"><img src="images/nav_07.png" alt=""></a>
+                    <a href="about3.html#a01"><img src="images/nav_07.png" alt=""></a>
                 </li>
             </ul>
         </nav>

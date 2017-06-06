@@ -11,7 +11,7 @@ abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,'游ゴシック Medium', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,'Noto Sans Japanese','游ゴシック Medium', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, sans-serif;
   line-height: 1;
   font-size: 14px;
   color: #333;
@@ -138,6 +138,11 @@ a img:hover {
   display: block;
   visibility: hidden;
   height: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
 }
 
 /* -------------- Config -------------- */
@@ -327,6 +332,10 @@ a img:hover {
 
 .pd_right_15 {
   padding-right: 15px;
+}
+
+.m0a {
+  margin: 0 auto;
 }
 
 @-webkit-keyframes func {
@@ -546,7 +555,7 @@ a img:hover {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 99999;
   background: rgba(18, 166, 235, 0.28);
   width: 100%;
 }
@@ -611,7 +620,10 @@ a img:hover {
 }
 
 .blockSlider .sliderMain .oc img {
-  min-height: 720px;
+  width: 1200px;
+  top: 180px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .blockSlider .logoSlider {
@@ -647,6 +659,10 @@ a img:hover {
   opacity: 0;
   position: absolute;
   top: 0;
+}
+
+.slick-initialized .slick-slide {
+  height: 720px;
 }
 
 /*====================================
@@ -1310,7 +1326,7 @@ a img:hover {
 =====================================*/
 .blockSp06_02 {
   border-top: 1px solid #c9c9c9;
-  padding: 234px 0 230px;
+  padding: 120px 0 120px;
   background: #f7f6f2;
 }
 
@@ -1495,6 +1511,10 @@ a img:hover {
   border-left: none;
 }
 
+.blockTable07 .table05 tr td img {
+  float: right;
+}
+
 .blockTable07 .table05 tr:last-child td:first-child {
   vertical-align: top;
 }
@@ -1503,7 +1523,7 @@ a img:hover {
   text-indent: 10px;
   border: 1px solid #c9c9c9;
   height: 35px;
-  max-width: 434px;
+  max-width: 320px;
   width: 100%;
 }
 
@@ -1534,7 +1554,7 @@ a img:hover {
 
 .blockTable07 .table05 .cItem .input {
   display: table-cell;
-  width: 434px;
+  width: 320px;
   vertical-align: middle;
 }
 
@@ -1622,6 +1642,16 @@ a img:hover {
   padding-bottom: 38px;
   font-size: 16px;
   line-height: 22px;
+}
+
+.blockBtnBottom .description {
+  font-size: 18px;
+  line-height: 30px;
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /*====================================
@@ -1729,7 +1759,7 @@ a img:hover {
             blockConfirmForm
 =====================================*/
 .blockConfirmForm {
-  height: 380px;
+  min-height: 380px;
   padding: 100px 0;
   text-align: center;
 }
@@ -1935,12 +1965,13 @@ a img:hover {
             blockSlider
     -----------------------------------*/
   .blockSlider {
-    min-height: 640px;
+    min-height: 490px;
   }
   .blockSlider .logoSlider {
     display: block;
-    width: 50%;
-    height: 50%;
+    z-index: 9999;
+    width: 65%;
+    height: 55%;
     overflow: auto;
     margin: auto;
     position: absolute;
@@ -1958,12 +1989,17 @@ a img:hover {
   }
   .blockSlider .sliderMain .oc img {
     min-height: 640px;
+    top: 72px;
+    width: 100%;
   }
   .blockSlider .slick-dots li {
     margin: 0 5px;
   }
   .owl-controls {
     display: block;
+  }
+  .slick-initialized .slick-slide {
+    height: 490px;
   }
   /*------------------
             blockNews
@@ -2001,6 +2037,7 @@ a img:hover {
     max-width: 100%;
     font-size: 16px;
     line-height: 22px;
+    letter-spacing: 0;
   }
   .blockNews .item br {
     display: none;
@@ -2077,7 +2114,7 @@ a img:hover {
             blockAbout
     -----------------------------------*/
   .blockAbout {
-    background: transparent url("../images/backg01.jpg") repeat fixed center center/cover;
+    background: transparent url("../images/backg01_sp.jpg") repeat fixed center center/cover;
     min-height: 540px;
     width: 100%;
   }
@@ -2125,7 +2162,7 @@ a img:hover {
     bottom: 0;
     right: 0;
     z-index: 9;
-    padding: 27px 0px;
+    padding: 27px 0;
   }
   .block02 .txt02 {
     line-height: 22px;
@@ -2249,6 +2286,15 @@ a img:hover {
   .blockBtnBottom .btnOn {
     margin-bottom: 30px;
   }
+  .blockBtnBottom .description {
+    font-size: 16px;
+    line-height: 22px;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
   /*------------------
             block04_listNews
     -----------------------------------*/
@@ -2269,6 +2315,17 @@ a img:hover {
     min-height: inherit !important;
   }
   /*------------------
+            block04_path
+    -----------------------------------*/
+  .zoomer_wrapper {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    height: 480px !important;
+    margin: 10px 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  /*------------------
             block05_01
     -----------------------------------*/
   .block05_01 .text {
@@ -2286,7 +2343,11 @@ a img:hover {
   /*------------------
             blockSp06_02
     -----------------------------------*/
+  .blockSp06_02 {
+    padding: 60px 0;
+  }
   .blockSp06_02 .nameBlock {
+    font-size: 20px;
     line-height: 35px;
   }
   /*------------------
@@ -2321,7 +2382,7 @@ a img:hover {
     width: 100%;
     display: block;
     background: #fff;
-    padding: 12px 15px;
+    padding: 12px 15px 0;
   }
   .blockTable07 .table05 tr td:first-child {
     width: inherit;
@@ -2414,5 +2475,23 @@ a img:hover {
   }
   .spCenter {
     text-align: center;
+  }
+  /*------------------
+            zoomer
+    -----------------------------------*/
+  .zoomer_wrapper {
+    height: 420px;
+    margin: -80px auto;
+    overflow: hidden;
+    width: 100%;
+  }
+  .zoomer_wrapper .zoomer {
+    background: none;
+  }
+  .zoomer_wrapper .zoomer-holder {
+    box-shadow: none !important;
+  }
+  .zoomer.dark_zoomer {
+    background: #F7F6F2 url("zoomer-bg-dark.png") repeat center;
   }
 }

@@ -110,7 +110,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 99999;
     background: rgba(18,166,235,0.28);
     width: 100%;
     // .content {
@@ -247,7 +247,10 @@
         }
         .oc {
             img {
-                min-height: 720px;
+                width: 1200px;
+            	top: 180px;
+            	position: relative;
+            	margin: 0 auto;
             }
         }
     }
@@ -257,7 +260,6 @@
         left: 0;
         right: 0;
         z-index: 9;
-        // animation: imageAnimation 1s linear 1;
         display: none;
         text-align: center;
     }
@@ -296,6 +298,9 @@
             // }
         }
     }
+}
+.slick-initialized .slick-slide{
+	height:720px;
 }
 /*====================================
             blockAbout
@@ -892,7 +897,8 @@
 =====================================*/
 .blockSp06_02 {
     border-top: 1px solid $color-7;
-    padding: 234px 0 230px;
+    // padding: 234px 0 230px;
+    padding: 120px 0 120px;
     background: $color-3;
     .titleBlock {
         color: $color-2;
@@ -1050,6 +1056,9 @@
                     background: $color-a;
                     border-left: none;
                 }
+                img {
+                	float:right;
+                }
             }
             &:last-child {
                 td {
@@ -1063,7 +1072,7 @@
             text-indent: 10px;
             border: 1px solid $color-7;
             height: 35px;
-            max-width: 434px;
+            max-width: 320px;
             width: 100%;
         }
         textarea {
@@ -1089,7 +1098,7 @@
             @extend %clearfix;
             .input {
                 display: table-cell;
-                width: 434px;
+                width: 320px;
                 // width: 100%;
                 vertical-align: middle;
             }
@@ -1170,6 +1179,15 @@
         padding-bottom: 38px;
         font-size: 16px;
         line-height: 22px;
+    }
+    .description {
+        font-size: 18px;
+        line-height: 30px;
+        margin: auto;
+        max-width: 800px;
+        width: 100%;
+    	text-align:center;
+    	margin-bottom:30px;
     }
 }
 /*====================================
@@ -1261,7 +1279,7 @@
             blockConfirmForm
 =====================================*/
 .blockConfirmForm {
-    height: 380px;
+    min-height: 380px;
     padding: 100px 0;
     text-align: center;
     .titleBlock {

@@ -50,6 +50,10 @@ a img {
         height: 0;
     }
 }
+h1,h2,h3{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 700;
+}
 /* -------------- Config -------------- */
 .lt02 {
     letter-spacing: 0.2em;
@@ -240,6 +244,9 @@ a img {
 }
 .pd_right_15 {
     padding-right: 15px;
+}
+.m0a {
+	margin:0 auto;
 }
 @keyframes func {
     0% {

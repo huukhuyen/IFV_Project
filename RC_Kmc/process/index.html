@@ -4,9 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>関東ミキシングコンクリート</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fs.zoomer.css">
 </head>
 
 <body>
@@ -120,7 +121,23 @@
 		<div class="block04_path">
 			<div class="container">
 				<h2 class="titleBlock"><img class="is_pc" src="../images/subPage/sp4_t02.png" alt="処理工程詳細図"><span class="is_mb">処理工程詳細図</span></h2>
-				<img src="../images/subPage/sp4_path.png" alt="">
+
+				<!--zoomer-->
+				<div class="zoomer_wrapper clZoomer">
+					<img src="../images/subPage/sp4_path.png" class="zoomer-image is_mb" />
+				</div>
+
+				<!--<div class="disp_image">
+					<a style="background-image:url('../images/subPage/sp4_path.png');" href="javascript:void(0);" onclick="open_image();"></a>
+				</div>
+				<div id="image_wrapper" style="display: none;">
+					<div class="close_button">
+						<a href="javascript:void(0);" onclick="close_image();"><i class="fa fa-times" aria-hidden="true"></i></a>
+					</div>
+				</div>-->
+				<!--zoomer-->
+
+				<img src="../images/subPage/sp4_path.png" alt="" class="is_pc">
 			</div>
 		</div>
 		<div class="block04_02">
@@ -166,6 +183,14 @@
 	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/jquery.fs.zoomer.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".clZoomer").zoomer();
+		});
+	</script>
+
 </body>
 
 </html>

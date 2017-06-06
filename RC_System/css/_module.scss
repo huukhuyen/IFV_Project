@@ -191,6 +191,11 @@ a img {
     bottom: 36px;
     z-index: 99999;
 }
+.divider {
+    border-top: 1px solid #F1EEEE;
+    padding-bottom: 30px;
+}
+
 /*====================================
             Helper
 =====================================*/
@@ -220,6 +225,10 @@ a img {
 }
 .w80 {
     width: 80px;
+}
+.shortTitle{
+	letter-spacing:0.35em;
+	font-weight:bold;
 }
 .brd_b_none {
     border-bottom: none!important;

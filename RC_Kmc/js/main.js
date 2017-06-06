@@ -227,35 +227,35 @@ $(document).ready(function() {
     });
 
     // Active nav Wipe
-    var urlPath = window.location.pathname;
-    $('nav.nav').find('a').each(function() {
-        let url = '..' + urlPath;
-        let url_ht = $(this).attr('href');
-        if (url == url_ht) {
-            $(this).addClass('active');
-        }
-    });
-    $('nav.navMb').find('a').each(function() {
-        let url = '..' + urlPath;
-        let url_ht = $(this).attr('href');
-        if (url == url_ht) {
-            $(this).addClass('active');
-        }
-    });
-    $('nav.navFooter').find('a').each(function() {
-        let url = '..' + urlPath;
-        let url_ht = $(this).attr('href');
-        if (url == url_ht) {
-            $(this).addClass('active');
-        }
-    });
-    $('.blockListTop').find('.items a').each(function() {
-        var tmp = window.location.href.split("/");
-        let url_l = '/' + tmp[3] + '/' + $(this).attr('href');
-        if (urlPath == url_l) {
-            $(this).parents('.items').addClass('active');
-        }
-    });
+    //var urlPath = window.location.pathname;
+//    $('nav.nav').find('a').each(function() {
+//        let url = '..' + urlPath;
+//        let url_ht = $(this).attr('href');
+//        if (url == url_ht) {
+//            $(this).addClass('active');
+//        }
+//    });
+//    $('nav.navMb').find('a').each(function() {
+//        let url = '..' + urlPath;
+//        let url_ht = $(this).attr('href');
+//        if (url == url_ht) {
+//            $(this).addClass('active');
+//        }
+//    });
+//    $('nav.navFooter').find('a').each(function() {
+//        let url = '..' + urlPath;
+//        let url_ht = $(this).attr('href');
+//        if (url == url_ht) {
+//            $(this).addClass('active');
+//        }
+//    });
+//    $('.blockListTop').find('.items a').each(function() {
+//        var tmp = window.location.href.split("/");
+//        let url_l = '/' + tmp[3] + '/' + $(this).attr('href');
+//        if (urlPath == url_l) {
+//            $(this).parents('.items').addClass('active');
+//        }
+//    });
 
     // Set height for menu listTop mobile
     equalheight = function(container) {
@@ -297,4 +297,20 @@ $(document).ready(function() {
         equalheight('.blockP ul li .description');
         equalheight('.blockP ul li .text');
     });
+});
+
+
+
+//anchor by header setings
+
+$(function(){
+	$('a[href^=#]').click(function() {
+		var speed = 400;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var headerHeight = 140; //固定ヘッダーの高さ
+		var position = target.offset().top - headerHeight; //ターゲットの座標からヘッダの高さ分引く
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+		return false;
+	});
 });

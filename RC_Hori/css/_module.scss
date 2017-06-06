@@ -1,0 +1,159 @@
+$color-1: #006db8;
+$color-2: #eeeeee;
+$color-3: #272727;
+$color-4: #d2d2d2;
+$color-5: #000;
+$color-6: #000;
+$color-7: #000;
+$color-8: #000;
+$color-a: #fff;
+$color-b: #2e2e2e;
+$color-o: #000; // Font
+$font-family-w6: 'Noto Sans Japanese', sans-serif; // h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h5,
+// h6 {
+//     font-family: $font-family-w6;
+// }
+a {
+    // color: $color-a;
+}
+vlink {
+    color:inherit;
+}
+small {
+    font-size: 80%;
+}
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+a img {
+    transition: 0.5s linear;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+%clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+}
+.clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+}
+/* -------------- Config -------------- */
+.is_mb {
+    display: none !important;
+}
+.is_tb {
+    display: none !important;
+}
+.is_pc {
+    display: inherit !important;
+}
+.clearfix {
+    clear: both;
+    display: block;
+}
+.container {
+    @extend %clearfix;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    // padding: 0 3%;
+}
+
+
+.titleSection {
+    text-transform: uppercase;
+    color: $color-1;
+    // font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 34px;
+    img {
+        margin: auto;
+        max-width: 100%;
+    }
+}
+.nameSection {
+    text-align: center;
+    font-size: 20px;
+    line-height: 33px;
+    img {
+        margin: auto;
+        max-width: 100%;
+    }
+}
+
+.listItems {
+    @extend %clearfix;
+}
+.titleItems {
+    // font-weight: bold;
+    font-size: 16px;
+}
+.noteItems {
+    line-height: 23px;
+    color:#2e2e2e;
+}
+
+.wrapWipe {
+    display: block;
+    width: 100%;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.wrapWipe > .table {
+    margin-bottom: 0;
+}
+.wrapWipe > .table > tbody > tr > td,
+.wrapWipe > .table > tbody > tr > th,
+.wrapWipe > .table > tfoot > tr > td,
+.wrapWipe > .table > tfoot > tr > th,
+.wrapWipe > .table > thead > tr > td,
+.wrapWipe > .table > thead > tr > th {
+    white-space: nowrap;
+    background: #000;
+}
+.wrapWipe > .table > thead > tr > th {
+    font-weight: bold;
+}
+
+/*====================================
+            Helper
+=====================================*/
+.inline {
+    display: inline !important;
+}
+.resetH {
+    height: inherit!important;
+}
+.red {
+    color: red;
+}
+.tac {
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}

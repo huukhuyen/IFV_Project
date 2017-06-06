@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>関東ミキシングコンクリート</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+	<div class="bgHeader"></div>
+	<header class="header">
+		<div class="navMobile is_mb">
+			<div class="logoMb">
+				</a><a href="../"><img src="../images/logoMb.png" alt=""></a></a>
+			</div>
+			<div class="toggleMb">
+				<div class="buttonT">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<nav class="navMb">
+				<ul>
+					<li>
+						<a href="./"><img src="../images/logoMb.png" alt=""></a>
+					</li>
+					<li><a href="../service/index.html">KMCの汚泥処理</a></li>
+					<li><a href="../process/index.html">処理工程</a></li>
+					<li><a href="../recycle/index.html">リサイクルへの取り組み</a></li>
+					<li><a href="../about/index.html">KMCについて</a></li>
+					<li><a href="../contact/index.html">お問い合わせ</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- /navMobile -->
+	</header>
+	<!-- /header -->
+	<div class="navFixed">
+		<div class="logo">
+			<a href="/" class="is_pc hide_tb"><img src="../images/logo.png" alt=""></a>
+			<a href="/" class="is_mb is_tb"><img src="../images/logoMb.png" alt=""></a>
+		</div>
+		<nav class="nav">
+			<ul>
+				<li><a href="../service/index.html">KMCの汚泥処理</a></li>
+				<li><a href="../process/index.html">処理工程</a></li>
+				<li><a href="../recycle/index.html">リサイクルへの取り組み</a></li>
+				<li><a href="../about/index.html">KMCについて</a></li>
+				<li><a href="../contact/index.html">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- /navFixed -->
+	<div class="mainBody">
+		<div class="blockConfirmForm">
+			<div class="container">
+				<h2 class="titleBlock">入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h2>
+				<div class="description">
+					<table>
+						<colgroup>
+							<col width="200px" />
+							<col width="450px" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>【会社名】</th>
+								<td><?php print $s->html( $F["nameclb"] ); ?></td>
+							</tr>
+							<tr>
+								<th>【部署】</th>
+								<td><?php print $s->html( $F["loading"] ); ?></td>
+							</tr>
+							<tr>
+								<th>【お名前】</th>
+								<td><?php print $s->html( $F["name"] ); ?></td>
+							</tr>
+							<tr>
+								<th>【お名前( ふりがな)】</th>
+								<td><?php print $s->html( $F["kana"] ); ?></td>
+							</tr>
+							<tr>
+								<th>【電話番号】</th>
+								<td><?php print $s->html( $F["mobile"] ); ?></td>
+							</tr>
+							<tr>
+								<th>【メールアドレス】</th>
+								<td><?php print $s->html( $F["mail"] ); ?></td>
+							</tr>
+							<tr>
+								<th>【お問い合わせ内容】</th>
+								<td><?php print nl2br( $s->html( $F["naiyou"] ) ); ?></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+			<form action="" method="post">
+				<button type="submit" name="send">送信する</button>
+			</form>
+		</div>
+	</div>
+	<!-- /wrap -->
+	<footer class="footer">
+		<nav class="navFooter is_mb">
+			<ul>
+				<li><a href="../service/index.html">KMCの汚泥処理</a></li>
+				<li><a href="../process/index.html">処理工程</a></li>
+				<li><a href="../recycle/index.html">リサイクルへの取り組み</a></li>
+				<li><a href="../about/index.html">KMCについて</a></li>
+				<li><a href="../contact/index.html">お問い合わせ</a></li>
+			</ul>
+		</nav>
+		<div class="container">
+			<div class="logoF is_pc">
+				<img src="../images/logoF.png" alt="">
+			</div>
+			<ul class="spLogoF is_mb">
+				<li><img src="../images/img_bnr01.png" alt=""></li>
+				<li><img src="../images/img_bnr02.png" alt=""></li>
+				<li><img src="../images/img_bnr03.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="infoF">
+			<div class="des">
+				<p class="name"><a href="">個人情報保護方針</a></p>
+				<p class="copyright">Copyrigh(C) 2017 KMC.Co.,ltd All Rights Reserved.</p>
+			</div>
+		</div>
+		<div id="totop">
+			<a href="#"><img src="../images/top.png" alt=""></a>
+		</div>
+	</footer>
+	<!-- /footer -->
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>

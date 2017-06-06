@@ -1,0 +1,337 @@
+@import "reset";
+@import "module"; //
+
+/*====================================
+            basic
+====================================*/
+.main-body {
+    position: relative;
+    @extend %clearfix;
+    max-width: 1366px;
+    width: 100%;
+    margin: auto;
+}
+.contentLeft {
+    max-width: 1043px;
+    width: 100%;
+    float: left;
+    border-right: 1px solid $color-4;
+}
+.contentRight {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+/*====================================
+
+            headerMenu
+=====================================*/
+.headerMenu {
+    width: 100%;
+    padding-top: 48px;
+    padding-left: 38px;
+}
+.headerlogo {
+    margin-top: -22px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+/*====================================
+        areaAbout
+=====================================*/
+.areaAbout {
+    .listItems {
+        padding: 10px;
+    }
+    .titleSection {
+        padding-bottom: 62px;
+    }
+    .items {
+        line-height: 1.4;
+        font-size: 18px;
+        color: $color-1;
+        text-align: justify;
+        border-left: 3px solid $color-a;
+        float: left;
+        width: 50%;
+        background: $color-2;
+        padding: 94px 95px;
+        &:first-child {
+            border-right: 3px solid $color-a;
+        }
+        .descript {
+            padding-bottom: 55px;
+        }
+    }
+    .btnAbout {
+        padding-top: 17px;
+        display: block;
+        text-align: center;
+    }
+}
+/*====================================
+        areaInfo
+=====================================*/
+.areaInfo {
+    padding: 180px 0 150px 0;
+    .titleSection {
+        padding-bottom: 60px;
+    }
+    .descript {
+        max-width: 680px;
+        width: 100%;
+        margin: 0 auto;
+        color: $color-1;
+        line-height: 34px;
+        padding-bottom: 70px;
+    }
+    .btnNoname {
+        display: block;
+        text-align: center;
+    }
+}
+/*====================================
+        areaTopic
+=====================================*/
+.areaTopic {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid $color-4;
+    border-bottom: 1px solid $color-4;
+    padding: 80px 0 65px 0;
+    a {
+        color: $color-3;
+    }
+    .containerTopic {
+        max-width: 750px;
+        width: 100%;
+        margin: auto;
+        .day {
+            padding-right: 30px;
+            float: left;
+        }
+        .nameTopic {
+            float: left;
+        }
+        .new {
+            position: absolute;
+            left: -65px;
+        }
+        li {
+            position: relative;
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 10px;
+            &.active {
+                .day, .nameTopic {
+                    color: red;
+                    text-decoration: underline;
+                }
+            }
+            &:hover {
+                .day, .nameTopic {
+                    color: red;
+                    text-decoration: underline;
+                }
+            }
+            a {
+                @extend %clearfix;
+            }
+        }
+    }
+    .linkDetail {
+        text-align: right;
+        padding-top: 45px;
+        a {
+            font-size: 16px;
+            text-decoration: underline;
+            color: $color-1;
+        }
+    }
+}
+/*====================================
+    areaListAbout
+=====================================*/
+.areaListAbout {
+    padding: 65px 0 72px 0;
+    .listItems {
+        margin: 0 -20px;
+        &:not(:first-child) {
+            padding-top: 40px;
+        }
+    }
+    .items {
+        padding: 0 20px;
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+    .avatar {
+        img {
+            width: 100%;
+        }
+    }
+    .descript {
+        padding-top: 15px;
+        a {
+            color: $color-1;
+        }
+    }
+}
+/*====================================
+        footer
+=====================================*/
+.footer {
+    padding: 72px 0 80px 0;
+    background: $color-1;
+    text-align: center;
+    .logoF {
+        padding-bottom: 55px;
+    }
+    .infoFooter {
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-a;
+        .tel {
+            font-size: 36px;
+            line-height: 45px;
+        }
+    }
+    .text {
+        font-size: 24px;
+        color: $color-a;
+        .highlight {
+            font-weight: bold;
+            font-size: 18px;
+            background: $color-a;
+            color: $color-1;
+            padding-left: 14px;
+        }
+        span {
+            padding: 14px 14px 10px 10px;
+            display: inline-block;
+            line-height: 1.6;
+        }
+    }
+    .note {
+        line-height: 1.6;
+        padding-top: 18px;
+        font-size: 18px;
+        color: $color-a;
+    }
+}
+/*====================================
+        areaBanner
+=====================================*/
+.areaBanner {
+    text-align: center;
+}
+/*====================================
+        areaText01
+=====================================*/
+.areaText01 {
+    max-width: 721px;
+    width: 100%;
+    margin: auto;
+    line-height: 32px;
+    padding: 104px 75px 160px 30px;
+    font-size: 18px;
+    color: $color-1;
+    p {
+        &:not(:first-child) {
+            padding-top: 30px;
+        }
+    }
+}
+/*====================================
+        areaListInfo
+=====================================*/
+.areaListInfo {
+    color: $color-1;
+    .titleItems {
+        line-height: 56px;
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .items {
+        padding-bottom: 160px;
+        max-width: 721px;
+        margin: auto;
+        .avatar {
+            float: left;
+            padding-left: 10px;
+        }
+        .descript {
+            text-align: justify;
+            padding-left: 30px;
+            max-width: 540px;
+            width: 100%;
+            float: left;
+        }
+        .detail {
+            line-height: 34px;
+            font-size: 18px;
+        }
+        &:last-child {
+            text-align: center;
+            .descript {
+                max-width: inherit;
+                width: 100%;
+            }
+        }
+    }
+    .btn {
+        clear: both;
+        padding-top: 40px;
+        text-align: center;
+    }
+}
+/*====================================
+        contentRight
+=====================================*/
+.contentRight {
+    padding: 80px 0 0 50px;
+    .titleSection {
+        text-align: left;
+        font-size: 28px;
+        line-height: 38px;
+        padding-bottom: 40px;
+    }
+    .navSidebar {
+        li {
+            line-height: 44px;
+            a {
+                display: block;
+                color: red;
+                font-size: 16px;
+            }
+        }
+    }
+    .footer2 {
+        color: $color-1;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        .info {
+            padding-top: 55px;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        .tel {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .address {
+            font-size: 18px;
+        }
+    }
+}
+/*====================================
+
+=====================================*/
+/*-----------------------------------
+            For mobile
+-----------------------------------*/
+@import "responsive";

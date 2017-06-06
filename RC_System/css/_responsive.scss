@@ -350,6 +350,9 @@
     -----------------------------------*/
     .sectionAccess {
         padding: 50px 0 60px;
+        .titleSection {
+            padding-bottom: 25px;
+        }
         .listMap {
             border: none;
             padding: 0;
@@ -377,6 +380,75 @@
         //     font-size: 12px;
         // }
     }
+    /*===------- mail -------===*/
+    .contentMail {
+        padding-top: 25px;
+    }
+    .formBox {
+    	margin-top:30px;
+    	margin-bottom:30px;
+    	width:100%;
+    }
+    .modForm01 th {
+    	padding:6% 4% 0;
+    	width:auto;
+    	display:block;
+    }
+    .modForm01 td {
+    	display:block;
+    	padding:4% 4% 6%;
+    	font-size:1.4em;
+    	width:auto;
+    }
+    input[type="text"] {
+    	padding:10px;
+    }
+    .inputText01 {
+    	width:100%;
+    }
+    .inputText02 {
+    	width:100%;
+    }
+    .inputText03 {
+    	width:100%;
+    }
+    .inputTextZip {
+    	width:20%;
+    }
+
+    .inputItem01 {
+    	margin-top:10px;
+    }
+    .inputItem01:first-child {
+    	margin-top:0;
+    }
+    .radiobtn {
+    	display:inline-block;
+    	width:auto;
+    	margin-bottom:5px;
+    }
+    .textArea {
+    	width:100%;
+    	height:200px;
+    }
+    .formBtnBox {
+    	text-align:center;
+    	margin-top:20px;
+    }
+    .formBtn {
+    	font-size:1.4em;
+    }
+    .formBtn:hover{
+    	opacity:1;
+    }
+
+
+    /* Complete */
+    .textContact01 {
+    	text-align:left;
+    	padding:0 4%;
+    }
+
     /*------------------
             .sectionAbout01
     -----------------------------------*/
