@@ -20,7 +20,12 @@
 .contentRight {
     position: relative;
     float: left;
-    height: 100%;
+    // height: 100%;
+    .contentRightIn {
+        position: fixed;
+        top: 80px;
+        bottom: 30px;
+    }
 }
 /*====================================
 
@@ -36,7 +41,31 @@
     margin-bottom: 80px;
     text-align: center;
 }
-
+.navMain {
+    display: none;
+    padding-top: 10px;
+    li {
+        &:first-child {
+            border-top: 1px solid $color-1;
+        }
+        a {
+            display: block;
+            padding: 20px;
+            border-bottom: 1px solid $color-1;
+            color: $color-1;
+            &:hover {
+                color: $color-a;
+                background: $color-1;
+            }
+        }
+        &.active {
+            a {
+                color: $color-a;
+                background: $color-1;
+            }
+        }
+    }
+}
 /*====================================
         areaAbout
 =====================================*/
@@ -46,6 +75,9 @@
     }
     .titleSection {
         padding-bottom: 62px;
+        a {
+            color: $color-1;
+        }
     }
     .items {
         line-height: 1.4;
@@ -60,12 +92,18 @@
         &:first-child {
             border-right: 3px solid $color-a;
         }
+        .avatar {
+            text-align: center;
+        }
         .descript {
             padding-bottom: 55px;
         }
+        .three_div {
+            margin: auto;
+        }
     }
     .btnAbout {
-        padding-top: 17px;
+        margin-top: 17px;
         display: block;
         text-align: center;
     }
@@ -77,6 +115,9 @@
     padding: 180px 0 150px 0;
     .titleSection {
         padding-bottom: 60px;
+        a {
+            color: $color-1;
+        }
     }
     .descript {
         max-width: 680px;
@@ -121,7 +162,7 @@
         }
         li {
             position: relative;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 24px;
             padding-bottom: 10px;
             &.active {
@@ -184,11 +225,23 @@
         footer
 =====================================*/
 .footer {
-    padding: 72px 0 80px 0;
+    padding: 72px 0 240px 0;
     background: $color-1;
-    text-align: center;
+    .footerIn {
+        display: table;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+    }
     .logoF {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
         padding-bottom: 55px;
+        width: 490px;
+    }
+    .infoRight {
+        vertical-align: middle;
     }
     .infoFooter {
         font-size: 18px;
@@ -282,10 +335,19 @@
             }
         }
     }
-    .btn {
+    .three_div {
+        &:before {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        // padding-top: 40px;
+    }
+    .btnMain {
         clear: both;
-        padding-top: 40px;
-        text-align: center;
+        margin-top: 40px;
     }
 }
 /*====================================
@@ -304,8 +366,14 @@
             line-height: 44px;
             a {
                 display: block;
-                color: red;
+                color: $color-5;
                 font-size: 16px;
+            }
+            &:hover {
+                a {
+                    color: red;
+                    text-decoration: underline;
+                }
             }
         }
     }

@@ -14,7 +14,7 @@ body {
   font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   line-height: 1;
   font-size: 14px;
-  color: #2e2e2e;
+  color: #333;
   background: #fff;
   word-wrap: break-word;
   letter-spacing: 0.1em;
@@ -177,6 +177,35 @@ a img:hover {
   margin: 0 auto;
 }
 
+.btnMain {
+  display: block;
+  max-width: 290px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  line-height: 57px;
+  height: 57px;
+  border: 3px solid #006db8;
+  color: #006db8;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btnMain:before {
+  content: "\f105";
+  font-size: 30px;
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -3px;
+  right: 12px;
+}
+
+.btnMain:hover {
+  background: #006db8;
+  color: #fff;
+}
+
 .titleSection {
   text-transform: uppercase;
   color: #006db8;
@@ -262,6 +291,10 @@ a img:hover {
   float: right;
 }
 
+.pd_top_160 {
+  padding-top: 160px;
+}
+
 /*====================================
             basic
 ====================================*/
@@ -282,7 +315,12 @@ a img:hover {
 .contentRight {
   position: relative;
   float: left;
-  height: 100%;
+}
+
+.contentRight .contentRightIn {
+  position: fixed;
+  top: 80px;
+  bottom: 30px;
 }
 
 /*====================================
@@ -301,6 +339,32 @@ a img:hover {
   text-align: center;
 }
 
+.navMain {
+  display: none;
+  padding-top: 10px;
+}
+
+.navMain li:first-child {
+  border-top: 1px solid #006db8;
+}
+
+.navMain li a {
+  display: block;
+  padding: 20px;
+  border-bottom: 1px solid #006db8;
+  color: #006db8;
+}
+
+.navMain li a:hover {
+  color: #fff;
+  background: #006db8;
+}
+
+.navMain li.active a {
+  color: #fff;
+  background: #006db8;
+}
+
 /*====================================
         areaAbout
 =====================================*/
@@ -310,6 +374,10 @@ a img:hover {
 
 .areaAbout .titleSection {
   padding-bottom: 62px;
+}
+
+.areaAbout .titleSection a {
+  color: #006db8;
 }
 
 .areaAbout .items {
@@ -328,12 +396,20 @@ a img:hover {
   border-right: 3px solid #fff;
 }
 
+.areaAbout .items .avatar {
+  text-align: center;
+}
+
 .areaAbout .items .descript {
   padding-bottom: 55px;
 }
 
+.areaAbout .items .three_div {
+  margin: auto;
+}
+
 .areaAbout .btnAbout {
-  padding-top: 17px;
+  margin-top: 17px;
   display: block;
   text-align: center;
 }
@@ -347,6 +423,10 @@ a img:hover {
 
 .areaInfo .titleSection {
   padding-bottom: 60px;
+}
+
+.areaInfo .titleSection a {
+  color: #006db8;
 }
 
 .areaInfo .descript {
@@ -401,7 +481,7 @@ a img:hover {
 
 .areaTopic .containerTopic li {
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   padding-bottom: 10px;
 }
@@ -465,13 +545,27 @@ a img:hover {
         footer
 =====================================*/
 .footer {
-  padding: 72px 0 80px 0;
+  padding: 72px 0 240px 0;
   background: #006db8;
-  text-align: center;
+}
+
+.footer .footerIn {
+  display: table;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .footer .logoF {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
   padding-bottom: 55px;
+  width: 490px;
+}
+
+.footer .infoRight {
+  vertical-align: middle;
 }
 
 .footer .infoFooter {
@@ -581,10 +675,17 @@ a img:hover {
   width: 100%;
 }
 
-.areaListInfo .btn {
+.areaListInfo .three_div:before {
+  content: "";
   clear: both;
-  padding-top: 40px;
-  text-align: center;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.areaListInfo .btnMain {
+  clear: both;
+  margin-top: 40px;
 }
 
 /*====================================
@@ -607,8 +708,13 @@ a img:hover {
 
 .contentRight .navSidebar li a {
   display: block;
-  color: red;
+  color: #333;
   font-size: 16px;
+}
+
+.contentRight .navSidebar li:hover a {
+  color: red;
+  text-decoration: underline;
 }
 
 .contentRight .footer2 {
@@ -639,12 +745,79 @@ a img:hover {
 /*-----------------------------------
             For mobile
 -----------------------------------*/
-@media screen and (max-width: 1200px) {
-  .is_tb {
-    display: inherit !important;
+@media screen and (min-width: 780px) and (max-width: 870px) {
+  /*----- contentRight -----*/
+  .contentRight .titleSection {
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 20px;
   }
-  .hide_tb {
-    display: none !important;
+  .contentRight .contentRightIn {
+    bottom: 20px;
+  }
+  .contentRight .navSidebar li {
+    line-height: 40px;
+  }
+  .contentRight .navSidebar li a {
+    font-size: 14px;
+  }
+  .contentRight .footer2 .info {
+    font-size: 15px;
+  }
+  .contentRight .footer2 .address {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 781px) and (max-width: 1000px) {
+  .contentLeft {
+    width: 70%;
+  }
+  /*----- contentRight -----*/
+  .contentRight {
+    width: 30%;
+    padding: 30px 0 0 20px;
+  }
+  .contentRight .contentRightIn {
+    top: 50px;
+  }
+  .contentRight .footer2 .info {
+    padding-top: 30px;
+  }
+  /*----- header -----*/
+  .headerMenu .btnToggle {
+    display: inline-block;
+  }
+  .headerMenu .btnToggle img {
+    max-width: 70%;
+  }
+  .headerlogo a {
+    display: inline-block;
+  }
+  .headerlogo a img {
+    max-width: 80%;
+  }
+  /*----- section -----*/
+  .areaAbout .listItems {
+    padding: 10px;
+  }
+  .areaAbout .titleSection {
+    padding-bottom: 62px;
+  }
+  .areaAbout .items {
+    padding: 94px 5%;
+  }
+  .areaListAbout .listItems {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 781px) {
+  .contentLeft {
+    max-width: 70%;
+  }
+  .areaListInfo .items .descript {
+    max-width: 60%;
   }
 }
 
@@ -659,7 +832,11 @@ a img:hover {
     display: none !important;
   }
   .titleSection {
-    font-size: 25px;
+    font-size: 1.25em;
+    padding: 2.5em 0 .9375em 0;
+  }
+  .btnMain {
+    width: 290px;
   }
   /*----------Swap two div before and after----------*/
   .swapTwo {
@@ -668,10 +845,7 @@ a img:hover {
     -moz-box-orient: vertical;
     flex-direction: column;
     /* optional */
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    align-items: center;
   }
   .swapTwo .first_div {
     -webkit-box-ordinal-group: 2;
@@ -687,19 +861,41 @@ a img:hover {
     -webkit-order: 1;
     order: 1;
   }
+  .swapTwo .three_div {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+  }
   /*------------------
             headerMenu
     -----------------------------------*/
   .headerMenu {
-    padding-top: 25px;
-    padding-left: 25px;
+    position: relative;
+    padding-top: 0px;
+    padding-left: 0px;
+    height: 65px;
+  }
+  .headerMenu .btnToggle {
+    position: absolute;
+    left: 25px;
+    top: calc(50% - 17px);
   }
   .headerMenu .btnToggle img {
-    max-width: 50px;
+    max-width: 35px;
+  }
+  .headerMenu .logoHeaderMb {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 54px);
+  }
+  .headerMenu .logoHeaderMb img {
+    max-height: 50px;
   }
   .headerlogo {
-    margin-top: -55px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
   .headerlogo .titleLogo {
     padding-top: 40px;
@@ -715,43 +911,54 @@ a img:hover {
   }
   .areaAbout .items {
     width: 100%;
-    padding: 55px 52px 34px;
+    padding: 55px 5% 34px;
     border-left: none;
   }
   .areaAbout .items:first-child {
     border-right: none;
     border-bottom: 7px solid #fff;
   }
+  .areaAbout .items .avatar {
+    text-align: center;
+    margin: auto;
+  }
   .areaAbout .items .descript {
+    font-size: .875em;
     padding-bottom: 22px;
+  }
+  .areaAbout .items .descript p {
+    line-height: 1.75em;
+    padding-bottom: 1em;
   }
   /*------------------
             areaInfo
     -----------------------------------*/
   .areaInfo {
-    padding: 70px 22px 50px;
+    padding: 0px 7.14286% 50px 7.14286%;
   }
   .areaInfo .titleSection {
     padding-bottom: 30px;
   }
   .areaInfo .descript {
+    font-size: .875em;
+    line-height: 1.75em;
     padding-bottom: 0;
+  }
+  .areaInfo .descript p {
+    padding-bottom: 1em;
   }
   /*------------------
             areaTopic
     -----------------------------------*/
   .areaTopic {
-    padding: 60px 32px 45px;
+    padding: 60px 7.14286% 45px;
   }
   .areaTopic .containerTopic .new {
     left: -5px;
     top: -35px;
   }
   .areaTopic .nameTopic {
-    max-width: 452px;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
   }
   .areaTopic .linkDetail {
     text-align: center;
@@ -763,18 +970,24 @@ a img:hover {
   .areaListAbout {
     padding: 32px 0 85px;
   }
+  .areaListAbout .titleSection {
+    font-size: 1.25em;
+  }
   .areaListAbout .listItems {
     margin: 0 auto;
+  }
+  .areaListAbout .listItems:not(:first-child) {
+    padding-top: 0;
   }
   .areaListAbout .items {
     width: 50%;
     padding: 5px;
   }
   .areaListAbout .items:nth-child(odd) {
-    padding-left: 10px;
+    padding-left: 7.14286%;
   }
   .areaListAbout .items:nth-child(even) {
-    padding-right: 10px;
+    padding-right: 7.14286%;
   }
   /*------------------
             areaBanner
@@ -786,17 +999,27 @@ a img:hover {
             areaText01
     -----------------------------------*/
   .areaText01 {
-    padding: 52px 3% 80px 3%;
+    line-height: 1.75em;
+    padding: 52px 7.14286% 80px;
+  }
+  .areaText01 p {
+    font-size: .875em;
+    line-height: 1.75em;
+    padding-bottom: 1em;
+  }
+  .areaText01 p:not(:first-child) {
+    padding-top: 0;
   }
   /*------------------
             areaListInfo
     -----------------------------------*/
   .areaListInfo .titleItems {
-    line-height: 38px;
-    font-size: 26px;
+    font-size: 1.25em;
+    padding: 2.5em 0 .9375em 0;
+    line-height: 1.7em;
   }
   .areaListInfo .listItems {
-    padding: 0 3%;
+    padding: 0 7.14286%;
   }
   .areaListInfo .items {
     padding-bottom: 80px;
@@ -807,17 +1030,33 @@ a img:hover {
     padding-left: 0;
   }
   .areaListInfo .items .descript {
+    max-width: 100%;
     width: 100%;
     padding-left: 0;
+  }
+  .areaListInfo .items .detail {
+    font-size: .875em;
+    line-height: 1.75em;
   }
   /*------------------
             footer
     -----------------------------------*/
   .footer {
-    padding: 45px 35px 35px 35px;
+    padding: 45px 35px 35px;
+  }
+  .footer .footerIn {
+    display: block;
+    text-align: center;
+  }
+  .footer .infoRight {
+    display: block;
+  }
+  .footer .logoF {
+    display: block;
+    width: 100%;
   }
   .footer .text {
-    padding: 30px 0 20px 0;
+    padding: 30px 0 20px;
   }
   .footer .text .highlight {
     display: block;
@@ -832,10 +1071,41 @@ a img:hover {
     -----------------------------------*/
   .contentRight {
     width: 100%;
-    padding: 40px 0 0 0;
+    padding: 0;
   }
-  .contentRight .titleSection, .contentRight .navSidebar {
-    padding-left: 10%;
+  .contentRight .contentRightIn {
+    position: relative;
+    top: 0;
+    bottom: 30px;
+  }
+  .contentRight .titleSection {
+    border-top: 1px solid #d2d2d2;
+    padding: 20px 20px 20px 25px;
+    font-size: 1.25em;
+    line-height: 1.7em;
+  }
+  .contentRight .navSidebar {
+    border-top: 1px solid #d2d2d2;
+  }
+  .contentRight .navSidebar:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  .contentRight .navSidebar li {
+    float: left;
+    width: 50%;
+    border-bottom: 1px solid #d2d2d2;
+    line-height: 32px;
+  }
+  .contentRight .navSidebar li:nth-child(odd) {
+    border-right: 1px solid #d2d2d2;
+  }
+  .contentRight .navSidebar li a {
+    padding: 5px 15px;
+    color: #333;
   }
   .contentRight .footer2 {
     padding: 30px 0;
@@ -846,5 +1116,8 @@ a img:hover {
     -----------------------------------*/
   .pb_45_mb {
     padding-bottom: 45px;
+  }
+  .pd_top_160 {
+    padding-top: 0;
   }
 }

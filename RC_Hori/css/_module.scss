@@ -2,7 +2,7 @@ $color-1: #006db8;
 $color-2: #eeeeee;
 $color-3: #272727;
 $color-4: #d2d2d2;
-$color-5: #000;
+$color-5: #333;
 $color-6: #000;
 $color-7: #000;
 $color-8: #000;
@@ -79,6 +79,34 @@ a img {
     // padding: 0 3%;
 }
 
+.btnMain {
+    display: block;
+    max-width: 290px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    line-height: 57px;
+    height: 57px;
+    // padding: 18px 27px;
+    border: 3px solid $color-1;
+    color: $color-1;
+    font-weight: bold;
+    font-size: 16px;
+    // background: url('../images/arrowR.png') no-repeat 95%;
+    &:before {
+        content: "\f105";
+        font-size: 30px;
+        font-family: "FontAwesome";
+        position: absolute;
+        top: -3px;
+        right: 12px;
+    }
+    &:hover {
+        background: $color-1;
+        color: $color-a;
+    }
+}
 
 .titleSection {
     text-transform: uppercase;
@@ -156,4 +184,7 @@ a img {
 }
 .right {
     float: right;
+}
+.pd_top_160 {
+    padding-top: 160px;
 }

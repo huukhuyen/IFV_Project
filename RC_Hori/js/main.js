@@ -29,17 +29,33 @@ var equalheight = function(container) {
 }
 $(document).ready(function() {
     var wBrower = $(window).width();
+    var hBrower = $(window).height();
+
+    $('.btnToggle').click(function(e) {
+        $('.navMain').slideToggle();
+        return false;
+    });
+
+    $(window).load(function() {
+        equalheight('.navSidebar li');
+    });
+    $(window).resize(function() {
+        equalheight('.navSidebar li');
+    });
 
     if (wBrower <= 720) {
-
+        // $('.areaListInfo .items .second_div').insertBefore('.first_div');
     } else {
-        let hLeft = $('.contentLeft').height();
-        $('.contentRight').css("height", hLeft);
+        $('.contentRight').css("height", hBrower);
         $(window).load(function() {
             equalheight('.areaAbout .items');
+            equalheight('.areaAbout .descript');
+            equalheight('.navSidebar li');
         });
         $(window).resize(function() {
             equalheight('.areaAbout .items');
+            equalheight('.areaAbout .descript');
+            equalheight('.navSidebar li');
         });
     }
 
