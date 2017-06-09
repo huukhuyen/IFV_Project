@@ -29,15 +29,39 @@
     }
 }
 @media screen and (min-width: 781px) and (max-width: 1000px) {
+
+    .titleSection {
+
+        line-height: 1.7em;
+        // font-size: 1.25em;
+        padding: 2.5em 0 .9375em 0;
+    }
     .contentLeft {
         width: 70%;
     }
     /*----- contentRight -----*/
+    .areaBanner {
+        padding: 0 3%;
+    }
+    .areaText01 {
+        padding: 104px 10% 160px 4%;
+        p {
+            padding-bottom: 1em;
+            &:not(:first-child) {
+                padding-top: 0;
+            }
+        }
+    }
+    .areaListInfo {
+        .titleItems {
+            line-height: 1.5em;
+        }
+    }
     .contentRight {
         width: 30%;
         padding: 30px 0 0 20px;
         .contentRightIn  {
-            top: 50px;
+            top: 45px;
         }
         .footer2 {
             .info {
@@ -67,9 +91,6 @@
         .listItems {
             padding: 10px;
         }
-        .titleSection {
-            padding-bottom: 62px;
-        }
         .items {
             padding: 94px 5%;
         }
@@ -77,6 +98,13 @@
     .areaListAbout {
         .listItems {
             margin: 0;
+        }
+    }
+    .areaListInfo {
+        .items {
+            .descript {
+                padding-left: 5%;
+            }
         }
     }
 }
@@ -117,7 +145,9 @@
         display: none !important;
     }
     .titleSection {
-        font-size: 1.25em;
+        font-size: 22.5px;
+        line-height: 1.5em;
+        // font-size: 1.25em;
         padding: 2.5em 0 .9375em 0;
         span {
             // font-weight: bold;
@@ -197,7 +227,8 @@
     -----------------------------------*/
     .areaAbout {
         .titleSection {
-            padding-bottom: 30px;
+            // padding-bottom: 30px;
+            padding: 2.5em 0 .9375em 0;
         }
         .listItems {
             padding: 0 3%;
@@ -215,9 +246,9 @@
                 margin: auto;
             }
             .descript {
-                font-size: .875em;
                 padding-bottom: 22px;
                 p {
+                    font-size: .875em;
                     line-height: 1.75em;
                     padding-bottom: 1em;
                 }
@@ -234,16 +265,20 @@
         padding: 0px 7.14286% 50px 7.14286%;
         // padding: 70px 22px 50px;
         .titleSection {
-            padding-bottom: 30px;
+            // padding-bottom: 30px;
+            padding: 2.5em 0 .9375em 0;
         }
         .descript {
             // padding: 0px 5%;
-            font-size: .875em;
-            line-height: 1.75em;
             padding-bottom: 0;
             p {
+                font-size: .875em;
+                line-height: 1.75em;
                 padding-bottom: 1em;
             }
+        }
+        .pd_top_40 {
+            padding-top: 0;
         }
     }
     /*------------------
@@ -255,6 +290,11 @@
             .new {
                 left: -5px;
                 top: -35px;
+            }
+            li {
+                &:not(:last-child){
+                    padding-bottom: 15px;
+                }
             }
         }
         .nameTopic {
@@ -275,7 +315,8 @@
     .areaListAbout {
         padding: 32px 0 85px;
         .titleSection {
-            font-size: 1.25em;
+            font-size: 22.5px;
+            // font-size: 1.25em;
         }
         .listItems {
             margin: 0 auto;
@@ -285,12 +326,12 @@
         }
         .items {
             width: 50%;
-            padding: 5px;
+            padding: 12px 5px 34px 5px;
             &:nth-child(odd) {
-                padding-left: 7.14286%;
+                padding-left: 10px;
             }
             &:nth-child(even) {
-                padding-right: 7.14286%;
+                padding-right: 10px;
             }
         }
     }
@@ -321,9 +362,10 @@
     -----------------------------------*/
     .areaListInfo {
         .titleItems {
-            font-size: 1.25em;
+            font-size: 22.5px;
+            // font-size: 1.25em;
             padding: 2.5em 0 .9375em 0;
-            line-height: 1.7em;
+            line-height: 1.5em;
             // line-height: 38px;
             // font-size: 25px;
         }
@@ -343,8 +385,10 @@
                 padding-left: 0;
             }
             .detail {
-                font-size: .875em;
+                // font-size: .875em;
+                font-size: 15.5px;
                 line-height: 1.75em;
+                padding-bottom: 1em;
             }
         }
     }
@@ -357,6 +401,12 @@
             display: block;
             text-align: center;
         }
+        .infoFooter {
+            font-size: 15px;
+            .tel {
+                font-size: 30px;
+            }
+        }
         .infoRight {
             display: block;
         }
@@ -365,14 +415,17 @@
             width: 100%;
         }
         .text {
+            font-size: 18px;
             padding: 30px 0 20px;
             .highlight {
                 display: block;
                 width: 200px;
+                font-size: 15px;
                 margin: auto;
             }
         }
         .note {
+            font-size: 16px;
             padding-top: 0;
         }
     }
@@ -390,8 +443,9 @@
         .titleSection {
             border-top: 1px solid $color-4;
             padding: 20px 20px 20px 25px;
-            font-size: 1.25em;
-            line-height: 1.7em;
+            font-size: 22.5px;
+            // font-size: 1.25em;
+            line-height: 1.5em;
             // padding: 2.5em 0 .9375em 0;
         }
         .navSidebar {

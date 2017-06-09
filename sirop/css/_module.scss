@@ -1,0 +1,80 @@
+$color-1: #E67FB7;
+$color-a: #fff;
+$color-b: #2e2e2e;
+$color-o: #000; // Font
+$font-family-w6: 'Noto Sans Japanese', sans-serif; // h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h5,
+// h6 {
+//     font-family: $font-family-w6;
+// }
+a {
+    // color: $color-a;
+}
+vlink {
+    color:inherit;
+}
+%clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+}
+.clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+}
+/* -------------- Config -------------- */
+.is_mb {
+    display: none !important;
+}
+.is_tb {
+    display: none !important;
+}
+.is_pc {
+    display: inherit !important;
+}
+.clearfix {
+    clear: both;
+    display: block;
+}
+// .container {
+//     @extend %clearfix;
+//     width: 100%;
+//     max-width: 1000px;
+//     margin: 0 auto;
+//     // padding: 0 3%;
+// }
+
+.listItems {
+    @extend %clearfix;
+}
+/*====================================
+            Helper
+=====================================*/
+.inline {
+    display: inline !important;
+}
+.resetH {
+    height: inherit!important;
+}
+.tac {
+    text-align: center;
+}
+// .left {
+//     float: left;
+// }
+// .right {
+//     float: right;
+// }

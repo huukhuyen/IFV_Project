@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*** company page ***/
+
+#company {
+}
+
+#company .container {
+	margin			:	0 auto;
+    padding-bottom	:	80px;
+    width			:	1000px;
+    position		:	relative;
+}
+
+#company .container img.relative {
+	position	:	absolute;
+    top			:	144px;
+    right		:	44px;
+}
+
+#company .container .mainTop {
+	height			:	360px;
+}
+
+#company .container .mainBottom {
+	height			:	30px;
+    background		:	url(../images/common/bg_main_bottom.gif) no-repeat;
+}
+
+#company .container .mainSide {
+	background		:	#FFFFFF;
+}
+
+#company .container .main .mainInner {
+	padding			:	50px 44px 50px 50px;
+    /*height			:	375px;*/
+}
+
+#company .container .main .mainInner table {
+	width:880px;
+	border:0;
+}
+
+#company .container .main .mainInner table .left {
+    padding-right: 17px;
+    width: 325px;
+}
+
+#company .container .main .mainInner table .right {
+    width: 190px;
+}
+
+#company .container .main .mainInner td {
+	vertical-align:top;
+    margin	:	0 15px 20px;
+	width:360px;
+}
+
+#company .container .main .mainInner p {
+	font-size:.75em;
+	letter-spacing:2px;
+	line-height:1.13em;
+	padding-top:5px;
+	width			:	325px;
+}
+
+
+#company .container .main .mainInner .mainLeft {
+
+	margin-right:30px;
+    float			:	left;
+}
+
+
+
+
+#company .container .main .mainInner .mainLeft tr {
+    margin-right	:	22px;
+    display			:	block;
+    float			:	left;
+}
+
+
+
+
+#company .container .main .mainInner .mainRight {
+    float: left;
+    margin: 0 0 30px 0;
+    width: 325px;
+}
+
+
+#company .container .main .mainInner {
+    height			:	auto;
+}
+
+
+
+

@@ -111,10 +111,12 @@ a img {
 .titleSection {
     text-transform: uppercase;
     color: $color-1;
-    // font-weight: bold;
     font-size: 30px;
     text-align: center;
     line-height: 34px;
+    a {
+        color: $color-1;
+    }
     img {
         margin: auto;
         max-width: 100%;
@@ -185,6 +187,15 @@ a img {
 .right {
     float: right;
 }
+.pd_top_40 {
+    padding-top: 40px;
+}
 .pd_top_160 {
     padding-top: 160px;
+}
+
+.noIcon {
+    &:before {
+        content: "";
+    }
 }
