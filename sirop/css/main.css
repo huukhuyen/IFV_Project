@@ -632,6 +632,53 @@ vlink {
   visibility: hidden;
 }
 
+.areaDetailCompany {
+  background: #fff;
+}
+
+.areaDetailCompany:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.areaDetailCompany .titleSection {
+  font-weight: bold;
+  font-size: 26px;
+  padding: 10px 20px;
+  color: #d0177d;
+  border-bottom: 3px solid #d0177d;
+}
+
+.areaDetailCompany .leftTable {
+  float: left;
+  width: 60%;
+}
+
+.areaDetailCompany .tableDetail {
+  width: 100%;
+}
+
+.areaDetailCompany .tableDetail tr td {
+  line-height: 1.4;
+  border-bottom: 1px dotted #d0177d;
+  padding: 15px 20px 15px 0px;
+}
+
+.areaDetailCompany .tableDetail tr td:first-child {
+  min-width: 120px;
+  padding: 15px 10px 15px 15px;
+  color: #d0177d;
+}
+
+.areaDetailCompany .rightImg {
+  float: left;
+  text-align: center;
+  width: 40%;
+}
+
 #cuteArea:after {
   content: "";
   clear: both;
@@ -669,8 +716,16 @@ vlink {
 /*-----------------------------------
             For mobile
 -----------------------------------*/
+@media screen and (min-width: 781px) {
+  #top {
+    min-width: 1000px;
+    overflow-x: hidden;
+  }
+}
+
 @media screen and (max-width: 780px) {
   * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   .is_pc_tb {
@@ -786,6 +841,9 @@ vlink {
   #top .container .main .mainInner .mainLeft {
     max-width: 100%;
   }
+  #top .container .main .mainInner .mainLeft .ifArea {
+    background-size: 100% 100%;
+  }
   #top .container .main .mainInner .mainLeft .ifArea iframe {
     width: 100%;
   }
@@ -823,6 +881,13 @@ vlink {
   .wrapTab {
     min-width: 100%;
     min-height: 100%;
+  }
+  .areaDetailCompany .leftTable {
+    width: 100%;
+  }
+  .areaDetailCompany .rightImg {
+    padding: 20px 0;
+    width: 100%;
   }
   /*------------------
             footer
@@ -879,6 +944,9 @@ vlink {
   .footer .footerRight {
     display: none;
   }
+  .footer .titleFooter img {
+    max-width: 90%;
+  }
   .footer .infoMb {
     padding: 48px 0 35px;
     text-align: center;
@@ -899,12 +967,14 @@ vlink {
     height: 0;
   }
   .footer .infoD span {
-    display: block;
-    float: left;
-    width: 50%;
+    display: inline-block;
+    padding-top: 10px;
+  }
+  .footer .infoD span img {
+    width: 80%;
   }
   .footer .copyright {
-    padding-top: 7px;
+    padding-top: 15px;
     text-align: center;
     font-size: 14px;
   }
@@ -913,5 +983,8 @@ vlink {
     -----------------------------------*/
   .pd_t50_b30 {
     padding: 40px 0 30px;
+  }
+  .pd_lr_3 {
+    padding: 0 3% !important;
   }
 }

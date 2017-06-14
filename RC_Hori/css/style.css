@@ -18,9 +18,33 @@ body {
   background: #fff;
   word-wrap: break-word;
   letter-spacing: 0.1em;
-  animation: fadeIn 2s ease 0s 1 normal;
 }
 
+/* fadein css seting */
+body {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* fadeincss seting */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -130,6 +154,8 @@ small {
 }
 
 a img {
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
   transition: 0.5s linear;
 }
 
@@ -184,12 +210,11 @@ a img:hover {
   margin: auto;
   position: relative;
   text-align: center;
-  line-height: 57px;
-  height: 57px;
   border: 3px solid #006db8;
   color: #006db8;
   font-weight: bold;
   font-size: 16px;
+  padding: 12px 0;
 }
 
 .btnMain:before {
@@ -197,7 +222,7 @@ a img:hover {
   font-size: 30px;
   font-family: "FontAwesome";
   position: absolute;
-  top: -3px;
+  top: 18%;
   right: 12px;
 }
 
@@ -268,6 +293,109 @@ a img:hover {
   font-weight: bold;
 }
 
+/* Fade effect */
+.effect i {
+  height: 120px;
+  padding: 20px;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
+}
+
+.effect div {
+  margin: auto;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
+  -webkit-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  transition-delay: .2s;
+}
+
+/* hamberger Format */
+.headerMenu .menu-trigger,
+.headerMenu .menu-trigger span {
+  display: inline-block;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.headerMenu .menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.headerMenu .menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #006DB8;
+  border-radius: 4px;
+}
+
+.headerMenu .menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.headerMenu .menu-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+
+.headerMenu .menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* hamberger Tranceform */
+.headerMenu .menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  -ms-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.headerMenu .menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.headerMenu .menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  -ms-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+/* zoom scale setings */
+.scale {
+  overflow: hidden;
+}
+
+.scale img {
+  -moz-transition: -moz-transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.scale img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.h_sTtl {
+  letter-spacing: .35em;
+}
+
 /*====================================
             Helper
 =====================================*/
@@ -311,6 +439,7 @@ a img:hover {
             basic
 ====================================*/
 .main-body {
+  overflow-x: hidden;
   position: relative;
   max-width: 1366px;
   width: 100%;
@@ -321,17 +450,25 @@ a img:hover {
   max-width: 1043px;
   width: 100%;
   float: left;
-  border-right: 1px solid #d2d2d2;
 }
 
 .contentRight {
-  position: relative;
+  position: fixed;
   float: left;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #d2d2d2;
+  background: #006DB8;
 }
 
 .contentRight .contentRightIn {
   top: 80px;
   bottom: 30px;
+}
+
+.divider {
+  border-top: #D2D2D2 solid 1px;
+  margin: 30px 0;
 }
 
 /*====================================
@@ -342,29 +479,71 @@ a img:hover {
   width: 100%;
   padding-top: 48px;
   padding-left: 38px;
+  position: fixed;
+  left: 0;
+  z-index: 100;
 }
 
 .headerMenu .btnToggle {
   display: inline-block;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .headerMenu .btnToggle img {
   max-width: 70%;
 }
 
+.headerMenu .btnToggle.active {
+  margin-left: 20%;
+}
+
 .headerlogo {
-  margin-top: -22px;
-  margin-bottom: 80px;
+  padding-top: 34px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.navMain {
-  display: none;
-  padding-top: 10px;
+.navMainforSP {
+  background: #FFF;
 }
 
-.navMain li:first-child {
-  border-top: 1px solid #006db8;
+.navMainforSP li a {
+  display: block;
+  padding: 20px;
+  border-bottom: 1px solid #006db8;
+  color: #006db8;
+}
+
+.navMainforSP li a:hover {
+  background: rgba(0, 109, 184, 0.3);
+}
+
+.navMainforSP li.active a {
+  color: #fff;
+  background: #006db8;
+}
+
+.navMain {
+  background: #FFF;
+  border-right: 1px solid #006DB8;
+  position: fixed;
+  top: 0;
+  left: -20%;
+  width: 20%;
+  z-index: 9999;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.navMain.active {
+  left: 0;
+}
+
+.navMain ul {
+  height: 100vh;
 }
 
 .navMain li a {
@@ -375,8 +554,7 @@ a img:hover {
 }
 
 .navMain li a:hover {
-  color: #fff;
-  background: #006db8;
+  background: rgba(0, 109, 184, 0.3);
 }
 
 .navMain li.active a {
@@ -433,11 +611,15 @@ a img:hover {
   text-align: center;
 }
 
+.three_div {
+  line-height: 34px;
+}
+
 /*====================================
         areaInfo
 =====================================*/
 .areaInfo {
-  padding: 180px 0 150px 0;
+  padding: 180px 0 150px;
 }
 
 .areaInfo .titleSection {
@@ -450,7 +632,7 @@ a img:hover {
 
 .areaInfo .descript {
   font-size: 18px;
-  max-width: 680px;
+  max-width: 760px;
   width: 100%;
   margin: 0 auto;
   color: #006db8;
@@ -472,7 +654,7 @@ a img:hover {
   margin: 0 auto;
   border-top: 1px solid #d2d2d2;
   border-bottom: 1px solid #d2d2d2;
-  padding: 80px 0 65px 0;
+  padding: 80px 0 65px;
 }
 
 .areaTopic a {
@@ -480,7 +662,7 @@ a img:hover {
 }
 
 .areaTopic .containerTopic {
-  max-width: 680px;
+  max-width: 760px;
   width: 100%;
   margin: auto;
 }
@@ -499,6 +681,10 @@ a img:hover {
   left: -65px;
 }
 
+.areaTopic .containerTopic ul {
+  padding-bottom: 10px;
+}
+
 .areaTopic .containerTopic li {
   position: relative;
   font-size: 14px;
@@ -506,12 +692,14 @@ a img:hover {
   padding-bottom: 10px;
 }
 
-.areaTopic .containerTopic li.active .day, .areaTopic .containerTopic li.active .nameTopic {
+.areaTopic .containerTopic li.active .day,
+.areaTopic .containerTopic li.active .nameTopic {
   color: red;
   text-decoration: underline;
 }
 
-.areaTopic .containerTopic li:hover .day, .areaTopic .containerTopic li:hover .nameTopic {
+.areaTopic .containerTopic li:hover .day,
+.areaTopic .containerTopic li:hover .nameTopic {
   color: red;
   text-decoration: underline;
 }
@@ -544,22 +732,34 @@ a img:hover {
     areaListAbout
 =====================================*/
 .areaListAbout {
-  padding: 65px 0 72px 0;
+  padding: 65px 0 72px;
 }
 
 .areaListAbout .listItems {
   margin: 0 -20px;
+  text-align: center;
 }
 
 .areaListAbout .listItems:not(:first-child) {
   padding-top: 40px;
+  text-align: center;
+}
+
+.areaListAbout .listItems a {
+  color: #006db8;
+}
+
+.areaListAbout .listItems a:hover .descript {
+  color: red;
+  text-decoration: underline;
 }
 
 .areaListAbout .items {
   padding: 0 20px;
-  float: left;
-  width: 25%;
+  width: 24%;
   text-align: center;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .areaListAbout .avatar img {
@@ -578,65 +778,78 @@ a img:hover {
         footer
 =====================================*/
 .footer {
-  padding: 72px 0 240px 0;
+  padding: 32px 0 40px 0;
   background: #006db8;
+  text-align: center;
 }
 
 .footer .footerIn {
   display: table;
   width: 100%;
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
+  position: relative;
 }
 
 .footer .logoF {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  padding-bottom: 55px;
-  width: 490px;
+  width: 50%;
+}
+
+.footer .logoF img {
+  width: 240px;
 }
 
 .footer .infoRight {
   vertical-align: middle;
+  min-width: 50%;
+  text-align: left;
 }
 
 .footer .infoFooter {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 1.6;
   color: #fff;
 }
 
 .footer .infoFooter .tel {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+.footer .infoFooter .mail a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .footer .text {
   padding-top: 15px;
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
 }
 
 .footer .text .highlight {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
   background: #fff;
   color: #006db8;
   padding-left: 14px;
 }
 
 .footer .text span {
-  padding: 7px 10px 3px 2px;
+  padding: 6px 10px 4px 2px;
   display: inline-block;
   line-height: 1.6;
 }
 
 .footer .note {
   line-height: 1.6;
-  padding-top: 10px;
-  font-size: 18px;
+  padding-top: 3px;
+  font-size: 14px;
   color: #fff;
 }
 
@@ -648,14 +861,31 @@ a img:hover {
 }
 
 /*====================================
+        pageHead
+=====================================*/
+.pageHead {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.pageHead .headTtl {
+  margin: 0 auto;
+}
+
+.pageHead .headTtl img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/*====================================
         areaText01
 =====================================*/
 .areaText01 {
-  max-width: 721px;
+  max-width: 860px;
   width: 100%;
   margin: auto;
   line-height: 34px;
-  padding: 104px 75px 160px 30px;
+  padding: 120px 7% 60px;
   font-size: 18px;
   color: #006db8;
 }
@@ -669,10 +899,11 @@ a img:hover {
 =====================================*/
 .areaListInfo {
   color: #006db8;
+  padding: 20px 0;
 }
 
 .areaListInfo .titleItems {
-  line-height: 56px;
+  line-height: 1.4;
   font-size: 30px;
   padding-bottom: 20px;
 }
@@ -682,8 +913,8 @@ a img:hover {
 }
 
 .areaListInfo .items {
-  padding-bottom: 160px;
-  max-width: 721px;
+  padding: 60px 0;
+  max-width: 860px;
   margin: auto;
 }
 
@@ -694,9 +925,9 @@ a img:hover {
 
 .areaListInfo .items .descript {
   text-align: justify;
-  padding-left: 30px;
+  padding: 0 0 0 7%;
   max-width: 540px;
-  width: 100%;
+  width: 65%;
   float: left;
 }
 
@@ -705,13 +936,12 @@ a img:hover {
   font-size: 18px;
 }
 
-.areaListInfo .items:last-child {
-  text-align: center;
-}
-
-.areaListInfo .items:last-child .descript {
-  max-width: inherit;
+.areaListInfo .items .descriptEnd {
+  text-align: justify;
+  padding: 0 7%;
+  max-width: 760px;
   width: 100%;
+  float: left;
 }
 
 .areaListInfo .three_div:before {
@@ -731,14 +961,20 @@ a img:hover {
         contentRight
 =====================================*/
 .contentRight {
-  padding: 80px 0 0 50px;
+  padding: 50px 3% 0 3%;
+  z-index: 999;
 }
 
 .contentRight .titleSection {
   text-align: left;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.5em;
-  padding-bottom: 40px;
+  padding-bottom: 16px;
+  color: #FDE302;
+}
+
+.contentRight .navSidebar {
+  margin-bottom: 60px;
 }
 
 .contentRight .navSidebar li {
@@ -747,35 +983,45 @@ a img:hover {
 
 .contentRight .navSidebar li a {
   display: block;
-  color: #333;
+  color: #fff;
   font-size: 16px;
 }
 
 .contentRight .navSidebar li:hover a {
-  color: red;
+  color: #fff;
   text-decoration: underline;
 }
 
 .contentRight .footer2 {
-  color: #006db8;
+  color: #fff;
   text-align: center;
-  position: relative;
-  bottom: 0;
+  position: fixed;
+  bottom: 20px;
+}
+
+.contentRight .footer2 img {
+  width: 160px;
 }
 
 .contentRight .footer2 .info {
-  padding-top: 55px;
-  font-size: 16px;
-  line-height: 26px;
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .contentRight .footer2 .tel {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 14px;
+  margin-top: 12px;
 }
 
 .contentRight .footer2 .address {
-  font-size: 18px;
+  font-size: 14px;
+}
+
+.contentRight .footer2 .mail a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
 }
 
 /*====================================
@@ -787,7 +1033,7 @@ a img:hover {
 @media screen and (min-width: 780px) and (max-width: 870px) {
   /*----- contentRight -----*/
   .contentRight .titleSection {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     padding-bottom: 20px;
   }
@@ -798,13 +1044,31 @@ a img:hover {
     line-height: 40px;
   }
   .contentRight .navSidebar li a {
-    font-size: 14px;
+    font-size: 13px;
   }
   .contentRight .footer2 .info {
-    font-size: 15px;
+    font-size: 13px;
   }
   .contentRight .footer2 .address {
-    font-size: 15px;
+    font-size: 13px;
+  }
+  .contentRight .footer2 .mail a {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1000px) {
+  .areaInfo {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .areaTopic {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .areaTopic .containerTopic .new {
+    left: 0;
+    top: -55px;
   }
 }
 
@@ -821,7 +1085,7 @@ a img:hover {
     padding: 0 3%;
   }
   .areaText01 {
-    padding: 104px 10% 160px 4%;
+    padding: 104px 7% 80px;
   }
   .areaText01 p {
     padding-bottom: 1em;
@@ -833,8 +1097,7 @@ a img:hover {
     line-height: 1.5em;
   }
   .contentRight {
-    width: 30%;
-    padding: 30px 0 0 20px;
+    padding: 30px 0 0 4%;
   }
   .contentRight .contentRightIn {
     top: 45px;
@@ -864,18 +1127,29 @@ a img:hover {
   }
   .areaListAbout .listItems {
     margin: 0;
+    text-align: left;
+  }
+  .areaListInfo .items {
+    width: 32%;
   }
   .areaListInfo .items .descript {
-    padding-left: 5%;
+    padding: 0 3% 0 0;
+    width: 50%;
+  }
+  .areaListInfo .first_div {
+    margin-left: 7%;
   }
 }
 
 @media screen and (max-width: 1366px) and (min-width: 781px) {
+  .navMain {
+    display: block !important;
+  }
   .contentLeft {
-    max-width: 70%;
+    max-width: 72%;
   }
   .areaListInfo .items .descript {
-    max-width: 60%;
+    max-width: 80%;
   }
 }
 
@@ -895,15 +1169,35 @@ a img:hover {
     padding: 2.5em 0 .9375em 0;
   }
   .btnMain {
-    width: 290px;
+    width: 220px;
+    font-size: 12px;
+  }
+  .divider {
+    border-top: #D2D2D2 solid 1px;
+    margin: 0 auto;
+    padding: 6px 0;
+    background: #eee;
+  }
+  .navMain {
+    -webkit-transition: all 0s linear;
+    -o-transition: all 0s linear;
+    transition: all 0s linear;
   }
   /*----------Swap two div before and after----------*/
   .swapTwo {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
     display: flex !important;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     /* optional */
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .swapTwo .first_div {
@@ -912,6 +1206,7 @@ a img:hover {
     -ms-flex-order: 2;
     -webkit-order: 2;
     order: 2;
+    margin: 0 auto;
   }
   .swapTwo .second_div {
     -webkit-box-ordinal-group: 1;
@@ -931,26 +1226,48 @@ a img:hover {
             headerMenu
     -----------------------------------*/
   .headerMenu {
-    position: relative;
+    position: fixed;
     padding-top: 0px;
     padding-left: 0px;
     height: 65px;
+    background: #FFF;
+    top: 0;
+  }
+  .headerMenu .menu-trigger {
+    width: 42px;
+    height: 36px;
+  }
+  .headerMenu .menu-trigger span:nth-of-type(2) {
+    top: 16px;
+  }
+  .headerMenu .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(12px) rotate(-45deg);
+    -ms-transform: translateY(12px) rotate(-45deg);
+    transform: translateY(12px) rotate(-45deg);
   }
   .headerMenu .btnToggle {
     position: absolute;
-    left: 25px;
-    top: calc(50% - 17px);
+    left: 16px;
+    top: 16px;
   }
-  .headerMenu .btnToggle img {
-    max-width: 35px;
+  .headerMenu .btnToggle.active {
+    margin-left: 0;
   }
-  .headerMenu .logoHeaderMb {
-    position: absolute;
-    top: calc(50% - 25px);
-    left: calc(50% - 54px);
+  .logoHeaderMb {
+    text-align: center;
   }
-  .headerMenu .logoHeaderMb img {
-    max-height: 50px;
+  .logoHeaderMb img {
+    max-height: 70px;
+    margin-bottom: 20px;
+  }
+  .page--top .headerMenu {
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .page--top .headerMenu.active {
+    background-color: white;
   }
   .headerlogo {
     margin-bottom: 0;
@@ -959,9 +1276,62 @@ a img:hover {
   .headerlogo .titleLogo {
     padding-top: 40px;
   }
+  .sp_closeMenu {
+    position: fixed;
+    top: 8px;
+    right: 16px;
+    z-index: 99999;
+    display: block;
+  }
+  .page--top .sp_closeMenu {
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .page--top .headerMenu.active .sp_closeMenu {
+    opacity: 1;
+  }
+  .sp_closeMenu img {
+    width: 48px;
+  }
+  .pageHead {
+    margin-top: 50px;
+  }
+  .navMain {
+    display: none;
+    background: #FFF;
+    border-right: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  .navMain li:first-child {
+    border-top: 1px solid #006db8;
+  }
+  .navMain li:nth-child(2) {
+    border-top: 1px solid #006db8;
+  }
+  .headerMenu .menu-trigger {
+    position: relative;
+  }
+  .headerMenu .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #006DB8;
+    border-radius: 4px;
+  }
+  /* hamberger Tranceform */
   /*------------------
             areaAbout
     -----------------------------------*/
+  .areaAbout {
+    margin-top: -20px;
+  }
   .areaAbout .titleSection {
     padding: 2.5em 0 .9375em 0;
   }
@@ -999,7 +1369,7 @@ a img:hover {
     padding: 2.5em 0 .9375em 0;
   }
   .areaInfo .descript {
-    padding-bottom: 0;
+    padding-bottom: 30px;
   }
   .areaInfo .descript p {
     font-size: .875em;
@@ -1013,7 +1383,8 @@ a img:hover {
             areaTopic
     -----------------------------------*/
   .areaTopic {
-    padding: 60px 7.14286% 45px;
+    padding: 60px 7.14286% 7%;
+    max-width: 100%;
   }
   .areaTopic .containerTopic .new {
     left: -5px;
@@ -1029,6 +1400,16 @@ a img:hover {
     text-align: center;
     padding-top: 22px;
   }
+  .areaTopic .linkDetail a {
+    font-size: 12px;
+  }
+  .areaTopic .btnMain {
+    color: #006db8;
+  }
+  .areaTopic .btnMain:hover {
+    background: #006db8;
+    color: #fff;
+  }
   /*------------------
             areaListAbout
     -----------------------------------*/
@@ -1040,19 +1421,31 @@ a img:hover {
   }
   .areaListAbout .listItems {
     margin: 0 auto;
+    text-align: left;
   }
   .areaListAbout .listItems:not(:first-child) {
     padding-top: 0;
   }
   .areaListAbout .items {
-    width: 50%;
-    padding: 12px 5px 34px 5px;
+    width: 48%;
+    padding: 12px 5px 10px 5px;
+    margin: 0;
   }
   .areaListAbout .items:nth-child(odd) {
     padding-left: 10px;
   }
   .areaListAbout .items:nth-child(even) {
     padding-right: 10px;
+  }
+  /*------------------
+            SP_PageHead
+    -----------------------------------*/
+  .pageHead {
+    padding: 0 7%;
+  }
+  .pageHead .headTtl img:first-child {
+    width: 220px;
+    margin-bottom: 20px;
   }
   /*------------------
             areaBanner
@@ -1078,37 +1471,43 @@ a img:hover {
   /*------------------
             areaListInfo
     -----------------------------------*/
-  .areaListInfo .titleItems {
-    font-size: 22.5px;
-    padding: 2.5em 0 .9375em 0;
-    line-height: 1.5em;
+  .areaListInfo {
+    background: #eee;
+    padding: 20px 3.14286%;
   }
-  .areaListInfo .listItems {
-    padding: 0 7.14286%;
+  .areaListInfo .titleItems {
+    font-size: 21.5px;
+    padding: 0.85em 0 .9375em 0;
+    line-height: 1.5em;
   }
   .areaListInfo .items {
     padding-bottom: 80px;
+    background: #eee;
+    padding: 4%;
   }
   .areaListInfo .items .avatar {
     width: 100%;
     text-align: center;
-    padding-left: 0;
+    padding: 0;
   }
   .areaListInfo .items .descript {
     max-width: 100%;
     width: 100%;
-    padding-left: 0;
+    padding: 0;
   }
   .areaListInfo .items .detail {
     font-size: 15.5px;
     line-height: 1.75em;
     padding-bottom: 1em;
   }
+  .areaListInfo .items .descriptEnd {
+    padding: 0;
+  }
   /*------------------
             footer
     -----------------------------------*/
   .footer {
-    padding: 45px 35px 35px;
+    padding: 7%;
   }
   .footer .footerIn {
     display: block;
@@ -1116,29 +1515,39 @@ a img:hover {
   }
   .footer .infoFooter {
     font-size: 15px;
+    max-width: 100%;
+  }
+  .footer .infoFooter a {
+    color: #fff;
   }
   .footer .infoFooter .tel {
-    font-size: 30px;
+    font-size: 20px;
+    margin: 6px 0;
   }
   .footer .infoRight {
     display: block;
+    margin-top: 20px;
+    text-align: center;
   }
   .footer .logoF {
     display: block;
     width: 100%;
   }
+  .footer .logoF img {
+    width: 210px;
+  }
   .footer .text {
-    font-size: 18px;
-    padding: 30px 0 20px;
+    font-size: 14px;
+    padding: 10px 0 0;
   }
   .footer .text .highlight {
     display: block;
     width: 200px;
-    font-size: 15px;
+    font-size: 14px;
     margin: auto;
   }
   .footer .note {
-    font-size: 16px;
+    font-size: 13px;
     padding-top: 0;
   }
   /*------------------
@@ -1147,6 +1556,7 @@ a img:hover {
   .contentRight {
     width: 100%;
     padding: 0;
+    position: static;
   }
   .contentRight .contentRightIn {
     position: relative;
@@ -1155,12 +1565,16 @@ a img:hover {
   }
   .contentRight .titleSection {
     border-top: 1px solid #d2d2d2;
-    padding: 20px 20px 20px 25px;
+    padding: 20px 14px 20px 14px;
     font-size: 22.5px;
     line-height: 1.5em;
+    background: #FFF;
+    color: #006DB8;
   }
   .contentRight .navSidebar {
     border-top: 1px solid #d2d2d2;
+    background: #fff;
+    margin-bottom: 30px;
   }
   .contentRight .navSidebar:after {
     content: "";
@@ -1170,13 +1584,14 @@ a img:hover {
     visibility: hidden;
   }
   .contentRight .navSidebar li {
-    float: left;
-    width: 50%;
+    width: 100%;
     border-bottom: 1px solid #d2d2d2;
-    line-height: 32px;
   }
-  .contentRight .navSidebar li:nth-child(odd) {
-    border-right: 1px solid #d2d2d2;
+  .contentRight .navSidebar li:last-child {
+    border-bottom: none;
+  }
+  .contentRight .navSidebar li:hover a {
+    color: #aaa;
   }
   .contentRight .navSidebar li a {
     padding: 5px 15px;
@@ -1194,5 +1609,12 @@ a img:hover {
   }
   .pd_top_160 {
     padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .areaListAbout .items {
+    float: left;
+    width: 33.3333333%;
   }
 }

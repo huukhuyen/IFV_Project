@@ -17,8 +17,21 @@ body {
     background: #fff;
     word-wrap: break-word;
     letter-spacing:0.1em;
-    animation: fadeIn 2s ease 0s 1 normal;
 }
+/* fadein css seting */
+body {
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+/* fadeincss seting */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }

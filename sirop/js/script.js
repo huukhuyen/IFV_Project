@@ -33,13 +33,20 @@ $(document).ready(function() {
     $(".ctTab:first").show();
     $('.clickSwap img:first').addClass("active");
 
-    if (wBrower < 768) {
+    if (wBrower <= 780) {
         // Show more list product
         $('#cuteArea .toggleFour li:gt(3)').hide();
         $('#coolArea .toggleFour li:gt(3)').hide();
         $('.btnMore').click(function(e) {
-            $('#cuteArea .toggleFour li').slideDown();
-            $('#coolArea .toggleFour li').slideDown();
+            var btn1 = "../images/responsive/btn1.jpg";
+            var btn2 = "../images/responsive/btn2.jpg";
+            if($(this).find("img").attr("src") == btn1){
+                $('.btnMore img').attr("src", btn2);
+            } else {
+                $('.btnMore img').attr("src", btn1);
+            }
+            $('#cuteArea .toggleFour li').slideToggle();
+            $('#coolArea .toggleFour li').slideToggle();
             return false;
         });
     }
@@ -51,7 +58,7 @@ $(document).ready(function() {
         var activeTab = $(this).attr("data");
         $("#" + activeTab).show();
 
-        if (wBrower > 768) {
+        if (wBrower > 780) {
             if ($('.clickSwap img:first').hasClass("active")) {
                 $('#wrapContent .container .mainTop').css("border-bottom", "5px solid #F4ACDB");
             } else {

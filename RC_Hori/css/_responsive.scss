@@ -3,7 +3,7 @@
     /*----- contentRight -----*/
     .contentRight {
         .titleSection {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 30px;
             padding-bottom: 20px;
         }
@@ -14,17 +14,35 @@
             li {
                 line-height: 40px;
                 a {
-                    font-size: 14px;
+                    font-size: 13px;
                 }
             }
         }
         .footer2 {
             .info {
-                font-size: 15px;
+                font-size: 13px;
             }
             .address {
-                font-size: 15px;
+                font-size: 13px;
             }
+            .mail a {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1000px) {
+    .areaInfo {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .areaTopic {
+        padding-left: 3%;
+        padding-right: 3%;
+        .containerTopic .new {
+            left: 0;
+            top: -55px;
         }
     }
 }
@@ -44,7 +62,7 @@
         padding: 0 3%;
     }
     .areaText01 {
-        padding: 104px 10% 160px 4%;
+        padding: 104px 7% 80px;
         p {
             padding-bottom: 1em;
             &:not(:first-child) {
@@ -58,8 +76,7 @@
         }
     }
     .contentRight {
-        width: 30%;
-        padding: 30px 0 0 20px;
+        padding: 30px 0 0 4%;
         .contentRightIn  {
             top: 45px;
         }
@@ -98,42 +115,38 @@
     .areaListAbout {
         .listItems {
             margin: 0;
+            text-align: left;
         }
     }
     .areaListInfo {
         .items {
+            width: 32%;
             .descript {
-                padding-left: 5%;
+                padding: 0 3% 0 0;
+                width: 50%;
             }
+        }
+        .first_div {
+            margin-left: 7%;
         }
     }
 }
-@media screen and (max-width: 1366px)  and (min-width: 781px) {
+@media screen and (max-width: 1366px) and (min-width: 781px) {
+    .navMain {
+        display: block !important;
+    }
     .contentLeft {
-        max-width: 70%;
+        max-width: 72%;
     }
 
     .areaListInfo {
         .items {
             .descript {
-                max-width: 60%;
+                max-width: 80%;
             }
         }
     }
 }
-// @media screen and (max-width: 1200px) {
-//     .is_tb {
-//         display: inherit !important;
-//     }
-//     .hide_tb {
-//         display: none !important;
-//     }
-//
-//
-//     // .container {
-//     //     padding: 0 3%;
-//     // }
-// }
 @media screen and (max-width: 780px) {
     .is_pc_tb {
         display: none;
@@ -147,14 +160,22 @@
     .titleSection {
         font-size: 22.5px;
         line-height: 1.5em;
-        // font-size: 1.25em;
         padding: 2.5em 0 .9375em 0;
         span {
-            // font-weight: bold;
         }
     }
     .btnMain {
-        width: 290px;
+        width: 220px;
+        font-size:12px;
+    }
+    .divider{
+    	border-top:#D2D2D2 solid 1px;
+    	margin:0 auto;
+    	padding:6px 0;
+    	background:#eee;
+    }
+    .navMain {
+        transition: all 0s linear;
     }
     /*----------Swap two div before and after----------*/
     .swapTwo {
@@ -172,6 +193,7 @@
         -ms-flex-order: 2;
         -webkit-order: 2;
         order: 2;
+        margin:0 auto;
     }
     .swapTwo .second_div {
         -webkit-box-ordinal-group: 1;
@@ -190,44 +212,117 @@
     /*------------------
             headerMenu
     -----------------------------------*/
+
     .headerMenu {
-        position: relative;
+        position: fixed;
         padding-top: 0px;
         padding-left: 0px;
         height: 65px;
-        .btnToggle {
-            position: absolute;
-            left: 25px;
-            top: calc(50% - 17px);
-            img {
-                max-width: 35px;
+        background:#FFF;
+        top: 0;
+        .menu-trigger {
+            span:nth-of-type(2) {
+                top: 16px;
+            }
+            width: 42px;
+            height: 36px;
+            &.active {
+                span {
+                    &:nth-of-type(1) {
+                        transform: translateY(12px) rotate(-45deg);
+                    }
+                }
             }
         }
-        .logoHeaderMb {
+        .btnToggle {
             position: absolute;
-            top: calc(50% - 25px);
-            left: calc(50% - 54px);
-            img {
-                // max-width: 76px;
-                max-height: 50px;
+            left: 16px;
+            top: 16px;
+            &.active {
+                margin-left: 0;
             }
         }
     }
+    .logoHeaderMb {
+        text-align: center;
+        img {
+            max-height: 70px;
+            margin-bottom: 20px;
+        }
+    }
+    .page--top .headerMenu {
+		background-color:rgba(255,255,255,0);
+		transition: all 0.3s linear;
+	}
+	.page--top .headerMenu.active {
+		background-color:rgba(255,255,255,1);
+	}
     .headerlogo {
-        // margin-top: -55px;
-        // margin-bottom: 40px;
         margin-bottom: 0;
         margin-top: 0;
         .titleLogo {
             padding-top: 40px;
         }
     }
+    .sp_closeMenu{
+        position:fixed;
+        top:8px;
+        right:16px;
+        z-index:99999;
+        display: block;
+    }
+    .page--top .sp_closeMenu{
+        opacity: 0;
+        transition: all 0.3s linear;
+    }
+    .page--top .headerMenu.active .sp_closeMenu{
+        opacity: 1;
+    }
+    .sp_closeMenu img{
+        width:48px;
+    }
+    .pageHead{
+        margin-top:50px;
+    }
+    .navMain {
+        display: none;
+        background:#FFF;
+        border-right:none;
+        position:fixed;
+        top:64px;
+        left:0;
+        width:100%;
+        z-index:9999;
+    }
+    .navMain li:first-child {
+        border-top: 1px solid #006db8;
+    }
+    .navMain li:nth-child(2) {
+        border-top: 1px solid #006db8;
+    }
+    .headerMenu .menu-trigger {
+    	position: relative;
+    	// width: 36px;
+    	// height: 32px;
+    }
+    .headerMenu .menu-trigger span {
+    	position: absolute;
+    	left: 0;
+    	width: 100%;
+    	height: 4px;
+    	background-color: #006DB8;
+    	border-radius: 4px;
+    }
+    .headerMenu .menu-trigger span:nth-of-type(2) {
+    	// top: 14px;
+    }
+    /* hamberger Tranceform */
     /*------------------
             areaAbout
     -----------------------------------*/
     .areaAbout {
+        margin-top: -20px;
         .titleSection {
-            // padding-bottom: 30px;
             padding: 2.5em 0 .9375em 0;
         }
         .listItems {
@@ -254,23 +349,17 @@
                 }
             }
         }
-        // .btnAbout {
-        //     width: 280px;
-        // }
     }
     /*------------------
             areaInfo
     -----------------------------------*/
     .areaInfo {
         padding: 0px 7.14286% 50px 7.14286%;
-        // padding: 70px 22px 50px;
         .titleSection {
-            // padding-bottom: 30px;
             padding: 2.5em 0 .9375em 0;
         }
         .descript {
-            // padding: 0px 5%;
-            padding-bottom: 0;
+            padding-bottom: 30px;
             p {
                 font-size: .875em;
                 line-height: 1.75em;
@@ -285,7 +374,8 @@
             areaTopic
     -----------------------------------*/
     .areaTopic {
-        padding: 60px 7.14286% 45px;
+        padding: 60px 7.14286% 7%;
+        max-width:100%;
         .containerTopic {
             .new {
                 left: -5px;
@@ -298,15 +388,21 @@
             }
         }
         .nameTopic {
-            // max-width: 452px;
             width: 100%;
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
         }
         .linkDetail {
             text-align: center;
             padding-top: 22px;
+            a {
+                font-size: 12px;
+            }
+        }
+        .btnMain {
+            color: $color-1;
+            &:hover {
+                background: $color-1;
+                color: $color-a;
+            }
         }
     }
     /*------------------
@@ -316,17 +412,18 @@
         padding: 32px 0 85px;
         .titleSection {
             font-size: 22.5px;
-            // font-size: 1.25em;
         }
         .listItems {
             margin: 0 auto;
+            text-align:left;
             &:not(:first-child) {
                 padding-top: 0;
             }
         }
         .items {
-            width: 50%;
-            padding: 12px 5px 34px 5px;
+            width: 48%;
+            padding: 12px 5px 10px 5px;
+            margin: 0;
             &:nth-child(odd) {
                 padding-left: 10px;
             }
@@ -334,6 +431,16 @@
                 padding-right: 10px;
             }
         }
+    }
+    /*------------------
+            SP_PageHead
+    -----------------------------------*/
+    .pageHead {
+        padding:0 7%;
+    }
+    .pageHead .headTtl img:first-child {
+        width:220px;
+        margin-bottom:20px;
     }
     /*------------------
             areaBanner
@@ -347,7 +454,6 @@
     .areaText01 {
         line-height: 1.75em;
         padding: 52px 7.14286% 80px;
-        // padding: 52px 3% 80px;
         p {
             font-size: .875em;
             line-height: 1.75em;
@@ -361,34 +467,36 @@
             areaListInfo
     -----------------------------------*/
     .areaListInfo {
+        background:#eee;
+	    padding:20px 3.14286%;
         .titleItems {
-            font-size: 22.5px;
-            // font-size: 1.25em;
-            padding: 2.5em 0 .9375em 0;
+            font-size: 21.5px;
+            padding: 0.85em 0 .9375em 0;
             line-height: 1.5em;
-            // line-height: 38px;
-            // font-size: 25px;
         }
         .listItems {
-            padding: 0 7.14286%;
         }
         .items {
             padding-bottom: 80px;
+            background:#eee;
+            padding:4%;
             .avatar {
                 width: 100%;
                 text-align: center;
-                padding-left: 0;
+                padding: 0;
             }
             .descript {
                 max-width: 100%;
                 width: 100%;
-                padding-left: 0;
+                padding: 0;
             }
             .detail {
-                // font-size: .875em;
                 font-size: 15.5px;
                 line-height: 1.75em;
                 padding-bottom: 1em;
+            }
+            .descriptEnd {
+                padding:0;
             }
         }
     }
@@ -396,36 +504,46 @@
             footer
     -----------------------------------*/
     .footer {
-        padding: 45px 35px 35px;
+        padding: 7%;
         .footerIn {
             display: block;
             text-align: center;
         }
         .infoFooter {
+            a {
+                color: $color-a;
+            }
             font-size: 15px;
+            max-width:100%;
             .tel {
-                font-size: 30px;
+                font-size: 20px;
+                margin:6px 0;
             }
         }
         .infoRight {
             display: block;
+            margin-top:20px;
+            text-align:center;
         }
         .logoF {
             display: block;
             width: 100%;
+            img{
+            	width:210px;
+            }
         }
         .text {
-            font-size: 18px;
-            padding: 30px 0 20px;
+            font-size: 14px;
+            padding: 10px 0 0;
             .highlight {
                 display: block;
                 width: 200px;
-                font-size: 15px;
+                font-size: 14px;
                 margin: auto;
             }
         }
         .note {
-            font-size: 16px;
+            font-size: 13px;
             padding-top: 0;
         }
     }
@@ -435,6 +553,7 @@
     .contentRight {
         width: 100%;
         padding: 0;
+        position: static;
         .contentRightIn {
             position: relative;
             top: 0;
@@ -442,14 +561,17 @@
         }
         .titleSection {
             border-top: 1px solid $color-4;
-            padding: 20px 20px 20px 25px;
+            padding: 20px 14px 20px 14px;
             font-size: 22.5px;
-            // font-size: 1.25em;
             line-height: 1.5em;
-            // padding: 2.5em 0 .9375em 0;
+            background:#FFF;
+            color:#006DB8;
         }
         .navSidebar {
             border-top: 1px solid $color-4;
+            background:#fff;
+	        margin-bottom:30px;
+
             &:after {
                 content: "";
                 clear: both;
@@ -458,12 +580,15 @@
                 visibility: hidden;
             }
             li {
-                float: left;
-                width: 50%;
+                width: 100%;
                 border-bottom: 1px solid $color-4;
-                line-height: 32px;
-                &:nth-child(odd) {
-                    border-right: 1px solid $color-4;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    a {
+                        color: #aaa;
+                    }
                 }
                 a {
                     padding: 5px 15px;
@@ -486,4 +611,13 @@
         padding-top: 0;
     }
     // end mobile
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .areaListAbout {
+        .items {
+            float: left;
+            width: 33.3333333%;
+        }
+    }
 }

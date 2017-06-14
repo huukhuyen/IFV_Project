@@ -511,6 +511,47 @@
         visibility: hidden;
     }
 }
+.areaDetailCompany {
+    background: $color-a;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+    .titleSection {
+        font-weight: bold;
+        font-size: 26px;
+        padding: 10px 20px;
+        color: $color-2;
+        border-bottom: 3px solid $color-2;
+    }
+    .leftTable {
+        float: left;
+        width: 60%;
+    }
+    .tableDetail {
+        width: 100%;
+        tr {
+            td {
+                line-height: 1.4;
+                border-bottom: 1px dotted $color-2;
+                padding: 15px 20px 15px 0px;
+                &:first-child {
+                    min-width: 120px;
+                    padding: 15px 10px 15px 15px;
+                    color: $color-2;
+                }
+            }
+        }
+    }
+    .rightImg {
+        float: left;
+        text-align: center;
+        width: 40%;
+    }
+}
 #cuteArea:after {
     content: "";
     clear: both;

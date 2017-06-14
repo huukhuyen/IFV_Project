@@ -1,3 +1,9 @@
+@media screen and (min-width: 781px) {
+    #top {
+        min-width: 1000px;
+        overflow-x: hidden;
+    }
+}
 @media screen and (max-width: 780px) {
     * {
         box-sizing: border-box;
@@ -130,13 +136,17 @@
     #top {
         .container {
             .main {
+                // padding: 0 5%;
                 border-bottom: none;
                 .mainInner {
                     padding-bottom: 15px;
                     .mainLeft {
                         max-width: 100%;
-                        .ifArea iframe {
-                            width: 100%;
+                        .ifArea {
+                            background-size: 100% 100%;
+                            iframe {
+                                width: 100%;
+                            }
                         }
                     }
                     .mainRight {
@@ -186,6 +196,15 @@
     .wrapTab {
         min-width: 100%;
         min-height: 100%;
+    }
+    .areaDetailCompany {
+        .leftTable {
+            width: 100%;
+        }
+        .rightImg {
+            padding: 20px 0;
+            width: 100%;
+        }
     }
     /*------------------
             footer
@@ -243,6 +262,11 @@
         .footerRight {
             display: none;
         }
+        .titleFooter {
+            img {
+                max-width: 90%;
+            }
+        }
         .infoMb {
             padding: 48px 0 35px;
             text-align: center;
@@ -264,13 +288,18 @@
                 height: 0;
             }
             span {
-                display: block;
-                float: left;
-                width: 50%;
+                // max-width: 50%
+                display: inline-block;
+                // float: left;
+                // width: 50%;
+                img {
+                    width: 80%;
+                }
+                padding-top: 10px
             }
         }
         .copyright {
-            padding-top: 7px;
+            padding-top: 15px;
             text-align: center;
             font-size: 14px;
         }
@@ -280,6 +309,9 @@
     -----------------------------------*/
     .pd_t50_b30 {
         padding: 40px 0 30px;
+    }
+    .pd_lr_3 {
+        padding: 0 3%!important;
     }
     // end mobile
 }
