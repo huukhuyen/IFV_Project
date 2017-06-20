@@ -19,6 +19,7 @@
             }
         }
         .footer2 {
+            margin: 0 1%;
             .info {
                 font-size: 13px;
             }
@@ -52,7 +53,7 @@
 
         line-height: 1.7em;
         // font-size: 1.25em;
-        padding: 2.5em 0 .9375em 0;
+        padding: 0.5em 0 .9375em 0;
     }
     .contentLeft {
         width: 70%;
@@ -76,15 +77,15 @@
         }
     }
     .contentRight {
-        padding: 30px 0 0 4%;
+        padding: 30px 2% 0 2%;
         .contentRightIn  {
             top: 45px;
         }
-        .footer2 {
-            .info {
-                padding-top: 30px;
-            }
-        }
+        // .footer2 {
+        //     .info {
+        //         padding-top: 30px;
+        //     }
+        // }
     }
     /*----- header -----*/
     .headerMenu {
@@ -120,7 +121,6 @@
     }
     .areaListInfo {
         .items {
-            width: 32%;
             .descript {
                 padding: 0 3% 0 0;
                 width: 50%;
@@ -166,7 +166,7 @@
     }
     .btnMain {
         width: 220px;
-        font-size:12px;
+        font-size: 13px;
     }
     .divider{
     	border-top:#D2D2D2 solid 1px;
@@ -255,7 +255,7 @@
 		transition: all 0.3s linear;
 	}
 	.page--top .headerMenu.active {
-		background-color:rgba(255,255,255,1);
+		background-color: rgba(255,255,255,1);
 	}
     .headerlogo {
         margin-bottom: 0;
@@ -298,7 +298,7 @@
         border-top: 1px solid #006db8;
     }
     .navMain li:nth-child(2) {
-        border-top: 1px solid #006db8;
+        border-top: 1px solid #62BDF9;
     }
     .headerMenu .menu-trigger {
     	position: relative;
@@ -398,10 +398,10 @@
             }
         }
         .btnMain {
-            color: $color-1;
+            color: #62BDF9;
             &:hover {
-                background: $color-1;
-                color: $color-a;
+                background: #62BDF9;
+                color: #fff110;
             }
         }
     }
@@ -501,6 +501,144 @@
         }
     }
     /*------------------
+            Contact Page
+    -----------------------------------*/
+    .areaContact {
+        padding: 0px 7.14286%;
+        *::-webkit-input-placeholder {
+            font-size: 12px;
+        }
+        &:first-child {
+            padding: 20px 7.14286%;
+        }
+        // .areaText01{
+        //     p {
+        //     	text-align:left;
+        //     }
+        // }
+        .blockTitle {
+            padding: 0;
+        }
+        &.mgr_b_110 {
+            margin-bottom: 20px!important;
+        }
+        .areaText01{
+            padding:20px 7% 30px;
+        }
+        .formBox {
+            // margin-top:30px;
+            // margin-bottom:30px;
+            width:100%;
+            padding: 25px 0 30px 0;
+        }
+        .submitContact {
+            padding: 0;
+        }
+        .tableFormBox {
+            select {
+                width: 100%;
+                max-width: 400px;
+            }
+            tr {
+                display: block;
+                padding-bottom: 20px;
+                td {
+                    display: block;
+                    &:first-child {
+                        padding: 5px 0;
+                    }
+                    &:last-child {
+                        padding: 5px 0;
+                    }
+                    &.must{
+                        &:after {
+                            top: -34px;
+                        }
+                        &.top{
+                            &:after {
+                                top: -34px;
+                            }
+                        }
+                    }
+                    &.check{
+                        &:after {
+                            top: -25px;
+                        }
+                    }
+                    .note2 {
+                        padding: 10px 10px 10px 10px;
+                        font-size: 14px;
+                        margin-left: 0;
+                    }
+                }
+            }
+            .twoCol input {
+                width: 55%;
+            }
+        }
+    }
+
+    .modForm01 {
+        th {
+        	padding:6% 7% 0;
+        	width:auto;
+        	display:block;
+        }
+        td {
+            display:block;
+            padding:4% 7% 6%;
+            font-size:1.4em;
+            width:auto;
+        }
+    }
+    input[type="text"] {
+    	padding:10px;
+    }
+    .inputText01 {
+    	width:100%;
+    }
+    .inputText02 {
+    	width:100%;
+    }
+    .inputText03 {
+    	width:100%;
+    }
+    .inputTextZip {
+    	width:20%;
+    }
+
+    .inputItem01 {
+    	margin-top:10px;
+        &:first-child {
+            margin-top:0;
+        }
+    }
+    .radiobtn {
+    	display:inline-block;
+    	width:auto;
+    	margin-bottom:5px;
+    }
+    .textArea {
+    	width:100%;
+    	height:200px;
+    }
+    .formBtnBox {
+    	text-align:center;
+    	margin-top:20px;
+    }
+    .formBtn {
+    	font-size:1.4em;
+        &:hover{
+            opacity:1;
+        }
+    }
+
+    /* Complete */
+    .textContact01 {
+    	text-align:left;
+    	padding:0 4%;
+    }
+    /*------------------
             footer
     -----------------------------------*/
     .footer {
@@ -554,6 +692,7 @@
         width: 100%;
         padding: 0;
         position: static;
+        background: #FFF;
         .contentRightIn {
             position: relative;
             top: 0;
@@ -618,6 +757,74 @@
         .items {
             float: left;
             width: 33.3333333%;
+        }
+    }
+    .areaContact {
+        margin: 0 3%;
+        .blockTitle {
+            padding: 0;
+        }
+        &.mgr_b_110 {
+            margin-bottom: 60px!important;
+        }
+        .areaText01{
+            padding:20px 7% 30px;
+        }
+        .formBox {
+            width:100%;
+            padding: 25px 0 20px 0;
+        }
+        .submitContact {
+            padding: 30px 0;
+        }
+        .tableFormBox {
+            select {
+                width: 100%;
+                max-width: 420px;
+            }
+            input {
+                max-width: 420px;
+            }
+            textarea {
+                max-width: 420px;
+            }
+            tr {
+                padding-bottom: 20px;
+                td {
+                    &:first-child {
+                        padding: 5px 0;
+                    }
+                    &:last-child {
+                        padding: 5px 0;
+                    }
+                    &.must{
+                        &:after {
+                            right: 2%;
+                            top: 15px;
+                        }
+                        &.top{
+                            &:after {
+                                right: 2%;
+                                top: 15px;
+                            }
+                        }
+                    }
+                    &.check{
+                        &:after {
+                            right: 5%;
+                            top: 18px;
+                        }
+                    }
+                    .note2 {
+                        padding: 12px 15px 11px 15px;
+                        font-size: 14px;
+                        margin-left: 0;
+                    }
+                }
+            }
+            .twoCol input {
+                width: 60%;
+            }
         }
     }
 }

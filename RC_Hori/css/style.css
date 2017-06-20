@@ -210,8 +210,8 @@ a img:hover {
   margin: auto;
   position: relative;
   text-align: center;
-  border: 3px solid #006db8;
-  color: #006db8;
+  border: 3px solid #62BDF9;
+  color: #62BDF9;
   font-weight: bold;
   font-size: 16px;
   padding: 12px 0;
@@ -219,16 +219,16 @@ a img:hover {
 
 .btnMain:before {
   content: "\f105";
-  font-size: 30px;
+  font-size: 28px;
   font-family: "FontAwesome";
   position: absolute;
-  top: 18%;
+  top: 10px;
   right: 12px;
 }
 
 .btnMain:hover {
-  background: #006db8;
-  color: #fff;
+  background: #62BDF9;
+  color: #fff110;
 }
 
 .titleSection {
@@ -431,6 +431,10 @@ a img:hover {
   padding-top: 160px;
 }
 
+.mgr_b_110 {
+  margin-bottom: 110px !important;
+}
+
 .noIcon:before {
   content: "";
 }
@@ -439,7 +443,6 @@ a img:hover {
             basic
 ====================================*/
 .main-body {
-  overflow-x: hidden;
   position: relative;
   max-width: 1366px;
   width: 100%;
@@ -458,7 +461,7 @@ a img:hover {
   right: 0;
   top: 0;
   border-left: 1px solid #d2d2d2;
-  background: #006DB8;
+  background: #62bdf9;
 }
 
 .contentRight .contentRightIn {
@@ -527,7 +530,7 @@ a img:hover {
 
 .navMain {
   background: #FFF;
-  border-right: 1px solid #006DB8;
+  border-right: 1px solid #62BDF9;
   position: fixed;
   top: 0;
   left: -20%;
@@ -548,18 +551,19 @@ a img:hover {
 
 .navMain li a {
   display: block;
-  padding: 20px;
-  border-bottom: 1px solid #006db8;
+  padding: 26px 20px;
+  border-bottom: 1px solid #62BDF9;
   color: #006db8;
 }
 
 .navMain li a:hover {
-  background: rgba(0, 109, 184, 0.3);
+  background: rgba(98, 189, 249, 0.3);
+  color: #006DB8;
 }
 
 .navMain li.active a {
-  color: #fff;
-  background: #006db8;
+  background: #62BDF9;
+  color: #fff110;
 }
 
 /*====================================
@@ -659,6 +663,10 @@ a img:hover {
 
 .areaTopic a {
   color: #272727;
+}
+
+.areaTopic .btnDetail {
+  line-height: 34px;
 }
 
 .areaTopic .containerTopic {
@@ -774,13 +782,381 @@ a img:hover {
   color: #006db8;
 }
 
+/*
+	Contact Page
+------------------------------------------*/
+.areaContact {
+  background: #f6f6f6;
+  margin-bottom: 100px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0px 24px;
+}
+
+.areaContact:first-child {
+  padding: 20px 24px;
+}
+
+.areaContact:not(:first-child) {
+  margin-top: 3px;
+}
+
+.areaContact .blockTitle {
+  padding: 80px 0 0px 0;
+  background: #fff;
+}
+
+.areaContact .areaText01 {
+  padding: 30px 7% 60px;
+}
+
+.areaContact .areaText01 p {
+  text-align: center;
+}
+
+.areaContact .formBox {
+  max-width: 840px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 55px 0 45px 0;
+}
+
+.areaContact .formBox .pd_t_40 {
+  padding-top: 40px !important;
+}
+
+.areaContact .tableFormBox {
+  width: 100%;
+  padding: 50px 0 40px 0;
+}
+
+.areaContact .tableFormBox .vTop {
+  padding-top: 30px;
+  vertical-align: top;
+}
+
+.areaContact .tableFormBox .twoCol input {
+  width: 288px;
+}
+
+.areaContact .tableFormBox tr td {
+  font-size: 18px;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.areaContact .tableFormBox tr td:first-child {
+  width: 192px;
+  color: #006db8;
+  font-size: 18px;
+}
+
+.areaContact .tableFormBox tr td:last-child {
+  padding: 15px 0;
+}
+
+.areaContact .tableFormBox tr td.check {
+  position: relative;
+}
+
+.areaContact .tableFormBox tr td.check:after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 26px;
+  background: url("../images/check.png");
+  width: 17px;
+  height: 17px;
+}
+
+.areaContact .tableFormBox tr td.must {
+  position: relative;
+}
+
+.areaContact .tableFormBox tr td.must:after {
+  content: "必 須";
+  position: absolute;
+  right: 0;
+  top: 26px;
+  background: #e60012;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+
+.areaContact .tableFormBox tr td.must.top:after {
+  top: 18px;
+}
+
+.areaContact .tableFormBox tr td .note1 {
+  font-size: 14px;
+}
+
+.areaContact .tableFormBox tr td .note2 {
+  margin-left: 25px;
+  border-radius: 3px;
+  padding: 8px 15px 10px 15px;
+  display: inline-block;
+  background: #006db8;
+  color: #fff;
+}
+
+.areaContact .tableFormBox *::-webkit-input-placeholder {
+  color: #999;
+}
+
+.areaContact .tableFormBox input {
+  font-size: 16px;
+  border: 3px solid #eeeeee;
+  max-width: 570px;
+  width: 100%;
+}
+
+.areaContact .tableFormBox select {
+  position: relative;
+  border: 3px solid #eeeeee;
+  height: 48px;
+  padding-left: 12px;
+  min-width: 250px;
+  color: #999999;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url("../images/arrowSelect.png") no-repeat 95% 50%;
+}
+
+.areaContact .tableFormBox textarea {
+  border: 3px solid #eeeeee;
+  width: 100%;
+  max-width: 572px;
+  height: 343px;
+  padding: 4%;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #999999;
+}
+
+.areaContact .submitContact {
+  padding: 50px 0 25px;
+}
+
+.areaContact .submitContact button {
+  cursor: pointer;
+  background: transparent;
+}
+
+.areaContact .submitContact button:hover {
+  background: #62BDF9;
+}
+
+.modForm01 {
+  width: 100%;
+  font-size: .75em;
+  color: #006DB8;
+}
+
+.modForm01 tr:nth-child(2n+1) {
+  background-color: #E9F5FE;
+}
+
+.modForm01 tr:nth-child(2n) {
+  background-color: #F4FBFF;
+}
+
+.modForm01 th {
+  padding: 20px 30px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: left;
+  width: 32%;
+  vertical-align: middle;
+  position: relative;
+}
+
+.modForm01 th.must::after {
+  content: "必須";
+  display: block;
+  padding: 2px 5px;
+  color: #FFF;
+  background-color: #C00;
+  font-size: .75em;
+  position: absolute;
+  right: 20px;
+  top: 90%;
+  margin-top: -0.9em;
+  text-shadow: none;
+}
+
+.modForm01 td {
+  vertical-align: middle;
+  padding: 20px 30px 20px 0;
+  font-size: 1.4em;
+}
+
+input[type="text"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px;
+  -webkit-appearance: none;
+  border: #CCC solid 1px;
+}
+
+.inputText01 {
+  width: 300px;
+}
+
+.inputText02 {
+  width: 300px;
+}
+
+.inputText03 {
+  width: 400px;
+}
+
+.inputTextZip {
+  width: 80px;
+}
+
+.inputItem01 {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.inputItem01:first-child {
+  margin-left: 0;
+}
+
+select {
+  height: 30px;
+}
+
+.textArea {
+  width: 100%;
+  height: 200px;
+}
+
+.formBtnBox {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.formBtn {
+  font-size: 1.4em;
+  background-color: #DC1E37;
+  color: #FFF;
+  text-decoration: none;
+  height: 46px;
+  width: 180px;
+  display: inline-block;
+  text-align: center;
+  line-height: 46px;
+  -webkit-transition: background-color 0.5s ease 0s;
+  -o-transition: background-color 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
+  text-shadow: none;
+  border-radius: 3px;
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.formBtn::after {
+  content: "";
+  display: inline-block;
+  background: url(../images/common/icn_arrow01_wt.png) no-repeat center center;
+  width: 7px;
+  height: 13px;
+  margin-left: 10px;
+}
+
+.formBtn:hover {
+  background-color: #FE1E3B;
+}
+
+/* Complete */
+.contactCompleteTtl {
+  text-align: center;
+  margin: 60px 0;
+  font-size: 2.4em;
+  font-weight: bold;
+  color: #FF4364;
+}
+
+.contactCompleteInner {
+  margin-top: 70px;
+  border: #CCC solid 6px;
+  padding: 24px;
+}
+
+.contactCompleteInnerTtl {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.contactCompleteBtnBox {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.formLine {
+  margin-top: 10px;
+}
+
+.formLine:first-child {
+  margin-top: 0;
+}
+
+.formCont {
+  margin-top: 30px;
+}
+
+.formCont:first-child {
+  margin-top: 0;
+}
+
+.formContTtl {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.entryInfoInputTtl {
+  display: inline-block;
+  width: 8em;
+}
+
+.autoAddressBtn {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.contactBox03 {
+  margin-top: 40px;
+}
+
+/* confirm */
+.mw_wp_form_confirm .modForm01 th.must::after {
+  display: none;
+}
+
+/* Complete */
+.textContact01 {
+  text-align: center;
+  font-size: 1.6em;
+  margin: 50px 0;
+  line-height: 2;
+}
+
 /*====================================
         footer
 =====================================*/
 .footer {
   padding: 32px 0 40px 0;
-  background: #006db8;
   text-align: center;
+  background: #62BDF9;
 }
 
 .footer .footerIn {
@@ -836,7 +1212,7 @@ a img:hover {
   font-weight: bold;
   font-size: 12px;
   background: #fff;
-  color: #006db8;
+  color: #62BDF9;
   padding-left: 14px;
 }
 
@@ -942,6 +1318,7 @@ a img:hover {
   max-width: 760px;
   width: 100%;
   float: left;
+  max-width: 100%;
 }
 
 .areaListInfo .three_div:before {
@@ -962,6 +1339,7 @@ a img:hover {
 =====================================*/
 .contentRight {
   padding: 50px 3% 0 3%;
+  height: 100%;
   z-index: 999;
 }
 
@@ -970,7 +1348,7 @@ a img:hover {
   font-size: 26px;
   line-height: 1.5em;
   padding-bottom: 16px;
-  color: #FDE302;
+  color: #fff110;
 }
 
 .contentRight .navSidebar {
@@ -997,10 +1375,7 @@ a img:hover {
   text-align: center;
   position: fixed;
   bottom: 20px;
-}
-
-.contentRight .footer2 img {
-  width: 160px;
+  padding: 0 2%;
 }
 
 .contentRight .footer2 .info {
@@ -1046,6 +1421,9 @@ a img:hover {
   .contentRight .navSidebar li a {
     font-size: 13px;
   }
+  .contentRight .footer2 {
+    margin: 0 1%;
+  }
   .contentRight .footer2 .info {
     font-size: 13px;
   }
@@ -1075,7 +1453,7 @@ a img:hover {
 @media screen and (min-width: 781px) and (max-width: 1000px) {
   .titleSection {
     line-height: 1.7em;
-    padding: 2.5em 0 .9375em 0;
+    padding: 0.5em 0 .9375em 0;
   }
   .contentLeft {
     width: 70%;
@@ -1097,13 +1475,10 @@ a img:hover {
     line-height: 1.5em;
   }
   .contentRight {
-    padding: 30px 0 0 4%;
+    padding: 30px 2% 0 2%;
   }
   .contentRight .contentRightIn {
     top: 45px;
-  }
-  .contentRight .footer2 .info {
-    padding-top: 30px;
   }
   /*----- header -----*/
   .headerMenu .btnToggle {
@@ -1128,9 +1503,6 @@ a img:hover {
   .areaListAbout .listItems {
     margin: 0;
     text-align: left;
-  }
-  .areaListInfo .items {
-    width: 32%;
   }
   .areaListInfo .items .descript {
     padding: 0 3% 0 0;
@@ -1170,7 +1542,7 @@ a img:hover {
   }
   .btnMain {
     width: 220px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .divider {
     border-top: #D2D2D2 solid 1px;
@@ -1312,7 +1684,7 @@ a img:hover {
     border-top: 1px solid #006db8;
   }
   .navMain li:nth-child(2) {
-    border-top: 1px solid #006db8;
+    border-top: 1px solid #62BDF9;
   }
   .headerMenu .menu-trigger {
     position: relative;
@@ -1404,11 +1776,11 @@ a img:hover {
     font-size: 12px;
   }
   .areaTopic .btnMain {
-    color: #006db8;
+    color: #62BDF9;
   }
   .areaTopic .btnMain:hover {
-    background: #006db8;
-    color: #fff;
+    background: #62BDF9;
+    color: #fff110;
   }
   /*------------------
             areaListAbout
@@ -1504,6 +1876,124 @@ a img:hover {
     padding: 0;
   }
   /*------------------
+            Contact Page
+    -----------------------------------*/
+  .areaContact {
+    padding: 0px 7.14286%;
+  }
+  .areaContact *::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .areaContact:first-child {
+    padding: 20px 7.14286%;
+  }
+  .areaContact .blockTitle {
+    padding: 0;
+  }
+  .areaContact.mgr_b_110 {
+    margin-bottom: 20px !important;
+  }
+  .areaContact .areaText01 {
+    padding: 20px 7% 30px;
+  }
+  .areaContact .formBox {
+    width: 100%;
+    padding: 25px 0 30px 0;
+  }
+  .areaContact .submitContact {
+    padding: 0;
+  }
+  .areaContact .tableFormBox select {
+    width: 100%;
+    max-width: 400px;
+  }
+  .areaContact .tableFormBox tr {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .areaContact .tableFormBox tr td {
+    display: block;
+  }
+  .areaContact .tableFormBox tr td:first-child {
+    padding: 5px 0;
+  }
+  .areaContact .tableFormBox tr td:last-child {
+    padding: 5px 0;
+  }
+  .areaContact .tableFormBox tr td.must:after {
+    top: -34px;
+  }
+  .areaContact .tableFormBox tr td.must.top:after {
+    top: -34px;
+  }
+  .areaContact .tableFormBox tr td.check:after {
+    top: -25px;
+  }
+  .areaContact .tableFormBox tr td .note2 {
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .areaContact .tableFormBox .twoCol input {
+    width: 55%;
+  }
+  .modForm01 th {
+    padding: 6% 7% 0;
+    width: auto;
+    display: block;
+  }
+  .modForm01 td {
+    display: block;
+    padding: 4% 7% 6%;
+    font-size: 1.4em;
+    width: auto;
+  }
+  input[type="text"] {
+    padding: 10px;
+  }
+  .inputText01 {
+    width: 100%;
+  }
+  .inputText02 {
+    width: 100%;
+  }
+  .inputText03 {
+    width: 100%;
+  }
+  .inputTextZip {
+    width: 20%;
+  }
+  .inputItem01 {
+    margin-top: 10px;
+  }
+  .inputItem01:first-child {
+    margin-top: 0;
+  }
+  .radiobtn {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 5px;
+  }
+  .textArea {
+    width: 100%;
+    height: 200px;
+  }
+  .formBtnBox {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .formBtn {
+    font-size: 1.4em;
+  }
+  .formBtn:hover {
+    opacity: 1;
+  }
+  /* Complete */
+  .textContact01 {
+    text-align: left;
+    padding: 0 4%;
+  }
+  /*------------------
             footer
     -----------------------------------*/
   .footer {
@@ -1557,6 +2047,7 @@ a img:hover {
     width: 100%;
     padding: 0;
     position: static;
+    background: #FFF;
   }
   .contentRight .contentRightIn {
     position: relative;
@@ -1616,5 +2107,63 @@ a img:hover {
   .areaListAbout .items {
     float: left;
     width: 33.3333333%;
+  }
+  .areaContact {
+    margin: 0 3%;
+  }
+  .areaContact .blockTitle {
+    padding: 0;
+  }
+  .areaContact.mgr_b_110 {
+    margin-bottom: 60px !important;
+  }
+  .areaContact .areaText01 {
+    padding: 20px 7% 30px;
+  }
+  .areaContact .formBox {
+    width: 100%;
+    padding: 25px 0 20px 0;
+  }
+  .areaContact .submitContact {
+    padding: 30px 0;
+  }
+  .areaContact .tableFormBox select {
+    width: 100%;
+    max-width: 420px;
+  }
+  .areaContact .tableFormBox input {
+    max-width: 420px;
+  }
+  .areaContact .tableFormBox textarea {
+    max-width: 420px;
+  }
+  .areaContact .tableFormBox tr {
+    padding-bottom: 20px;
+  }
+  .areaContact .tableFormBox tr td:first-child {
+    padding: 5px 0;
+  }
+  .areaContact .tableFormBox tr td:last-child {
+    padding: 5px 0;
+  }
+  .areaContact .tableFormBox tr td.must:after {
+    right: 2%;
+    top: 15px;
+  }
+  .areaContact .tableFormBox tr td.must.top:after {
+    right: 2%;
+    top: 15px;
+  }
+  .areaContact .tableFormBox tr td.check:after {
+    right: 5%;
+    top: 18px;
+  }
+  .areaContact .tableFormBox tr td .note2 {
+    padding: 12px 15px 11px 15px;
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .areaContact .tableFormBox .twoCol input {
+    width: 60%;
   }
 }

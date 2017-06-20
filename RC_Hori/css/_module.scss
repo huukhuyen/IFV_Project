@@ -78,7 +78,6 @@ a img {
     margin: 0 auto;
     // padding: 0 3%;
 }
-
 .btnMain {
     display: block;
     max-width: 290px;
@@ -86,26 +85,23 @@ a img {
     margin: auto;
     position: relative;
     text-align: center;
-    // line-height: 57px;
-    // height: 57px;
-    // padding: 18px 27px;
-    border: 3px solid $color-1;
-    color: $color-1;
+    border:3px solid #62BDF9;
+    color: #62BDF9;
     font-weight: bold;
     font-size: 16px;
     padding:12px 0;
     // background: url('../images/arrowR.png') no-repeat 95%;
     &:before {
         content: "\f105";
-        font-size: 30px;
+        font-size: 28px;
         font-family: "FontAwesome";
         position: absolute;
-        top: 18%;
+        top: 10px;
         right: 12px;
     }
     &:hover {
-        background: $color-1;
-        color: $color-a;
+        background:#62BDF9;
+        color:#fff110;
     }
 }
 
@@ -266,6 +262,9 @@ a img {
 }
 .pd_top_160 {
     padding-top: 160px;
+}
+.mgr_b_110 {
+    margin-bottom: 110px!important;
 }
 .noIcon {
     &:before {
