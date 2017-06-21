@@ -21,7 +21,11 @@ $(document).ready(function() {
 
     // Slider-in menu left
     $('.gnav').css("left", "0");
-
+    // $('.gnav .gnav-options_items').hover(function() {
+    //     $('.gnav .nav-background').css("visibility", "visible");
+    // }, function() {
+    //     $('.gnav .nav-background').css("visibility", "visible");
+    // });
     // Fade title slider
     $('.sectionSlider .titleSection').css({
         "opacity": "1",

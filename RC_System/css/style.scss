@@ -97,8 +97,31 @@
                     visibility: visible;
                     transform: rotateY(0);
                 }
+                .nav-background {
+                    // width: 1000px;
+                    transition-delay: 0.1s;
+                    visibility: visible;
+                    transform: rotateY(0);
+                }
             }
         }
+    }
+    .nav-background {
+        position: fixed;
+        z-index: -1;
+        width: 200px;
+        left: 180px;
+        top: -300px;
+        // bottom: 0;
+        height: 2000px;
+        background-color: #ede8e8;
+        visibility: hidden;
+        transform: rotateY(78deg);
+        transform-origin: 0 0 0;
+        // transition: .5s all;
+        transition-duration: 0.1s, 0.1s;
+        transition-timing-function: ease, ease-out;
+        transition-delay: 0.4s;
     }
     .gnav-secondary-options {
         position: fixed;
@@ -112,7 +135,7 @@
         visibility: hidden;
         transform: rotateY(78deg);
         transform-origin: 0 0 0;
-        transition: all 0.1s;
+        transition: all 0.3s;
         li {
             > a {
                 text-align: left;
