@@ -55,9 +55,13 @@
                             <ul>
                                 <li><a href="about.html">ご挨拶</a></li>
                                 <li><a href="about2.html">会社概要</a></li>
-								<li><a href="about3.html">LASの会</a></li>
+                                <li><a href="about3.html">LASの会</a></li>
                                 <li><a href="access.html">アクセス</a></li>
                             </ul>
+                        </div>
+
+                        <div class="nav-background">
+                            <div class="navBg"></div>
                         </div>
                     </li>
                     <li class="gnav-options_items">
@@ -65,10 +69,13 @@
                         <div class="gnav-secondary-options">
                             <ul>
                                 <li><a href="product.html">製品案内トップ</a></li>
-								<li><a href="product2.html">新聞社向け</a></li>
+                                <li><a href="product2.html">新聞社向け</a></li>
                                 <li><a href="product3.html">折込チラシ業向け</a></li>
                                 <li><a href="product4.html">その他システム・製品</a></li>
                             </ul>
+                        </div>
+                        <div class="nav-background">
+                            <div class="navBg"></div>
                         </div>
                     </li>
                     <li class="gnav-options_items">
@@ -80,6 +87,7 @@
                 </ul>
             </div>
         </nav>
+
         <!-- /.gnav-options-->
         <nav class="gnav-links">
             <ul>
@@ -102,23 +110,133 @@
         <div class="sectionBreadcrumb">
             <div class="content">
                 <h2 class="title"><img class="is_pc_tb" src="images/subpage/breadcrumb_contact.png" alt="CONTACT"><span class="is_mb">CONTACT</span></h2>
-                <p class="name"><img class="is_pc_tb" src="images/subpage/breadcrumb_n_contact.png" alt="お問い合わせ"><span class="is_mb">お問い合わせ</span></p>
+                <p class="name"><img class="is_pc_tb" src="images/subpage/breadcrumb_n_nontact.png" alt="お問い合わせ"><span class="is_mb">お問い合わせ</span></p>
             </div>
             <div class="note">※背景イメージ写真</div>
         </div>
         <!-- /sectionThumbnail -->
-        <div class="sectionAccess">
+
+        <div class="sectionProduct01">
             <div class="container">
-                <h2 class="titleSection"><img src="images/subpage/title_contact.png" alt="お問い合わせ" class="is_pc"><span class="is_mb">お問い合わせ</span></h2>
-				<img src="images/subpage/dummycontents.jpg">
+                <!--<h2 class="titleSection"><img src="../images/subpage/title_contact.png" alt="お問い合わせ" class="is_pc"><span class="is_mb">お問い合わせ</span></h2>-->
+                <div class="description">
+				<p class="center">システマックのWEBサイトにアクセスいただき、ありがとうございます。<br>下記ご記入の上、お問い合わせ内容をご確認ください。
+                </p>
+                <div class="contentMail">
+                    <form method="post" action="" enctype="multipart/form-data">
+                        <table class="modForm01">
+                            <tbody>
+                                <tr>
+                                    <th class="must">お問い合わせ種別：</th>
+                                    <td>
+                                        <select name="cms-type" class="selectType validate[required]">
+                                            <option value="一般的なお問い合わせ">一般的なお問い合わせ</option>
+                                            <option value="製品について">製品について</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="must">ご担当者名：</th>
+                                    <td><input type="text" name="cms-name" class="inputText01 validate[required]" size="60" placeholder="資州手間 太郎"></td>
+                                </tr>
+                                <tr>
+                                    <th class="must">ふりがな：</th>
+                                    <td><input type="text" name="cms-kana" class="inputText01 validate[required,custom[katakana]]" size="60" placeholder="しすてま たろう"></td>
+                                </tr>
+                                <tr>
+                                    <th>会社名：</th>
+                                    <td><input type="text" name="cms-company" class="inputText01" size="60"></td>
+                                </tr>
+                                <tr>
+                                    <th>部署名：</th>
+                                    <td><input type="text" name="cms-busyo" class="inputText01" size="60"></td>
+                                </tr>
+                                <tr>
+                                    <th>業種・分野：</th>
+                                    <td><input type="text" name="cms-gyosyu" class="inputText01" size="60"</td>
+                                </tr>
+                                <tr>
+                                    <th class="must">ご住所：</th>
+                                    <td>
+                                        <p class="formLine"><span class="pr10">〒</span><input type="text" name="cms-zip" id="zip" class="inputTextZip validate[required]" size="60" maxlength="3"> - <input type="text" name="cms-zip1" id="zip1" class="inputTextZip validate[required]" size="60" maxlength="4"></p>
+                                        <p class="formLine">
+                                            <select name="cms-pref" class="select04 selectPref validate[required]" id="pref">
+                                                <option value="" selected="selected">都道府県</option>
+                                                <option value="北海道">北海道</option>
+                                                <option value="青森県">青森県</option>
+                                                <option value="岩手県">岩手県</option>
+                                                <option value="宮城県">宮城県</option>
+                                                <option value="秋田県">秋田県</option>
+                                                <option value="山形県">山形県</option>
+                                                <option value="福島県">福島県</option>
+                                                <option value="茨城県">茨城県</option>
+                                                <option value="栃木県">栃木県</option>
+                                                <option value="群馬県">群馬県</option>
+                                                <option value="埼玉県">埼玉県</option>
+                                                <option value="千葉県">千葉県</option>
+                                                <option value="東京都">東京都</option>
+                                                <option value="神奈川県">神奈川県</option>
+                                                <option value="新潟県">新潟県</option>
+                                                <option value="富山県">富山県</option>
+                                                <option value="石川県">石川県</option>
+                                                <option value="福井県">福井県</option>
+                                                <option value="山梨県">山梨県</option>
+                                                <option value="長野県">長野県</option>
+                                                <option value="岐阜県">岐阜県</option>
+                                                <option value="静岡県">静岡県</option>
+                                                <option value="愛知県">愛知県</option>
+                                                <option value="三重県">三重県</option>
+                                                <option value="滋賀県">滋賀県</option>
+                                                <option value="京都府">京都府</option>
+                                                <option value="大阪府">大阪府</option>
+                                                <option value="兵庫県">兵庫県</option>
+                                                <option value="奈良県">奈良県</option>
+                                                <option value="和歌山県">和歌山県</option>
+                                                <option value="鳥取県">鳥取県</option>
+                                                <option value="島根県">島根県</option>
+                                                <option value="岡山県">岡山県</option>
+                                                <option value="広島県">広島県</option>
+                                                <option value="山口県">山口県</option>
+                                                <option value="徳島県">徳島県</option>
+                                                <option value="香川県">香川県</option>
+                                                <option value="愛媛県">愛媛県</option>
+                                                <option value="高知県">高知県</option>
+                                                <option value="福岡県">福岡県</option>
+                                                <option value="佐賀県">佐賀県</option>
+                                                <option value="長崎県">長崎県</option>
+                                                <option value="熊本県">熊本県</option>
+                                                <option value="大分県">大分県</option>
+                                                <option value="宮崎県">宮崎県</option>
+                                                <option value="鹿児島県">鹿児島県</option>
+                                                <option value="沖縄県">沖縄県</option>
+                                            </select>
+                                        </p>
+                                        <p class="formLine"><input type="text" name="cms-addr" id="addr" class="inputText03 validate[required]" size="60" placeholder="市区町村名"></p>
+                                        <p class="formLine"><input type="text" name="cms-address01_2" class="inputText03 validate[required]" size="60" placeholder="番地、建物名、部屋番号"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>FAX番号：</th>
+                                    <td><?php print $errmsg['fax']; ?></span><input type="text" name="cms-fax" class="inputText02" size="60"></td>
+                                </tr>
+                                <tr>
+                                    <th class="must">メールアドレス：</th>
+                                    <td><input type="text" name="cms-mail" class="inputText02 validate[required,custom[email]]" size="60"></td>
+                                </tr>
+                                <tr>
+                                    <th class="must">お問い合わせ内容：</th>
+                                    <td><span></span><textarea name="cms-inquirybody" class="textArea validate[required]" cols="50" rows="5"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="formBtnBox"><button type="submit" name="cms-submitConfirm" class="formBtn">確認する</button></div>
+                    </form>
+                </div>
             </div>
         </div>
-        <!-- /sectionAbout01 -->
-
-        <!-- /sectionThumbnail -->
-
-    </section>
     <!-- /Content body -->
+	</section>
+	<!-- /sectionAbout01 -->
 
     <!-- ============= Footer ============= -->
 
