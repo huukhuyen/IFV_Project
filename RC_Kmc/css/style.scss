@@ -3,11 +3,14 @@
 /*====================================
             navFixed
 =====================================*/
+.page-top .navFixed {
+    display: none;
+}
 .navFixed {
     width: 100%;
     padding: 0;
     background: rgba(18,166,235,0.28);
-    display: none;
+    display: block;
     position: fixed;
     text-shadow: 0 0 8px #004463;
     top: 0;
@@ -759,7 +762,7 @@
     .description {
         width: 50%;
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: top;
         .name {
             font-size: 20px;
             color: $color-1;

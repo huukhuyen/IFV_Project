@@ -18,10 +18,12 @@ require( dirname(__FILE__) . "/lib/cls_session.php" );
 require( dirname(__FILE__) . "/lib/cls_string.php" );
 require( dirname(__FILE__) . "/lib/cls_fileupload.php" );
 require( dirname(__FILE__) . "/lib/qdmail.php" );
+require( dirname(__FILE__) . "/lib/qdsmtp.php" );
 require( dirname(__FILE__) . "/conf/validate_message_mail.php" );
 
 //サイトトップのURL（末尾に/を入れること）
-define("SITE_URL","http://test-up.jp/00sample/mailform/");
+define("SITE_URL","http://test-up.jp/shinwakensou/");
+//define("SITE_URL","http://www.shinwakensou.com/");
 
 //ファイルのアップロードディレクトリ
 define("UPLOAD_MAIL_DIR","/../../_upload/mail/");

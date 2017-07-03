@@ -68,7 +68,7 @@ $(document).ready(function() {
     });
 
     // Custom header
-    var sticky = $('.navFixed');
+    var sticky = $('.page-top .navFixed');
     setTimeout(function() {
         $(sticky).slideDown();
     }, 1100);

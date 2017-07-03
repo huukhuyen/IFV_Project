@@ -6,7 +6,7 @@ define("MAIL_FLG", 0);
 
 //テスト用:::::::::::::::::::::::::::::::::::::::
 //管理者宛メールの送信先のメールアドレス（テスト）
-define("MAIL_TO_TEST", "rocoz@rocoz.cc");
+define("MAIL_TO_TEST", "akit@rocoz.cc");
 
 //管理者宛メールの送信先のメールCC（テスト）※空欄の場合はCCを送らない
 define("MAIL_CC_TEST", "");
@@ -20,7 +20,7 @@ define("MAIL_RETURN_FROM_TEST", "");
 
 //本番用::::::::::::::::::::::::::::::::::::::::::
 //管理者宛メールの送信先のメールアドレス（本番）
-define("MAIL_TO", "info@nisseihs.ed.jp");
+define("MAIL_TO", "akit@rocoz.cc");
 
 //管理者宛メールの送信先のメールアドレスCC（本番）※空欄の場合はCCを送らない
 define("MAIL_CC", "");
