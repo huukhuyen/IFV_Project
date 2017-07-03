@@ -76,7 +76,6 @@ $(document).ready(function() {
     // Fade logo slider
     $(".blockSlider .logoSlider").delay(1000).fadeIn('1000');
 
-
     // Active scroll navTop
     $(window).scroll(function(event) {
         if ($(this).scrollTop() > 88) {
