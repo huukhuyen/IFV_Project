@@ -175,16 +175,30 @@
             left: 0;
             bottom: 0;
             right: 0;
+            img {
+                width: auto;
+                max-width: 100%;
+                min-height: inherit!important;
+            }
         }
         .sliderMain {
-            background: $color-a;
+            // background: $color-a;
             .oc {
+                &:nth-child(2) {
+                    background: url('../images/mainslider_sp02.png');
+                }
+                &:nth-child(3) {
+                    background: url('../images/mainslider_sp03.png');
+                }
+                &:nth-child(4) {
+                    background: url('../images/mainslider_sp04.png');
+                }
                 background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: top center;
                 img {
                     min-height: 640px;
-                    top: 72px;
+                    // top: 72px;
                     width: 100%;
                 }
             }

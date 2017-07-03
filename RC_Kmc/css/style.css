@@ -758,9 +758,12 @@ h1, h2, h3 { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; }
   /*------------------ blockSlider -----------------------------------*/
   .blockSlider { min-height: 490px; }
   .blockSlider .logoSlider { display: block; z-index: 9999; width: 65%; height: 55%; overflow: auto; margin: auto; position: absolute; left: 0; bottom: 0; right: 0; }
-  .blockSlider .sliderMain { background: #fff; }
+  .blockSlider .logoSlider img { width: auto; max-width: 100%; min-height: inherit !important; }
   .blockSlider .sliderMain .oc { background-size: 100%; background-repeat: no-repeat; background-position: top center; }
-  .blockSlider .sliderMain .oc img { min-height: 640px; top: 72px; width: 100%; }
+  .blockSlider .sliderMain .oc:nth-child(2) { background: url("../images/mainslider_sp02.png"); }
+  .blockSlider .sliderMain .oc:nth-child(3) { background: url("../images/mainslider_sp03.png"); }
+  .blockSlider .sliderMain .oc:nth-child(4) { background: url("../images/mainslider_sp04.png"); }
+  .blockSlider .sliderMain .oc img { min-height: 640px; width: 100%; }
   .blockSlider .slick-dots li { margin: 0 5px; }
   .owl-controls { display: block; }
   .slick-initialized .slick-slide { height: 490px; }
