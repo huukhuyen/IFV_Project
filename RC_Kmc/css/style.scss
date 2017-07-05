@@ -249,16 +249,15 @@
             bottom: 0;
         }
         .oc {
-            &:nth-child(2) {
-                background: url('../images/bgSlider02.jpg');
-            }
-            &:nth-child(3) {
-                background: url('../images/bgSlider03.jpg');
-            }
-            &:nth-child(4) {
-                background: url('../images/bgSlider04.jpg');
-            }
-            // background: red;
+            // &:nth-child(2) {
+            //     background: url('../images/bgSlider02.jpg');
+            // }
+            // &:nth-child(3) {
+            //     background: url('../images/bgSlider03.jpg');
+            // }
+            // &:nth-child(4) {
+            //     background: url('../images/bgSlider04.jpg');
+            // }
             img {
                 width: 1200px;
             	// top: 180px;
@@ -332,6 +331,7 @@
         padding: 180px 0 55px;
         text-align: center;
         font-size: 24px;
+        line-height: 1.4;
         img {
             margin: auto;
         }
@@ -597,6 +597,9 @@
         }
     }
 }
+.blockListFoot {
+	margin:100px 0 0;
+}
 /*====================================
             blockBanner
 =====================================*/
@@ -739,19 +742,21 @@
             blockThumbnail
 =====================================*/
 .blockThumbnail {
+    padding: 70px 0 55px;
+    border-top: 1px solid #c9c9c9;
     background: $color-3;
     .items {
-        padding: 45px 0;
+        padding: 25px 0!important;
         display: table;
+        .avatar {
+            padding-right: 20px;
+            padding-left: 0;
+        }
+        .description {
+            padding-left: 20px;
+            padding-right: 30px;
+        }
         &.odd {
-            .avatar {
-                padding-right: 20px;
-                padding-left: 0;
-            }
-            .description {
-                padding-left: 45px;
-                padding-right: 30px;
-            }
         }
         &.even {
             .avatar {
@@ -881,23 +886,33 @@
 .blockSp06_01 {
     background: $color-3;
     @extend %clearfix;
-    padding: 90px 0;
+    padding: 90px 0 20px 0;
     .titleBlock {
         color: $color-2;
         padding-bottom: 55px;
     }
+    .contentblock {
+        @extend %clearfix;
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+        padding: 0 18px;
+    }
     .avatar {
         text-align: center;
+        float: left;
+    }
+    .description {
+        padding-right: 30px;
+        float: left;
+        margin: auto;
+        max-width: 460px;
+        width: 100%;
     }
     .text {
         font-size: 16px;
         line-height: 30px;
         padding-top: 62px;
-    }
-    .description {
-        margin: auto;
-        max-width: 520px;
-        width: 100%;
     }
     .note {
         text-align: right;
@@ -912,43 +927,116 @@
             blockSp06_02
 =====================================*/
 .blockSp06_02 {
-    border-top: 1px solid $color-7;
+    margin: auto;
+    // border-top: 1px solid $color-7;
     // padding: 234px 0 230px;
-    padding: 120px 0 120px;
+    padding: 120px 0 0;
     background: $color-3;
+    .container {
+        &.w8 {
+            max-width: 800px;
+            width: 100%;
+        }
+    }
     .titleBlock {
         color: $color-2;
         padding-bottom: 50px;
+        &.t2 {
+            padding-bottom: 80px;
+        }
     }
     .nameBlock {
         line-height: 40px;
         font-size: 24px;
         text-align: center;
         padding-bottom: 25px;
+        color: $color-1;
+        &.t2 {
+            padding: 80px 0 55px 0;
+        }
         img {
             margin: auto;
         }
     }
-    .text {
-        text-align: center;
-        max-width: 394px;
-        width: 100%;
-        margin: auto;
+    .textList {
+        &.t2 {
+            p {
+                padding-bottom: 30px;
+            }
+        }
+        .titsub {
+            font-weight: bold;
+            line-height: 23px;
+            font-size: 16px;
+            padding-bottom: 2px;
+        }
+        p {
+            padding-bottom: 20px;
+            padding-left: 30px;
+            line-height: 23px;
+        }
+    }
+    .noteR {
+        padding-top: 40px;
+        text-align: right;
         font-size: 16px;
         line-height: 30px;
-        line-height: 24px;
+    }
+    .text {
+        // text-align: center;
+        // max-width: 394px;
+        font-size: 16px;
+        line-height: 30px;
+        line-height: 30px;
+        // line-height: 24px;
+    }
+    .boxSp04 {
+        margin-top: 125px;
+        border: 5px solid $color-5;
+        padding: 45px 0 40px;
+        background: #ededeb;
+        .tBox {
+            text-align: center;
+            color: $color-2;
+            font-size: 24px;
+            padding-bottom: 40px;
+            img {
+                margin: auto;
+            }
+        }
+        .text {
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+            img {
+                margin: auto;
+            }
+        }
+        .btnBox04 {
+            padding-top: 28px;
+            text-align: center;
+            display: block;
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 /*====================================
             blockSp06_03
 =====================================*/
 .blockSp06_03 {
-    border-top: 1px solid $color-7;
+    // border-top: 1px solid $color-7;
     padding: 78px 0 112px;
     background: $color-3;
     .titleBlock {
         color: $color-2;
         padding-bottom: 50px;
+        &#plant {
+            padding-top: 50px;
+        }
     }
     .table04_03 {
         margin: auto;
@@ -987,7 +1075,7 @@
             blockSp06_04
 =====================================*/
 .blockSp06_04 {
-    border-top: 1px solid $color-7;
+    // border-top: 1px solid $color-7;
     padding-top: 78px;
     background: $color-3;
     .titleBlock {
@@ -1007,6 +1095,7 @@
         height: 720px;
     }
     .boxSp04 {
+        background: #ededeb;
         border: 5px solid $color-5;
         padding: 45px 0 40px;
         .tBox {
@@ -1217,6 +1306,11 @@
         color: $color-2;
         padding-bottom: 55px;
     }
+    .text {
+        padding: 20px 0;
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
 /*====================================
             block04_02
@@ -1248,34 +1342,141 @@
 .block04_listNews {
     background: $color-3;
     border-bottom: 1px solid $color-7;
+    .titleBlock {
+        font-size: 24px;
+        color: #12a5eb;
+        padding-bottom: 55px;
+    }
+    .wrapListNews {
+        @extend %clearfix;
+        .tab {
+            float: left;
+            width: 50%;
+            &.active {
+                display: block;
+            }
+            .list {
+                &.left {
+                    margin-left: -20px;
+                }
+                &.right {
+                    margin-right: -20px;
+                }
+            }
+            .items {
+                &:not(:first-child) {
+                    padding-top: 50px;
+                    background: url('../images/arrow_next.png') no-repeat;
+                    background-position: center top;
+                    background-size: 30px;
+                }
+            }
+        }
+        .itemT {
+            float: left;
+            width: 50%;
+            margin-bottom: 10px;
+            &:nth-child(odd) {
+                padding-left: 0;
+                padding-right: 20px;
+            }
+            &:nth-child(even) {
+                padding-right: 0;
+                padding-left: 20px;
+            }
+            span {
+                padding: 20px;
+                border: 1px solid #12a5eb;
+                display: block;
+            }
+        }
+    }
     .list {
-        margin: 0 -20px;
+        // margin: 0 -20px;
         @extend %clearfix;
     }
     .items {
         padding: 0 20px;
-        float: left;
-        width: 50%;
+        // float: left;
+        // width: 50%;
+    }
+    .nameBlock {
+        text-align: center;
+        line-height: 40px;
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 25px;
+        color: #002638;
     }
     .description {
-        padding: 24px 0 60px;
+        // padding: 24px 0 60px;
+        padding: 24px 0 35px;
     }
     .itemT {
         font-size: 18px;
         color: $color-2;
-        padding-bottom: 20px;
+        padding: 0 20px 20px 20px;
+        text-align: center;
         a {
             color: $color-2;
         }
     }
     .text {
-        line-height: 24px;
+        line-height: 30px;
+        // line-height: 24px;
         min-height: 67px;
+        font-size: 16px;
+    }
+    .banner {
+        .titleBlock {
+            padding-bottom: 30px;
+        }
+        .note {
+            padding: 15px 0 0 0;
+        }
+        .noteThumbnail {
+            margin-top: 20px;
+            background: $color-a;
+            padding: 28px 48px;
+            line-height: 24px;
+            border: 5px solid #edecea;
+            margin-bottom: 42px;
+        }
+    }
+    .listProcess01 {
+        margin: 0 -10px;
+        @extend %clearfix;
+        .items2 {
+            padding: 0 10px;
+            float: left;
+            width: 33.3333333%;
+        }
+        .itemT {
+            width: 100%;
+        }
+        .note {
+            padding: 10px 0;
+        }
+        .titleTab {
+            padding: 0 10px 10px;
+            @extend %clearfix;
+            .itemT {
+                float: left;
+                width: 33.3333333%;
+            }
+        }
     }
     .h95 {
         min-height: 95px;
     }
+    .btnContact {
+        padding: 50px 0;
+    }
 }
+// .block04_listNews2 {
+//     background: $color-3;
+//     border-bottom: 1px solid $color-7;
+// }
 /*====================================
             block04_path
 =====================================*/
