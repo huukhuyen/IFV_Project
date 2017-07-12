@@ -38,30 +38,41 @@ $(document).ready(function() {
         equalheight('.navSidebar li');
     });
 
-    if (wBrower <= 720) {
-        // $('.areaListInfo .items .second_div').insertBefore('.first_div');
+    if (wBrower <= 780) {
+        $('.navMain').height(hBrower);
+        $('.subNavL3').removeClass('subNavL3').addClass('subNavL3sp');
+        $(".navMain a").click(function(event) {
+            $(this).toggleClass('icon2');
+        });
+        $('.subNavL3sp').hide();
+        $('.navMain .subNavL2>a').click(function(event) {
+            $(this).next().slideToggle();
+            return false;
+        });
+        $('.activeSub').parents('.subNavL2').children('a').addClass('active3');
+
     } else {
         $('.contentRight').css("height", hBrower);
+        let wNav = $('.navMain').width()+1;
+        $('.navMain .subNavL3 li').css('left', wNav);
+
+        $('.activeSub').parents('.subNavL2').addClass('active');
+
         $(window).load(function() {
-            equalheight('.areaAbout .items');
+            // equalheight('.areaAbout .items');
             equalheight('.areaAbout .descript');
+            equalheight('.areaAbout .titleSection');
             equalheight('.navSidebar li');
         });
         $(window).resize(function() {
-            equalheight('.areaAbout .items');
+            // equalheight('.areaAbout .items');
             equalheight('.areaAbout .descript');
+            equalheight('.areaAbout .titleSection');
             equalheight('.navSidebar li');
         });
     }
 
 });
-
-// div要素をfadein
-//$('div').hide().fadeIn(300);
-
-// class'showUp'をdiv要素に追加
-//$('div').addClass('showUp');
-
 
 // div要素をスクロールでfadein
 $(function() {
@@ -136,6 +147,7 @@ $(function() {
     //	$(window).on('resize',widthResizeSetting);
 
     $('.btnToggle').click(function(e) {
+		var scroll = $(window).scrollTop();
         var winWidth = window.innerWidth ? window.innerWidth : $(window).width();
         if (winWidth > 780) {
             $(this).toggleClass('active');
@@ -143,6 +155,9 @@ $(function() {
         } else if (winWidth <= 780) {
             $(this).toggleClass('active');
             $('.navMain').slideToggle();
+			if(scroll <= 1){
+				$('.headerMenu').toggleClass('active');
+			}
         }
         return false;
     });
@@ -157,22 +172,6 @@ $(function() {
     });
 
 });
-//$(function(){
-//	$('.anim div').hide();
-//	});
-//	var i = 0;
-//	var int=0;
-//	$(window).bind("load", function() {
-//	var int=setInterval("doFade(i)",500);
-//	});
-//	function doFade() {
-//	var list = $('.anim div').length;
-//	if (i >= list) {
-//	clearInterval(int);
-//	}
-//	$('.anim div').eq(i).fadeIn(300);
-//	i++;
-//}
 
 
 // Change view settings

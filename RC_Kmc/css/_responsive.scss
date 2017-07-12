@@ -58,6 +58,9 @@
     }
 }
 @media screen and (max-width: 780px) {
+    h1, h2, h3 {
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif, sans-serif;
+    }
     body {
         background: $color-a;
     }
@@ -125,36 +128,33 @@
         display: inline-block;
         a {
             img {
-                width: 100px;
+                width: 90px;
+                // width: 90%;
             }
         }
     }
     .toggleMb {
-        position: absolute;
-    }
-    .toggleMb {
         cursor: pointer;
         position: absolute;
-        top: 0;
+        top: 1px;
         right: 0;
         width: 100%;
         z-index: 9999999;
         .buttonT {
             position: absolute;
-            border-radius: 50%;
-            top: 10px;
+            top: 16px;
             right: 10px;
-            background: #FFF;
-            width: 50px;
-            height: 50px;
-            border: 2px solid #a9a9a9;
+            width: 60px;
+            height: 36px;
             padding-top: 4px;
+            padding-left:10px;
+            border-left:1px solid #a9a9a9;
         }
         span {
             display: block;
             width: 55%;
-            height: 2px;
-            margin: 8px auto;
+            height: 4px;
+            margin: 4px auto;
             background: #a9a9a9;
         }
     }
@@ -213,10 +213,27 @@
     .slick-initialized .slick-slide {
         height: 490px;
     }
+    .blockSlider .sliderMain .oc{
+        background-size:cover!important;
+    }
+
     /*------------------
-            blockNews
+        commonParts
     -----------------------------------*/
-    .blockNews {
+    .titleBlock{
+        font-size:22px;
+    }
+    .description{
+        letter-spacing:.15em;
+        line-height:1.6!important;
+    }
+    .nameBlock{
+        font-size:22px!important;
+    }
+    /*------------------
+            blockHome_02
+    -----------------------------------*/
+    .blockHome_02 {
         .item {
             display: block;
             padding: 10px;
@@ -244,8 +261,8 @@
                 // text-align: center;
             }
             .titleI {
-                text-align: center;
-                font-size: 20px;
+                // text-align: center;
+                font-size: 18px;
                 max-width: 100%;
                 padding: 16px 0;
                 line-height: 25px;
@@ -317,6 +334,7 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: baseline;
+                padding-left: 0;
                 a {
                     width: 100%;
                     display: block;
@@ -326,15 +344,19 @@
         }
     }
     /*------------------
-            blockAbout
+            blockHome_01
     -----------------------------------*/
-    .blockAbout {
-        background: rgba(0, 0, 0, 0) url("../images/backg01_sp.jpg") repeat fixed center center / cover;
+    .blockHome_01 {
+        // background: rgba(0, 0, 0, 0) url("../images/backg01_sp.jpg") repeat fixed center center / cover;
+        background: none;
         min-height: 540px;
         width: 100%;
         h1 {
+            font-size: 22px;
             line-height: 35px;
             padding: 80px 0 55px;
+            padding-left: 5%;
+            padding-right: 5%;
         }
         .description {
             font-size: 16px;
@@ -348,16 +370,52 @@
         .mapInfo {
             border: none;
             padding: 5%;
+            margin:15px 0;
             p {
                 font-size: 16px;
                 line-height: 22px;
             }
         }
+        .btnOn1 img {
+        	width:280px;
+        }
     }
     /*------------------
-            block02
+            blockHome_03
     -----------------------------------*/
-    .block02 {
+    .blockHome_03 {
+        .description {
+           font-size: 16px;
+           line-height: 22px;
+           padding: 0 5% 50px;
+        }
+    }
+    /*------------------
+            blockHome_04
+    -----------------------------------*/
+    .blockHome_04 {
+        margin-top: 20px;
+        .mapInfo {
+            border: none;
+            position: relative;
+            top: 0;
+            right: 0;
+            padding: 5%;
+            margin: 15px 3%;
+            p {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        #mapIframe {
+            height: 320px;
+            padding: 0 3%;
+        }
+    }
+    /*------------------
+            blockHome_05
+    -----------------------------------*/
+    .blockHome_05 {
         background: transparent;
         background-attachment: inherit;
         // background-size: cover;
@@ -380,37 +438,30 @@
             padding: 27px 0;
         }
         .txt02 {
-            line-height: 22px;
+            padding:0 5%;
         }
     }
     /*------------------
-            blockMap
+            blockService_banner
     -----------------------------------*/
-    .blockMap {
-        margin-top: 20px;
-        .mapInfo {
-            border: none;
-            position: relative;
-            top: 0;
-            right: 0;
-            padding: 5%;
-            margin: 15px 3%;
-            p {
-                font-size: 16px;
-                line-height: 22px;
-            }
-        }
-        #mapIframe {
-            height: 320px;
-            padding: 0 3%;
-        }
+    .blockService_banner {
+        // padding: 30px 0 40px 0;
     }
     /*------------------
-            blockInfo
+            blockService_01
     -----------------------------------*/
-    .blockInfo {
+    .blockService_01 {
+        .titleBlock{
+            padding-left: 5%;
+            padding-right: 5%;
+            text-align: left;
+    		font-size: 22px;
+    	}
         .tableInfo {
             position: relative;
+            background: #f7f6f2;
+            border: none;
+            padding: 35px 3%;
             &:after {
                 content: "";
                 position: absolute;
@@ -429,16 +480,26 @@
                 left: -3%;
                 bottom: 0;
             }
-            background: #f7f6f2;
-            border: none;
-            // border-top: 5px solid #edecea;
-            // border-bottom: 5px solid #edecea;
-            padding: 35px 3%;
+            table {
+                width: 100%;
+            }
             td {
+                display: block;
                 line-height: 24px;
-                &:first-child {
-                    width: 115px;
-                    vertical-align: top;
+                padding: 12px 10px 12px 10px;
+                &:nth-child(even) {
+                    padding-left: 10px;
+                    border-bottom: 1px solid $color-7;
+                }
+            }
+            tr {
+                td {
+                    &:first-child {
+                        border-right: 0;
+                        width: 100%;
+                        padding: 12px 10px 5px 10px;
+                        vertical-align: top;
+                    }
                 }
             }
         }
@@ -448,20 +509,25 @@
         }
     }
     /*------------------
-            blockAbout02
+            blockService_02
     -----------------------------------*/
-    .blockAbout02 {
+    .blockService_02 {
+        .headingBlock02 {
+            // padding-left: 5%;
+            // padding-right: 5%;
+        }
         .description {
             font-size: 16px;
+            padding:0 5%;
         }
     }
     /*------------------
-            blockTable02
+            blockService_03
     -----------------------------------*/
-    .blockTable02 {
+    .blockService_03 {
         padding-bottom: 30px;
     }
-    .blockTable02 {
+    .blockService_03 {
         .table02 {
             thead {
                 tr {
@@ -484,13 +550,27 @@
     /*------------------
             blockP
     -----------------------------------*/
-    .blockP {
+    .blockService_04 {
         .items {
             width: 100%;
         }
         .description {
             .name {
                 font-size: 16px;
+            }
+        }
+        .more {
+            font-family: 'Noto Sans Japanese', sans-serif, sans-serif;
+            font-weight:700;
+            background: url("../images/subPage/arrowRw.png") no-repeat 74% 48% #12a5eb;
+            text-align: center;
+            max-width:280px;
+            margin:30px auto 50px;
+            a {
+                display: block;
+                padding: 16px 18px;
+                /*color: #12a5eb;*/
+                color: #fff;
             }
         }
     }
@@ -513,9 +593,14 @@
             width: 100%;
             padding-left: 0 !important;
             padding-right: 0 !important;
+            margin: 0;
             .name {
                 text-align: center;
-                font-size: 24px;
+                font-size: 22px;
+            }
+            p {
+                font-size:16px;
+                padding:0 3%;
             }
         }
         .noteThumbnail {
@@ -529,6 +614,9 @@
     .blockBtnBottom {
         .btnOn {
             margin-bottom: 30px;
+            img {
+                width:280px;
+            }
         }
         .description {
             font-size: 16px;
@@ -540,10 +628,13 @@
             margin-bottom: 30px;
         }
     }
+    .blockHome_02 .item .btnMore img{
+        width:280px;
+    }
     /*------------------
-            block04_listNews
+            blockProcess_02
     -----------------------------------*/
-    .block04_listNews {
+    .blockProcess_02 {
         .list {
             margin: 0;
         }
@@ -557,13 +648,16 @@
             }
         }
         .itemT {
+            font-size:14px;
             padding: 5px;
             text-align: center;
+            background: #fff;
+            color: #12a5eb;
             transition-duration: 0ms;
             span.active {
                 transition-duration: 0ms;
-                background: $color-2;
-                color: $color-a;
+                background: #12a5eb!important;
+                color: $color-a!important;;
             }
             &.left {
                 padding-left: 0;
@@ -576,6 +670,7 @@
         }
         .text {
             min-height: inherit!important;
+            padding:0 3%;
         }
         .wrapListNews {
             .tab {
@@ -620,12 +715,17 @@
                     background: $color-2;
                     color: $color-a;
                 }
+                span {
+                    border: 1px solid #12a5eb;
+                    background:#fff;
+                    color:#12a5eb;
+                }
             }
         }
     }
 
     /*------------------
-            block04_path
+            blockProcess_03
     -----------------------------------*/
     .zoomer_wrapper {
         /*border: 1px solid #ddd;*/
@@ -636,20 +736,36 @@
         width: 100%;
     }
     /*------------------
+            blockProcess_04
+    -----------------------------------*/
+    .blockProcess_04 .description{
+        font-size: 16px;
+        line-height: 22px;
+        margin: auto auto 30px;
+        max-width: 100%;
+        text-align: center;
+        width: 100%;
+    }
+    /*------------------
+            block04_03
+    -----------------------------------*/
+    /*------------------
             block05_01
     -----------------------------------*/
     .block05_01 {
         .text {
             line-height: 24px;
+            text-align:left;
         }
         .nameBlock {
+            font-size: 22px;
             line-height: 35px;
         }
     }
     /*------------------
-            blockSp06_01
+            blockAbout_01
     -----------------------------------*/
-    .blockSp06_01 {
+    .blockAbout_01 {
         .text {
             line-height: 22px;
         }
@@ -663,37 +779,63 @@
         }
         .description {
             order: 2;
+            padding: 0;
             padding-right: 0;
         }
-    }
-    /*------------------
-            blockSp06_02
-    -----------------------------------*/
-    .blockSp06_02 {
-        padding: 60px 0;
-        .nameBlock {
-            font-size: 20px;
-            line-height: 35px;
+        .note{
+            font-size:16px;
+            .bold{
+                font-size:20px;
+            }
         }
     }
     /*------------------
-            blockSp06_03
+            blockAbout_02
     -----------------------------------*/
-    .blockSp06_03 {
+    .blockAbout_02 {
+        padding: 60px 0;
+        .nameBlock {
+            font-size: 22px;
+            line-height: 35px;
+        }
+        .text{
+            padding:0 5%;
+        }
+        dt{
+            text-align:center;
+            margin-bottom:15px;
+        }
+        .textList p {
+            padding:0 5% 30px;
+        }
+    }
+    /*------------------
+            blockAbout_03
+    -----------------------------------*/
+    .blockAbout_03 {
         .table03 {
+            .hide_row {
+                display: none;
+            }
             tr {
                 td {
-                    padding: 12px 20px;
+                    display: block;
+                    border: 0;
+                    width: 100%;
+                    padding: 12px 10px 12px 10px;
+                    font-size: 16px;
                     &:first-child {
-                        padding: 12px 15px;
-                        width: 93px;
+                        padding: 12px 10px 5px 10px;
+                        background: transparent;
+                        color: $color-2;
+                        width: 100%;
                     }
                     &:nth-child(2) {
-                        border-right: 1px solid $color-7;
+                        border-bottom: 1px solid $color-7;
                     }
-                }
-                span {
-                    // padding-left: 15px;
+                    a {
+                        color: $color-2;
+                    }
                 }
             }
             .btnTable {
@@ -704,9 +846,9 @@
         }
     }
     /*------------------
-            blockSp06_04
+            blockAbout_04
     -----------------------------------*/
-    .blockSp06_04 {
+    .blockAbout_04 {
         .boxSp04 {
             border: none;
         }
@@ -752,6 +894,19 @@
                 top: 5px;
             }
         }
+    }
+    /*------------------
+            footCommonUnit
+    -----------------------------------*/
+    .footCommonUnit {
+        padding-top: 50px;
+    }
+    .footCommonUnit .boxSp04 {
+        border: none;
+        background:none;
+    }
+    .footCommonUnit img {
+        width:280px;
     }
     /*------------------
             footer

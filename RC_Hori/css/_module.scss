@@ -57,6 +57,9 @@ a img {
         height: 0;
     }
 }
+.wraper{
+	margin: 0 auto;
+}
 /* -------------- Config -------------- */
 .is_mb {
     display: none !important;
@@ -96,7 +99,7 @@ a img {
         font-size: 28px;
         font-family: "FontAwesome";
         position: absolute;
-        top: 10px;
+        top: 11px;
         right: 12px;
     }
     &:hover {
@@ -182,37 +185,38 @@ a img {
 }
 .headerMenu .menu-trigger {
 	position: relative;
-	width: 50px;
-	height: 44px;
+	// width: 50px;
+	// height: 44px;
+    width: 64px;
+    height: 64px;
+    // padding: 15px;
 }
 .headerMenu .menu-trigger span {
 	position: absolute;
-	left: 0;
-	width: 100%;
+	left: 13px;
+	width: 38px;
 	height: 4px;
 	background-color: #006DB8;
 	border-radius: 4px;
 }
 .headerMenu .menu-trigger span:nth-of-type(1) {
-	top: 0;
+	top: 15px;
 }
 .headerMenu .menu-trigger span:nth-of-type(2) {
-	top: 20px;
+	top: 30px;
 }
 .headerMenu .menu-trigger span:nth-of-type(3) {
-	bottom: 0;
+	bottom: 15px;
 }
 /* hamberger Tranceform */
 .headerMenu .menu-trigger.active span:nth-of-type(1) {
-	-webkit-transform: translateY(20px) rotate(-45deg);
-	transform: translateY(20px) rotate(-45deg);
+	transform: translateY(15px) rotate(-45deg);
 }
 .headerMenu .menu-trigger.active span:nth-of-type(2) {
 	opacity: 0;
 }
 .headerMenu .menu-trigger.active span:nth-of-type(3) {
-	-webkit-transform: translateY(-20px) rotate(45deg);
-	transform: translateY(-20px) rotate(45deg);
+	transform: translateY(-15px) rotate(45deg);
 }
 /* zoom scale setings */
 .scale {

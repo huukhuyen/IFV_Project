@@ -11,9 +11,9 @@ abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,'Noto Sans Japanese', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo,'游ゴシック Medium', Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,'Noto Sans Japanese', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, メイリオ, Meiryo,'游ゴシック Medium', Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, sans-serif;
   line-height: 1.2;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   background: #f7f6f2;
   word-wrap: break-word;
@@ -131,7 +131,7 @@ a img:hover {
   opacity: 0.6;
 }
 
-.container::after, .header::after, .mainBody::after, .blockNews::after, .blockNews .item::after, .blockListTop .list::after, .blockP .list::after, .blockSp06_01::after, .blockSp06_01 .contentblock::after, .blockTable07 .table05 .cItem::after, .block04_listNews .wrapListNews::after, .block04_listNews .list::after, .block04_listNews .listProcess01::after, .block04_listNews .listProcess01 .titleTab::after {
+.container::after, .header::after, .mainBody::after, .blockHome_02::after, .blockHome_02 .item::after, .blockListTop .list::after, .blockService_04 .list::after, .blockAbout_01::after, .blockAbout_01 .contentblock::after, .blockTable07 .table05 .cItem::after, .blockProcess_02 .wrapListNews::after, .blockProcess_02 .list::after, .blockProcess_02 .listProcess01::after, .blockProcess_02 .listProcess01 .titleTab::after {
   clear: both;
   content: "";
   display: block;
@@ -149,11 +149,23 @@ a img:hover {
 
 h1, h2, h3 {
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .title01 {
   line-height: 1.4;
+}
+
+.txtI {
+  letter-spacing: 0.15em !important;
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+}
+
+.divider_b {
+  border-top: 1px solid #12A6EC;
 }
 
 /* -------------- Config -------------- */
@@ -184,7 +196,7 @@ h1, h2, h3 {
 }
 
 .titleBlock {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 24px;
   text-align: center;
 }
@@ -235,7 +247,7 @@ h1, h2, h3 {
 }
 
 .slick-dots {
-  bottom: 45px;
+  bottom: -35px;
 }
 
 .btnOn {
@@ -250,7 +262,7 @@ h1, h2, h3 {
 .arrowTitle {
   padding-top: 75px !important;
   background: url("../images/arrow_next.png") no-repeat;
-  background-position: center 25px;
+  background-position: center -3px;
   background-size: 30px;
 }
 
@@ -291,6 +303,18 @@ h1, h2, h3 {
   right: 42px;
   bottom: 36px;
   z-index: 99999;
+}
+
+.cubic {
+  bottom: 7px;
+  font-size: 0.5em;
+  margin-left: -2px;
+  position: relative;
+}
+
+.dummyContents {
+  width: 100%;
+  height: 800px;
 }
 
 /*====================================
@@ -354,6 +378,10 @@ h1, h2, h3 {
 
 .m0a {
   margin: 0 auto;
+}
+
+.T01s {
+  letter-spacing: .18em;
 }
 
 @-webkit-keyframes func {
@@ -480,6 +508,7 @@ h1, h2, h3 {
 }
 
 .navFixed .nav {
+  font-size: 14px;
   padding-top: 39px;
   float: right;
 }
@@ -636,7 +665,7 @@ h1, h2, h3 {
 =====================================*/
 .blockSlider {
   position: relative;
-  min-height: 720px;
+  min-height: 640px;
   background: url("../images/main_bg.jpg") no-repeat center top;
 }
 
@@ -657,7 +686,7 @@ h1, h2, h3 {
 
 .blockSlider .logoSlider {
   position: absolute;
-  top: calc(50% - 110px);
+  top: calc(50% - 80px);
   left: 0;
   right: 0;
   z-index: 9;
@@ -695,32 +724,30 @@ h1, h2, h3 {
 }
 
 .slick-initialized .slick-slide {
-  height: 720px;
+  height: 640px;
 }
 
 /*====================================
-            blockAbout
+            blockHome_01
 =====================================*/
-.blockAbout {
+.blockHome_01 {
   min-height: 650px;
   width: 100%;
-  background: url("../images/backg01.jpg") center fixed;
-  background-size: cover;
 }
 
-.blockAbout h1 {
+.blockHome_01 h1 {
   color: #002638;
   padding: 180px 0 55px;
   text-align: center;
   font-size: 24px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
-.blockAbout h1 img {
+.blockHome_01 h1 img {
   margin: auto;
 }
 
-.blockAbout .description {
+.blockHome_01 .description {
   font-size: 18px;
   line-height: 30px;
   max-width: 800px;
@@ -728,23 +755,23 @@ h1, h2, h3 {
   margin: auto;
 }
 
-.blockAbout .btnOn1 {
+.blockHome_01 .btnOn1 {
   margin-top: 75px;
 }
 
-.blockAbout .btnOn1 img:hover {
+.blockHome_01 .btnOn1 img:hover {
   opacity: 1;
 }
 
 /*====================================
-            blockNews
+            blockHome_02
 =====================================*/
-.blockNews {
+.blockHome_02 {
   background: #f7f6f2;
   padding: 78px 0;
 }
 
-.blockNews .item {
+.blockHome_02 .item {
   cursor: pointer;
   position: relative;
   display: -webkit-box;
@@ -757,11 +784,11 @@ h1, h2, h3 {
   border: 5px solid #edecea;
 }
 
-.blockNews .item:not(:last-child) {
+.blockHome_02 .item:not(:last-child) {
   margin-bottom: 38px;
 }
 
-.blockNews .item .avatar {
+.blockHome_02 .item .avatar {
   max-width: 375px;
   width: 100%;
   -webkit-transition-duration: 400ms;
@@ -770,26 +797,26 @@ h1, h2, h3 {
   float: left;
 }
 
-.blockNews .item .description {
+.blockHome_02 .item .description {
   padding-left: 50px;
   float: left;
 }
 
-.blockNews .item .titleI {
+.blockHome_02 .item .titleI {
   font-size: 24px;
   color: #12a6eb;
   padding-bottom: 25px;
   line-height: 1.4;
 }
 
-.blockNews .item .txtI {
+.blockHome_02 .item .txtI {
   font-size: 16px;
   line-height: 25px;
   max-width: 509px;
   letter-spacing: 0.18em;
 }
 
-.blockNews .item .btnMore {
+.blockHome_02 .item .btnMore {
   position: absolute;
   right: 11px;
   bottom: 11px;
@@ -797,44 +824,54 @@ h1, h2, h3 {
 }
 
 /*====================================
-            block01
+            blockHome_03
 =====================================*/
-.block01 {
+.blockHome_03 {
   background: #FFF;
   padding: 65px 0 70px;
 }
 
-.block01 .title01 {
+.blockHome_03 .title01 {
   text-align: center;
   color: #12a5eb;
   font-size: 24px;
+  padding: 0 0 55px;
 }
 
-.block01 .title01 img {
+.blockHome_03 .title01 img {
   margin: auto;
 }
 
-.block01 .txt01 {
+.blockHome_03 .description {
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.blockHome_03 .txt01 {
   max-width: 626px;
   width: 100%;
   margin: auto;
   padding: 40px 0;
 }
 
-.block01 .note {
+.blockHome_03 .note {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #12a5eb;
 }
 
-.block01 .btnOn {
+.blockHome_03 .btnOn {
   margin-top: 60px;
 }
 
 /*====================================
-            block02
+            blockHome_05
 =====================================*/
-.block02 {
+.blockHome_05 {
   min-height: 650px;
   background: url("../images/backg02.jpg") center no-repeat fixed;
   background-size: cover;
@@ -842,7 +879,7 @@ h1, h2, h3 {
   position: relative;
 }
 
-.block02 .wrapBox {
+.blockHome_05 .wrapBox {
   top: 0;
   bottom: 0;
   left: calc(50% - 500px);
@@ -851,104 +888,115 @@ h1, h2, h3 {
   max-width: 1000px;
 }
 
-.block02 .textR {
+.blockHome_05 .textR {
   position: absolute;
   width: 100px;
   top: 155px;
-  right: 100px;
+  right: 120px;
   font-size: 30px;
   color: #fff;
 }
 
-.block02 .textR h3 span {
+.blockHome_05 .textR h3 span {
   display: block;
   margin: 3px 0;
 }
 
-.block02 .textR .txtR1 {
+.blockHome_05 .textR .txtR1 {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.block02 .textR .txtR2 {
+.blockHome_05 .textR .txtR2 {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.block02 .boxOn {
+.blockHome_05 .boxOn {
   position: absolute;
   top: 130px;
   left: 0;
   z-index: 9;
-  padding: 67px 35px 30px;
+  padding: 40px 30px 30px;
   max-width: 415px;
   width: 100%;
   border: 5px solid #fff;
   background: rgba(255, 255, 255, 0.76);
 }
 
-.block02 .title02 {
+.blockHome_05 .boxOn .title01 {
+  text-align: center;
+  color: #12a5eb;
+  font-size: 24px;
+  padding: 0 0 25px;
+}
+
+.blockHome_05 .title02 {
   text-align: center;
   font-size: 24px;
   color: #12a5eb;
   padding-bottom: 30px;
 }
 
-.block02 .txt02 {
+.blockHome_05 .txt02 {
   text-align: justify;
   line-height: 30px;
   font-size: 16px;
+  text-align: center;
 }
 
-.block02 .btnOn {
-  margin-top: 50px;
+.blockHome_05 .btnOn {
+  margin-top: 30px;
 }
 
 /*====================================
-            blockMap
+            blockHome_04
 =====================================*/
-.blockMap {
+.blockHome_04 {
   position: relative;
 }
 
-.blockMap .container {
+.blockHome_04 .container {
   position: relative;
 }
 
-.blockMap #mapIframe {
+.blockHome_04 #mapIframe {
   width: 100%;
   height: 600px;
   pointer-events: none;
   vertical-align: bottom;
 }
 
-.blockMap .mapInfo {
+.blockHome_04 .mapInfo {
   background: rgba(255, 255, 255, 0.91);
   position: absolute;
   top: 100px;
   right: 10%;
-  padding: 60px 30px 30px;
+  padding: 30px;
   border: 5px solid #12a5eb;
 }
 
-.blockMap .mapInfo h2 {
+.blockHome_04 .mapInfo h2 {
   padding-bottom: 30px;
+  color: #12a5eb;
+  font-size: 18px;
+  padding: 0 0 25px;
 }
 
-.blockMap .mapInfo p {
-  line-height: 30px;
-  font-size: 14px;
-}
-
-.blockMap .mapInfo .btnOn {
-  margin-top: 20px;
-}
-
-.blockMap .mapInfo h2 img {
-  height: 20px;
+.blockHome_04 .mapInfo h2 img {
+  height: 48px;
   width: auto;
+}
+
+.blockHome_04 .mapInfo p {
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.blockHome_04 .mapInfo .btnOn {
+  margin-top: 20px;
 }
 
 /*====================================
@@ -985,8 +1033,11 @@ h1, h2, h3 {
 }
 
 .blockListTop .items .description {
-  padding: 8px 0;
+  padding: 6px 0;
   font-size: 12px;
+  text-align: left;
+  line-height: 1.4;
+  padding-left: 5px;
 }
 
 .blockListTop .items .description a {
@@ -1024,154 +1075,176 @@ h1, h2, h3 {
 }
 
 /*====================================
-            blockBanner
+            blockService_banner
 =====================================*/
-.blockBanner {
+.blockService_banner {
   background: #f7f6f2;
-  padding: 93px 0 80px;
+  padding: 65px 0 80px;
 }
 
-.blockBanner .titleBlock {
+.blockService_banner .titleBlock {
   color: #12a5eb;
   padding-bottom: 60px;
 }
 
 /*====================================
-            blockInfo
+            blockService_01
 =====================================*/
-.blockInfo {
-  padding-bottom: 62px;
+.blockService_01 {
+  padding-bottom: 100px;
   background: #f7f6f2;
 }
 
-.blockInfo .titleBlock {
-  line-height: 35px;
+.blockService_01 .titleBlock {
+  line-height: 1.6;
   font-size: 24px;
   padding-bottom: 45px;
   color: #002638;
 }
 
-.blockInfo .text {
+.blockService_01 .text {
   margin: auto;
   max-width: 745px;
   font-size: 16px;
   line-height: 30px;
 }
 
-.blockInfo .tableInfo {
+.blockService_01 .tableInfo {
   margin-top: 70px;
   padding: 35px 40px;
   width: 100%;
   border: 5px solid #edecea;
   background: #fff;
+  line-height: 30px;
 }
 
-.blockInfo .tableInfo td {
-  padding-bottom: 15px;
+.blockService_01 .tableInfo td {
+  padding-bottom: 25px;
 }
 
-.blockInfo .tableInfo td:first-child {
+.blockService_01 .tableInfo td:first-child {
+  border-right: 1px solid #EDECEA;
   width: 163px;
   color: #12a5eb;
+}
+
+.blockService_01 .tableInfo td:nth-child(even) {
+  padding-left: 22px;
+}
+
+.blockService_01 .tableInfo td:last-child {
+  margin-bottom: 0;
+}
+
+.blockService_01 .tableInfo td.tdTop {
+  vertical-align: top;
 }
 
 /*====================================
             blockP
 =====================================*/
-.blockP {
+.blockService_04 {
   background: #f7f6f2;
 }
 
-.blockP .list {
+.blockService_04 h2 {
+  margin-bottom: 60px;
+}
+
+.blockService_04 .list {
   margin: 0 -10px;
 }
 
-.blockP .items {
+.blockService_04 .items {
   position: relative;
   float: left;
   width: 50%;
   padding: 0 10px;
 }
 
-.blockP .avatar img {
+.blockService_04 .avatar img {
   width: 100%;
 }
 
-.blockP .description {
+.blockService_04 .description {
   padding-top: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.blockP .description .name {
+.blockService_04 .description .name {
   padding-bottom: 18px;
   font-size: 18px;
   line-height: 1.4;
 }
 
-.blockP .description .name a {
+.blockService_04 .description .name a {
   color: #002638;
 }
 
-.blockP .description .text {
+.blockService_04 .description .text {
   line-height: 24px;
 }
 
-.blockP .more {
+.blockService_04 .more {
   margin-top: 20px;
   margin-bottom: 30px;
+  margin-right: 18px;
   background: url("../images/subPage/arrowR.png") no-repeat 98% 0;
   text-align: right;
 }
 
-.blockP .more a {
+.blockService_04 .more a {
   display: block;
   padding-right: 30px;
   color: #12a5eb;
 }
 
 /*====================================
-            blockAbout02
+            blockService_02
 =====================================*/
-.blockAbout02 {
+.blockService_02 {
   background: #f7f6f2;
   padding-top: 90px;
 }
 
-.blockAbout02 .titleBlock {
+.blockService_02 .titleBlock {
   color: #12a5eb;
   padding-bottom: 60px;
   font-size: 24px;
 }
 
-.blockAbout02 .headingBlock02 {
+.blockService_02 .headingBlock02 {
   text-align: center;
   margin: auto;
-  max-width: 606px;
+  max-width: 640px;
   width: 100%;
   font-size: 24px;
-  line-height: 35px;
+  line-height: 1.6;
   padding-bottom: 35px;
 }
 
-.blockAbout02 .description {
+.blockService_02 .description {
   font-size: 16px;
   line-height: 30px;
   max-width: 700px;
   width: 100%;
   margin: auto;
+  text-align: left;
 }
 
-.blockAbout02 .description a {
+.blockService_02 .description a {
   text-decoration: underline;
   color: #0468ff;
 }
 
-.blockAbout02 .btnAbout02 {
+.blockService_02 .btnService02 {
   margin-top: 70px;
   text-align: center;
   line-height: 1.4;
 }
 
-.blockAbout02 .btnAbout02 a {
+.blockService_02 .btnService02 a {
   display: block;
   padding: 17px 10px;
   font-size: 18px;
@@ -1184,7 +1257,6 @@ h1, h2, h3 {
 =====================================*/
 .blockThumbnail {
   padding: 70px 0 55px;
-  border-top: 1px solid #c9c9c9;
   background: #f7f6f2;
 }
 
@@ -1201,6 +1273,7 @@ h1, h2, h3 {
 .blockThumbnail .items .description {
   padding-left: 20px;
   padding-right: 30px;
+  padding-top: 0;
 }
 
 .blockThumbnail .items.even .avatar {
@@ -1227,6 +1300,7 @@ h1, h2, h3 {
   width: 50%;
   display: table-cell;
   vertical-align: top;
+  line-height: 30px;
 }
 
 .blockThumbnail .description .name {
@@ -1240,48 +1314,36 @@ h1, h2, h3 {
 }
 
 .blockThumbnail .description li {
-  position: relative;
-  padding-left: 10px;
   line-height: 24px;
-}
-
-.blockThumbnail .description li:before {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #000;
-  top: 8px;
-  left: 0;
 }
 
 .blockThumbnail .noteThumbnail {
   background: #fff;
   padding: 28px 48px;
-  line-height: 24px;
+  line-height: 30px;
   border: 5px solid #edecea;
   margin-bottom: 42px;
 }
 
 /*====================================
-            blockTable02
+            blockService_03
 =====================================*/
-.blockTable02 {
+.blockService_03 {
   background: #f7f6f2;
+  margin-top: 50px;
 }
 
-.blockTable02 .note {
+.blockService_03 .note {
   padding-bottom: 16px;
   font-size: 12px;
 }
 
-.blockTable02 .table02 {
+.blockService_03 .table02 {
   text-align: center;
   font-size: 13px;
 }
 
-.blockTable02 .table02 th {
+.blockService_03 .table02 th {
   line-height: 19px;
   border: 1px solid #c9c9c9;
   padding: 25px 10px;
@@ -1289,316 +1351,329 @@ h1, h2, h3 {
   vertical-align: middle;
 }
 
-.blockTable02 .table02 td {
+.blockService_03 .table02 td {
   line-height: 15px;
   border: 1px solid #c9c9c9;
   padding: 10px;
   vertical-align: middle;
 }
 
-.blockTable02 .table02 thead th {
+.blockService_03 .table02 thead th {
   border-top: 1px solid #000;
 }
 
-.blockTable02 .table02 thead th:first-child {
+.blockService_03 .table02 thead th:first-child {
   border-left: 1px solid #000;
 }
 
-.blockTable02 .table02 thead tr:last-child th {
+.blockService_03 .table02 thead tr:last-child th {
   border-bottom: 1px solid #000;
 }
 
-.blockTable02 .table02 thead tr th:last-child {
+.blockService_03 .table02 thead tr th:last-child {
   border-right: 1px solid #000;
 }
 
-.blockTable02 .table02 thead tr th:first-child {
+.blockService_03 .table02 thead tr th:first-child {
   border-right: 1px solid #000;
 }
 
-.blockTable02 .table02 tbody tr:last-child td {
+.blockService_03 .table02 tbody tr:last-child td {
   border-bottom: 1px solid #000;
 }
 
-.blockTable02 .table02 tbody tr td:first-child {
+.blockService_03 .table02 tbody tr td:first-child {
   border-left: 1px solid #000;
 }
 
-.blockTable02 .table02 tbody tr td:last-child {
+.blockService_03 .table02 tbody tr td:last-child {
   border-right: 1px solid #000;
 }
 
 /*====================================
-            blockSp06_01
+            blockAbout_01
 =====================================*/
-.blockSp06_01 {
+.blockAbout_01 {
   background: #f7f6f2;
-  padding: 90px 0 20px 0;
+  padding: 90px 0 80px 0;
 }
 
-.blockSp06_01 .titleBlock {
+.blockAbout_01 .titleBlock {
   color: #12a5eb;
   padding-bottom: 55px;
 }
 
-.blockSp06_01 .contentblock {
+.blockAbout_01 .contentblock {
   max-width: 800px;
   width: 100%;
   margin: auto;
   padding: 0 18px;
 }
 
-.blockSp06_01 .avatar {
+.blockAbout_01 .avatar {
   text-align: center;
   float: left;
 }
 
-.blockSp06_01 .description {
-  padding-right: 30px;
-  float: left;
+.blockAbout_01 .description {
+  padding-left: 30px;
+  float: right;
   margin: auto;
   max-width: 460px;
   width: 100%;
 }
 
-.blockSp06_01 .text {
+.blockAbout_01 .text {
   font-size: 16px;
   line-height: 30px;
   padding-top: 62px;
 }
 
-.blockSp06_01 .note {
+.blockAbout_01 .note {
   text-align: right;
   padding-top: 36px;
   font-size: 18px;
 }
 
-.blockSp06_01 .note .bold {
+.blockAbout_01 .note .bold {
   font-size: 24px;
 }
 
 /*====================================
-            blockSp06_02
+            blockAbout_02
 =====================================*/
-.blockSp06_02 {
+.blockAbout_02 {
   margin: auto;
-  padding: 120px 0 0;
+  padding: 120px 0 80px;
   background: #f7f6f2;
 }
 
-.blockSp06_02 .container.w8 {
+.blockAbout_02 .container.w8 {
   max-width: 800px;
   width: 100%;
 }
 
-.blockSp06_02 .titleBlock {
+.blockAbout_02 .titleBlock {
   color: #12a5eb;
   padding-bottom: 50px;
 }
 
-.blockSp06_02 .titleBlock.t2 {
+.blockAbout_02 .titleBlock.t2 {
   padding-bottom: 80px;
 }
 
-.blockSp06_02 .nameBlock {
+.blockAbout_02 .nameBlock {
   line-height: 40px;
   font-size: 24px;
+  font-weight: 500;
   text-align: center;
   padding-bottom: 25px;
   color: #002638;
 }
 
-.blockSp06_02 .nameBlock.t2 {
+.blockAbout_02 .nameBlock.t2 {
   padding: 80px 0 55px 0;
 }
 
-.blockSp06_02 .nameBlock img {
+.blockAbout_02 .nameBlock img {
   margin: auto;
 }
 
-.blockSp06_02 .textList.t2 p {
+.blockAbout_02 .textList.t2 p {
   padding-bottom: 30px;
 }
 
-.blockSp06_02 .textList .titsub {
+.blockAbout_02 .textList .titsub {
   font-weight: bold;
   line-height: 23px;
   font-size: 16px;
-  padding-bottom: 2px;
+  padding-bottom: 6px;
 }
 
-.blockSp06_02 .textList p {
+.blockAbout_02 .textList p {
   padding-bottom: 20px;
   padding-left: 30px;
-  line-height: 23px;
+  line-height: 30px;
 }
 
-.blockSp06_02 .noteR {
+.blockAbout_02 dt {
+  border-top: 1px solid #ddd;
+  padding-top: 25px;
+}
+
+.blockAbout_02 dt:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.blockAbout_02 .noteR {
   padding-top: 40px;
   text-align: right;
   font-size: 16px;
   line-height: 30px;
 }
 
-.blockSp06_02 .text {
+.blockAbout_02 .text {
   font-size: 16px;
   line-height: 30px;
   line-height: 30px;
 }
 
-.blockSp06_02 .boxSp04 {
+.blockAbout_02 .boxSp04 {
   margin-top: 125px;
   border: 5px solid #edecea;
   padding: 45px 0 40px;
   background: #ededeb;
 }
 
-.blockSp06_02 .boxSp04 .tBox {
+.blockAbout_02 .boxSp04 .tBox {
   text-align: center;
   color: #12a5eb;
   font-size: 24px;
   padding-bottom: 40px;
 }
 
-.blockSp06_02 .boxSp04 .tBox img {
+.blockAbout_02 .boxSp04 .tBox img {
   margin: auto;
 }
 
-.blockSp06_02 .boxSp04 .text {
+.blockAbout_02 .boxSp04 .text {
   text-align: center;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
 }
 
-.blockSp06_02 .boxSp04 .text img {
+.blockAbout_02 .boxSp04 .text img {
   margin: auto;
 }
 
-.blockSp06_02 .boxSp04 .btnBox04 {
+.blockAbout_02 .boxSp04 .btnBox04 {
   padding-top: 28px;
   text-align: center;
   display: block;
 }
 
-.blockSp06_02 .boxSp04 .btnBox04:hover img {
+.blockAbout_02 .boxSp04 .btnBox04:hover img {
   opacity: 1;
 }
 
 /*====================================
-            blockSp06_03
+            blockAbout_03
 =====================================*/
-.blockSp06_03 {
+.blockAbout_03 {
   padding: 78px 0 112px;
   background: #f7f6f2;
 }
 
-.blockSp06_03 .titleBlock {
+.blockAbout_03 .titleBlock {
   color: #12a5eb;
   padding-bottom: 50px;
 }
 
-.blockSp06_03 .titleBlock#plant {
+.blockAbout_03 .titleBlock#plant {
   padding-top: 50px;
 }
 
-.blockSp06_03 .table04_03 {
+.blockAbout_03 .table04_03 {
   margin: auto;
   max-width: 745px;
   width: 100%;
 }
 
-.blockSp06_03 .table03 {
+.blockAbout_03 .table03 {
   width: 100%;
 }
 
-.blockSp06_03 .table03 tr td {
+.blockAbout_03 .table03 tr td {
   line-height: 1.4;
   font-size: 14px;
   border: 1px solid #c9c9c9;
-  padding: 17px 34px;
+  padding: 24px 0 24px 34px;
 }
 
-.blockSp06_03 .table03 tr td:first-child {
+.blockAbout_03 .table03 tr td:first-child {
   background: #fff;
+  padding: 24px 12px 24px 16px;
+  width: 110px;
 }
 
-.blockSp06_03 .table03 tr td:nth-child(2) {
+.blockAbout_03 .table03 tr td:nth-child(2) {
   border-right: none;
 }
 
-.blockSp06_03 .table03 tr td:last-child {
+.blockAbout_03 .table03 tr td:last-child {
   padding: 6px 5px;
   border-left: none;
 }
 
-.blockSp06_03 .table03 .btnTable {
+.blockAbout_03 .table03 .btnTable {
   position: absolute;
   top: calc(50% - 18px);
   right: 5px;
 }
 
 /*====================================
-            blockSp06_04
+            blockAbout_04
 =====================================*/
-.blockSp06_04 {
+.blockAbout_04 {
   padding-top: 78px;
   background: #f7f6f2;
 }
 
-.blockSp06_04 .titleBlock {
+.blockAbout_04 .titleBlock {
   color: #12a5eb;
   padding-bottom: 50px;
 }
 
-.blockSp06_04 .nameBlock {
+.blockAbout_04 .nameBlock {
   font-size: 24px;
   text-align: center;
   padding-bottom: 25px;
 }
 
-.blockSp06_04 .nameBlock img {
+.blockAbout_04 .nameBlock img {
   margin: auto;
 }
 
-.blockSp06_04 .height720 {
+.blockAbout_04 .height720 {
   width: 100%;
   height: 720px;
 }
 
-.blockSp06_04 .boxSp04 {
+.blockAbout_04 .boxSp04 {
   background: #ededeb;
   border: 5px solid #edecea;
   padding: 45px 0 40px;
 }
 
-.blockSp06_04 .boxSp04 .tBox {
+.blockAbout_04 .boxSp04 .tBox {
   text-align: center;
   color: #12a5eb;
   font-size: 24px;
   padding-bottom: 40px;
 }
 
-.blockSp06_04 .boxSp04 .tBox img {
+.blockAbout_04 .boxSp04 .tBox img {
   margin: auto;
 }
 
-.blockSp06_04 .boxSp04 .text {
+.blockAbout_04 .boxSp04 .text {
   text-align: center;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
 }
 
-.blockSp06_04 .boxSp04 .text img {
+.blockAbout_04 .boxSp04 .text img {
   margin: auto;
 }
 
-.blockSp06_04 .boxSp04 .btnBox04 {
+.blockAbout_04 .boxSp04 .btnBox04 {
   padding-top: 28px;
   text-align: center;
   display: block;
 }
 
-.blockSp06_04 .boxSp04 .btnBox04:hover img {
+.blockAbout_04 .boxSp04 .btnBox04:hover img {
   opacity: 1;
 }
 
@@ -1701,7 +1776,7 @@ h1, h2, h3 {
         block05_01
 -----------------------------------*/
 .block05_01 {
-  padding: 94px 0 800px;
+  padding: 94px 0 0;
   background: #f7f6f2;
 }
 
@@ -1723,7 +1798,7 @@ h1, h2, h3 {
 }
 
 .block05_01 .text {
-  text-align: center;
+  text-align: left;
   max-width: 700px;
   width: 100%;
   margin: auto;
@@ -1742,7 +1817,7 @@ h1, h2, h3 {
 .block07bot h3 {
   text-align: center;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   padding-bottom: 50px;
 }
 
@@ -1786,46 +1861,47 @@ h1, h2, h3 {
 }
 
 /*====================================
-            block04_01
+            blockProcess_01
 =====================================*/
-.block04_01 {
+.blockProcess_01 {
   background: #f7f6f2;
   padding: 90px 0 74px;
 }
 
-.block04_01 .titleBlock {
+.blockProcess_01 .titleBlock {
   font-size: 24px;
   color: #12a5eb;
   padding-bottom: 55px;
 }
 
-.block04_01 .text {
+.blockProcess_01 .text {
+  text-align: center;
   padding: 20px 0;
   font-size: 16px;
   line-height: 30px;
 }
 
 /*====================================
-            block04_02
+            blockProcess_04
 =====================================*/
-.block04_02 {
+.blockProcess_04 {
   background: #f7f6f2;
   padding: 70px 0 80px;
   border-top: 1px solid #fff;
 }
 
-.block04_02 .title01 {
+.blockProcess_04 .title01 {
   text-align: center;
   font-size: 24px;
   color: #12a5eb;
   padding-bottom: 55px;
 }
 
-.block04_02 .title01 img {
+.blockProcess_04 .title01 img {
   margin: auto;
 }
 
-.block04_02 h3 {
+.blockProcess_04 .description {
   max-width: 558px;
   width: 100%;
   margin: auto;
@@ -1834,70 +1910,76 @@ h1, h2, h3 {
 }
 
 /*====================================
-            block04_listNews
+            blockProcess_02
 =====================================*/
-.block04_listNews {
+.blockProcess_02 {
   background: #f7f6f2;
   border-bottom: 1px solid #c9c9c9;
 }
 
-.block04_listNews .titleBlock {
+.blockProcess_02 .blockThumbnail {
+  border-top: 1px solid #c9c9c9;
+}
+
+.blockProcess_02 .titleBlock {
   font-size: 24px;
   color: #12a5eb;
   padding-bottom: 55px;
 }
 
-.block04_listNews .wrapListNews .tab {
+.blockProcess_02 .wrapListNews .tab {
   float: left;
   width: 50%;
 }
 
-.block04_listNews .wrapListNews .tab.active {
+.blockProcess_02 .wrapListNews .tab.active {
   display: block;
 }
 
-.block04_listNews .wrapListNews .tab .list.left {
+.blockProcess_02 .wrapListNews .tab .list.left {
   margin-left: -20px;
 }
 
-.block04_listNews .wrapListNews .tab .list.right {
+.blockProcess_02 .wrapListNews .tab .list.right {
   margin-right: -20px;
 }
 
-.block04_listNews .wrapListNews .tab .items:not(:first-child) {
+.blockProcess_02 .wrapListNews .tab .items:not(:first-child) {
   padding-top: 50px;
   background: url("../images/arrow_next.png") no-repeat;
   background-position: center top;
   background-size: 30px;
 }
 
-.block04_listNews .wrapListNews .itemT {
+.blockProcess_02 .wrapListNews .itemT {
   float: left;
   width: 50%;
   margin-bottom: 10px;
 }
 
-.block04_listNews .wrapListNews .itemT:nth-child(odd) {
+.blockProcess_02 .wrapListNews .itemT:nth-child(odd) {
   padding-left: 0;
   padding-right: 20px;
 }
 
-.block04_listNews .wrapListNews .itemT:nth-child(even) {
+.blockProcess_02 .wrapListNews .itemT:nth-child(even) {
   padding-right: 0;
   padding-left: 20px;
 }
 
-.block04_listNews .wrapListNews .itemT span {
-  padding: 20px;
+.blockProcess_02 .wrapListNews .itemT span {
+  padding: 24px 12px;
+  background: #12a5eb;
+  color: #fff;
   border: 1px solid #12a5eb;
   display: block;
 }
 
-.block04_listNews .items {
+.blockProcess_02 .items {
   padding: 0 20px;
 }
 
-.block04_listNews .nameBlock {
+.blockProcess_02 .nameBlock {
   text-align: center;
   line-height: 40px;
   font-size: 24px;
@@ -1906,95 +1988,147 @@ h1, h2, h3 {
   color: #002638;
 }
 
-.block04_listNews .description {
-  padding: 24px 0 35px;
+.blockProcess_02 .description {
+  padding: 24px 8px 35px;
 }
 
-.block04_listNews .itemT {
+.blockProcess_02 .itemT {
   font-size: 18px;
   color: #12a5eb;
   padding: 0 20px 20px 20px;
   text-align: center;
 }
 
-.block04_listNews .itemT a {
+.blockProcess_02 .itemT a {
   color: #12a5eb;
 }
 
-.block04_listNews .text {
+.blockProcess_02 .text {
   line-height: 30px;
   min-height: 67px;
   font-size: 16px;
 }
 
-.block04_listNews .banner .titleBlock {
+.blockProcess_02 .banner {
+  border-top: 1px solid #12A6EC;
+  margin-bottom: 60px;
+}
+
+.blockProcess_02 .banner .titleBlock {
   padding-bottom: 30px;
 }
 
-.block04_listNews .banner .note {
-  padding: 15px 0 0 0;
+.blockProcess_02 .banner .note {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 20px 8px;
 }
 
-.block04_listNews .banner .noteThumbnail {
+.blockProcess_02 .banner .noteThumbnail {
   margin-top: 20px;
   background: #fff;
-  padding: 28px 48px;
-  line-height: 24px;
+  padding: 3%;
+  line-height: 30px;
   border: 5px solid #edecea;
   margin-bottom: 42px;
 }
 
-.block04_listNews .listProcess01 {
+.blockProcess_02 .listProcess01 {
   margin: 0 -10px;
+  padding-bottom: 60px;
 }
 
-.block04_listNews .listProcess01 .items2 {
+.blockProcess_02 .listProcess01 .items2 {
   padding: 0 10px;
   float: left;
   width: 33.3333333%;
 }
 
-.block04_listNews .listProcess01 .itemT {
+.blockProcess_02 .listProcess01 .itemT {
   width: 100%;
 }
 
-.block04_listNews .listProcess01 .note {
-  padding: 10px 0;
+.blockProcess_02 .listProcess01 .note {
+  padding: 10px 8px;
+  line-height: 30px;
 }
 
-.block04_listNews .listProcess01 .titleTab {
+.blockProcess_02 .listProcess01 .titleTab {
   padding: 0 10px 10px;
 }
 
-.block04_listNews .listProcess01 .titleTab .itemT {
+.blockProcess_02 .listProcess01 .titleTab .itemT {
   float: left;
   width: 33.3333333%;
 }
 
-.block04_listNews .h95 {
+.blockProcess_02 .h95 {
   min-height: 95px;
 }
 
-.block04_listNews .btnContact {
+.blockProcess_02 .btnContact {
   padding: 50px 0;
 }
 
+.block04_3 .titleBlock {
+  color: #002638;
+}
+
+.block04_3 .text {
+  font-size: 16px;
+  line-height: 30px;
+  margin: auto;
+  max-width: 745px;
+}
+
+.block04_3 .listThumbnail {
+  margin-top: 60px;
+}
+
 /*====================================
-            block04_path
+            blockProcess_03
 =====================================*/
-.block04_path {
+.blockProcess_03 {
   background: #f7f6f2;
   padding: 85px 0 83px;
   border-bottom: 1px solid #c9c9c9;
 }
 
-.block04_path .titleBlock {
+.blockProcess_03 .titleBlock {
   color: #12a5eb;
   padding-bottom: 90px;
 }
 
-.block04_path .titleBlock img {
+.blockProcess_03 .titleBlock img {
   margin: auto;
+}
+
+/*====================================
+            blockContact_01
+=====================================*/
+.blockContact_01 {
+  background: #f7f6f2;
+  padding-top: 90px;
+}
+
+.blockContact_01 .titleBlock {
+  color: #12a5eb;
+  padding-bottom: 60px;
+  font-size: 24px;
+}
+
+.blockContact_01 .description {
+  font-size: 16px;
+  line-height: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
+
+.blockContact_01 .description a {
+  text-decoration: underline;
+  color: #0468ff;
 }
 
 /*====================================
@@ -2051,12 +2185,78 @@ h1, h2, h3 {
   padding: 20px 0;
 }
 
+/*====================================*/
+.btnContact {
+  padding: 0 0 50px;
+}
+
+/*====================================
+            footCommonUnit
+=====================================*/
+.footCommonUnit {
+  padding-top: 78px;
+  border-top: 1px solid #eee;
+  background: #f7f6f2;
+}
+
+.footCommonUnit .titleBlock {
+  color: #12a5eb;
+  padding-bottom: 50px;
+}
+
+.footCommonUnit .nameBlock {
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footCommonUnit .nameBlock img {
+  margin: auto;
+}
+
+.footCommonUnit .boxSp04 {
+  background: #ededeb;
+  border: 5px solid #edecea;
+  padding: 45px 0 40px;
+}
+
+.footCommonUnit .boxSp04 .tBox {
+  text-align: center;
+  color: #12a5eb;
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.footCommonUnit .boxSp04 .tBox img {
+  margin: auto;
+}
+
+.footCommonUnit .boxSp04 .text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.footCommonUnit .boxSp04 .text img {
+  margin: auto;
+}
+
+.footCommonUnit .boxSp04 .btnBox04 {
+  padding-top: 28px;
+  text-align: center;
+  display: block;
+}
+
+.footCommonUnit .boxSp04 .btnBox04:hover img {
+  opacity: 1;
+}
+
 /*====================================
             footer
 =====================================*/
 .footer {
   background: url("../images/subPage/backgFooter.jpg") center bottom no-repeat;
-  min-height: 485px;
+  min-height: 360px;
   position: relative;
 }
 
@@ -2076,6 +2276,7 @@ h1, h2, h3 {
 .footer .infoF .name {
   text-decoration: underline;
   padding-bottom: 30px;
+  font-size: 14px;
 }
 
 .footer .infoF .name a {
@@ -2118,6 +2319,9 @@ h1, h2, h3 {
 }
 
 @media screen and (max-width: 780px) {
+  h1, h2, h3 {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif, sans-serif;
+  }
   body {
     background: #fff;
   }
@@ -2178,35 +2382,31 @@ h1, h2, h3 {
     display: inline-block;
   }
   .logoMb a img {
-    width: 100px;
-  }
-  .toggleMb {
-    position: absolute;
+    width: 90px;
   }
   .toggleMb {
     cursor: pointer;
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 0;
     width: 100%;
     z-index: 9999999;
   }
   .toggleMb .buttonT {
     position: absolute;
-    border-radius: 50%;
-    top: 10px;
+    top: 16px;
     right: 10px;
-    background: #FFF;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #a9a9a9;
+    width: 60px;
+    height: 36px;
     padding-top: 4px;
+    padding-left: 10px;
+    border-left: 1px solid #a9a9a9;
   }
   .toggleMb span {
     display: block;
     width: 55%;
-    height: 2px;
-    margin: 8px auto;
+    height: 4px;
+    margin: 4px auto;
     background: #a9a9a9;
   }
   /*------------------
@@ -2250,24 +2450,40 @@ h1, h2, h3 {
   .slick-initialized .slick-slide {
     height: 490px;
   }
+  .blockSlider .sliderMain .oc {
+    background-size: cover !important;
+  }
   /*------------------
-            blockNews
+        commonParts
     -----------------------------------*/
-  .blockNews .item {
+  .titleBlock {
+    font-size: 22px;
+  }
+  .description {
+    letter-spacing: .15em;
+    line-height: 1.6 !important;
+  }
+  .nameBlock {
+    font-size: 22px !important;
+  }
+  /*------------------
+            blockHome_02
+    -----------------------------------*/
+  .blockHome_02 .item {
     display: block;
     padding: 10px;
     background: none;
     border: none !important;
   }
-  .blockNews .item .avatar {
+  .blockHome_02 .item .avatar {
     float: none;
     margin: 0 auto;
   }
-  .blockNews .item .description {
+  .blockHome_02 .item .description {
     padding-left: 0;
     float: none;
   }
-  .blockNews .item .btnMore {
+  .blockHome_02 .item .btnMore {
     position: relative;
     display: block;
     text-align: center;
@@ -2275,26 +2491,25 @@ h1, h2, h3 {
     right: 0;
     bottom: 0;
   }
-  .blockNews .item .titleI {
-    text-align: center;
-    font-size: 20px;
+  .blockHome_02 .item .titleI {
+    font-size: 18px;
     max-width: 100%;
     padding: 16px 0;
     line-height: 25px;
   }
-  .blockNews .item .txtI {
+  .blockHome_02 .item .txtI {
     max-width: 100%;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0;
   }
-  .blockNews .item br {
+  .blockHome_02 .item br {
     display: none;
   }
-  .blockNews .item .btnMore {
+  .blockHome_02 .item .btnMore {
     padding: 10px 0 5px;
   }
-  .blockNews .item .btnMore img {
+  .blockHome_02 .item .btnMore img {
     margin: 0 auto;
   }
   /*------------------
@@ -2353,6 +2568,7 @@ h1, h2, h3 {
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
+    padding-left: 0;
   }
   .blockListTop .items .description a {
     width: 100%;
@@ -2360,50 +2576,87 @@ h1, h2, h3 {
     padding-left: 15px;
   }
   /*------------------
-            blockAbout
+            blockHome_01
     -----------------------------------*/
-  .blockAbout {
-    background: transparent url("../images/backg01_sp.jpg") repeat fixed center center/cover;
+  .blockHome_01 {
+    background: none;
     min-height: 540px;
     width: 100%;
   }
-  .blockAbout h1 {
+  .blockHome_01 h1 {
+    font-size: 22px;
     line-height: 35px;
     padding: 80px 0 55px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  .blockAbout .description {
+  .blockHome_01 .description {
     font-size: 16px;
     line-height: 22px;
     padding: 0 5%;
   }
-  .blockAbout .btnOn1 {
+  .blockHome_01 .btnOn1 {
     margin-top: 50px;
     padding-bottom: 30px;
   }
-  .blockAbout .mapInfo {
+  .blockHome_01 .mapInfo {
     border: none;
     padding: 5%;
+    margin: 15px 0;
   }
-  .blockAbout .mapInfo p {
+  .blockHome_01 .mapInfo p {
     font-size: 16px;
     line-height: 22px;
   }
+  .blockHome_01 .btnOn1 img {
+    width: 280px;
+  }
   /*------------------
-            block02
+            blockHome_03
     -----------------------------------*/
-  .block02 {
+  .blockHome_03 .description {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 5% 50px;
+  }
+  /*------------------
+            blockHome_04
+    -----------------------------------*/
+  .blockHome_04 {
+    margin-top: 20px;
+  }
+  .blockHome_04 .mapInfo {
+    border: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 5%;
+    margin: 15px 3%;
+  }
+  .blockHome_04 .mapInfo p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .blockHome_04 #mapIframe {
+    height: 320px;
+    padding: 0 3%;
+  }
+  /*------------------
+            blockHome_05
+    -----------------------------------*/
+  .blockHome_05 {
     background: transparent;
     background-attachment: inherit;
     padding-top: 0;
     position: relative;
   }
-  .block02 .wrapBox {
+  .blockHome_05 .wrapBox {
     position: relative;
     top: 0;
     bottom: 0;
     left: 0;
   }
-  .block02 .boxOn {
+  .blockHome_05 .boxOn {
     max-width: 100%;
     margin: auto;
     position: relative;
@@ -2413,41 +2666,28 @@ h1, h2, h3 {
     z-index: 9;
     padding: 27px 0;
   }
-  .block02 .txt02 {
-    line-height: 22px;
+  .blockHome_05 .txt02 {
+    padding: 0 5%;
   }
   /*------------------
-            blockMap
+            blockService_banner
     -----------------------------------*/
-  .blockMap {
-    margin-top: 20px;
-  }
-  .blockMap .mapInfo {
-    border: none;
-    position: relative;
-    top: 0;
-    right: 0;
-    padding: 5%;
-    margin: 15px 3%;
-  }
-  .blockMap .mapInfo p {
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .blockMap #mapIframe {
-    height: 320px;
-    padding: 0 3%;
-  }
   /*------------------
-            blockInfo
+            blockService_01
     -----------------------------------*/
-  .blockInfo .tableInfo {
+  .blockService_01 .titleBlock {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+    font-size: 22px;
+  }
+  .blockService_01 .tableInfo {
     position: relative;
     background: #f7f6f2;
     border: none;
     padding: 35px 3%;
   }
-  .blockInfo .tableInfo:after {
+  .blockService_01 .tableInfo:after {
     content: "";
     position: absolute;
     height: 5px;
@@ -2456,7 +2696,7 @@ h1, h2, h3 {
     left: -3%;
     top: 0;
   }
-  .blockInfo .tableInfo:before {
+  .blockService_01 .tableInfo:before {
     content: "";
     position: absolute;
     height: 5px;
@@ -2465,42 +2705,68 @@ h1, h2, h3 {
     left: -3%;
     bottom: 0;
   }
-  .blockInfo .tableInfo td {
-    line-height: 24px;
+  .blockService_01 .tableInfo table {
+    width: 100%;
   }
-  .blockInfo .tableInfo td:first-child {
-    width: 115px;
+  .blockService_01 .tableInfo td {
+    display: block;
+    line-height: 24px;
+    padding: 12px 10px 12px 10px;
+  }
+  .blockService_01 .tableInfo td:nth-child(even) {
+    padding-left: 10px;
+    border-bottom: 1px solid #c9c9c9;
+  }
+  .blockService_01 .tableInfo tr td:first-child {
+    border-right: 0;
+    width: 100%;
+    padding: 12px 10px 5px 10px;
     vertical-align: top;
   }
-  .blockInfo .text {
+  .blockService_01 .text {
     padding: 0 5%;
   }
   /*------------------
-            blockAbout02
+            blockService_02
     -----------------------------------*/
-  .blockAbout02 .description {
+  .blockService_02 .description {
     font-size: 16px;
+    padding: 0 5%;
   }
   /*------------------
-            blockTable02
+            blockService_03
     -----------------------------------*/
-  .blockTable02 {
+  .blockService_03 {
     padding-bottom: 30px;
   }
-  .blockTable02 .table02 thead tr th:first-child {
+  .blockService_03 .table02 thead tr th:first-child {
     min-width: 80px;
   }
-  .blockTable02 .table02 tbody tr td {
+  .blockService_03 .table02 tbody tr td {
     min-width: 100px;
   }
   /*------------------
             blockP
     -----------------------------------*/
-  .blockP .items {
+  .blockService_04 .items {
     width: 100%;
   }
-  .blockP .description .name {
+  .blockService_04 .description .name {
     font-size: 16px;
+  }
+  .blockService_04 .more {
+    font-family: 'Noto Sans Japanese', sans-serif, sans-serif;
+    font-weight: 700;
+    background: url("../images/subPage/arrowRw.png") no-repeat 74% 48% #12a5eb;
+    text-align: center;
+    max-width: 280px;
+    margin: 30px auto 50px;
+  }
+  .blockService_04 .more a {
+    display: block;
+    padding: 16px 18px;
+    /*color: #12a5eb;*/
+    color: #fff;
   }
   /*------------------
             blockThumbnail
@@ -2520,10 +2786,15 @@ h1, h2, h3 {
     width: 100%;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    margin: 0;
   }
   .blockThumbnail .description .name {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .blockThumbnail .description p {
+    font-size: 16px;
+    padding: 0 3%;
   }
   .blockThumbnail .noteThumbnail {
     padding: 28px 5%;
@@ -2535,6 +2806,9 @@ h1, h2, h3 {
   .blockBtnBottom .btnOn {
     margin-bottom: 30px;
   }
+  .blockBtnBottom .btnOn img {
+    width: 280px;
+  }
   .blockBtnBottom .description {
     font-size: 16px;
     line-height: 22px;
@@ -2544,69 +2818,76 @@ h1, h2, h3 {
     text-align: center;
     margin-bottom: 30px;
   }
+  .blockHome_02 .item .btnMore img {
+    width: 280px;
+  }
   /*------------------
-            block04_listNews
+            blockProcess_02
     -----------------------------------*/
-  .block04_listNews .list {
+  .blockProcess_02 .list {
     margin: 0;
   }
-  .block04_listNews .items {
+  .blockProcess_02 .items {
     padding: 0;
     width: 100%;
   }
-  .block04_listNews .avatar img {
+  .blockProcess_02 .avatar img {
     width: 100%;
   }
-  .block04_listNews .itemT {
+  .blockProcess_02 .itemT {
+    font-size: 14px;
     padding: 5px;
     text-align: center;
+    background: #fff;
+    color: #12a5eb;
     -webkit-transition-duration: 0ms;
     -o-transition-duration: 0ms;
     transition-duration: 0ms;
   }
-  .block04_listNews .itemT span.active {
+  .blockProcess_02 .itemT span.active {
     -webkit-transition-duration: 0ms;
     -o-transition-duration: 0ms;
     transition-duration: 0ms;
-    background: #12a5eb;
-    color: #fff;
+    background: #12a5eb !important;
+    color: #fff !important;
   }
-  .block04_listNews .itemT.left {
+  .blockProcess_02 .itemT.left {
     padding-left: 0;
     padding-right: 0px !important;
   }
-  .block04_listNews .itemT.right {
+  .blockProcess_02 .itemT.right {
     padding-right: 0;
     padding-left: 0px !important;
   }
-  .block04_listNews .text {
+  .blockProcess_02 .text {
     min-height: inherit !important;
+    padding: 0 3%;
   }
-  .block04_listNews .wrapListNews .tab {
+  .blockProcess_02 .wrapListNews .tab {
     display: none;
     padding-top: 20px;
     width: 100%;
   }
-  .block04_listNews .wrapListNews .tab:first-child {
+  .blockProcess_02 .wrapListNews .tab:first-child {
     display: block;
   }
-  .block04_listNews .wrapListNews .tab .list.left {
+  .blockProcess_02 .wrapListNews .tab .list.left {
     margin-left: 0;
   }
-  .block04_listNews .wrapListNews .tab .list.right {
+  .blockProcess_02 .wrapListNews .tab .list.right {
     margin-right: 0;
   }
-  .block04_listNews .listProcess01 .items2 {
+  .blockProcess_02 .listProcess01 .items2 {
     display: none;
     width: 100%;
   }
-  .block04_listNews .listProcess01 .items2.active {
+  .blockProcess_02 .listProcess01 .items2.active {
     display: block;
   }
-  .block04_listNews .listProcess01 .titleTab {
+  .blockProcess_02 .listProcess01 .titleTab {
     margin: 20px 0 0;
   }
-  .block04_listNews .listProcess01 .itemT {
+  .blockProcess_02 .listProcess01 .itemT {
     padding: 10px;
     text-align: center;
     -webkit-transition-duration: 0ms;
@@ -2614,19 +2895,24 @@ h1, h2, h3 {
     transition-duration: 0ms;
     border: 1px solid #12a5eb;
   }
-  .block04_listNews .listProcess01 .itemT:nth-child(2) {
+  .blockProcess_02 .listProcess01 .itemT:nth-child(2) {
     border-left: 0;
     border-right: 0;
   }
-  .block04_listNews .listProcess01 .itemT.active {
+  .blockProcess_02 .listProcess01 .itemT.active {
     -webkit-transition-duration: 0ms;
     -o-transition-duration: 0ms;
     transition-duration: 0ms;
     background: #12a5eb;
     color: #fff;
   }
+  .blockProcess_02 .listProcess01 .itemT span {
+    border: 1px solid #12a5eb;
+    background: #fff;
+    color: #12a5eb;
+  }
   /*------------------
-            block04_path
+            blockProcess_03
     -----------------------------------*/
   .zoomer_wrapper {
     /*border: 1px solid #ddd;*/
@@ -2637,71 +2923,116 @@ h1, h2, h3 {
     width: 100%;
   }
   /*------------------
+            blockProcess_04
+    -----------------------------------*/
+  .blockProcess_04 .description {
+    font-size: 16px;
+    line-height: 22px;
+    margin: auto auto 30px;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+  /*------------------
+            block04_03
+    -----------------------------------*/
+  /*------------------
             block05_01
     -----------------------------------*/
   .block05_01 .text {
     line-height: 24px;
+    text-align: left;
   }
   .block05_01 .nameBlock {
+    font-size: 22px;
     line-height: 35px;
   }
   /*------------------
-            blockSp06_01
+            blockAbout_01
     -----------------------------------*/
-  .blockSp06_01 .text {
+  .blockAbout_01 .text {
     line-height: 22px;
   }
-  .blockSp06_01 .contentblock {
+  .blockAbout_01 .contentblock {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .blockSp06_01 .avatar {
+  .blockAbout_01 .avatar {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
     width: 100%;
   }
-  .blockSp06_01 .description {
+  .blockAbout_01 .description {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+    padding: 0;
     padding-right: 0;
   }
+  .blockAbout_01 .note {
+    font-size: 16px;
+  }
+  .blockAbout_01 .note .bold {
+    font-size: 20px;
+  }
   /*------------------
-            blockSp06_02
+            blockAbout_02
     -----------------------------------*/
-  .blockSp06_02 {
+  .blockAbout_02 {
     padding: 60px 0;
   }
-  .blockSp06_02 .nameBlock {
-    font-size: 20px;
+  .blockAbout_02 .nameBlock {
+    font-size: 22px;
     line-height: 35px;
   }
+  .blockAbout_02 .text {
+    padding: 0 5%;
+  }
+  .blockAbout_02 dt {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .blockAbout_02 .textList p {
+    padding: 0 5% 30px;
+  }
   /*------------------
-            blockSp06_03
+            blockAbout_03
     -----------------------------------*/
-  .blockSp06_03 .table03 tr td {
-    padding: 12px 20px;
+  .blockAbout_03 .table03 .hide_row {
+    display: none;
   }
-  .blockSp06_03 .table03 tr td:first-child {
-    padding: 12px 15px;
-    width: 93px;
+  .blockAbout_03 .table03 tr td {
+    display: block;
+    border: 0;
+    width: 100%;
+    padding: 12px 10px 12px 10px;
+    font-size: 16px;
   }
-  .blockSp06_03 .table03 tr td:nth-child(2) {
-    border-right: 1px solid #c9c9c9;
+  .blockAbout_03 .table03 tr td:first-child {
+    padding: 12px 10px 5px 10px;
+    background: transparent;
+    color: #12a5eb;
+    width: 100%;
   }
-  .blockSp06_03 .table03 .btnTable {
+  .blockAbout_03 .table03 tr td:nth-child(2) {
+    border-bottom: 1px solid #c9c9c9;
+  }
+  .blockAbout_03 .table03 tr td a {
+    color: #12a5eb;
+  }
+  .blockAbout_03 .table03 .btnTable {
     position: relative;
     right: 0;
     top: 5px;
   }
   /*------------------
-            blockSp06_04
+            blockAbout_04
     -----------------------------------*/
-  .blockSp06_04 .boxSp04 {
+  .blockAbout_04 .boxSp04 {
     border: none;
   }
   /*------------------
@@ -2739,6 +3070,19 @@ h1, h2, h3 {
     position: relative;
     right: 0;
     top: 5px;
+  }
+  /*------------------
+            footCommonUnit
+    -----------------------------------*/
+  .footCommonUnit {
+    padding-top: 50px;
+  }
+  .footCommonUnit .boxSp04 {
+    border: none;
+    background: none;
+  }
+  .footCommonUnit img {
+    width: 280px;
   }
   /*------------------
             footer

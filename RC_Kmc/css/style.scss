@@ -21,6 +21,7 @@
         padding: 15px 0 15px 19px;
     }
     .nav {
+        font-size:14px;
         padding-top: 39px;
         float: right;
         li {
@@ -235,8 +236,8 @@
 =====================================*/
 .blockSlider {
     position: relative;
-    min-height:720px;
-    background:url('../images/main_bg.jpg')no-repeat center top;
+    min-height: 640px;
+    background: url('../images/main_bg.jpg')no-repeat center top;
     // margin: auto;
     // text-align: center;
     // height: 780px;
@@ -268,7 +269,7 @@
     }
     .logoSlider {
         position: absolute;
-        top: calc(50% - 110px);
+        top: calc(50% - 80px);
         left: 0;
         right: 0;
         z-index: 9;
@@ -315,23 +316,23 @@
     }
 }
 .slick-initialized .slick-slide{
-	height:720px;
+	height: 640px;
 }
 /*====================================
-            blockAbout
+            blockHome_01
 =====================================*/
-.blockAbout {
+.blockHome_01 {
     // min-height: 572px;
     min-height: 650px;
     width: 100%;
-    background: url('../images/backg01.jpg') center fixed;
-    background-size: cover;
+    // background: url('../images/backg01.jpg') center fixed;
+    // background-size: cover;
     h1 {
         color: $color-1;
         padding: 180px 0 55px;
         text-align: center;
         font-size: 24px;
-        line-height: 1.4;
+        line-height: 1.6;
         img {
             margin: auto;
         }
@@ -354,9 +355,9 @@
     }
 }
 /*====================================
-            blockNews
+            blockHome_02
 =====================================*/
-.blockNews {
+.blockHome_02 {
     background: #f7f6f2;
     @extend %clearfix;
     padding: 78px 0;
@@ -409,18 +410,27 @@
     }
 }
 /*====================================
-            block01
+            blockHome_03
 =====================================*/
-.block01 {
+.blockHome_03 {
     background: #FFF;
     padding: 65px 0 70px;
     .title01 {
         text-align: center;
         color: $color-2;
         font-size: 24px;
+        padding:0 0 55px;
         img {
             margin: auto;
         }
+    }
+    .description {
+        font-size: 16px;
+        line-height: 30px;
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+        padding-bottom:50px;
     }
     .txt01 {
         max-width: 626px;
@@ -430,7 +440,7 @@
     }
     .note {
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         color: $color-2;
     }
     .btnOn {
@@ -438,9 +448,9 @@
     }
 }
 /*====================================
-            block02
+            blockHome_05
 =====================================*/
-.block02 {
+.blockHome_05 {
     min-height: 650px;
     background: url('../images/backg02.jpg') center no-repeat fixed;
     background-size: cover;
@@ -458,7 +468,7 @@
         position: absolute;
         width: 100px;
         top: 155px;
-        right: 100px;
+        right: 120px;
         font-size: 30px;
         color: $color-a;
         h3 {
@@ -483,11 +493,17 @@
         top: 130px;
         left: 0;
         z-index: 9;
-        padding: 67px 35px 30px;
+        padding: 40px 30px 30px;
         max-width: 415px;
         width: 100%;
         border: 5px solid $color-a;
         background: rgba(255,255,255,0.76);
+        .title01{
+            text-align: center;
+            color: #12a5eb;
+            font-size: 24px;
+            padding:0 0 25px;
+        }
     }
     .title02 {
         text-align: center;
@@ -499,15 +515,16 @@
         text-align: justify;
         line-height: 30px;
         font-size: 16px;
+        text-align: center;
     }
     .btnOn {
-        margin-top: 50px;
+        margin-top: 30px;
     }
 }
 /*====================================
-            blockMap
+            blockHome_04
 =====================================*/
-.blockMap {
+.blockHome_04 {
     position: relative;
     .container {
         position: relative;
@@ -523,21 +540,24 @@
         position: absolute;
         top: 100px;
         right: 10%;
-        padding: 60px 30px 30px;
+        padding: 30px;
         border: 5px solid $color-2;
         h2 {
             padding-bottom: 30px;
+            color: #12a5eb;
+            font-size: 18px;
+            padding: 0 0 25px;
+            img{
+                height:48px;
+                width: auto;
+            }
         }
         p {
             line-height: 30px;
-            font-size: 14px;
+            font-size: 16px;
         }
         .btnOn {
             margin-top: 20px;
-        }
-        h2 img {
-            height: 20px;
-            width: auto;
         }
     }
 }
@@ -566,8 +586,11 @@
             }
         }
         .description {
-            padding: 8px 0;
+            padding: 6px 0;
             font-size: 12px;
+            text-align: left;
+            line-height:1.4;
+            padding-left: 5px;
             a {
                 color: $color-o;
             }
@@ -601,24 +624,24 @@
 	margin:100px 0 0;
 }
 /*====================================
-            blockBanner
+            blockService_banner
 =====================================*/
-.blockBanner {
+.blockService_banner {
     background: $color-3;
-    padding: 93px 0 80px;
+    padding: 65px 0 80px;
     .titleBlock {
         color: $color-2;
         padding-bottom: 60px;
     }
 }
 /*====================================
-            blockInfo
+            blockService_01
 =====================================*/
-.blockInfo {
-    padding-bottom: 62px;
+.blockService_01 {
+    padding-bottom: 100px;
     background: $color-3;
     .titleBlock {
-        line-height: 35px;
+        line-height: 1.6;
         font-size: 24px;
         padding-bottom: 45px;
         color: $color-1;
@@ -635,11 +658,22 @@
         width: 100%;
         border: 5px solid $color-5;
         background: $color-a;
+        line-height:30px;
         td {
-            padding-bottom: 15px;
+            padding-bottom: 25px;
             &:first-child {
+                border-right:1px solid #EDECEA;
                 width: 163px;
                 color: $color-2;
+            }
+            &:nth-child(even) {
+                padding-left:22px
+            }
+            &:last-child {
+                margin-bottom:0;
+            }
+            &.tdTop {
+                vertical-align:top;
             }
         }
     }
@@ -647,8 +681,11 @@
 /*====================================
             blockP
 =====================================*/
-.blockP {
+.blockService_04 {
     background: $color-3;
+    h2 {
+    	margin-bottom:60px;
+    }
     .list {
         @extend %clearfix;
         margin: 0 -10px;
@@ -666,6 +703,8 @@
     }
     .description {
         padding-top: 24px;
+        padding-left:8px;
+        padding-right:8px;
         .name {
             padding-bottom: 18px;
             font-size: 18px;
@@ -685,6 +724,7 @@
         // right: 10px;
         margin-top: 20px;
         margin-bottom: 30px;
+        margin-right: 18px;
         background: url('../images/subPage/arrowR.png') no-repeat 98% 0;
         text-align: right;
         a {
@@ -695,9 +735,9 @@
     }
 }
 /*====================================
-            blockAbout02
+            blockService_02
 =====================================*/
-.blockAbout02 {
+.blockService_02 {
     background: $color-3;
     padding-top: 90px;
     .titleBlock {
@@ -708,10 +748,10 @@
     .headingBlock02 {
         text-align: center;
         margin: auto;
-        max-width: 606px;
+        max-width: 640px;
         width: 100%;
         font-size: 24px;
-        line-height: 35px;
+        line-height: 1.6;
         padding-bottom: 35px;
     }
     .description {
@@ -720,12 +760,13 @@
         max-width: 700px;
         width: 100%;
         margin: auto;
+        text-align: left;
         a {
             text-decoration: underline;
             color: #0468ff;
         }
     }
-    .btnAbout02 {
+    .btnService02 {
         margin-top: 70px;
         text-align: center;
         line-height: 1.4;
@@ -743,7 +784,7 @@
 =====================================*/
 .blockThumbnail {
     padding: 70px 0 55px;
-    border-top: 1px solid #c9c9c9;
+    // border-top: 1px solid #c9c9c9;
     background: $color-3;
     .items {
         padding: 25px 0!important;
@@ -755,6 +796,7 @@
         .description {
             padding-left: 20px;
             padding-right: 30px;
+            padding-top: 0;
         }
         &.odd {
         }
@@ -781,6 +823,7 @@
         width: 50%;
         display: table-cell;
         vertical-align: top;
+        line-height: 30px;
         .name {
             font-size: 20px;
             color: $color-1;
@@ -790,34 +833,35 @@
             line-height: 1.4;
         }
         li {
-            position: relative;
-            padding-left: 10px;
+            // position: relative;
+            // padding-left: 10px;
             line-height: 24px;
-            &:before {
-                content: "";
-                position: absolute;
-                width: 3px;
-                height: 3px;
-                border-radius: 50%;
-                background: $color-o;
-                top: 8px;
-                left: 0;
-            }
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     width: 3px;
+            //     height: 3px;
+            //     border-radius: 50%;
+            //     background: $color-o;
+            //     top: 8px;
+            //     left: 0;
+            // }
         }
     }
     .noteThumbnail {
         background: $color-a;
         padding: 28px 48px;
-        line-height: 24px;
+        line-height: 30px;
         border: 5px solid $color-5;
         margin-bottom: 42px;
     }
 }
 /*====================================
-            blockTable02
+            blockService_03
 =====================================*/
-.blockTable02 {
+.blockService_03 {
     background: $color-3;
+    margin-top: 50px;
     .note {
         padding-bottom: 16px;
         font-size: 12px;
@@ -881,12 +925,12 @@
     }
 }
 /*====================================
-            blockSp06_01
+            blockAbout_01
 =====================================*/
-.blockSp06_01 {
+.blockAbout_01 {
     background: $color-3;
     @extend %clearfix;
-    padding: 90px 0 20px 0;
+    padding: 90px 0 80px 0;
     .titleBlock {
         color: $color-2;
         padding-bottom: 55px;
@@ -903,8 +947,8 @@
         float: left;
     }
     .description {
-        padding-right: 30px;
-        float: left;
+        padding-left: 30px;
+        float: right;
         margin: auto;
         max-width: 460px;
         width: 100%;
@@ -924,13 +968,13 @@
     }
 }
 /*====================================
-            blockSp06_02
+            blockAbout_02
 =====================================*/
-.blockSp06_02 {
+.blockAbout_02 {
     margin: auto;
     // border-top: 1px solid $color-7;
     // padding: 234px 0 230px;
-    padding: 120px 0 0;
+    padding: 120px 0 80px;
     background: $color-3;
     .container {
         &.w8 {
@@ -948,6 +992,7 @@
     .nameBlock {
         line-height: 40px;
         font-size: 24px;
+        font-weight: 500;
         text-align: center;
         padding-bottom: 25px;
         color: $color-1;
@@ -968,12 +1013,20 @@
             font-weight: bold;
             line-height: 23px;
             font-size: 16px;
-            padding-bottom: 2px;
+            padding-bottom: 6px;
         }
         p {
             padding-bottom: 20px;
             padding-left: 30px;
-            line-height: 23px;
+            line-height: 30px;
+        }
+    }
+    dt {
+    	border-top: 1px solid #ddd;
+    	padding-top:25px;
+        &:first-child {
+        	border-top: none;
+        	padding-top:0;
         }
     }
     .noteR {
@@ -1007,7 +1060,7 @@
         .text {
             text-align: center;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 30px;
             img {
                 margin: auto;
             }
@@ -1025,9 +1078,9 @@
     }
 }
 /*====================================
-            blockSp06_03
+            blockAbout_03
 =====================================*/
-.blockSp06_03 {
+.blockAbout_03 {
     // border-top: 1px solid $color-7;
     padding: 78px 0 112px;
     background: $color-3;
@@ -1049,11 +1102,12 @@
             td {
                 line-height: 1.4;
                 font-size: 14px;
-                // position: relative;
                 border: 1px solid $color-7;
-                padding: 17px 34px;
+                padding: 24px 0 24px 34px;
                 &:first-child {
                     background: $color-a;
+                    padding: 24px 12px 24px 16px;
+                    width: 110px;
                 }
                 &:nth-child(2) {
                     border-right: none;
@@ -1072,9 +1126,9 @@
     }
 }
 /*====================================
-            blockSp06_04
+            blockAbout_04
 =====================================*/
-.blockSp06_04 {
+.blockAbout_04 {
     // border-top: 1px solid $color-7;
     padding-top: 78px;
     background: $color-3;
@@ -1110,7 +1164,7 @@
         .text {
             text-align: center;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 30px;
             img {
                 margin: auto;
             }
@@ -1221,7 +1275,7 @@
         block05_01
 -----------------------------------*/
 .block05_01 {
-    padding: 94px 0 800px;
+    padding: 94px 0 0;
     background: $color-3;
     .titleBlock {
         color: $color-2;
@@ -1238,7 +1292,7 @@
         }
     }
     .text {
-        text-align: center;
+        text-align: left;
         max-width: 700px;
         width: 100%;
         margin: auto;
@@ -1255,7 +1309,7 @@
     h3 {
         text-align: center;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 30px;
         padding-bottom: 50px;
     }
     button {
@@ -1296,9 +1350,9 @@
     }
 }
 /*====================================
-            block04_01
+            blockProcess_01
 =====================================*/
-.block04_01 {
+.blockProcess_01 {
     background: $color-3;
     padding: 90px 0 74px;
     .titleBlock {
@@ -1307,15 +1361,16 @@
         padding-bottom: 55px;
     }
     .text {
+        text-align:center;
         padding: 20px 0;
         font-size: 16px;
         line-height: 30px;
     }
 }
 /*====================================
-            block04_02
+            blockProcess_04
 =====================================*/
-.block04_02 {
+.blockProcess_04 {
     background: $color-3;
     padding: 70px 0 80px;
     border-top: 1px solid $color-a;
@@ -1328,7 +1383,7 @@
             margin: auto;
         }
     }
-    h3 {
+    .description {
         max-width: 558px;
         width: 100%;
         margin: auto;
@@ -1337,11 +1392,14 @@
     }
 }
 /*====================================
-            block04_listNews
+            blockProcess_02
 =====================================*/
-.block04_listNews {
+.blockProcess_02 {
     background: $color-3;
     border-bottom: 1px solid $color-7;
+    .blockThumbnail {
+        border-top: 1px solid #c9c9c9;
+    }
     .titleBlock {
         font-size: 24px;
         color: #12a5eb;
@@ -1385,7 +1443,9 @@
                 padding-left: 20px;
             }
             span {
-                padding: 20px;
+                padding: 24px 12px;
+                background:#12a5eb;
+                color:#fff;
                 border: 1px solid #12a5eb;
                 display: block;
             }
@@ -1410,7 +1470,7 @@
     }
     .description {
         // padding: 24px 0 60px;
-        padding: 24px 0 35px;
+        padding: 24px 8px 35px;
     }
     .itemT {
         font-size: 18px;
@@ -1428,23 +1488,28 @@
         font-size: 16px;
     }
     .banner {
+        border-top:1px solid #12A6EC;
+        margin-bottom:60px;
         .titleBlock {
             padding-bottom: 30px;
         }
         .note {
-            padding: 15px 0 0 0;
+            font-size: 16px;
+            line-height: 30px;
+            padding: 20px 8px;
         }
         .noteThumbnail {
             margin-top: 20px;
             background: $color-a;
-            padding: 28px 48px;
-            line-height: 24px;
+            padding: 3%;
+            line-height: 30px;
             border: 5px solid #edecea;
             margin-bottom: 42px;
         }
     }
     .listProcess01 {
         margin: 0 -10px;
+        padding-bottom: 60px;
         @extend %clearfix;
         .items2 {
             padding: 0 10px;
@@ -1455,7 +1520,8 @@
             width: 100%;
         }
         .note {
-            padding: 10px 0;
+            padding: 10px 8px;
+            line-height:30px;
         }
         .titleTab {
             padding: 0 10px 10px;
@@ -1473,14 +1539,28 @@
         padding: 50px 0;
     }
 }
-// .block04_listNews2 {
+.block04_3  {
+    .titleBlock{
+    	color:#002638;
+    }
+    .text {
+        font-size: 16px;
+        line-height: 30px;
+        margin: auto;
+        max-width: 745px;
+    }
+    .listThumbnail{
+        margin-top:60px;
+    }
+}
+// .blockProcess_022 {
 //     background: $color-3;
 //     border-bottom: 1px solid $color-7;
 // }
 /*====================================
-            block04_path
+            blockProcess_03
 =====================================*/
-.block04_path {
+.blockProcess_03 {
     background: $color-3;
     padding: 85px 0 83px;
     border-bottom: 1px solid $color-7;
@@ -1489,6 +1569,30 @@
         padding-bottom: 90px;
         img {
             margin: auto;
+        }
+    }
+}
+/*====================================
+            blockContact_01
+=====================================*/
+.blockContact_01 {
+    background: $color-3;
+    padding-top: 90px;
+    .titleBlock {
+        color: $color-2;
+        padding-bottom: 60px;
+        font-size: 24px;
+    }
+    .description {
+        font-size: 16px;
+        line-height: 30px;
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        a {
+            text-decoration: underline;
+            color: #0468ff;
         }
     }
 }
@@ -1541,24 +1645,69 @@
         padding: 20px 0;
     }
 }
+/*====================================*/
+.btnContact{
+	padding:0 0 50px;
+}
+/*====================================
+            footCommonUnit
+=====================================*/
+.footCommonUnit {
+  padding-top: 78px;
+  border-top:1px solid #eee;
+  background: #f7f6f2;
+  .titleBlock {
+      color: #12a5eb;
+      padding-bottom: 50px;
+  }
+  .nameBlock {
+      font-size: 24px;
+      text-align: center;
+      padding-bottom: 25px;
+  }
+  .nameBlock img {
+      margin: auto;
+  }
+  .boxSp04 {
+      background: #ededeb;
+      border: 5px solid #edecea;
+      padding: 45px 0 40px;
+      .tBox {
+          text-align: center;
+          color: #12a5eb;
+          font-size: 24px;
+          padding-bottom: 40px;
+          img {
+              margin: auto;
+          }
+      }
+      .text {
+          text-align: center;
+          font-size: 16px;
+          line-height: 30px;
+          img {
+              margin: auto;
+          }
+      }
+      .btnBox04 {
+          padding-top: 28px;
+          text-align: center;
+          display: block;
+          &:hover img {
+              opacity: 1;
+          }
+      }
+  }
+}
 /*====================================
             footer
 =====================================*/
 .footer {
     background: url("../images/subPage/backgFooter.jpg") center bottom no-repeat;
-    // background-size: cover;
-    // min-height: 606px;
-    // height: 730px;
-    min-height: 485px;
+    min-height: 360px;
     position: relative;
-    // &.topP {
-    //     background: url('../images/backgFooter.jpg')center no-repeat!important;
-    //     min-height: 830px!important;
-    //     background-size: cover!important;
-    // }
     .logoF {
         padding-top: 100px;
-        // margin-top: 100px;
     }
     .infoF {
         left: 0;
@@ -1570,6 +1719,7 @@
         .name {
             text-decoration: underline;
             padding-bottom: 30px;
+            font-size:14px;
             a {
                 color: $color-a;
             }

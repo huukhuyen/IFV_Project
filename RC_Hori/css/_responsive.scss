@@ -56,7 +56,8 @@
         padding: 0.5em 0 .9375em 0;
     }
     .contentLeft {
-        width: 70%;
+        // width: 70%;
+        float: none;
     }
     /*----- contentRight -----*/
     .areaBanner {
@@ -130,13 +131,16 @@
             margin-left: 7%;
         }
     }
+    .contactIntroR {
+    	float:none;
+    }
 }
 @media screen and (max-width: 1366px) and (min-width: 781px) {
     .navMain {
         display: block !important;
     }
     .contentLeft {
-        max-width: 72%;
+        max-width: 76%;
     }
 
     .areaListInfo {
@@ -236,8 +240,9 @@
         }
         .btnToggle {
             position: absolute;
-            left: 16px;
-            top: 16px;
+            left: 7px;
+            top: 7px;
+            background: $color-a;
             &.active {
                 margin-left: 0;
             }
@@ -286,35 +291,92 @@
     }
     .navMain {
         display: none;
-        background:#FFF;
+        background: transparent;
         border-right:none;
         position:fixed;
         top:64px;
+        overflow-y: auto;
+        height: 100%;
         left:0;
         width:100%;
         z-index:9999;
-    }
-    .navMain li:first-child {
-        border-top: 1px solid #006db8;
-    }
-    .navMain li:nth-child(2) {
-        border-top: 1px solid #62BDF9;
+        background: $color-a;
+        ul {
+            height: auto;
+        }
+        li {
+            // background: none;
+            &:hover {
+                background: none;
+            }
+        }
+        a {
+            transition: all 0ms;
+            &.icon1{
+                background: url("../images/arrow_nav.png")no-repeat 96% 50%!important;
+                color: #006db8;
+            }
+            &.icon2{
+                background: #62BDF9 url("../images/arrow_nav_active.png")no-repeat 96% 50%!important;
+                color: #FFF110;
+            }
+            &.active3 {
+                background: #62BDF9 url("../images/arrow_nav.png")no-repeat 96% 50%;
+                color: #FFF110;
+            }
+            // &:focus {
+            //     transition-duration: 0.3s;
+            //     background: #62BDF9 url("../images/arrow_nav_active.png")no-repeat 96% 50%;
+            //     color: yellow;
+            // }
+        }
+        .subNavL3sp {
+            display: none;
+            li.activeSub {
+                a {
+                    background: #62BDF9 url("../images/arrow_nav.png")no-repeat 96% 50%!important;
+                    color:#fff110;
+                }
+            }
+        }
+        .subNavL3 {
+            background: #62BDF9;
+            padding-bottom: 20px;
+            position: relative;
+            left: 0;
+            li {
+                left: 0;
+                top: 0;
+                width: 100%;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+
+            }
+        }
     }
     .headerMenu .menu-trigger {
     	position: relative;
-    	// width: 36px;
-    	// height: 32px;
+        width: 50px;
+        height: 50px;
     }
     .headerMenu .menu-trigger span {
     	position: absolute;
-    	left: 0;
-    	width: 100%;
+        background: $color-1;
+    	left: 7px;
+    	width: 36px;
     	height: 4px;
-    	background-color: #006DB8;
     	border-radius: 4px;
     }
+    .headerMenu .menu-trigger span:nth-of-type(1) {
+        top: 10px;
+    }
     .headerMenu .menu-trigger span:nth-of-type(2) {
-    	// top: 14px;
+    	top: 23px;
+    }
+    .headerMenu .menu-trigger span:nth-of-type(3) {
+        bottom: 10px;
     }
     /* hamberger Tranceform */
     /*------------------
@@ -503,7 +565,16 @@
     /*------------------
             Contact Page
     -----------------------------------*/
+    .contactIntroL, .contactIntroR{
+    	float:none;
+    	padding:0;
+    }
     .areaContact {
+        .areaText01 {
+            p {
+                text-align: center;
+            }
+        }
         padding: 0px 7.14286%;
         *::-webkit-input-placeholder {
             font-size: 12px;
@@ -741,13 +812,108 @@
         }
     }
     /*------------------
+            Mod
+    -----------------------------------*/
+    .pd_top_160 {
+        padding-top: 0;
+    }
+    #mod_article {
+        width: 100%;
+        margin-top: 120px;
+        padding: 52px 7.14286% 80px;
+    }
+    #mod_article .articleInner {
+        width: 100%;
+        /*padding:0 3.14286%;*/
+    }
+    h1.m_topicTtl {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+    .m_exText {
+        font-size: 15.5px;
+        line-height: 1.75em;
+        padding: 5%;
+        width: 100%;
+        margin: 25px 0;
+    }
+    .m_articleTxt {
+        font-size: 15.5px;
+        line-height: 1.75em;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .m_articleTxt span {
+        background: #ECE953;
+    }
+    /* QA */
+
+    .m_articleFAQ {
+        border: none;
+        border-top: 8px solid #eee;
+        border-bottom: 8px solid #eee;
+        padding: 30px 0 30px;
+        width: 100%;
+    }
+    h3.m_articleQ {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    .m_articleFAQ p:last-child {
+        margin: 0
+    }
+    .m_articleQAns {
+        font-size: 15.5px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 50px;
+    }
+    .m_pageLnk {
+        text-align: center;
+        width: 100%;
+    }
+    .m_pageLnk a {
+        padding: 13px 20px 12px 24px;
+    }
+    .m_articleChart {
+        width: 100%;
+        margin: 0 auto;
+        border: #CCC 1px solid;
+    }
+    .m_articleChart table {
+        width: 100%;
+    }
+    .m_articleChart tr td {
+        border: 1px solid #c9c9c9;
+        line-height: 1.75em;
+        padding: 6px 10px;
+        width: 33.333%;
+    }
+    .m_articleChart tr td:first-child {
+        width: 33.333%;
+    }
+    .m_articleChart tr td p:not(:last-child) {
+        padding-bottom: 30px;
+    }
+    h2.m_articleTtl1 {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    h3.m_articleTtl2 {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+    h4.m_articleTtl3 {
+        font-size: 15.5px;
+        margin-bottom: 15px;
+    }
+
+    /*------------------
             helper
     -----------------------------------*/
     .pb_45_mb {
         padding-bottom: 45px;
-    }
-    .pd_top_160 {
-        padding-top: 0;
     }
     // end mobile
 }
@@ -768,7 +934,7 @@
             margin-bottom: 60px!important;
         }
         .areaText01{
-            padding:20px 7% 30px;
+            padding:20px 12% 30px;
         }
         .formBox {
             width:100%;

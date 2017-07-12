@@ -40,12 +40,15 @@
 =====================================*/
 .headerMenu {
     width: 100%;
-    padding-top: 48px;
-    padding-left: 38px;
+    padding-top: 0;
+    padding-left: 0;
+    // padding-top: 48px;
+    // padding-left: 38px;
     position: fixed;
     left: 0;
     z-index: 100;
     .btnToggle {
+        background: #fff;
         display: inline-block;
         transition: all 0.3s linear;
         img {
@@ -84,7 +87,7 @@
 .navMain {
     // display: none;
     background: #FFF;
-    border-right: 1px solid #62BDF9;
+    border-right: 1px solid #D9EEFD;
     position: fixed;
     top: 0;
     left: -20%;
@@ -98,24 +101,63 @@
     ul {
         height: 100vh;
     }
+    > ul > li {
+        position: relative;
+    }
     li {
-        // &:first-child {
-        //     border-top: 1px solid $color-1;
-        // }
+        background: url("../images/arrow_nav_off.png") no-repeat 96% 50%;
+        &:hover {
+            cursor: pointer;
+            background: rgba(98,189,249, 0.3) url("../images/arrow_nav.png")no-repeat 96% 50%;
+            color:#006DB8;
+        }
         a {
             display: block;
-            padding: 26px 20px;
-            border-bottom: 1px solid #62BDF9;
+            padding: 25px 20px 24px 20px;
+            border-bottom: 1px solid #D9EEFD;
             color: $color-1;
-            &:hover {
-                background:rgba(98,189,249, 0.3);
-                color:#006DB8;
-            }
+            background: url("../images/arrow_nav.png")no-repeat 96% 50%;
         }
         &.active {
             a {
-                background:#62BDF9;
+                background: #62BDF9 url("../images/arrow_nav.png")no-repeat 96% 50%;
                 color:#fff110;
+            }
+        }
+        &:hover {
+            .subNavL3 {
+                display: block;
+            }
+        }
+    }
+    .subNavL3 {
+        display: none;
+        position: absolute;
+        top: 0;
+        li {
+            top: -1px;
+            left: 0;
+            border-right: 1px solid #B8E0FC;
+            position: relative;
+            background: $color-a url("../images/arrow_nav.png")no-repeat 96% 50%;
+            &:first-child {
+                border-top: 1px solid #B8E0FC;
+            }
+            &.activeSub {
+                a {
+                    background: #62BDF9 url("../images/arrow_nav.png")no-repeat 96% 50%!important;
+                    color:#fff110;
+                }
+            }
+            a {
+                width: 266px;
+                padding: 25px 20px 24px 20px;
+                color: $color-1;
+                background: #fff url("../images/arrow_nav_off.png") no-repeat 96% 50%;
+                &:hover {
+                    transition: all 0ms;
+                    background: rgba(98,189,249, 0.3);
+                }
             }
         }
     }
@@ -305,6 +347,7 @@
     }
     .descript {
         padding-top: 15px;
+        line-height:1.2;
         a {
             color: $color-1;
         }
@@ -313,6 +356,14 @@
 /*
 	Contact Page
 ------------------------------------------*/
+.contactIntroL {
+	// float:left;
+    text-align:center;
+}
+.contactIntroR {
+	float:left;
+	padding-left:12px;
+}
 .areaContact{
     background: #f6f6f6;
 	margin-bottom:100px;
@@ -332,7 +383,9 @@
     .areaText01{
         padding: 30px 7% 60px;
         p {
-            text-align:center;
+            display:inline-block;
+            text-align: left;
+            vertical-align: middle;
         }
     }
     .formBox {
@@ -448,7 +501,10 @@
     }
     .submitContact {
         padding: 50px 0 25px;
-        button {
+        .btnMain {
+            position: relative;
+            max-width: 290px;
+            height: 64px;
             cursor: pointer;
             background: transparent;
             &:hover {
@@ -709,6 +765,7 @@ select {
 =====================================*/
 .pageHead {
 	text-align:center;
+    margin-top: 100px;
 	margin-top:80px;
 }
 .pageHead .headTtl{
@@ -838,7 +895,7 @@ select {
         text-align: center;
         position: fixed;
         bottom: 20px;
-        padding:0 2%;
+        // padding:0 2%;
         img{
         	// width: 160px;
         }
@@ -861,9 +918,124 @@ select {
         }
     }
 }
-/*====================================
 
+#mod_article {
+    color: #006db8;
+    padding: 20px 7%;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    .articleInner {
+        margin: 0 auto;
+        /*width: 760px;*/
+        padding: 60px 0;
+        .divider {
+            margin: 50px 0;
+            background: none;
+        }
+    }
+}
+
+/*====================================
+            Mod
 =====================================*/
+
+h1.m_topicTtl {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+.m_exText {
+    font-size: 18px;
+    line-height: 34px;
+    padding: 3%;
+    background: #eee;
+    width: 100%;
+    margin: 25px 0;
+}
+.m_articleTxt {
+    font-size: 18px;
+    line-height: 34px;
+    color: #666;
+    width: 100%;
+    margin-bottom: 50px;
+    span {
+        background: #ECE953;
+    }
+}
+
+/* QA */
+
+.m_articleFAQ {
+    border: 8px solid #eee;
+    padding: 5%;
+    width: 100%;
+    p:last-child {
+        margin: 0
+    }
+}
+h3.m_articleQ {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.m_articleQAns {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 50px;
+}
+.m_pageLnk {
+    text-align: center;
+    width: 100%;
+    a {
+        font-size: 16px;
+        background: url(../images/article_delta.png)no-repeat left center;
+        padding: 13px 36px 12px 26px;
+        color: #09F;
+        text-decoration: underline;
+        margin: 3% 0;
+        -moz-background-size: 16px auto;
+        -webkit-background-size: 16px auto;
+        -o-background-size: 16px auto;
+        -ms-background-size: 16px auto;
+    }
+}
+.m_articleChart {
+    width: 760px;
+    margin: 0 auto;
+    border: #CCC 1px solid;
+    table {
+        width: 100%;
+    }
+    tr td {
+        border: 1px solid #c9c9c9;
+        line-height: 22px;
+        padding: 17px 26px;
+        width: 33.333%;
+        color: #666;
+    }
+    tr td:first-child {
+        width: 33.333%;
+        background: #eee;
+    }
+    tr td p:not(:last-child) {
+        padding-bottom: 30px;
+    }
+}
+h2.m_articleTtl1 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 35px;
+}
+h3.m_articleTtl2 {
+    font-size: 20px;
+    color: #E60012;
+    margin-bottom: 50px;
+}
+h4.m_articleTtl3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
 /*-----------------------------------
             For mobile
 -----------------------------------*/
