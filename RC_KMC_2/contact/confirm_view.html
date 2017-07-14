@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>お問い合わせ（確認画面） | 関東ミキシングコンクリート</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+	<div class="bgHeader"></div>
+	<header class="header">
+		<div class="navMobile is_mb">
+			<div class="logoMb">
+				</a><a href="../"><img src="../images/logoMb.png" alt=""></a></a>
+			</div>
+			<div class="toggleMb">
+				<div class="buttonT">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<nav class="navMb">
+				<ul>
+					<li>
+						<a href="./"><img src="../images/logoMb.png" alt=""></a>
+					</li>
+					<li><a href="../service/index.html">KMCの汚泥処理</a></li>
+					<li><a href="../process/index.html">処理工程</a></li>
+					<li><a href="../recycle/index.html">再生土への取り組み</a></li>
+					<li><a href="../about/index.html">KMCについて</a></li>
+					<li><a href="../contact/">お問い合わせ</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- /navMobile -->
+	</header>
+	<!-- /header -->
+	<div class="navFixed">
+		<div class="logo">
+			<a href="/" class="is_pc hide_tb"><img src="../images/logo.png" alt=""></a>
+			<a href="/" class="is_mb is_tb"><img src="../images/logoMb.png" alt=""></a>
+		</div>
+		<nav class="nav">
+			<ul>
+				<li><a href="../service/index.html">KMCの汚泥処理</a></li>
+				<li><a href="../process/index.html">処理工程</a></li>
+				<li><a href="../recycle/index.html">再生土への取り組み</a></li>
+				<li><a href="../about/index.html">KMCについて</a></li>
+				<li><a href="../contact/">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- /navFixed -->
+	<div class="mainBody">
+		<form class="blockConfirmForm" action="" method="post">
+			<h2 class="title_A">入力内容をご確認の上、送信してください。</h2>
+			<div class="blockTable07">
+				<div class="container">
+					<table class="table05">
+						<tbody>
+							<tr>
+								<td>会社名</td>
+								<td><?php print $s->html( $F['nameclb'] ); ?></td>
+							</tr>
+							<tr>
+								<td>部署</td>
+								<td><?php print $s->html( $F['loading'] ); ?></td>
+							</tr>
+							<tr>
+								<td>お名前</td>
+								<td><?php print $s->html( $F['name'] ); ?></td>
+							</tr>
+							<tr>
+								<td>お名前( ふりがな)</td>
+								<td><?php print $s->html( $F['kana'] ); ?></td>
+							</tr>
+							<tr>
+								<td>電話番号</td>
+								<td><?php print $s->html( $F['mobile'] ); ?></td>
+							</tr>
+							<tr>
+								<td>メールアドレス</td>
+								<td><?php print $s->html( $F['mail'] ); ?></td>
+							</tr>
+							<tr>
+								<td>お問い合わせ内容</td>
+								<td><?php print nl2br( $s->html( $F['naiyou'] ) ); ?></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="block07bot">
+				<div class="container">
+					<button type="submit" name="send"><img src="../images/contact/btn_submit.png" alt="送信する"></button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+	<!-- /wrap -->
+	<footer class="footer">
+		<nav class="navFooter is_mb">
+			<ul>
+				<li><a href="../service/index.html">KMCの汚泥処理</a></li>
+				<li><a href="../process/index.html">処理工程</a></li>
+				<li><a href="../recycle/index.html">再生土への取り組み</a></li>
+				<li><a href="../about/index.html">KMCについて</a></li>
+				<li><a href="../contact/">お問い合わせ</a></li>
+			</ul>
+		</nav>
+		<!--<div class="container">
+			<div class="logoF is_pc">
+				<img src="../images/logoF.png" alt="">
+			</div>
+			<ul class="spLogoF is_mb">
+				<li><img src="../images/img_bnr01.png" alt=""></li>
+				<li><img src="../images/img_bnr02.png" alt=""></li>
+				<li><img src="../images/img_bnr03.png" alt=""></li>
+			</ul>
+		</div>-->
+		<div class="infoF">
+			<div class="des">
+				<p class="name"><a href="../about/privacy.html">個人情報保護方針</a></p>
+				<p class="copyright">Copyrigh(C) 2017 KMC.Co.,ltd All Rights Reserved.</p>
+			</div>
+		</div>
+		<div id="totop">
+			<a href="#"><img src="../images/top.png" alt=""></a>
+		</div>
+	</footer>
+	<!-- /footer -->
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>
