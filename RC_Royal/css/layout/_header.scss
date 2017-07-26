@@ -1,0 +1,33 @@
+/*======================================
+        Header
+======================================*/
+.header {
+    @extend %clearfix;
+    .container {
+        padding: 28px;
+    }
+    .logo {
+        float: left;
+    }
+    .nav-main {
+        float: left;
+        padding-left: 15px;
+        ul {
+            li {
+                font-size: 13px;
+                float: left;
+                padding: 50px 20px 0 20px;
+                &:not(:first-child) {
+                    padding: 50px 20px 0 20px;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+                a {
+                    padding-top: 10px;
+                    border-top: 1px solid $color-o;
+                }
+            }
+        }
+    }
+}

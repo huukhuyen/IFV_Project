@@ -1,0 +1,22 @@
+// Ghi đè css ví dụ như custom slider...
+
+/*----Custom slider----*/
+.owl-theme .owl-controls .owl-page span {
+    border-radius: 0;
+    background: #BDBDAE;
+    position: relative;
+    z-index: 2;
+}
+
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+    background: #333;
+}
+
+.owl-buttons {
+    position: relative;
+    margin-top: -30px;
+}
+.owl-theme .owl-controls .owl-buttons div {
+    margin: 5px 60px;
+    background: transparent;
+}

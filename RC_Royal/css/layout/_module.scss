@@ -1,0 +1,91 @@
+/*------------------- Wraper -------------------*/
+.wrapper {
+    border-top: 8px solid $color-o;
+    border-bottom: 8px solid $color-o;
+}
+.row_clear {
+    @extend %clearfix;
+}
+.container {
+    @extend %clearfix;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    // padding: 0 15px;
+}
+
+// Typography
+/*------------------- Typography -------------------*/
+.title_h2 {
+    font-size: 24px;
+    color: $color-primary;
+    line-height: 1.8;
+    font-weight: bold;
+}
+.h3_items {
+    display: inline-block;
+    font-size: 24px;
+    border-bottom: 1px solid $color-o;
+    margin-bottom: 10px;
+}
+.title_h3 {
+    // font-size: 24px;
+    // line-height: 1.8;
+    // color: $color-primary;
+    // font-weight: bold;
+}
+.title_A {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.8;
+    // font-weight: bold;
+}
+.title_B {
+    // font-size: 24px;
+    // line-height: 1.8;
+    // color: $color-primary;
+    // font-weight: bold;
+}
+.title_h4 {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.8;
+    // font-weight: bold;
+}
+.text {
+    // padding:
+    // font-size: ;
+    // color:
+}
+
+/*------------------- Form -------------------*/
+input {
+    // padding:
+    // border:
+    &:focus {
+
+    }
+}
+select {
+    // padding:
+    // border:
+}
+textarea {
+    // padding:
+    // border:
+}
+.btn {
+    // padding:
+    // border:
+    // background:
+    // font-size:
+    // color:
+}
+
+/*------------------- List -------------------*/
+.list-group {
+    @extend %clearfix;
+    // .list-group-item {
+    //     float: left;
+    // }
+}
