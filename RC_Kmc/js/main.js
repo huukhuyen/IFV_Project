@@ -52,6 +52,7 @@ function isEmail(emailStr) {
     return true;
 }
 
+
 // Set height for menu listTop mobile
 equalheight = function(container) {
     var currentTallest = 0,
@@ -82,37 +83,10 @@ equalheight = function(container) {
         }
     });
 }
-// Auto resize height items
-var matchHeight = function () {
-    function init() {
-        eventListeners();
-        matchHeight();
-    }
-    function eventListeners(){
-        $(window).on('resize', function() {
-            matchHeight();
-        });
-    }
-    function matchHeight(){
-        var groupName = $('[data-match-height]');
-        var groupHeights = [];
-        groupName.css('min-height', 'auto');
-        groupName.each(function() {
-            groupHeights.push($(this).outerHeight());
-        });
-        var maxHeight = Math.max.apply(null, groupHeights);
-        groupName.css('height', maxHeight);
-    };
-    return {
-        init: init
-    };
-} ();
 $(document).ready(function() {
-    // $('.titleBlock').css('background', 'yellow');
 
     var widthBr = $(window).width();
     // Auto resize height items
-    matchHeight.init();
 
     // Navigation Mobile
     $('.toggleMb').click(function(event) {
@@ -185,6 +159,33 @@ $(document).ready(function() {
             $("#" + urlData).addClass('active');
         });
     } else {
+        // Auto resize height items
+        var matchHeight = function () {
+            function init() {
+                eventListeners();
+                matchHeight();
+            }
+            function eventListeners(){
+                $(window).on('resize', function() {
+                    matchHeight();
+                });
+            }
+            function matchHeight(){
+                var groupName = $('[data-match-height]');
+                var groupHeights = [];
+                groupName.css('min-height', 'auto');
+                groupName.each(function() {
+                    groupHeights.push($(this).outerHeight());
+                });
+                var maxHeight = Math.max.apply(null, groupHeights);
+                groupName.css('height', maxHeight);
+            };
+            return {
+                init: init
+            };
+        } ();
+        matchHeight.init();
+
         // Hover listNews
         $('.listNews .item').hover(function() {
             let url = $(this).find('.btnNewsM');
@@ -195,6 +196,7 @@ $(document).ready(function() {
             $(this).css('border', '5px solid #edecea');
             url.attr('src', url.attr('src').replace('-ovon', '-ovoff'));
         });
+
     }
 
 
@@ -334,14 +336,14 @@ $(document).ready(function() {
 
     $(window).load(function() {
         equalheight('.blockListTop ul li');
-        equalheight('.blockP ul li .description');
-        equalheight('.blockP ul li .text');
+        // equalheight('.blockService_04 ul li .name');
+        // equalheight('.blockService_04 ul li .text');
         equalheight('.titleTab .itemT');
     });
     $(window).resize(function() {
         equalheight('.blockListTop ul li');
-        equalheight('.blockP ul li .description');
-        equalheight('.blockP ul li .text');
+        // equalheight('.blockService_04 ul li .name');
+        // equalheight('.blockService_04 ul li .text');
         equalheight('.titleTab .itemT');
     });
 });

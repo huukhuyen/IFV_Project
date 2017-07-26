@@ -3,11 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>関東ミキシングコンクリート</title>
+	<title>お問い合わせ（確認画面） | 関東ミキシングコンクリート</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-		
+
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
@@ -34,7 +34,7 @@
 					<li><a href="../process/index.html">処理工程</a></li>
 					<li><a href="../recycle/index.html">再生土への取り組み</a></li>
 					<li><a href="../about/index.html">KMCについて</a></li>
-					<li><a href="../contact/index.html">お問い合わせ</a></li>
+					<li><a href="../contact/">お問い合わせ</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -52,59 +52,59 @@
 				<li><a href="../process/index.html">処理工程</a></li>
 				<li><a href="../recycle/index.html">再生土への取り組み</a></li>
 				<li><a href="../about/index.html">KMCについて</a></li>
-				<li><a href="../contact/index.html">お問い合わせ</a></li>
+				<li><a href="../contact/">お問い合わせ</a></li>
 			</ul>
 		</nav>
 	</div>
 	<!-- /navFixed -->
 	<div class="mainBody">
-		<div class="blockConfirmForm">
-			<div class="container">
-				<h2 class="titleBlock">入力内容をご確認の上、送信してください。</h2>
-				<div class="description">
-					<table>
-						<colgroup>
-							<col width="200px" />
-							<col width="450px" />
-						</colgroup>
+		<form class="blockConfirmForm" action="" method="post">
+			<h2 class="title_A">入力内容をご確認の上、送信してください。</h2>
+			<div class="blockTable07">
+				<div class="container">
+					<table class="table05">
 						<tbody>
 							<tr>
-								<th>【会社名】</th>
-								<td><?php print $s->html( $F["nameclb"] ); ?></td>
+								<td>会社名</td>
+								<td><?php print $s->html( $F['nameclb'] ); ?></td>
 							</tr>
 							<tr>
-								<th>【部署】</th>
-								<td><?php print $s->html( $F["loading"] ); ?></td>
+								<td>部署</td>
+								<td><?php print $s->html( $F['loading'] ); ?></td>
 							</tr>
 							<tr>
-								<th>【お名前】</th>
-								<td><?php print $s->html( $F["name"] ); ?></td>
+								<td>お名前</td>
+								<td><?php print $s->html( $F['name'] ); ?></td>
 							</tr>
 							<tr>
-								<th>【お名前( ふりがな)】</th>
-								<td><?php print $s->html( $F["kana"] ); ?></td>
+								<td>お名前( ふりがな)</td>
+								<td><?php print $s->html( $F['kana'] ); ?></td>
 							</tr>
 							<tr>
-								<th>【電話番号】</th>
-								<td><?php print $s->html( $F["mobile"] ); ?></td>
+								<td>電話番号</td>
+								<td><?php print $s->html( $F['mobile'] ); ?></td>
 							</tr>
 							<tr>
-								<th>【メールアドレス】</th>
-								<td><?php print $s->html( $F["mail"] ); ?></td>
+								<td>メールアドレス</td>
+								<td><?php print $s->html( $F['mail'] ); ?></td>
 							</tr>
 							<tr>
-								<th>【お問い合わせ内容】</th>
-								<td><?php print nl2br( $s->html( $F["naiyou"] ) ); ?></td>
+								<td>お問い合わせ内容</td>
+								<td><?php print nl2br( $s->html( $F['naiyou'] ) ); ?></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+			</div>
+			<div class="block07bot">
+				<div class="container">
+					<p class="btd-link no is_mb">
+						<button type="submit" name="send" class="btn-text">送信する</button>
+					</p>
+				</div>
+			</div>
+		</form>
 
-
-			<form action="" method="post">
-				<button type="submit" name="send">送信する</button>
-			</form>
-		</div>
 	</div>
 	<!-- /wrap -->
 	<footer class="footer">
@@ -114,10 +114,10 @@
 				<li><a href="../process/index.html">処理工程</a></li>
 				<li><a href="../recycle/index.html">再生土への取り組み</a></li>
 				<li><a href="../about/index.html">KMCについて</a></li>
-				<li><a href="../contact/index.html">お問い合わせ</a></li>
+				<li><a href="../contact/">お問い合わせ</a></li>
 			</ul>
 		</nav>
-		<div class="container">
+		<!--<div class="container">
 			<div class="logoF is_pc">
 				<img src="../images/logoF.png" alt="">
 			</div>
@@ -126,7 +126,7 @@
 				<li><img src="../images/img_bnr02.png" alt=""></li>
 				<li><img src="../images/img_bnr03.png" alt=""></li>
 			</ul>
-		</div>
+		</div>-->
 		<div class="infoF">
 			<div class="des">
 				<p class="name"><a href="../about/privacy.html">個人情報保護方針</a></p>

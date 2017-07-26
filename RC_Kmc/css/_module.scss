@@ -8,15 +8,8 @@ $color-7: #c9c9c9;
 $color-8: #626262;
 $color-a: #fff;
 $color-o: #000; // Font
-$font-family-w6: 'Noto Sans Japanese', sans-serif; // h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h5,
-// h6 {
-//     font-family: $font-family-w6;
-// }
+$font-family-w6: 'Noto Sans Japanese', sans-serif;
+
 small {
     font-size: 80%;
 }
@@ -89,48 +82,65 @@ h1,h2,h3{
     margin: 0 auto;
     // padding: 0 3%;
 }
-.titleBlock {
+.title_A {
     font-weight: 500;
     font-size: 24px;
+    color: $color-2;
     text-align: center;
-    img {
-        margin: auto;
+    padding-bottom: 55px;
+}
+.title_B {
+    padding-bottom: 55px;
+    color: $color-1;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.6;
+}
+.text {
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+    margin: auto;
+}
+.btd-link {
+    position: relative;
+    margin-bottom: 55px;
+    &.no {
+        margin-bottom: 0;
+    }
+    &:after {
+        position: absolute;
+        left: -5%;
+        bottom: 0;
+        content: "";
+        width: 110%;
+        height: 1px;
+        background: #eee;
+    }
+    &.no-brd {
+        &:after {
+            background: transparent;
+        }
+    }
+}
+.btn-text {
+    position: relative;
+    padding: 35px 0 45px 0;
+    color: $color-2;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    &:after {
+        font-family: "FontAwesome";
+        content: "\f138";
+        color: $color-2;
+        padding-left: 10px;
     }
 }
 .clearfix {
     clear: both;
     display: block;
 }
-// .owl-theme .owl-controls .owl-page span {
-//     width: 15px;
-//     height: 15px;
-//     margin: 5px 17px;
-//     background: #76c8f0;
-// }
-// .owl-theme .owl-controls .owl-page.active span {
-//     width: 15px;
-//     height: 15px;
-//     background: #12a5eb;
-// }
-// .owl-theme .owl-controls .owl-buttons div {
-//     background: transparent;
-//     opacity: 1;
-//     padding: 0;
-//     margin: 0;
-// }
-// .owl-theme .owl-controls {
-//     margin-top: 0;
-// }
-// .owl-pagination {
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     text-align: center;
-//     bottom: 45px;
-// }
-// .owl-buttons {
-//     display: none;
-// }
 
 .slider {
     width: 50%;
@@ -247,6 +257,9 @@ h1,h2,h3{
 }
 .right {
     float: right;
+}
+.tac {
+    text-align: center;
 }
 .img100 {
     width: 100%;

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
   margin: 0;
   padding: 0;
@@ -195,14 +196,66 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-.titleBlock {
+.title_A {
   font-weight: 500;
   font-size: 24px;
+  color: #12a5eb;
   text-align: center;
+  padding-bottom: 55px;
 }
 
-.titleBlock img {
+.title_B {
+  padding-bottom: 55px;
+  color: #002638;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 30px;
+  width: 100%;
   margin: auto;
+}
+
+.btd-link {
+  position: relative;
+  margin-bottom: 55px;
+}
+
+.btd-link.no {
+  margin-bottom: 0;
+}
+
+.btd-link:after {
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+  content: "";
+  width: 110%;
+  height: 1px;
+  background: #eee;
+}
+
+.btd-link.no-brd:after {
+  background: transparent;
+}
+
+.btn-text {
+  position: relative;
+  padding: 35px 0 45px 0;
+  color: #12a5eb;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+}
+
+.btn-text:after {
+  font-family: "FontAwesome";
+  content: "\f138";
+  color: #12a5eb;
+  padding-left: 10px;
 }
 
 .clearfix {
@@ -342,6 +395,10 @@ h1, h2, h3 {
 
 .right {
   float: right;
+}
+
+.tac {
+  text-align: center;
 }
 
 .img100 {
@@ -732,27 +789,13 @@ h1, h2, h3 {
 =====================================*/
 .blockHome_01 {
   min-height: 650px;
+  padding-top: 180px;
   width: 100%;
 }
 
-.blockHome_01 h1 {
-  color: #002638;
-  padding: 180px 0 55px;
-  text-align: center;
-  font-size: 24px;
-  line-height: 1.6;
-}
-
-.blockHome_01 h1 img {
-  margin: auto;
-}
-
-.blockHome_01 .description {
+.blockHome_01 .text {
   font-size: 18px;
-  line-height: 30px;
   max-width: 800px;
-  width: 100%;
-  margin: auto;
 }
 
 .blockHome_01 .btnOn1 {
@@ -835,19 +878,17 @@ h1, h2, h3 {
   text-align: center;
   color: #12a5eb;
   font-size: 24px;
-  padding: 0 0 55px;
+  padding: 0 0 45px;
 }
 
 .blockHome_03 .title01 img {
   margin: auto;
 }
 
-.blockHome_03 .description {
+.blockHome_03 .text {
   font-size: 16px;
   line-height: 30px;
   max-width: 800px;
-  width: 100%;
-  margin: auto;
   padding-bottom: 50px;
 }
 
@@ -1035,9 +1076,8 @@ h1, h2, h3 {
 .blockListTop .items .description {
   padding: 6px 0;
   font-size: 12px;
-  text-align: left;
+  text-align: center;
   line-height: 1.4;
-  padding-left: 5px;
 }
 
 .blockListTop .items .description a {
@@ -1082,11 +1122,6 @@ h1, h2, h3 {
   padding: 65px 0 80px;
 }
 
-.blockService_banner .titleBlock {
-  color: #12a5eb;
-  padding-bottom: 60px;
-}
-
 /*====================================
             blockService_01
 =====================================*/
@@ -1095,18 +1130,13 @@ h1, h2, h3 {
   background: #f7f6f2;
 }
 
-.blockService_01 .titleBlock {
-  line-height: 1.6;
-  font-size: 24px;
+.blockService_01 .title_B {
   padding-bottom: 45px;
-  color: #002638;
 }
 
 .blockService_01 .text {
   margin: auto;
   max-width: 745px;
-  font-size: 16px;
-  line-height: 30px;
 }
 
 .blockService_01 .tableInfo {
@@ -1147,8 +1177,8 @@ h1, h2, h3 {
   background: #f7f6f2;
 }
 
-.blockService_04 h2 {
-  margin-bottom: 60px;
+.blockService_04 .title_B {
+  padding-bottom: 60px;
 }
 
 .blockService_04 .list {
@@ -1208,32 +1238,19 @@ h1, h2, h3 {
   padding-top: 90px;
 }
 
-.blockService_02 .titleBlock {
-  color: #12a5eb;
-  padding-bottom: 60px;
-  font-size: 24px;
-}
-
-.blockService_02 .headingBlock02 {
-  text-align: center;
+.blockService_02 .title_B {
   margin: auto;
   max-width: 640px;
   width: 100%;
-  font-size: 24px;
-  line-height: 1.6;
   padding-bottom: 35px;
 }
 
-.blockService_02 .description {
-  font-size: 16px;
-  line-height: 30px;
+.blockService_02 .text {
   max-width: 700px;
-  width: 100%;
-  margin: auto;
   text-align: left;
 }
 
-.blockService_02 .description a {
+.blockService_02 .text a {
   text-decoration: underline;
   color: #0468ff;
 }
@@ -1322,6 +1339,7 @@ h1, h2, h3 {
   padding: 28px 48px;
   line-height: 30px;
   border: 5px solid #edecea;
+  margin-top: 45px;
   margin-bottom: 42px;
 }
 
@@ -1398,11 +1416,6 @@ h1, h2, h3 {
   padding: 90px 0 80px 0;
 }
 
-.blockAbout_01 .titleBlock {
-  color: #12a5eb;
-  padding-bottom: 55px;
-}
-
 .blockAbout_01 .contentblock {
   max-width: 800px;
   width: 100%;
@@ -1453,12 +1466,11 @@ h1, h2, h3 {
   width: 100%;
 }
 
-.blockAbout_02 .titleBlock {
-  color: #12a5eb;
+.blockAbout_02 .title_A {
   padding-bottom: 50px;
 }
 
-.blockAbout_02 .titleBlock.t2 {
+.blockAbout_02 .title_A.t2 {
   padding-bottom: 80px;
 }
 
@@ -1565,12 +1577,11 @@ h1, h2, h3 {
   background: #f7f6f2;
 }
 
-.blockAbout_03 .titleBlock {
-  color: #12a5eb;
+.blockAbout_03 .title_A {
   padding-bottom: 50px;
 }
 
-.blockAbout_03 .titleBlock#plant {
+.blockAbout_03 .title_A#plant {
   padding-top: 50px;
 }
 
@@ -1620,7 +1631,7 @@ h1, h2, h3 {
   background: #f7f6f2;
 }
 
-.blockAbout_04 .titleBlock {
+.blockAbout_04 .title_A {
   color: #12a5eb;
   padding-bottom: 50px;
 }
@@ -1687,6 +1698,7 @@ h1, h2, h3 {
 
 .blockTable07 .table05 {
   width: 100%;
+  font-size: 14px;
 }
 
 .blockTable07 .table05 .cTd {
@@ -1780,30 +1792,19 @@ h1, h2, h3 {
   background: #f7f6f2;
 }
 
-.block05_01 .titleBlock {
-  color: #12a5eb;
+.block05_01 .title_A {
   padding-bottom: 60px;
 }
 
-.block05_01 .nameBlock {
-  font-size: 24px;
-  text-align: center;
+.block05_01 .title_B {
   padding-bottom: 25px;
-  color: #002638;
   line-height: 40px;
 }
 
-.block05_01 .nameBlock img {
-  margin: auto;
-}
-
 .block05_01 .text {
-  text-align: left;
   max-width: 700px;
   width: 100%;
   margin: auto;
-  font-size: 16px;
-  line-height: 30px;
 }
 
 /*====================================
@@ -1826,7 +1827,7 @@ h1, h2, h3 {
   border: none;
   background: transparent;
   margin: auto;
-  display: block;
+  display: inherit;
 }
 
 /*====================================
@@ -1868,17 +1869,9 @@ h1, h2, h3 {
   padding: 90px 0 74px;
 }
 
-.blockProcess_01 .titleBlock {
-  font-size: 24px;
-  color: #12a5eb;
-  padding-bottom: 55px;
-}
-
 .blockProcess_01 .text {
   text-align: center;
   padding: 20px 0;
-  font-size: 16px;
-  line-height: 30px;
 }
 
 /*====================================
@@ -1919,12 +1912,6 @@ h1, h2, h3 {
 
 .blockProcess_02 .blockThumbnail {
   border-top: 1px solid #c9c9c9;
-}
-
-.blockProcess_02 .titleBlock {
-  font-size: 24px;
-  color: #12a5eb;
-  padding-bottom: 55px;
 }
 
 .blockProcess_02 .wrapListNews .tab {
@@ -2014,10 +2001,6 @@ h1, h2, h3 {
   margin-bottom: 60px;
 }
 
-.blockProcess_02 .banner .titleBlock {
-  padding-bottom: 30px;
-}
-
 .blockProcess_02 .banner .note {
   font-size: 16px;
   line-height: 30px;
@@ -2067,17 +2050,10 @@ h1, h2, h3 {
 }
 
 .blockProcess_02 .btnContact {
-  padding: 50px 0;
-}
-
-.block04_3 .titleBlock {
-  color: #002638;
+  padding: 50px 0 0;
 }
 
 .block04_3 .text {
-  font-size: 16px;
-  line-height: 30px;
-  margin: auto;
   max-width: 745px;
 }
 
@@ -2094,13 +2070,8 @@ h1, h2, h3 {
   border-bottom: 1px solid #c9c9c9;
 }
 
-.blockProcess_03 .titleBlock {
-  color: #12a5eb;
+.blockProcess_03 .title_A {
   padding-bottom: 90px;
-}
-
-.blockProcess_03 .titleBlock img {
-  margin: auto;
 }
 
 /*====================================
@@ -2111,22 +2082,15 @@ h1, h2, h3 {
   padding-top: 90px;
 }
 
-.blockContact_01 .titleBlock {
-  color: #12a5eb;
+.blockContact_01 .title_A {
   padding-bottom: 60px;
-  font-size: 24px;
 }
 
-.blockContact_01 .description {
-  font-size: 16px;
-  line-height: 30px;
+.blockContact_01 .text {
   max-width: 700px;
-  width: 100%;
-  margin: auto;
-  text-align: left;
 }
 
-.blockContact_01 .description a {
+.blockContact_01 .text a {
   text-decoration: underline;
   color: #0468ff;
 }
@@ -2135,15 +2099,11 @@ h1, h2, h3 {
             blockConfirmForm
 =====================================*/
 .blockConfirmForm {
-  min-height: 380px;
   padding: 100px 0;
-  text-align: center;
 }
 
-.blockConfirmForm .titleBlock {
-  color: #12a5eb;
+.blockConfirmForm .title_A {
   padding-bottom: 60px;
-  font-style: 24px;
 }
 
 .blockConfirmForm .description {
@@ -2155,18 +2115,25 @@ h1, h2, h3 {
   margin: auto;
 }
 
+.blockConfirmForm .blockTable07 {
+  padding: 30px 0 50px 0;
+}
+
+.blockConfirmForm .blockTable07 tr td:last-child {
+  color: red;
+  border: 1px solid #c9c9c9;
+  background: transparent;
+}
+
 /*====================================
             blockCompleteForm
 =====================================*/
 .blockCompleteForm {
-  height: 380px;
   padding: 100px 0;
 }
 
-.blockCompleteForm .titleBlock {
-  color: #12a5eb;
+.blockCompleteForm .title_A {
   padding-bottom: 60px;
-  font-style: 24px;
 }
 
 .blockCompleteForm .description {
@@ -2185,11 +2152,6 @@ h1, h2, h3 {
   padding: 20px 0;
 }
 
-/*====================================*/
-.btnContact {
-  padding: 0 0 50px;
-}
-
 /*====================================
             footCommonUnit
 =====================================*/
@@ -2199,8 +2161,7 @@ h1, h2, h3 {
   background: #f7f6f2;
 }
 
-.footCommonUnit .titleBlock {
-  color: #12a5eb;
+.footCommonUnit .title_A {
   padding-bottom: 50px;
 }
 
@@ -2217,13 +2178,14 @@ h1, h2, h3 {
 .footCommonUnit .boxSp04 {
   background: #ededeb;
   border: 5px solid #edecea;
-  padding: 45px 0 40px;
+  padding: 10px 0 55px;
 }
 
 .footCommonUnit .boxSp04 .tBox {
   text-align: center;
   color: #12a5eb;
   font-size: 24px;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -2321,6 +2283,7 @@ h1, h2, h3 {
 @media screen and (max-width: 780px) {
   h1, h2, h3 {
     font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif, sans-serif;
+    font-weight: 600;
   }
   body {
     background: #fff;
@@ -2336,6 +2299,66 @@ h1, h2, h3 {
   }
   .is_pc {
     display: none !important;
+  }
+  .pt55_sp {
+    padding-top: 55px !important;
+  }
+  .pb55_sp {
+    padding-bottom: 55px !important;
+  }
+  .pb45_sp {
+    padding-bottom: 45px !important;
+  }
+  .pt30_sp {
+    padding-top: 30px !important;
+  }
+  .pt10_sp {
+    padding-top: 10px !important;
+  }
+  .pb0_sp {
+    padding-bottom: 0px !important;
+  }
+  .mt55_sp {
+    margin-top: 55px;
+  }
+  .mb55_sp {
+    margin-bottom: 55px !important;
+  }
+  .mb0_sp {
+    margin-bottom: 0 !important;
+  }
+  .mt0_sp {
+    margin-top: 0 !important;
+  }
+  .btnContact {
+    margin-top: 45px;
+  }
+  .boxSp04 {
+    padding-bottom: 0;
+  }
+  .btnOn {
+    width: 280px;
+    margin: 0 auto;
+  }
+  .title_B {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .text {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btnOn1, .btnOn {
+    margin: auto;
+    width: 280px;
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+  .btnMore {
+    padding: 45px 0 55px;
+  }
+  .arrowTitle {
+    padding-top: 55px !important;
   }
   /*----------Swap two div before and after----------*/
   .swapTwo {
@@ -2456,27 +2479,42 @@ h1, h2, h3 {
   /*------------------
         commonParts
     -----------------------------------*/
-  .titleBlock {
-    font-size: 22px;
+  .title_A {
+    font-size: 20px;
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+    line-height: 1.4;
+  }
+  .title_B {
+    font-size: 20px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
   .description {
     letter-spacing: .15em;
     line-height: 1.6 !important;
   }
   .nameBlock {
-    font-size: 22px !important;
+    font-size: 20px !important;
   }
   /*------------------
             blockHome_02
     -----------------------------------*/
+  .blockHome_02 {
+    padding: 55px 0 0 0;
+  }
   .blockHome_02 .item {
     display: block;
-    padding: 10px;
+    padding: 0 5%;
     background: none;
     border: none !important;
   }
+  .blockHome_02 .item:not(:last-child) {
+    margin-bottom: 0px;
+  }
   .blockHome_02 .item .avatar {
     float: none;
+    max-width: 100%;
     margin: 0 auto;
   }
   .blockHome_02 .item .description {
@@ -2494,8 +2532,9 @@ h1, h2, h3 {
   .blockHome_02 .item .titleI {
     font-size: 18px;
     max-width: 100%;
-    padding: 16px 0;
+    padding: 16px 0 25px 0;
     line-height: 25px;
+    font-weight: 500;
   }
   .blockHome_02 .item .txtI {
     max-width: 100%;
@@ -2505,9 +2544,6 @@ h1, h2, h3 {
   }
   .blockHome_02 .item br {
     display: none;
-  }
-  .blockHome_02 .item .btnMore {
-    padding: 10px 0 5px;
   }
   .blockHome_02 .item .btnMore img {
     margin: 0 auto;
@@ -2525,7 +2561,6 @@ h1, h2, h3 {
     margin: 0;
     display: block;
     border-top: 1px solid #c9c9c9;
-    border-bottom: 1px solid #c9c9c9;
   }
   .blockListTop .items {
     position: relative;
@@ -2548,9 +2583,6 @@ h1, h2, h3 {
   .blockListTop .items.brd_b_none {
     border-bottom: none !important;
   }
-  .blockListTop .items:last-child {
-    border-bottom: none;
-  }
   .blockListTop .items .avatar {
     display: none;
   }
@@ -2569,35 +2601,42 @@ h1, h2, h3 {
     -ms-flex-align: baseline;
     align-items: baseline;
     padding-left: 0;
+    text-align: left;
   }
   .blockListTop .items .description a {
     width: 100%;
     display: block;
     padding-left: 15px;
   }
+  .blockListFoot {
+    margin-top: 0;
+  }
+  .blockListFoot li:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
   /*------------------
             blockHome_01
     -----------------------------------*/
   .blockHome_01 {
+    padding-top: 30px;
     background: none;
-    min-height: 540px;
+    min-height: inherit;
     width: 100%;
   }
   .blockHome_01 h1 {
-    font-size: 22px;
-    line-height: 35px;
-    padding: 80px 0 55px;
+    font-size: 20px;
+    line-height: 30px;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: left;
   }
-  .blockHome_01 .description {
+  .blockHome_01 .text {
     font-size: 16px;
     line-height: 22px;
     padding: 0 5%;
   }
   .blockHome_01 .btnOn1 {
-    margin-top: 50px;
-    padding-bottom: 30px;
+    margin-top: 45px;
   }
   .blockHome_01 .mapInfo {
     border: none;
@@ -2614,28 +2653,34 @@ h1, h2, h3 {
   /*------------------
             blockHome_03
     -----------------------------------*/
+  .blockHome_03 {
+    padding: 0;
+  }
   .blockHome_03 .description {
     font-size: 16px;
     line-height: 22px;
     padding: 0 5% 50px;
   }
+  .blockHome_03 .text {
+    padding-bottom: 45px;
+  }
   /*------------------
             blockHome_04
     -----------------------------------*/
-  .blockHome_04 {
-    margin-top: 20px;
-  }
   .blockHome_04 .mapInfo {
     border: none;
     position: relative;
     top: 0;
     right: 0;
-    padding: 5%;
-    margin: 15px 3%;
+    padding: 0 5%;
   }
   .blockHome_04 .mapInfo p {
     font-size: 16px;
     line-height: 22px;
+    margin-top: 16px;
+  }
+  .blockHome_04 .mapInfo .btnOn {
+    margin-top: 45px;
   }
   .blockHome_04 #mapIframe {
     height: 320px;
@@ -2659,33 +2704,43 @@ h1, h2, h3 {
   .blockHome_05 .boxOn {
     max-width: 100%;
     margin: auto;
+    margin-top: 0;
     position: relative;
     top: 0;
     bottom: 0;
     right: 0;
     z-index: 9;
-    padding: 27px 0;
+    padding: 0;
+  }
+  .blockHome_05 .boxOn .title01 {
+    padding-bottom: 45px;
   }
   .blockHome_05 .txt02 {
     padding: 0 5%;
+    text-align: left;
   }
   /*------------------
             blockService_banner
     -----------------------------------*/
+  .blockService_banner {
+    padding: 0;
+  }
   /*------------------
             blockService_01
     -----------------------------------*/
-  .blockService_01 .titleBlock {
-    padding-left: 5%;
-    padding-right: 5%;
+  .blockService_01 {
+    padding: 0;
+  }
+  .blockService_01 .title_B {
     text-align: left;
-    font-size: 22px;
+    padding-bottom: 45px;
   }
   .blockService_01 .tableInfo {
+    margin-top: 55px;
     position: relative;
     background: #f7f6f2;
     border: none;
-    padding: 35px 3%;
+    padding: 55px 3%;
   }
   .blockService_01 .tableInfo:after {
     content: "";
@@ -2711,17 +2766,27 @@ h1, h2, h3 {
   .blockService_01 .tableInfo td {
     display: block;
     line-height: 24px;
-    padding: 12px 10px 12px 10px;
+    padding: 16px 10px 0 10px;
   }
   .blockService_01 .tableInfo td:nth-child(even) {
+    padding-bottom: 25px;
     padding-left: 10px;
+    padding-top: 16px;
+  }
+  .blockService_01 .tableInfo tr {
     border-bottom: 1px solid #c9c9c9;
   }
-  .blockService_01 .tableInfo tr td:first-child {
+  .blockService_01 .tableInfo tr:last-child {
+    border-bottom: none;
+  }
+  .blockService_01 .tableInfo tr:last-child td.tdTop {
     border-right: 0;
     width: 100%;
-    padding: 12px 10px 5px 10px;
+    padding: 0 10px;
     vertical-align: top;
+  }
+  .blockService_01 .tableInfo tr:last-child td:nth-child(2n) {
+    padding-bottom: 0;
   }
   .blockService_01 .text {
     padding: 0 5%;
@@ -2729,15 +2794,25 @@ h1, h2, h3 {
   /*------------------
             blockService_02
     -----------------------------------*/
-  .blockService_02 .description {
-    font-size: 16px;
-    padding: 0 5%;
+  .blockService_02 {
+    padding: 0;
+  }
+  .blockService_02 .title_B {
+    text-align: left;
+    padding-bottom: 45px;
+  }
+  .blockService_02 .title_B.first {
+    padding-top: 0;
+  }
+  .blockService_02 .pd_t_55 {
+    padding-top: 0 !important;
   }
   /*------------------
             blockService_03
     -----------------------------------*/
   .blockService_03 {
-    padding-bottom: 30px;
+    margin: 0;
+    padding: 55px 0;
   }
   .blockService_03 .table02 thead tr th:first-child {
     min-width: 80px;
@@ -2746,21 +2821,47 @@ h1, h2, h3 {
     min-width: 100px;
   }
   /*------------------
-            blockP
+            blockService_04
     -----------------------------------*/
+  .blockService_04 {
+    padding-bottom: 0;
+  }
+  .blockService_04 .title_B {
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
   .blockService_04 .items {
     width: 100%;
   }
+  .blockService_04 .description {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 16px;
+  }
+  .blockService_04 .description .text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .blockService_04 .description h3 {
+    height: auto !important;
+  }
   .blockService_04 .description .name {
-    font-size: 16px;
+    font-size: 18px;
+    max-width: 100%;
+    padding-bottom: 25px;
+    font-weight: 500;
+  }
+  .blockService_04 .description .name a {
+    line-height: 25px;
+    color: #12a5eb;
   }
   .blockService_04 .more {
     font-family: 'Noto Sans Japanese', sans-serif, sans-serif;
     font-weight: 700;
-    background: url("../images/subPage/arrowRw.png") no-repeat 74% 48% #12a5eb;
+    background: #12a5eb;
     text-align: center;
     max-width: 280px;
-    margin: 30px auto 50px;
+    margin: 45px auto 55px;
   }
   .blockService_04 .more a {
     display: block;
@@ -2771,8 +2872,27 @@ h1, h2, h3 {
   /*------------------
             blockThumbnail
     -----------------------------------*/
+  .blockThumbnail {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .blockThumbnail.block04_3 {
+    padding-top: 0;
+  }
   .blockThumbnail .items {
     display: block;
+    padding-bottom: 50px;
+  }
+  .blockThumbnail .items .description {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .blockThumbnail .items.first {
+    padding-top: 0 !important;
+  }
+  .blockThumbnail .items.even .description {
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .blockThumbnail .avatar {
     display: block;
@@ -2784,21 +2904,27 @@ h1, h2, h3 {
     margin-top: 20px;
     display: block;
     width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
     margin: 0;
   }
+  .blockThumbnail .description .text {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .blockThumbnail .description .name {
-    text-align: center;
-    font-size: 22px;
+    text-align: left;
+    font-size: 20px;
+    margin-top: 16px;
   }
   .blockThumbnail .description p {
     font-size: 16px;
-    padding: 0 3%;
   }
   .blockThumbnail .noteThumbnail {
     padding: 28px 5%;
     margin-bottom: 0;
+    margin-top: 45px;
+    margin-bottom: 55px;
   }
   /*------------------
             blockBtnBottom
@@ -2822,17 +2948,55 @@ h1, h2, h3 {
     width: 280px;
   }
   /*------------------
+            blockProcess_01
+    -----------------------------------*/
+  .blockProcess_01 {
+    padding-top: 0;
+    padding-bottom: 55px;
+  }
+  .blockProcess_01 .text {
+    text-align: left;
+    padding-top: 45px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0;
+  }
+  /*------------------
             blockProcess_02
     -----------------------------------*/
+  .blockProcess_02 .btnContact {
+    padding: 0;
+  }
+  .blockProcess_02 .listThumbnail {
+    margin-top: 55px;
+  }
   .blockProcess_02 .list {
     margin: 0;
   }
   .blockProcess_02 .items {
-    padding: 0;
+    padding: 0 !important;
     width: 100%;
+  }
+  .blockProcess_02 .items:last-child {
+    margin: 10px 0;
   }
   .blockProcess_02 .avatar img {
     width: 100%;
+  }
+  .blockProcess_02 .banner {
+    margin-bottom: 0;
+  }
+  .blockProcess_02 .banner .note {
+    padding: 20px 5% 0;
+  }
+  .blockProcess_02 .description {
+    padding: 16px 0px 25px;
+  }
+  .blockProcess_02 .description.last_sp {
+    padding-bottom: 0;
+  }
+  .blockProcess_02 .listProcess01 .note {
+    padding: 20px 5%;
   }
   .blockProcess_02 .itemT {
     font-size: 14px;
@@ -2861,7 +3025,13 @@ h1, h2, h3 {
   }
   .blockProcess_02 .text {
     min-height: inherit !important;
-    padding: 0 3%;
+  }
+  .blockProcess_02 .wrapListNews .itemT span {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #12a5eb;
+    color: #12a5eb;
+    display: block;
+    padding: 24px 12px;
   }
   .blockProcess_02 .wrapListNews .tab {
     display: none;
@@ -2885,7 +3055,7 @@ h1, h2, h3 {
     display: block;
   }
   .blockProcess_02 .listProcess01 .titleTab {
-    margin: 20px 0 0;
+    margin: 0px 0 20px;
   }
   .blockProcess_02 .listProcess01 .itemT {
     padding: 10px;
@@ -2914,6 +3084,9 @@ h1, h2, h3 {
   /*------------------
             blockProcess_03
     -----------------------------------*/
+  .blockProcess_03 {
+    padding-top: 0;
+  }
   .zoomer_wrapper {
     /*border: 1px solid #ddd;*/
     border-radius: 3px;
@@ -2925,32 +3098,47 @@ h1, h2, h3 {
   /*------------------
             blockProcess_04
     -----------------------------------*/
+  .blockProcess_04 {
+    padding: 0;
+  }
   .blockProcess_04 .description {
     font-size: 16px;
     line-height: 22px;
-    margin: auto auto 30px;
+    margin: auto;
     max-width: 100%;
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
   /*------------------
-            block04_03
-    -----------------------------------*/
-  /*------------------
             block05_01
     -----------------------------------*/
+  .block05_01 {
+    padding: 0;
+  }
+  .block05_01 .title_B {
+    padding-bottom: 45px;
+  }
+  .block05_01 .title_B.first {
+    padding-top: 0;
+  }
   .block05_01 .text {
     line-height: 24px;
     text-align: left;
   }
   .block05_01 .nameBlock {
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 700;
     line-height: 35px;
   }
   /*------------------
             blockAbout_01
     -----------------------------------*/
+  .blockAbout_01 {
+    padding: 0;
+    padding-bottom: 55px;
+  }
   .blockAbout_01 .text {
+    padding-top: 16px;
     line-height: 22px;
   }
   .blockAbout_01 .contentblock {
@@ -2974,6 +3162,7 @@ h1, h2, h3 {
     padding-right: 0;
   }
   .blockAbout_01 .note {
+    padding-top: 25px;
     font-size: 16px;
   }
   .blockAbout_01 .note .bold {
@@ -2983,25 +3172,56 @@ h1, h2, h3 {
             blockAbout_02
     -----------------------------------*/
   .blockAbout_02 {
-    padding: 60px 0;
+    padding: 0;
   }
-  .blockAbout_02 .nameBlock {
-    font-size: 22px;
+  .blockAbout_02 .title_B {
+    font-weight: 700;
     line-height: 35px;
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
+  .blockAbout_02 .title_B.first {
+    padding-top: 0;
+  }
+  .blockAbout_02 .title_A {
+    padding-bottom: 55px;
+  }
+  .blockAbout_02 .title_A.t2 {
+    padding-bottom: 45px;
   }
   .blockAbout_02 .text {
     padding: 0 5%;
   }
   .blockAbout_02 dt {
+    border-top: 1px solid #eee;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+  }
+  .blockAbout_02 .textList .titsub {
+    color: #12a5eb;
+    text-align: left;
+    font-size: 18px;
+    max-width: 100%;
+    padding: 0 5% 0 5%;
+    line-height: 25px;
+    font-weight: 500;
   }
   .blockAbout_02 .textList p {
-    padding: 0 5% 30px;
+    padding: 0 5% 25px;
+  }
+  .blockAbout_02 .boxSp04 {
+    margin-top: 45px;
+    padding-bottom: 0;
   }
   /*------------------
             blockAbout_03
     -----------------------------------*/
+  .blockAbout_03 {
+    padding: 0;
+  }
+  .blockAbout_03 .title_A#plant {
+    padding-top: 55px;
+  }
   .blockAbout_03 .table03 .hide_row {
     display: none;
   }
@@ -3009,11 +3229,11 @@ h1, h2, h3 {
     display: block;
     border: 0;
     width: 100%;
-    padding: 12px 10px 12px 10px;
+    padding: 16px 5% 12px;
     font-size: 16px;
   }
   .blockAbout_03 .table03 tr td:first-child {
-    padding: 12px 10px 5px 10px;
+    padding: 16px 5% 5px;
     background: transparent;
     color: #12a5eb;
     width: 100%;
@@ -3032,12 +3252,52 @@ h1, h2, h3 {
   /*------------------
             blockAbout_04
     -----------------------------------*/
+  .blockAbout_04 {
+    padding: 0;
+  }
   .blockAbout_04 .boxSp04 {
     border: none;
+    padding-bottom: 0;
+  }
+  /*------------------
+            blockContact
+    -----------------------------------*/
+  .blockContact_01 {
+    padding-top: 0;
+  }
+  .blockContact_01 .title_A {
+    padding-bottom: 55px;
+  }
+  .blockContact_01 .description {
+    padding: 0 5%;
+  }
+  /*------------------
+            blockConfirmForm
+    -----------------------------------*/
+  .blockConfirmForm {
+    padding: 0 0 55px 0;
+  }
+  .blockConfirmForm .blockTable07 {
+    padding: 30px 0 20px 0;
+  }
+  .blockConfirmForm .blockTable07 tr td {
+    font-size: 16px;
+  }
+  .blockConfirmForm .blockTable07 tr td:last-child {
+    background: #fff;
+  }
+  /*------------------
+            blockCompleteForm
+    -----------------------------------*/
+  .blockCompleteForm {
+    padding: 0 0 55px 0;
   }
   /*------------------
             blockTable07
     -----------------------------------*/
+  .blockTable07 {
+    padding: 45px 0;
+  }
   .blockTable07 .table05 tr td {
     border: none !important;
     width: 100%;
@@ -3051,6 +3311,9 @@ h1, h2, h3 {
   .blockTable07 .table05 tr td.cTd {
     background: #fff !important;
     border: none !important;
+  }
+  .blockTable07 .table05 tr:last-child td:last-child {
+    padding-bottom: 10px;
   }
   .blockTable07 .table05 .noteTb {
     display: block;
@@ -3072,14 +3335,34 @@ h1, h2, h3 {
     top: 5px;
   }
   /*------------------
+            block07bot
+    -----------------------------------*/
+  .block07bot h3 {
+    padding-bottom: 0;
+    text-align: left;
+  }
+  /*------------------
             footCommonUnit
     -----------------------------------*/
   .footCommonUnit {
-    padding-top: 50px;
+    padding-top: 70px;
   }
   .footCommonUnit .boxSp04 {
     border: none;
     background: none;
+    padding: 0 0 55px 0;
+  }
+  .footCommonUnit .boxSp04 .tBox {
+    font-size: 20px;
+    padding-top: 0;
+    line-height: 1.6;
+    padding-bottom: 16px;
+  }
+  .footCommonUnit .boxSp04 .text {
+    padding: 0;
+  }
+  .footCommonUnit .boxSp04 .btnBox04 {
+    padding-top: 45px;
   }
   .footCommonUnit img {
     width: 280px;

@@ -1,23 +1,9 @@
-// @media screen and (max-width: 997px) {
-//     .container {
-//         padding: 0 3%;
-//     }
-//     .is_tb {
-//         display: inherit !important;
-//     }
-//     .hide_tb {
-//         display: none !important;
-//     }
-// }
 @media screen and (max-width: 1000px) {
     .header {
         .nav {
             float: none;
             min-width: 940px;
         }
-    }
-    .slick-dots {
-        // display: none!important;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -30,24 +16,6 @@
     .container {
         padding: 0 3%;
     }
-    // .header, .navFixed {
-    //     .logo {
-    //         img {
-    //             width: 100px;
-    //         }
-    //     }
-    //     .nav {
-    //         li {
-    //             padding-right: 0;
-    //         }
-    //     }
-    // }
-    // .header .logo img.visible1200ov {
-    //     display: none;
-    // }
-    // .header .logo img.visible1200under {
-    //     display: block!important;
-    // }
 }
 @media screen and (max-width: 840px) {
     .navFixed .nav li:last-child {
@@ -60,16 +28,13 @@
 @media screen and (max-width: 780px) {
     h1, h2, h3 {
         font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif, sans-serif;
+        font-weight: 600;
     }
     body {
         background: $color-a;
     }
     .bgHeader {
-        // display: none;
         height: 72px;
-    }
-    .logoSlider {
-        // display: none!important;
     }
     .is_pc_tb {
         display: none!important;
@@ -80,8 +45,65 @@
     .is_pc {
         display: none !important;
     }
-    .slick-slide {
-        // background-size: 100% !important;
+    .pt55_sp {
+        padding-top: 55px !important;
+    }
+    .pb55_sp {
+        padding-bottom: 55px !important;
+    }
+    .pb45_sp {
+        padding-bottom: 45px !important;
+    }
+    .pt30_sp {
+        padding-top: 30px !important;
+    }
+    .pt10_sp {
+        padding-top: 10px !important;
+    }
+    .pb0_sp {
+        padding-bottom: 0px !important;
+    }
+    .mt55_sp {
+        margin-top: 55px;
+    }
+    .mb55_sp {
+        margin-bottom: 55px !important;
+    }
+    .mb0_sp {
+        margin-bottom: 0 !important;
+    }
+    .mt0_sp {
+        margin-top: 0 !important;
+    }
+    .btnContact {
+        margin-top: 45px;
+    }
+    .boxSp04 {
+        padding-bottom: 0;
+    }
+    .btnOn{
+        width:280px;
+        margin:0 auto;
+    }
+    .title_B {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .text {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .btnOn1, .btnOn {
+        margin: auto;
+        width: 280px;
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+    .btnMore {
+        padding: 45px 0 55px;
+    }
+    .arrowTitle {
+        padding-top: 55px!important;
     }
     /*----------Swap two div before and after----------*/
     .swapTwo {
@@ -118,9 +140,6 @@
     .header {
         background: $color-a!important;
         position: fixed;
-        // .logo {
-        //     padding: 8px 19px;
-        // }
         width: 100%;
     }
     .logoMb {
@@ -129,7 +148,6 @@
         a {
             img {
                 width: 90px;
-                // width: 90%;
             }
         }
     }
@@ -171,7 +189,6 @@
             overflow: auto;
             margin: auto;
             position: absolute;
-            // top: 72px;
             left: 0;
             bottom: 0;
             right: 0;
@@ -182,23 +199,12 @@
             }
         }
         .sliderMain {
-            // background: $color-a;
             .oc {
-                // &:nth-child(2) {
-                //     background: url('../');
-                // }
-                // &:nth-child(3) {
-                //     background: url('../images/mainslider_sp03.png');
-                // }
-                // &:nth-child(4) {
-                //     background: url('../images/mainslider_sp04.png');
-                // }
                 background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: top center;
                 img {
                     min-height: 640px;
-                    // top: 72px;
                     width: 100%;
                 }
             }
@@ -220,34 +226,45 @@
     /*------------------
         commonParts
     -----------------------------------*/
-    .titleBlock{
-        font-size:22px;
+    .title_A {
+        font-size: 20px;
+        padding-top: 55px!important;
+        padding-bottom: 55px!important;
+        line-height: 1.4;
+    }
+    .title_B {
+        font-size: 20px;
+        padding-top: 45px;
+        padding-bottom: 45px;
     }
     .description{
         letter-spacing:.15em;
         line-height:1.6!important;
     }
     .nameBlock{
-        font-size:22px!important;
+        font-size: 20px!important;
     }
     /*------------------
             blockHome_02
     -----------------------------------*/
     .blockHome_02 {
+        padding: 55px 0 0 0;
         .item {
             display: block;
-            padding: 10px;
+            padding: 0 5%;
             background: none;
             border: none!important;
+            &:not(:last-child) {
+                margin-bottom: 0px;
+            }
             .avatar {
-                // width: 50%;
                 float: none;
+                max-width:100%;
                 margin: 0 auto;
             }
             .description {
                 padding-left: 0;
                 float: none;
-                // width: 50%;
             }
             .btnMore {
                 position: relative;
@@ -256,16 +273,13 @@
                 clear: both;
                 right: 0;
                 bottom: 0;
-                // width: 70%;
-                // margin: auto;i
-                // text-align: center;
             }
             .titleI {
-                // text-align: center;
                 font-size: 18px;
                 max-width: 100%;
-                padding: 16px 0;
+                padding: 16px 0 25px 0;
                 line-height: 25px;
+                font-weight:500;
             }
             .txtI {
                 max-width: 100%;
@@ -277,7 +291,7 @@
                 display: none;
             }
             .btnMore {
-                padding: 10px 0 5px;
+                // padding: 20px 0 5px;
                 img {
                     margin: 0 auto;
                 }
@@ -287,8 +301,8 @@
     /*------------------
             blockListTop
     -----------------------------------*/
+
     .blockListTop {
-        // margin-top: 74px;
         .container {
             padding: 0;
         }
@@ -297,10 +311,11 @@
             margin: 0;
             display: block;
             border-top: 1px solid $color-7;
-            border-bottom: 1px solid $color-7;
+            // border-bottom: 1px solid $color-7;
         }
         .items {
             position: relative;
+            border-bottom: 1px solid $color-7;
             &:before {
                 content: "";
                 position: absolute;
@@ -310,7 +325,6 @@
                 height: 10px;
                 background: url('../images/subPage/arrowTh.png') no-repeat;
             }
-            border-bottom: 1px solid $color-7;
             &:nth-child(odd) {
                 border-right: 1px solid $color-7;
             }
@@ -318,7 +332,7 @@
                 border-bottom: none!important;
             }
             &:last-child {
-                border-bottom: none;
+                // border-bottom: none;
             }
             width: 50%;
             text-align: left;
@@ -329,12 +343,12 @@
                 }
             }
             .description {
-                // min-height: 60px;
                 line-height: 22px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: baseline;
                 padding-left: 0;
+                text-align: left;
                 a {
                     width: 100%;
                     display: block;
@@ -343,29 +357,38 @@
             }
         }
     }
+    .blockListFoot {
+        margin-top: 0;
+        li {
+            &:nth-last-child(-n+2) {
+                border-bottom: 0;
+            }
+        }
+    }
     /*------------------
             blockHome_01
     -----------------------------------*/
     .blockHome_01 {
-        // background: rgba(0, 0, 0, 0) url("../images/backg01_sp.jpg") repeat fixed center center / cover;
+        padding-top: 30px;
         background: none;
-        min-height: 540px;
+        // min-height: 540px;
+        min-height: inherit;
         width: 100%;
         h1 {
-            font-size: 22px;
-            line-height: 35px;
-            padding: 80px 0 55px;
+            font-size: 20px;
+            line-height: 30px;
+            // padding: 80px 0 35px;
             padding-left: 5%;
             padding-right: 5%;
+            text-align: left;
         }
-        .description {
+        .text {
             font-size: 16px;
             line-height: 22px;
             padding: 0 5%;
         }
         .btnOn1 {
-            margin-top: 50px;
-            padding-bottom: 30px;
+            margin-top: 45px;
         }
         .mapInfo {
             border: none;
@@ -384,27 +407,34 @@
             blockHome_03
     -----------------------------------*/
     .blockHome_03 {
+        padding: 0;
         .description {
            font-size: 16px;
            line-height: 22px;
            padding: 0 5% 50px;
+        }
+        .text {
+            padding-bottom: 45px;
         }
     }
     /*------------------
             blockHome_04
     -----------------------------------*/
     .blockHome_04 {
-        margin-top: 20px;
         .mapInfo {
             border: none;
             position: relative;
             top: 0;
             right: 0;
-            padding: 5%;
-            margin: 15px 3%;
+            padding: 0 5%;
             p {
                 font-size: 16px;
                 line-height: 22px;
+                // margin-bottom: 45px;
+                margin-top: 16px;
+            }
+            .btnOn {
+                margin-top: 45px;
             }
         }
         #mapIframe {
@@ -418,7 +448,6 @@
     .blockHome_05 {
         background: transparent;
         background-attachment: inherit;
-        // background-size: cover;
         padding-top: 0;
         position: relative;
         .wrapBox {
@@ -430,38 +459,43 @@
         .boxOn {
             max-width: 100%;
             margin: auto;
+            margin-top: 0;
             position: relative;
             top: 0;
             bottom: 0;
             right: 0;
             z-index: 9;
-            padding: 27px 0;
+            padding: 0;
+            .title01 {
+                padding-bottom: 45px;
+            }
         }
         .txt02 {
             padding:0 5%;
+            text-align:left;
         }
     }
     /*------------------
             blockService_banner
     -----------------------------------*/
     .blockService_banner {
-        // padding: 30px 0 40px 0;
+        padding: 0;
     }
     /*------------------
             blockService_01
     -----------------------------------*/
     .blockService_01 {
-        .titleBlock{
-            padding-left: 5%;
-            padding-right: 5%;
+        padding: 0;
+        .title_B{
             text-align: left;
-    		font-size: 22px;
+            padding-bottom: 45px;
     	}
         .tableInfo {
+            margin-top: 55px;
             position: relative;
             background: #f7f6f2;
             border: none;
-            padding: 35px 3%;
+            padding: 55px 3%;
             &:after {
                 content: "";
                 position: absolute;
@@ -486,46 +520,57 @@
             td {
                 display: block;
                 line-height: 24px;
-                padding: 12px 10px 12px 10px;
+                padding: 16px 10px 0 10px;
                 &:nth-child(even) {
+                    padding-bottom: 25px;
                     padding-left: 10px;
-                    border-bottom: 1px solid $color-7;
+                    padding-top: 16px;
                 }
             }
             tr {
-                td {
-                    &:first-child {
-                        border-right: 0;
-                        width: 100%;
-                        padding: 12px 10px 5px 10px;
-                        vertical-align: top;
+                border-bottom: 1px solid #c9c9c9;
+                &:last-child {
+                    border-bottom: none;
+                    td {
+                        &.tdTop {
+                            border-right: 0;
+                            width: 100%;
+                            padding: 0 10px;
+                            vertical-align: top;
+                        }
+                        &:nth-child(2n) {
+                            padding-bottom: 0;
+                        }
                     }
                 }
             }
         }
         .text {
             padding: 0 5%;
-            // line-height: 22px;
         }
     }
     /*------------------
             blockService_02
     -----------------------------------*/
     .blockService_02 {
-        .headingBlock02 {
-            // padding-left: 5%;
-            // padding-right: 5%;
+        padding: 0;
+        .title_B {
+            &.first {
+                padding-top: 0;
+            }
+            text-align:left;
+            padding-bottom: 45px;
         }
-        .description {
-            font-size: 16px;
-            padding:0 5%;
+        .pd_t_55 {
+            padding-top: 0!important;
         }
     }
     /*------------------
             blockService_03
     -----------------------------------*/
     .blockService_03 {
-        padding-bottom: 30px;
+        margin:0;
+        padding: 55px 0;
     }
     .blockService_03 {
         .table02 {
@@ -548,24 +593,46 @@
         }
     }
     /*------------------
-            blockP
+            blockService_04
     -----------------------------------*/
     .blockService_04 {
+        padding-bottom: 0;
+        .title_B {
+            padding-top: 55px;
+            padding-bottom: 45px;
+        }
         .items {
             width: 100%;
         }
         .description {
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 16px;
+            .text {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            h3 {
+                height: auto !important;
+            }
             .name {
-                font-size: 16px;
+                font-size: 18px;
+                max-width: 100%;
+                padding-bottom: 25px;
+                font-weight: 500;
+                a {
+                    line-height: 25px;
+                    color: $color-2;
+                }
             }
         }
         .more {
             font-family: 'Noto Sans Japanese', sans-serif, sans-serif;
             font-weight:700;
-            background: url("../images/subPage/arrowRw.png") no-repeat 74% 48% #12a5eb;
+            background: #12a5eb;
             text-align: center;
             max-width:280px;
-            margin:30px auto 50px;
+            margin: 45px auto 55px;
             a {
                 display: block;
                 padding: 16px 18px;
@@ -578,8 +645,28 @@
             blockThumbnail
     -----------------------------------*/
     .blockThumbnail {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        &.block04_3 {
+            padding-top: 0;
+        }
         .items {
             display: block;
+            // padding: 0 !important;
+            padding-bottom: 50px;
+            .description {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            &.first {
+                padding-top: 0!important;
+            }
+            &.even {
+                .description {
+                    padding-left:5%;
+                    padding-right:5%;
+                }
+            }
         }
         .avatar {
             display: block;
@@ -591,21 +678,27 @@
             margin-top: 20px;
             display: block;
             width: 100%;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
+            padding-left: 5%;
+            padding-right: 5%;
             margin: 0;
+            .text {
+                padding-left: 0;
+                padding-right: 0;
+            }
             .name {
-                text-align: center;
-                font-size: 22px;
+                text-align: left;
+                font-size: 20px;
+                margin-top: 16px;
             }
             p {
                 font-size:16px;
-                padding:0 3%;
             }
         }
         .noteThumbnail {
             padding: 28px 5%;
             margin-bottom: 0;
+            margin-top: 45px;
+            margin-bottom: 55px;
         }
     }
     /*------------------
@@ -629,22 +722,63 @@
         }
     }
     .blockHome_02 .item .btnMore img{
-        width:280px;
+        width: 280px;
+    }
+    /*------------------
+            blockProcess_01
+    -----------------------------------*/
+    .blockProcess_01 {
+        padding-top: 0;
+        padding-bottom: 55px;
+        .text {
+            text-align: left;
+            padding-top: 45px;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 0;
+        }
     }
     /*------------------
             blockProcess_02
     -----------------------------------*/
     .blockProcess_02 {
+        .btnContact {
+            padding: 0;
+        }
+        .listThumbnail {
+            margin-top: 55px;
+        }
         .list {
             margin: 0;
         }
         .items {
-            padding: 0;
+            padding: 0!important;
             width: 100%;
+            &:last-child {
+                margin: 10px 0;
+            }
         }
         .avatar {
             img {
                 width: 100%;
+            }
+        }
+        .banner {
+            margin-bottom: 0;
+            .note {
+                padding: 20px 5% 0;
+            }
+        }
+        .description {
+            // padding: 16px 8px 25px;
+            padding: 16px 0px 25px;
+            &.last_sp {
+                padding-bottom: 0;
+            }
+        }
+        .listProcess01 {
+            .note {
+                padding: 20px 5%;
             }
         }
         .itemT {
@@ -670,9 +804,17 @@
         }
         .text {
             min-height: inherit!important;
-            padding:0 3%;
         }
         .wrapListNews {
+            .itemT {
+                span {
+                    background: #fff none repeat scroll 0 0;
+                    border: 1px solid #12a5eb;
+                    color: #12a5eb;
+                    display: block;
+                    padding: 24px 12px;
+                }
+            }
             .tab {
                 display: none;
                 padding-top: 20px;
@@ -699,7 +841,7 @@
                 }
             }
             .titleTab {
-                margin: 20px 0 0;
+                margin: 0px 0 20px;
             }
             .itemT {
                 padding: 10px;
@@ -727,6 +869,9 @@
     /*------------------
             blockProcess_03
     -----------------------------------*/
+    .blockProcess_03 {
+        padding-top: 0;
+    }
     .zoomer_wrapper {
         /*border: 1px solid #ddd;*/
         border-radius: 3px;
@@ -738,27 +883,35 @@
     /*------------------
             blockProcess_04
     -----------------------------------*/
-    .blockProcess_04 .description{
-        font-size: 16px;
-        line-height: 22px;
-        margin: auto auto 30px;
-        max-width: 100%;
-        text-align: center;
-        width: 100%;
+    .blockProcess_04 {
+        padding: 0;
+        .description{
+            font-size: 16px;
+            line-height: 22px;
+            margin: auto;
+            max-width: 100%;
+            text-align: left;
+            width: 100%;
+        }
     }
-    /*------------------
-            block04_03
-    -----------------------------------*/
     /*------------------
             block05_01
     -----------------------------------*/
     .block05_01 {
+        padding: 0;
+        .title_B {
+            &.first {
+                padding-top: 0;
+            }
+            padding-bottom: 45px;
+        }
         .text {
             line-height: 24px;
             text-align:left;
         }
         .nameBlock {
-            font-size: 22px;
+            font-size: 20px;
+            font-weight: 700;
             line-height: 35px;
         }
     }
@@ -766,7 +919,10 @@
             blockAbout_01
     -----------------------------------*/
     .blockAbout_01 {
+        padding: 0;
+        padding-bottom: 55px;
         .text {
+            padding-top: 16px;
             line-height: 22px;
         }
         .contentblock {
@@ -783,6 +939,7 @@
             padding-right: 0;
         }
         .note{
+            padding-top: 25px;
             font-size:16px;
             .bold{
                 font-size:20px;
@@ -793,26 +950,57 @@
             blockAbout_02
     -----------------------------------*/
     .blockAbout_02 {
-        padding: 60px 0;
-        .nameBlock {
-            font-size: 22px;
+        padding: 0;
+        .title_B {
+            font-weight: 700;
             line-height: 35px;
+            padding-top: 55px;
+            padding-bottom: 45px;
+            &.first {
+                padding-top: 0;
+            }
+        }
+        .title_A  {
+            padding-bottom: 55px;
+            &.t2 {
+                padding-bottom: 45px;
+            }
         }
         .text{
             padding:0 5%;
         }
-        dt{
-            text-align:center;
-            margin-bottom:15px;
+        dt {
+            border-top: 1px solid #eee;
+            text-align: center;
+            margin-bottom: 25px;
         }
-        .textList p {
-            padding:0 5% 30px;
+        .textList {
+            .titsub {
+                color: $color-2;
+                text-align: left;
+                font-size: 18px;
+                max-width: 100%;
+                padding: 0 5% 0 5%;
+                line-height: 25px;
+                font-weight:500;
+            }
+            p {
+                padding:0 5% 25px;
+            }
+        }
+        .boxSp04 {
+            margin-top: 45px;
+            padding-bottom: 0;
         }
     }
     /*------------------
             blockAbout_03
     -----------------------------------*/
     .blockAbout_03 {
+        padding: 0;
+        .title_A#plant {
+            padding-top: 55px;
+        }
         .table03 {
             .hide_row {
                 display: none;
@@ -822,10 +1010,10 @@
                     display: block;
                     border: 0;
                     width: 100%;
-                    padding: 12px 10px 12px 10px;
+                    padding: 16px 5% 12px;
                     font-size: 16px;
                     &:first-child {
-                        padding: 12px 10px 5px 10px;
+                        padding: 16px 5% 5px;
                         background: transparent;
                         color: $color-2;
                         width: 100%;
@@ -849,14 +1037,54 @@
             blockAbout_04
     -----------------------------------*/
     .blockAbout_04 {
+        padding: 0;
         .boxSp04 {
             border: none;
+            padding-bottom: 0;
         }
+    }
+    /*------------------
+            blockContact
+    -----------------------------------*/
+    .blockContact_01 {
+        padding-top: 0;
+        .title_A {
+            padding-bottom: 55px;
+        }
+        .description{
+            padding:0 5%;
+        }
+    }
+
+    /*------------------
+            blockConfirmForm
+    -----------------------------------*/
+    .blockConfirmForm {
+        padding: 0 0 55px 0;
+        .blockTable07 {
+            // padding: 30px 0 50px 0;
+            padding: 30px 0 20px 0;
+            tr {
+                td {
+                    font-size: 16px;
+                    &:last-child {
+                        background: $color-a;
+                    }
+                }
+            }
+        }
+    }
+    /*------------------
+            blockCompleteForm
+    -----------------------------------*/
+    .blockCompleteForm {
+        padding: 0 0 55px 0;
     }
     /*------------------
             blockTable07
     -----------------------------------*/
     .blockTable07 {
+        padding: 45px 0;
         .table05 {
             tr {
                 td {
@@ -871,6 +1099,13 @@
                     &.cTd {
                         background: #fff!important;
                         border: none!important;
+                    }
+                }
+                &:last-child {
+                    td {
+                        &:last-child {
+                            padding-bottom: 10px;
+                        }
                     }
                 }
             }
@@ -896,14 +1131,34 @@
         }
     }
     /*------------------
+            block07bot
+    -----------------------------------*/
+    .block07bot h3 {
+        padding-bottom: 0;
+        text-align: left;
+    }
+    /*------------------
             footCommonUnit
     -----------------------------------*/
     .footCommonUnit {
-        padding-top: 50px;
+        padding-top: 70px;
     }
     .footCommonUnit .boxSp04 {
         border: none;
-        background:none;
+        background: none;
+        padding: 0 0 55px 0;
+        .tBox{
+            font-size:20px;
+            padding-top:0;
+            line-height:1.6;
+            padding-bottom: 16px;
+        }
+        .text {
+            padding: 0;
+        }
+        .btnBox04 {
+            padding-top: 45px;
+        }
     }
     .footCommonUnit img {
         width:280px;
@@ -912,11 +1167,9 @@
             footer
     -----------------------------------*/
     .footer {
-        // background: $color-3;
         background: url("../images/subPage/backgFooter_sp.jpg") bottom center no-repeat;
         background-size: auto;
         min-height: 220px;
-        // height: 1260px;
         position: rerative;
         h3 {
             line-height: 25px;
