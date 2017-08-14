@@ -1,0 +1,217 @@
+@import "base/variable";
+/*------------------------------------
+
+            Page-02.html
+
+------------------------------------*/
+/*======================================
+        section-page02-01
+======================================*/
+.section-page02-01 {
+    position: relative;
+    background: url('../images/page-02/img_banner_01.jpg')center;
+    min-height: 1072px;
+    .page02-01In {
+        padding-top: 110px;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .title_h2 {
+        padding-bottom: 100px;
+    }
+    .image-center {
+        position: relative;
+        .caption-img {
+            position: absolute;
+            top: 32px;
+            right: 255px;
+        }
+        .caption-text {
+            text-align: left;
+            color: $color-a;
+            position: absolute;
+            top: 22px;
+            right: -50px;
+            h3 {
+                font-size: 18px;
+            }
+            ul {
+                padding-top: 10px;
+                padding-left: 20px;
+            }
+            li {
+                padding: 5px 0;
+                line-height: 24px;
+                list-style: initial;
+            }
+        }
+        .btn-focus {
+            position: absolute;
+            top: 380px;
+            left: 350px;
+            a {
+                position: relative;
+                left: 120px;
+                &:nth-child(2) {
+                    top: 100px;
+                    left: 180px;
+                }
+                &:nth-child(3) {
+                    top: 120px;
+                    left: 12px;
+                }
+            }
+        }
+    }
+    .caption-02 {
+        position: absolute;
+        left: 90px;
+        bottom: 100px;
+    }
+}
+/*======================================
+        section-page02-02
+======================================*/
+.section-page02-02 {
+    background: url('../images/page-02/img_banner_02.jpg') top left no-repeat fixed;
+    background-size: cover;
+    min-height: 815px;
+    .page02-02In {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .title_h3 {
+        text-align: left;
+    }
+    .textDes {
+        max-width: 483px;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+    }
+    .caption-text {
+        position: absolute;
+        top: 230px;
+        right: -66px;
+        .title_h3 {
+            padding-bottom: 40px;
+        }
+        .textDes {
+            padding-bottom: 80px;
+        }
+        .btn-caption {
+            text-align: center;
+        }
+    }
+}
+/*======================================
+        section-page02-03
+======================================*/
+.section-page02-03 {
+    position: relative;
+    background: $color-1;
+    padding: 130px 0 95px;
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: url('../images/background-home03.jpg')center no-repeat fixed;
+        background-size: 100%;
+        height: 1141px;
+    }
+    .titleRow {
+        padding-top: 120px;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+        padding-top: 40px;
+    }
+    .textDes {
+        padding-bottom: 80px;
+    }
+}
+/*======================================
+        section-page02-04
+======================================*/
+.section-page02-04 {
+    background: $color-2;
+    padding: 100px 0 95px;
+    .titleRow {
+        padding-bottom: 30px;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+        padding-top: 40px;
+    }
+    .textDes {
+        padding-bottom: 80px;
+    }
+}
+/*======================================
+        section-page02-05
+======================================*/
+.section-page02-05 {
+    background: $color-1;
+    padding: 75px 0 80px;
+    .titleRow {
+        padding-bottom: 40px;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .textDes {
+        padding-bottom: 55px;
+    }
+}
+/*======================================
+        section-page02-06
+======================================*/
+.section-page02-06 {
+    background: $color-2;
+    padding: 90px 0 78px;
+    .titleRow {
+        padding-bottom: 40px;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .textDes {
+        padding-bottom: 55px;
+    }
+}
+/*======================================
+        section-page02-0
+======================================*/
+/*-----------------------
+        Responsive for device < 780px
+-----------------------------------------*/
+@media screen and (max-width: 780px) {}

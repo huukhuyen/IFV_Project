@@ -1,0 +1,13 @@
+/*======================================
+        Footer
+======================================*/
+.footer {
+    @extend %clearfix;
+    background: url('../images/bg_footer.jpg') repeat-x;
+    height: 343px;
+    padding-top: 235px;
+    .copyright {
+        text-align: center;
+        color: $color-a;
+    }
+}

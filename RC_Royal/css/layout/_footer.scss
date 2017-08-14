@@ -17,9 +17,44 @@
             &:last-child {
                 padding-right: 0;
             }
+            &:hover {
+                a {
+                    &:before {
+                        transition: 0.3s linear;
+                        transform: scaleX(1.1);
+                    }
+                    &:after {
+                        top: inherit;
+                        bottom: -10px;
+                        transition: 0.3s linear;
+                        background: $color-o;
+                        transform: scaleX(1.1);
+                    }
+                }
+            }
             a {
+                position: relative;
                 padding-top: 10px;
-                border-top: 1px solid $color-o;
+                // border-top: 1px solid $color-o;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    width: 100%;
+                    background: $color-o;
+                    height: 1px;
+                    left: 0;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    bottom: calc(100% - -10px);
+                    width: 100%;
+                    // background: red;
+                    height: 1px;
+                    left: 0;
+                }
             }
         }
     }

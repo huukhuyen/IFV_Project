@@ -1,0 +1,271 @@
+/*======================================
+        section-home01
+======================================*/
+.section-home01 {
+    @extend %clearfix;
+    position: relative;
+    background: url('../images/img_home01.jpg')center fixed no-repeat;
+    background-size: cover;
+    min-height: 835px;
+    .container {
+        position: relative;
+    }
+    .captionSlider {
+        position: absolute;
+        top: 287px;
+        right: 0;
+    }
+    .btnScroll {
+        position: absolute;
+        top: 720px;
+        z-index: 12;
+        left: calc(50% - 35px);
+    }
+}
+/*======================================
+        section-home02
+======================================*/
+.section-home02 {
+    @extend %clearfix;
+    background: url('../images/img_home02_blur.jpg')center no-repeat;
+    background-size: cover;
+    min-height: 979px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .blurred-img {
+        background: url('../images/img_home02.jpg')center no-repeat;
+        opacity: 0;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .content {
+        position: relative;
+        z-index: 9;
+        max-width: 498px;
+        float: right;
+        color: $color-a;
+        .title_h2 {
+            padding-bottom: 15px;
+        }
+        .description {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing:.15em;
+            &:not(:first-child) {
+                padding-top: 30px;
+            }
+        }
+        .btnModal {
+            padding-top: 85px;
+            font-size: 24px;
+            a {
+                border-bottom: 3px solid $color-a;
+            }
+            .fa {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+/*======================================
+        section-home03
+======================================*/
+.section-home03 {
+    background: #e2e5ec;
+    position: relative;
+    padding-top: 130px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: url('../images/background-home03.jpg')center no-repeat fixed;
+        background-size: 100%;
+        height: 1420px;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .avatarSection {
+        padding-bottom: 85px;
+        position: relative;
+        padding-top: 100px;
+        .note-img {
+            position: absolute;
+            background: url('../images/note-01.png')center no-repeat;
+            top: 184px;
+            right: 290px;
+            width: 255px;
+            height: 148px;
+        }
+        .description-avatar {
+            position: absolute;
+            top: 176px;
+            right: -100px;
+            h3 {
+                padding-bottom: 20px;
+                font-size: 20px;
+            }
+            ul {
+                padding-left: 20px;
+            }
+            li {
+                font-size: 16px;
+                padding: 5px 0;
+                line-height: 24px;
+                list-style: initial;
+            }
+        }
+    }
+}
+
+/*======================================
+        section-home04
+======================================*/
+.section-home04 {
+    background: $color-1;
+    .titleRow {
+        padding: 82px 0 40px 0;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .center-slider {
+        padding: 50px 0;
+    }
+}
+/*======================================
+        section-home05
+======================================*/
+.section-home05 {
+    background: $color-2;
+    .titleRow {
+        padding: 130px 0 40px 0;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .img-home05 {
+        padding-top: 30px;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+}
+/*======================================
+        section-home06
+======================================*/
+.section-home06 {
+    background: $color-1;
+    .titleRow {
+        padding: 130px 0 40px 0;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .img-home06 {
+        position: relative;
+        background: url('../images/img_home06_blur.jpg')center no-repeat;
+        max-width: 920px;
+        width: 100%;
+        height: 688px;
+        margin: auto;
+        margin-top: 90px;
+    }
+    .blurred-img06 {
+        background: url('../images/img_home06.jpg')center no-repeat;
+        opacity: 0;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+/*======================================
+        section-home07
+======================================*/
+.section-home07 {
+    background: $color-1 url('../images/img_home07.jpg')left bottom no-repeat fixed;
+    min-height: 900px;
+    .titleRow {
+        position: relative;
+        top: -50px;
+        // padding: 0px 0 40px 0;
+    }
+    .textRow {
+        text-align: justify;
+        max-width: 663px;
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .img-home07 {
+        padding-top: 90px;
+        text-align: center;
+    }
+}
+/*======================================
+        section-home08
+======================================*/
+.section-home08 {
+    padding: 95px 0 112px 0;
+    background: $color-o;
+    .title_h2 {
+        font-size: 36px;
+        color: $color-a;
+        padding-bottom: 80px;
+    }
+    .listItems {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    .items {
+        text-align: center;
+        float: left;
+        width: 33.3333333%;
+        padding: 0 19px;
+        &:nth-last-of-type(-n+2) {
+            padding-top: 58px;
+        }
+        img {
+            width: 100%;
+        }
+        .description {
+            padding-top: 15px;
+            color: $color-a;
+        }
+    }
+}
+
+/*======================================
+        section-home09
+======================================*/

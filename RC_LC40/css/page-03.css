@@ -1,0 +1,147 @@
+/*------------------------------------
+
+            Page-03.html
+
+------------------------------------*/
+/*======================================
+        section-navThumbnail
+======================================*/
+.section-navThumbnail .container {
+  padding: 0; }
+
+.section-navThumbnail .listItems {
+  margin: 0 -10px;
+  padding: 20px 0; }
+
+.section-navThumbnail .items {
+  width: 20%;
+  float: left;
+  padding: 0px 10px; }
+  .section-navThumbnail .items img {
+    width: 100%; }
+  .section-navThumbnail .items .caption {
+    padding-top: 12px;
+    line-height: 19px;
+    text-align: center; }
+
+/*======================================
+        section-page03-01
+======================================*/
+.section-page03-01 {
+  background: url("../images/page-03/img_banner_01.jpg") center fixed no-repeat;
+  min-height: 815px;
+  background-size: cover; }
+
+/*======================================
+        section-page03-02
+======================================*/
+.section-page03-02 {
+  padding-top: 140px; }
+  .section-page03-02 .title_h2 {
+    padding-bottom: 140px; }
+  .section-page03-02 .title_h3 {
+    max-width: 839px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 60px; }
+  .section-page03-02 .textDes {
+    max-width: 672px;
+    width: 100%;
+    padding-bottom: 92px; }
+
+/*======================================
+        section-page03-03
+======================================*/
+.section-page03-03 {
+  position: relative;
+  z-index: 9;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: -114px;
+  padding-top: 68px;
+  padding-bottom: 145px; }
+  .section-page03-03 .title_h3 {
+    padding-bottom: 50px; }
+  .section-page03-03 .textDes {
+    max-width: 689px;
+    width: 100%; }
+
+/*======================================
+        section-page03-04
+======================================*/
+.section-page03-04 {
+  padding: 122px 0 137px;
+  border-bottom: 1px solid #e5e5e5; }
+  .section-page03-04 .title_h3 {
+    padding-bottom: 50px; }
+  .section-page03-04 .textDes {
+    max-width: 680px;
+    width: 100%;
+    padding-bottom: 75px; }
+
+/*======================================
+        section-page03-05
+======================================*/
+.section-page03-05 {
+  padding: 120px 0 180px; }
+  .section-page03-05 .title_h3 {
+    padding-bottom: 45px; }
+  .section-page03-05 .textDes {
+    max-width: 670px;
+    width: 100%;
+    padding-bottom: 30px; }
+  .section-page03-05 .image-center {
+    padding-top: 42px;
+    margin-right: -70px; }
+
+/*======================================
+        section-page03-06
+======================================*/
+.section-page03-06 {
+  background: url("../images/page-03/img_banner_05.jpg") center fixed no-repeat;
+  background-size: cover;
+  min-height: 815px; }
+
+/*======================================
+        section-page03-07
+======================================*/
+.section-page03-07 {
+  padding: 135px 0 106px;
+  border-bottom: 1px solid #e5e5e5; }
+  .section-page03-07 .title_h2 {
+    padding-bottom: 110px; }
+  .section-page03-07 .title_h3 {
+    padding-bottom: 75px; }
+  .section-page03-07 .textDes {
+    max-width: 670px;
+    width: 100%;
+    padding-bottom: 40px; }
+  .section-page03-07 .image-center {
+    padding-top: 56px; }
+
+/*======================================
+        section-page03-08
+======================================*/
+.section-page03-08 {
+  padding: 124px 0 120px;
+  border-bottom: 1px solid #e5e5e5; }
+  .section-page03-08 .title_h3 {
+    padding-bottom: 70px; }
+  .section-page03-08 .textDes {
+    max-width: 679px; }
+
+/*======================================
+        section-page03-09
+======================================*/
+.section-page03-09 {
+  padding: 124px 0 120px;
+  border-bottom: 1px solid #e5e5e5; }
+  .section-page03-09 .title_h3 {
+    padding-bottom: 70px; }
+  .section-page03-09 .textDes {
+    max-width: 678px; }
+
+/*-----------------------
+        Responsive for device < 780px
+-----------------------------------------*/

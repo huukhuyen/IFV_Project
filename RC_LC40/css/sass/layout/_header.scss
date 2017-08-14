@@ -1,0 +1,136 @@
+/*======================================
+        Header
+======================================*/
+.header {
+    @extend %clearfix;
+    background: #0c0c10;
+    &.top-page {
+        background: $color-a;
+        .container {
+            position: absolute;
+            max-width: 1300px;
+        }
+        .nav-main {
+            li {
+                color: $color-o;
+                &.highlight {
+                    &:hover {
+                        a {
+                            border: 1px solid transparent;
+                            box-shadow: none;
+                            background: $color-o;
+                            color: $color-a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        max-width: 1300px;
+        padding-bottom: 22px;
+    }
+    .headerIn {
+        @extend %clearfix;
+        position: relative;
+        z-index: 9;
+        width: 100%;
+        max-width: 1300px;
+        margin: auto;
+    }
+    .logo {
+        padding: 27px 0 0 25px;
+        float: left;
+        width: 50%;
+        img {
+            width: 178px;
+        }
+    }
+}
+.nav-main {
+    padding: 27px 0 0;
+    width: 50%;
+    float: right;
+    li {
+        float: left;
+        color: $color-a;
+        &.active {
+            a {
+                &:after {
+                    top: inherit;
+                    bottom: 0px;
+                    transition: 0.3s linear;
+                    background: $color-a;
+                    transform: scaleX(0.8);
+                }
+            }
+        }
+        a {
+            &:hover {
+                &:after {
+                    top: inherit;
+                    bottom: 0px;
+                    transition: 0.3s linear;
+                    background: $color-a;
+                    // width: 100%;
+                    transform: scaleX(0.8);
+                }
+            }
+            padding: 17px 15px;
+            display: block;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0px;
+                width: 100%;
+                transform: scaleX(0.2);
+                height: 3px;
+                left: 0;
+            }
+        }
+        &.highlight {
+            margin-left: 30px;
+            border-radius: 50px;
+            padding: 7px 0 0;
+            a {
+                border: 1px solid transparent;
+                background: $color-a;
+                border-radius: 50px;
+                padding: 8px 15px;
+                color: $color-o;
+                &:hover {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: transparent;
+                    }
+                }
+            }
+            &:hover {
+                a {
+                    box-shadow: 0 0 25px #0065AF;
+                    border: 1px solid #0065AF;
+                    background: $color-a;
+                    color: $color-3;
+                }
+            }
+        }
+    }
+}
+.langNav {
+    color: $color-a;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 24px;
+    overflow: hidden;
+    li {
+        padding: 4px 15px;
+        background: $color-o;
+    }
+}

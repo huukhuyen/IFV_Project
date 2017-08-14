@@ -1,0 +1,119 @@
+@import "base/variable";
+/*------------------------------------
+
+            Page-05.html
+
+------------------------------------*/
+/*======================================
+        section-page05-01
+======================================*/
+.section-page05-01 {
+    padding: 135px 0 80px 0;
+    .title_h2 {
+        padding-bottom: 50px;
+    }
+    .title_h3 {
+        text-align: center;
+        padding-bottom: 55px;
+    }
+    .textDes {
+        max-width: 682px;
+        width: 100%;
+        margin: auto;
+    }
+}
+/*======================================
+        section-page05-02
+======================================*/
+.section-page05-02 {
+    padding: 55px 0 10px 0;
+    background: $color-7;
+    .items {
+        padding-bottom: 70px;
+        .title_h4 {
+            padding-bottom: 30px;
+        }
+        @extend %clearfix;
+        &:nth-child(odd) {
+            .avatar {
+                float: left;
+            }
+            .description {
+                padding-right: 70px;
+                float: left;
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+        &:nth-child(even) {
+            .avatar {
+                float: left;
+                width: 100%;
+                max-width: 570px;
+            }
+            .description {
+                max-width: 400px;
+                width: 100%;
+                padding-left: 40px;
+                float: left;
+            }
+        }
+        .description-text {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}
+
+/*======================================
+        section-page05-03
+======================================*/
+.section-page05-03 {
+    padding-top: 185px;
+    .title_h3 {
+        text-align: center;
+        padding-bottom: 68px;
+    }
+    .title_h4 {
+        padding-bottom: 35px;
+    }
+    .textDes {
+        max-width: 677px;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 75px;
+    }
+    .content-03 {
+        padding: 80px 0 65px 0;
+        background: $color-7;
+    }
+    .img-page05-03 {
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+    }
+    .items {
+        .left {
+            float: left;
+            max-width: 550px;
+            width: 100%;
+            .description-text {
+                font-size: 18px;
+                line-height: 30px;
+                padding-bottom: 45px;
+            }
+        }
+        .right {
+            float: right;
+        }
+    }
+}
+
+/*======================================
+        section-page05-04
+======================================*/
+
+/*-----------------------
+        Responsive for device < 780px
+-----------------------------------------*/
+@media screen and (max-width: 780px) {}

@@ -48,6 +48,17 @@
             width: 100%;
         }
     }
+    .avatar {
+        overflow: hidden;
+        img {
+            transition: 0.4s linear;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
     .caption {
         padding-bottom: 15px;
         text-align: center;

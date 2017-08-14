@@ -1,0 +1,296 @@
+/*-----------------------
+        Responsive for device < 780px
+-----------------------------------------*/
+@media screen and (max-width: 780px) {
+    .is_pc {
+        display: none;
+    }
+    .is_sp {
+        display: inherit;
+    }
+    .container {
+        padding-left: 7.14286%!important;
+        padding-right: 7.14286%!important;
+    }
+    /*------------------- Typography_SP -------------------*/
+    .titleRow {
+        display: block;
+    }
+    .number {
+        text-align: center;
+        padding-bottom: 35px;
+        display: block;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        img {
+            width: 50px;
+        }
+    }
+    .titleText {
+        display: block;
+        padding-left: 0;
+        h2 {
+            font-size: 22.5px;
+            line-height: 1.5em;
+        }
+        h5 {
+            font-size: 17px;
+        }
+    }
+    .title_h2 {
+        // font-size: 24px;
+        // color: $color-primary;
+        // line-height: 1.8;
+        // font-weight: bold;
+    }
+    .textDes {
+        text-align: justify;
+        line-height: 1.75em;
+        font-size: .875em!important;
+        padding-bottom: 1em;
+    }
+    .title_h3 {
+        // font-size: 24px;
+        // line-height: 1.8;
+        // color: $color-primary;
+        // font-weight: bold;
+    }
+    .title_h4 {
+        // font-size: 24px;
+        // color: $color-primary;
+        // line-height: 1.8;
+        // font-weight: bold;
+    }
+    .text {
+        // padding:
+        // font-size: ;
+        // color:
+    }
+
+    ///*------------------- Form_SP -------------------*/
+    input {
+        // padding:
+        // border:
+        &:focus {
+
+        }
+    }
+    select {
+        // padding:
+        // border:
+    }
+    textarea {
+        // padding:
+        // border:
+    }
+    .btn {
+        // padding:
+        // border:
+        // background:
+        // font-size:
+        // color:
+    }
+    /*--------------------------- header ---------------------------*/
+    .headerSp {
+        background: $color-a;
+        padding: 31px 24px;
+        &:after {
+            content: "";
+            clear: both;
+            visibility: hidden;
+            display: block;
+            height: 0;
+        }
+        .logoSP {
+            float: left;
+            width: 40%;
+        }
+        .toggle-sp {
+            float: right;
+            .btnToggle {
+                cursor: pointer;
+                width: 30px;
+                height: 35px;
+                span {
+                    transition: all .4s;
+                    width: 100%;
+                    margin-bottom: 6px;
+                    height: 4px;
+                    background: $color-o;
+                    display: block;
+                }
+                &.active {
+                    span {
+                        &:nth-of-type(1) {
+                            transform: translateY(10px) rotate(-45deg);
+                        }
+                        &:nth-of-type(2) {
+                            opacity: 0;
+                        }
+                        &:nth-of-type(3) {
+                            transform: translateY(-10px) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+        .nav-sp {
+            position: absolute;
+            background: $color-a;
+            width: 100%;
+            left: 0;
+            padding-left: 7.14286%;
+            padding-right: 7.14286%;
+            padding-top: 20px;
+            display: none;
+            li {
+                display: block;
+                width: 100%;
+                padding: 16px 16px 16px 0;
+                &:not(:first-child) {
+                    border-top: 1px solid #ddd;
+                }
+            }
+        }
+    }
+    /*--------------------------- section-home01 ---------------------------*/
+    .section-home01 {
+        background-position: 22% 45px;
+        min-height: 600px;
+        .captionSlider {
+            top: 40px;
+            right: 20px;
+        }
+        .btnScroll {
+            top: 500px;
+        }
+    }
+    /*--------------------------- section-home02 ---------------------------*/
+    .section-home02 {
+        background: url('../images/img_home02_sp_blur.jpg')center no-repeat;
+        align-items: flex-end;
+        padding-bottom: 80px;
+        .blurred-img {
+            background: url('../images/img_home02_sp.jpg')center no-repeat;
+        }
+        .content {
+            .title_h2 {
+                text-align: left;
+                padding-bottom: 30px;
+            }
+            .description {
+                &:not(:first-child) {
+                    padding-top: 0;
+                }
+            }
+            .btnModal {
+                padding-top: 25px;
+                text-align: center;
+            }
+        }
+    }
+
+    /*--------------------------- section-home03 ---------------------------*/
+    .section-home03 {
+        padding-top: 60px;
+        .avatarSection {
+            padding-top: 60px;
+            // padding-bottom: 70px;
+            padding-bottom: 0px;
+            .note-img {
+                background: url('../images/note-01_sp.png')center no-repeat;
+                top: 222px;
+                right: 120px;
+                width: 98px;
+                height: 255px;
+            }
+            .description-avatar {
+                position: relative;
+                top: 0;
+                right: 0;
+                padding-bottom: 60px;
+                li{
+                    line-height: 1.75em;
+                    font-size: .875em;
+                    padding-bottom: 1em;
+                }
+            }
+        }
+    }
+    /*--------------------------- section-home04 ---------------------------*/
+    .section-home04 {
+        .titleRow {
+            padding: 0 0 25px 0;
+        }
+    }
+    /*--------------------------- section-home05 ---------------------------*/
+    .section-home05 {
+        .titleRow {
+            padding: 0px 0 20px 0;
+        }
+    }
+    /*--------------------------- section-home06 ---------------------------*/
+    .section-home06 {
+        .titleRow {
+            padding: 0px 0 20px 0;
+        }
+        .img-home06 {
+            background: none;
+            margin-top: 50px;
+            height: 450px;
+        }
+        .blurred-img06 {
+            background-size: 100%;
+            background-position: top;
+        }
+    }
+    /*--------------------------- section-home07 ---------------------------*/
+    .section-home07 {
+        background-position: 75% 100%;
+        min-height: 780px;
+        background-size: 130%;
+        background-attachment: scroll;
+        .titleRow {
+            top: -30px;
+        }
+    }
+    /*--------------------------- section-home08 ---------------------------*/
+    .section-home08 {
+        padding: 25px 0 75px 0;
+        .title_h2 {
+            font-size: 22.5px;
+            line-height: 1.5em;
+            padding-bottom: 25px;
+        }
+        .listItems {
+            justify-content: flex-start;
+        }
+        .items {
+            width: 50%;
+            padding-bottom: 42px;
+            &:nth-last-of-type(-n+2) {
+                padding-top: 0;
+            }
+            &:nth-child(even) {
+                padding-right: 0;
+                padding-left: 8px;
+            }
+            &:nth-child(odd) {
+                padding-right: 8px;
+                padding-left: 0;
+            }
+            .description {
+                line-height: 1.4;
+            }
+        }
+    }
+    /*--------------------------- footer ---------------------------*/
+    .footer {
+        padding-top: 0;
+        height: inherit;
+        .copyright {
+            font-size: 12px;
+            padding-bottom: 18px;
+        }
+    }
+}
