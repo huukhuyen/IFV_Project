@@ -1,9 +1,10 @@
 $(document).ready(function() {
     // Clone nav PC to SP
     var cloneNav = $('.nav-main ul').clone(true);
-    var navSpClone = $(cloneNav).find('.highlight').remove();
+    // var navSpClone = $(cloneNav).find('.highlight').remove();
+    var navSpClone = $(cloneNav).find('.highlight').removeClass('highlight');
     $('.nav-sp').append(cloneNav);
-    
+
     // Toggle nav mobile
     $('.btnToggle').click(function(event) {
         $(this).toggleClass('active');
@@ -48,13 +49,14 @@ $(document).ready(function() {
             centerMode: true,
             centerPadding: '160px',
             slidesToShow: 1,
+            arrows: false,
             responsive: [{
                     breakpoint: 768,
                     settings: {
                         arrows: false,
                         centerMode: true,
                         centerPadding: '40px',
-                        slidesToShow: 3
+                        slidesToShow: 1
                     }
                 },
                 {
@@ -69,35 +71,83 @@ $(document).ready(function() {
             ]
         });
         // Click modal
+        // $('.video-popup').colorbox({
+        //     iframe: true,
+        //     innerWidth: 949,
+        //     innerHeight: 493,
+        //     scalePhotos: true,
+        //     maxWidth: '95%',
+        //     maxHeight: '95%'
+        // });
+
+        // $('.video-popup').colorbox({
+        //     rel: 'popout',
+        //     maxWidth: '95%',
+        //     maxHeight: '95%',
+        //     href: function() {
+        //         return this.href;
+        //     }
+        // });
+        $('.video-popup, #btn_close').click(function(event) {
+            $('.wrapVideo').toggleClass('is_hidden');
+        });
+
         $('.video-popup').colorbox({
-            iframe: true,
-            innerWidth: 949,
-            innerHeight: 493,
+            inline: true,
+            // width: '80%',
             maxWidth: '95%',
-            maxHeight: '95%'
+            maxHeight: '95%',
+            height: 'auto',
+            href: '#inline_content'
         });
     } catch (e) {}
 
-
-
-    // $('.btnModal a').click(function(event) {
-    //     let url_modal = $(this).data('img');
-    //     let modal_html = `
-    //         <div class="modal">
-    //             <div class="modalIn">
-    //                 <img src="` + url_modal + `" alt="">
-    //             </div>
-    //         </div>`;
-    //     $('body').append(modal_html);
-    //     return false;
-    // });
+    $("#btn_close").click(function() {
+        $("#videoplayer").load();
+        parent.$.fn.colorbox.close();
+        return false;
+    });
 
     // Hide modal
     $(document).click(function(e) {
-        if (!$(e.target).is('.modalIn')) {
-            $(".modal").fadeOut();
+        if ($(e.target).is('#cboxOverlay')) {
+            $('.wrapVideo').addClass('is_hidden');
+            $("#videoplayer").load();
         }
     });
+
+    var widthBr = $(window).width();
+    // Fixed header
+    if (widthBr <= 768) {
+        // Auto resize height items
+        var matchHeight = function() {
+            function init() {
+                eventListeners();
+                matchHeight();
+            }
+
+            function eventListeners() {
+                $(window).on('resize', function() {
+                    matchHeight();
+                });
+            }
+
+            function matchHeight() {
+                var groupName = $('[data-match-height]');
+                var groupHeights = [];
+                groupName.css('min-height', 'auto');
+                groupName.each(function() {
+                    groupHeights.push($(this).outerHeight());
+                });
+                var maxHeight = Math.max.apply(null, groupHeights);
+                groupName.css('height', maxHeight);
+            };
+            return {
+                init: init
+            };
+        }();
+        matchHeight.init();
+    } else {}
 
     // Fade scroll
     $(window).scroll(function() {
@@ -111,3 +161,12 @@ $(document).ready(function() {
         });
     }).trigger("scroll");
 });
+
+
+// colorbox Close
+
+// $(document).ready(function() {
+//     $(".close_btn").colorbox({
+//         inline: "true"
+//     });
+// });

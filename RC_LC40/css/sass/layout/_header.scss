@@ -8,16 +8,20 @@
         background: $color-a;
         .container {
             position: absolute;
-            max-width: 1300px;
+            max-width: 100%;
         }
         .nav-main {
             li {
                 color: $color-o;
                 &.highlight {
+                    a {
+                        background: $color-a;
+                        color: $color-o;
+                        box-shadow: none;
+                        border: 1px solid transparent;
+                    }
                     &:hover {
                         a {
-                            border: 1px solid transparent;
-                            box-shadow: none;
                             background: $color-o;
                             color: $color-a;
                         }
@@ -28,14 +32,14 @@
     }
     .container {
         max-width: 1300px;
-        padding-bottom: 22px;
+        padding-bottom: 20px;
     }
     .headerIn {
         @extend %clearfix;
         position: relative;
         z-index: 9;
         width: 100%;
-        max-width: 1300px;
+        max-width: 100%;
         margin: auto;
     }
     .logo {
@@ -48,7 +52,7 @@
     }
 }
 .nav-main {
-    padding: 27px 0 0;
+    padding: 18px 0 0 12%;
     width: 50%;
     float: right;
     li {
@@ -66,6 +70,9 @@
             }
         }
         a {
+            padding: 17px 15px;
+            display: block;
+            position: relative;
             &:hover {
                 &:after {
                     top: inherit;
@@ -76,9 +83,6 @@
                     transform: scaleX(0.8);
                 }
             }
-            padding: 17px 15px;
-            display: block;
-            position: relative;
             &:after {
                 content: "";
                 position: absolute;
@@ -99,6 +103,11 @@
                 border-radius: 50px;
                 padding: 8px 15px;
                 color: $color-o;
+                // hover
+                box-shadow: 0 0 25px #0065AF;
+                border: 1px solid #0065AF;
+                background: $color-a;
+                color: $color-3;
                 &:hover {
                     &:after {
                         content: "";
@@ -111,14 +120,10 @@
                     }
                 }
             }
-            &:hover {
-                a {
-                    box-shadow: 0 0 25px #0065AF;
-                    border: 1px solid #0065AF;
-                    background: $color-a;
-                    color: $color-3;
-                }
-            }
+            // &:hover {
+            //     a {
+            //     }
+            // }
         }
     }
 }

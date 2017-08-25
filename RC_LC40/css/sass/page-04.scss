@@ -91,4 +91,33 @@
 -----------------------------------------*/
 @media screen and (max-width: 780px) {
 
+    /*--------------------------- section-page04-01 ---------------------------*/
+    .section-page04-01 {
+        padding-top: 60px;
+    }
+    .table-page04-01 {
+        display: block;
+        tr {
+            &:first-child {
+                td {
+                    border-top: 1px solid $color-6;
+                }
+            }
+            td {
+                display: block;
+                padding: 15px 0;
+                font-size: 14px;
+                border: none!important;
+                &:first-child {
+                    width: 100%;
+                    border-top: 1px solid $color-6!important;
+                    color: $color-primary;
+                }
+                h3 {
+                    font-size: 17px;
+                }
+            }
+
+        }
+    }
 }

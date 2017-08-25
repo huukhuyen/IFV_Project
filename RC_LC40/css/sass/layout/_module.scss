@@ -47,13 +47,24 @@
 /*------------------- Video popup*/
 #cboxOverlay {
     background: $color-o;
-    opacity: 0.8!important;
+    opacity: 1!important;
 }
 #cboxLoadedContent {
     margin-bottom: 0;
+    overflow: inherit!important;
 }
 #cboxClose {
     display: none;
+}
+#inline_content {
+    background: $color-o;
+}
+#btn_close {
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    right: 0;
 }
 .fadeTop {
     opacity: 0;
@@ -62,14 +73,15 @@
     transform: translate(0px, 100px);
     -webkit-transition: all 0.6s;
     -o-transition: all 0.6s;
-    transition: all 0.6s
+    transition: all 0.6s;
 }
 .fadeTop.ef-slide {
     opacity: 1;
     -webkit-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
-    transform: translate(0px, 0px)
+    transform: translate(0px, 0px);
 }
+
 // Typography
 /*------------------- Typography -------------------*/
 .titleRow {
@@ -95,16 +107,14 @@
         font-size: 36px;
         line-height: 43px;
         color: $color-primary;
-        letter-spacing: .15em;
+        letter-spacing: 0.15em;
     }
 }
-
-.textDes{
+.textDes {
     font-size: 18px;
     line-height: 30px;
     margin: auto;
 }
-
 .title_h2 {
     font-size: 48px;
     // color: $color-primary;

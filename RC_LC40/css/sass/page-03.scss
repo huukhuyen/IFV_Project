@@ -167,9 +167,93 @@
         max-width: 678px;
     }
 }
+
+/*-----------------------
+        Responsive for device < 1200px
+-----------------------------------------*/
+@media screen and (max-width: 1200px) {
+    /*--------------------------- section-navThumbnail ---------------------------*/
+    .section-navThumbnail {
+        .listItems {
+            margin: 0;
+        }
+    }
+    /*--------------------------- section-page03-05 ---------------------------*/
+    .section-page03-05 {
+        .image-center {
+            margin-right: 0;
+        }
+    }
+}
+
 /*-----------------------
         Responsive for device < 780px
 -----------------------------------------*/
 @media screen and (max-width: 780px) {
-
+    /*--------------------------- navThumbnail ---------------------------*/
+    .section-navThumbnail {
+        .listItems {
+            margin: 0;
+            border-top: 1px solid $color-6;
+            padding: 0;
+        }
+        .items {
+            width: 50%;
+            border-bottom: 1px solid $color-6;
+            &:nth-child(odd) {
+                padding-left: 0;
+                border-right: 1px solid $color-6;
+            }
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+            .avatar {
+                display: none;
+            }
+            .caption {
+                text-align: left;
+                padding: 6px;
+            }
+        }
+    }
+    /*--------------------------- section-page03-02 ---------------------------*/
+    .section-page03-02 {
+        padding-top: 70px;
+    }
+    /*--------------------------- section-page03-03 ---------------------------*/
+    .section-page03-03 {
+        padding-bottom: 70px;
+    }
+    /*--------------------------- section-page03-04 ---------------------------*/
+    .section-page03-04 {
+        padding: 60px 0;
+    }
+    /*--------------------------- section-page03-05 ---------------------------*/
+    .section-page03-05 {
+        padding: 60px 0 90px;
+        .image-center {
+            margin-right: 0;
+        }
+    }
+    /*--------------------------- section-page03-06 ---------------------------*/
+    .section-page03-06 {
+        min-height: 220px;
+        background-size: 100%;
+        background-attachment: scroll;
+    }
+    /*--------------------------- section-page03-07 ---------------------------*/
+    .section-page03-07 {
+        padding: 60px 0 90px;
+        .image-center {
+            margin-right: 0;
+        }
+    }
+    /*--------------------------- section-page03-08 ---------------------------*/
+    .section-page03-08 {
+        padding: 60px 0;
+    }
+    /*--------------------------- section-page03-09 ---------------------------*/
+    .section-page03-09 {
+        padding: 60px 0;
+    }
 }

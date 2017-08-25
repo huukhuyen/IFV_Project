@@ -156,15 +156,28 @@ button:focus, input:focus, a:focus {
 /*------------------- Video popup*/
 #cboxOverlay {
   background: #000;
-  opacity: 0.8 !important;
+  opacity: 1 !important;
 }
 
 #cboxLoadedContent {
   margin-bottom: 0;
+  overflow: inherit !important;
 }
 
 #cboxClose {
   display: none;
+}
+
+#inline_content {
+  background: #000;
+}
+
+#btn_close {
+  cursor: pointer;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  right: 0;
 }
 
 .fadeTop {
@@ -212,7 +225,7 @@ button:focus, input:focus, a:focus {
   font-size: 36px;
   line-height: 43px;
   color: #33445b;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 .textDes {
@@ -254,31 +267,36 @@ button:focus, input:focus, a:focus {
 
 .header.top-page .container {
   position: absolute;
-  max-width: 1300px;
+  max-width: 100%;
 }
 
 .header.top-page .nav-main li {
   color: #000;
 }
 
-.header.top-page .nav-main li.highlight:hover a {
-  border: 1px solid transparent;
+.header.top-page .nav-main li.highlight a {
+  background: #ffffff;
+  color: #000;
   -webkit-box-shadow: none;
   box-shadow: none;
+  border: 1px solid transparent;
+}
+
+.header.top-page .nav-main li.highlight:hover a {
   background: #000;
   color: #ffffff;
 }
 
 .header .container {
   max-width: 1300px;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
 }
 
 .header .headerIn {
   position: relative;
   z-index: 9;
   width: 100%;
-  max-width: 1300px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -293,7 +311,7 @@ button:focus, input:focus, a:focus {
 }
 
 .nav-main {
-  padding: 27px 0 0;
+  padding: 18px 0 0 12%;
   width: 50%;
   float: right;
 }
@@ -357,6 +375,11 @@ button:focus, input:focus, a:focus {
   border-radius: 50px;
   padding: 8px 15px;
   color: #000;
+  -webkit-box-shadow: 0 0 25px #0065AF;
+  box-shadow: 0 0 25px #0065AF;
+  border: 1px solid #0065AF;
+  background: #ffffff;
+  color: #2991b3;
 }
 
 .nav-main li.highlight a:hover:after {
@@ -367,14 +390,6 @@ button:focus, input:focus, a:focus {
   width: 100%;
   height: 3px;
   background: transparent;
-}
-
-.nav-main li.highlight:hover a {
-  -webkit-box-shadow: 0 0 25px #0065AF;
-  box-shadow: 0 0 25px #0065AF;
-  border: 1px solid #0065AF;
-  background: #ffffff;
-  color: #2991b3;
 }
 
 .langNav {
@@ -564,6 +579,8 @@ button:focus, input:focus, a:focus {
 ======================================*/
 .section-home04 {
   background: #e3e5eb;
+  position: relative;
+  z-index: 9;
 }
 
 .section-home04 .titleRow {
@@ -588,6 +605,8 @@ button:focus, input:focus, a:focus {
 ======================================*/
 .section-home05 {
   background: #eff1f4;
+  position: relative;
+  z-index: 9;
 }
 
 .section-home05 .titleRow {
@@ -664,7 +683,6 @@ button:focus, input:focus, a:focus {
 
 .section-home07 .titleRow {
   position: relative;
-  top: -50px;
 }
 
 .section-home07 .textRow {
@@ -674,11 +692,16 @@ button:focus, input:focus, a:focus {
   margin: auto;
   font-size: 18px;
   line-height: 29px;
+  margin-top: 50px;
 }
 
 .section-home07 .img-home07 {
   padding-top: 90px;
   text-align: center;
+}
+
+.section-home07 .textDes {
+  margin-bottom: 55px;
 }
 
 /*======================================
@@ -730,9 +753,6 @@ button:focus, input:focus, a:focus {
 }
 
 /*======================================
-        section-home09
-======================================*/
-/*======================================
             Helper
 ======================================*/
 .is_pc {
@@ -771,6 +791,31 @@ button:focus, input:focus, a:focus {
   border: 0 !important;
 }
 
+.pd_top_100 {
+  padding-top: 100px;
+}
+
+/*-----------------------
+        Responsive for device < 1200px
+-----------------------------------------*/
+@media screen and (max-width: 1200px) {
+  /*--------------------------- header ---------------------------*/
+  .header .logo {
+    width: 26%;
+  }
+  .nav-main {
+    width: 72%;
+  }
+  .nav-main li.highlight {
+    margin-left: 15px;
+  }
+  /*--------------------------- section-home03 ---------------------------*/
+  .section-home03 .avatarSection .description-avatar {
+    z-index: 9;
+    right: 0;
+  }
+}
+
 /*-----------------------
         Responsive for device < 780px
 -----------------------------------------*/
@@ -784,6 +829,38 @@ button:focus, input:focus, a:focus {
   .container {
     padding-left: 7.14286% !important;
     padding-right: 7.14286% !important;
+  }
+  /*------------------- Swap div*/
+  .swapTwo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* optional */
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+  .swapTwo .first_div {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .swapTwo .second_div {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
   }
   /*------------------- Typography_SP -------------------*/
   .titleRow {
@@ -810,13 +887,26 @@ button:focus, input:focus, a:focus {
   .titleText h5 {
     font-size: 17px;
   }
+  .title_h2 {
+    font-size: 22.5px !important;
+    padding-bottom: 25px !important;
+    line-height: 1.5em !important;
+  }
+  .title_h3 {
+    line-height: 1.5em !important;
+    padding-bottom: 25px !important;
+    font-size: 1.375em !important;
+  }
   .textDes {
     text-align: justify;
     line-height: 1.75em;
-    font-size: 0.875em !important;
+    font-size: 15px !important;
     padding-bottom: 1em;
   }
   /*--------------------------- header ---------------------------*/
+  .header .container {
+    padding-bottom: 0;
+  }
   .headerSp {
     background: #ffffff;
     padding: 31px 24px;
@@ -831,6 +921,7 @@ button:focus, input:focus, a:focus {
   .headerSp .logoSP {
     float: left;
     width: 40%;
+    min-width: 180px;
   }
   .headerSp .toggle-sp {
     float: right;
@@ -841,9 +932,9 @@ button:focus, input:focus, a:focus {
     height: 35px;
   }
   .headerSp .toggle-sp .btnToggle span {
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
     width: 100%;
     margin-bottom: 6px;
     height: 4px;
@@ -878,8 +969,11 @@ button:focus, input:focus, a:focus {
     width: 100%;
     padding: 16px 16px 16px 0;
   }
-  .headerSp .nav-sp li:not(:first-child) {
-    border-top: 1px solid #ddd;
+  .headerSp .nav-sp li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+  .headerSp .nav-sp li.active {
+    border-bottom: 1px solid #33445b;
   }
   /*--------------------------- section-home01 ---------------------------*/
   .section-home01 {
@@ -920,9 +1014,12 @@ button:focus, input:focus, a:focus {
   .section-home03 {
     padding-top: 60px;
   }
+  .section-home03:before {
+    height: 1182px;
+  }
   .section-home03 .avatarSection {
     padding-top: 60px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   .section-home03 .avatarSection .note-img {
     background: url("../images/note-01_sp.png") center no-repeat;
@@ -939,25 +1036,25 @@ button:focus, input:focus, a:focus {
   }
   .section-home03 .avatarSection .description-avatar li {
     line-height: 1.75em;
-    font-size: .875em;
+    font-size: 0.875em;
     padding-bottom: 1em;
   }
   /*--------------------------- section-home04 ---------------------------*/
   .section-home04 .titleRow {
-    padding: 0 0 25px 0;
+    padding: 0 0 25px;
   }
   /*--------------------------- section-home05 ---------------------------*/
   .section-home05 .titleRow {
-    padding: 0px 0 20px 0;
+    padding: 0 0 20px;
   }
   /*--------------------------- section-home06 ---------------------------*/
   .section-home06 .titleRow {
-    padding: 0px 0 20px 0;
+    padding: 0 0 20px;
   }
   .section-home06 .img-home06 {
     background: none;
     margin-top: 50px;
-    height: 450px;
+    height: 350px;
   }
   .section-home06 .blurred-img06 {
     background-size: 100%;
@@ -972,10 +1069,11 @@ button:focus, input:focus, a:focus {
   }
   .section-home07 .titleRow {
     top: -30px;
+    margin-top: 0;
   }
   /*--------------------------- section-home08 ---------------------------*/
   .section-home08 {
-    padding: 25px 0 75px 0;
+    padding: 25px 0 75px;
   }
   .section-home08 .title_h2 {
     font-size: 22.5px;
@@ -1013,6 +1111,6 @@ button:focus, input:focus, a:focus {
   }
   .footer .copyright {
     font-size: 12px;
-    padding-bottom: 18px;
+    padding: 18px 0;
   }
 }

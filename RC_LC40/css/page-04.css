@@ -68,3 +68,22 @@
 /*-----------------------
         Responsive for device < 780px
 -----------------------------------------*/
+@media screen and (max-width: 780px) {
+  /*--------------------------- section-page04-01 ---------------------------*/
+  .section-page04-01 {
+    padding-top: 60px; }
+  .table-page04-01 {
+    display: block; }
+    .table-page04-01 tr:first-child td {
+      border-top: 1px solid #e5e5e5; }
+    .table-page04-01 tr td {
+      display: block;
+      padding: 15px 0;
+      font-size: 14px;
+      border: none !important; }
+      .table-page04-01 tr td:first-child {
+        width: 100%;
+        border-top: 1px solid #e5e5e5 !important;
+        color: #33445b; }
+      .table-page04-01 tr td h3 {
+        font-size: 17px; } }

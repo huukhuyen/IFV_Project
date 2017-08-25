@@ -1,4 +1,32 @@
 /*-----------------------
+        Responsive for device < 1200px
+-----------------------------------------*/
+@media screen and (max-width: 1200px) {
+    /*--------------------------- header ---------------------------*/
+    .header {
+        .logo {
+            width: 26%;
+        }
+    }
+    .nav-main {
+        width: 72%;
+        li {
+            &.highlight {
+                margin-left: 15px;
+            }
+        }
+    }
+    /*--------------------------- section-home03 ---------------------------*/
+    .section-home03 {
+        .avatarSection {
+            .description-avatar {
+                z-index: 9;
+                right: 0;
+            }
+        }
+    }
+}
+/*-----------------------
         Responsive for device < 780px
 -----------------------------------------*/
 @media screen and (max-width: 780px) {
@@ -9,8 +37,30 @@
         display: inherit;
     }
     .container {
-        padding-left: 7.14286%!important;
-        padding-right: 7.14286%!important;
+        padding-left: 7.14286% !important;
+        padding-right: 7.14286% !important;
+    }
+    /*------------------- Swap div*/
+    .swapTwo {
+        display: flex;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        flex-direction: column;
+        /* optional */
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        .first_div {
+            -webkit-box-ordinal-group: 2;
+            -moz-box-ordinal-group: 2;
+            order: 2;
+        }
+        .second_div {
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            order: 1;
+        }
     }
     /*------------------- Typography_SP -------------------*/
     .titleRow {
@@ -38,22 +88,21 @@
         }
     }
     .title_h2 {
-        // font-size: 24px;
-        // color: $color-primary;
-        // line-height: 1.8;
-        // font-weight: bold;
+        font-size: 22.5px!important;
+        padding-bottom: 25px !important;
+        line-height: 1.5em!important;
+    }
+    .title_h3 {
+        line-height: 1.5em!important;
+        padding-bottom: 25px !important;
+        font-size: 1.375em!important;
     }
     .textDes {
         text-align: justify;
         line-height: 1.75em;
-        font-size: .875em!important;
+        font-size: 15px!important;
+        // font-size: 0.875em!important;
         padding-bottom: 1em;
-    }
-    .title_h3 {
-        // font-size: 24px;
-        // line-height: 1.8;
-        // color: $color-primary;
-        // font-weight: bold;
     }
     .title_h4 {
         // font-size: 24px;
@@ -66,14 +115,11 @@
         // font-size: ;
         // color:
     }
-
     ///*------------------- Form_SP -------------------*/
     input {
         // padding:
         // border:
-        &:focus {
-
-        }
+        &:focus {}
     }
     select {
         // padding:
@@ -91,6 +137,11 @@
         // color:
     }
     /*--------------------------- header ---------------------------*/
+    .header {
+        .container {
+            padding-bottom: 0;
+        }
+    }
     .headerSp {
         background: $color-a;
         padding: 31px 24px;
@@ -104,6 +155,7 @@
         .logoSP {
             float: left;
             width: 40%;
+            min-width:180px;
         }
         .toggle-sp {
             float: right;
@@ -112,7 +164,7 @@
                 width: 30px;
                 height: 35px;
                 span {
-                    transition: all .4s;
+                    transition: all 0.4s;
                     width: 100%;
                     margin-bottom: 6px;
                     height: 4px;
@@ -147,8 +199,11 @@
                 display: block;
                 width: 100%;
                 padding: 16px 16px 16px 0;
-                &:not(:first-child) {
-                    border-top: 1px solid #ddd;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #ddd;
+                }
+                &.active {
+                    border-bottom: 1px solid $color-primary;
                 }
             }
         }
@@ -189,14 +244,16 @@
             }
         }
     }
-
     /*--------------------------- section-home03 ---------------------------*/
     .section-home03 {
         padding-top: 60px;
+        &:before {
+            height: 1182px;
+        }
         .avatarSection {
             padding-top: 60px;
             // padding-bottom: 70px;
-            padding-bottom: 0px;
+            padding-bottom: 0;
             .note-img {
                 background: url('../images/note-01_sp.png')center no-repeat;
                 top: 222px;
@@ -209,9 +266,9 @@
                 top: 0;
                 right: 0;
                 padding-bottom: 60px;
-                li{
+                li {
                     line-height: 1.75em;
-                    font-size: .875em;
+                    font-size: 0.875em;
                     padding-bottom: 1em;
                 }
             }
@@ -220,24 +277,24 @@
     /*--------------------------- section-home04 ---------------------------*/
     .section-home04 {
         .titleRow {
-            padding: 0 0 25px 0;
+            padding: 0 0 25px;
         }
     }
     /*--------------------------- section-home05 ---------------------------*/
     .section-home05 {
         .titleRow {
-            padding: 0px 0 20px 0;
+            padding: 0 0 20px;
         }
     }
     /*--------------------------- section-home06 ---------------------------*/
     .section-home06 {
         .titleRow {
-            padding: 0px 0 20px 0;
+            padding: 0 0 20px;
         }
         .img-home06 {
             background: none;
             margin-top: 50px;
-            height: 450px;
+            height: 350px;
         }
         .blurred-img06 {
             background-size: 100%;
@@ -252,11 +309,12 @@
         background-attachment: scroll;
         .titleRow {
             top: -30px;
+            margin-top: 0;
         }
     }
     /*--------------------------- section-home08 ---------------------------*/
     .section-home08 {
-        padding: 25px 0 75px 0;
+        padding: 25px 0 75px;
         .title_h2 {
             font-size: 22.5px;
             line-height: 1.5em;
@@ -290,7 +348,7 @@
         height: inherit;
         .copyright {
             font-size: 12px;
-            padding-bottom: 18px;
+            padding: 18px 0;
         }
     }
 }

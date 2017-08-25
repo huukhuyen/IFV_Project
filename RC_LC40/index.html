@@ -60,19 +60,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <nav class="nav-sp">
-                                <ul>
-                                    <li>
-                                        <a href="">製品概要</a>
-                                    </li>
-                                    <li>
-                                        <a href="">拡張モジュール</a>
-                                    </li>
-                                    <li>
-                                        <a href="">見積もりシュミレーション</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            <nav class="nav-sp"></nav>
                         </div>
                     </div>
                 </div>
@@ -98,8 +86,10 @@
                             <p class="description textDes">
                                 研究開発や品質管理など様々な用途で分析者のパートナ ーとして寄り添い、ニーズに応えて進化を続けてきたHPLC。 定評ある島津HPLCテクノロジーが結集して新たに誕生した 40 seriesは、一歩先に立って分析者をリードして、分析業務に新しい体験をもたらします。</p>
                             <p class="description textDes">分析時間の短縮などこれまでの課題の解決だけでなく、装置自身が監視してトラブルを未然に防ぐなど、分析者の装置マネージメントを支え、安定した分析を実現するという体 験型New HPLCです。</p>
+
                             <div class="btnModal">
-                                <a class="video-popup" href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent">動画を見る
+                                <a class="video-popup" href="http://www.an.shimadzu.co.jp/sites/default/files/ckeditor/gcms/tq8040/size.mp4">動画を見る
+									<!--<img src="images/modal_01.jpg">-->
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                             </div>
@@ -199,6 +189,11 @@
                         </div>
                         <div class="textRow">
                             <p class="textDes">装置の稼働時間や部品の交換履歴をIoTを用いて自動収集し、最適な交換のタイミングを事前にお知らせしトラブルを未然に防ぎます。装置の稼働率を高い状態で維持でき、ラボの運用コスト、スペースの最適化を図れます。</p>
+							<div class="btnModal">
+								<a class="video-popup" href="http://www.an.shimadzu.co.jp/sites/default/files/ckeditor/gcms/tq8040/size.mp4">
+									<img src="images/modal_01.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -258,9 +253,39 @@
             </footer>
             <!-- /footer -->
         </div>
+
+
+        <!-- Local popup video -->
+        <div class="wrapVideo is_hidden">
+            <div id='inline_content'>
+                <video id="videoplayer" width="640" height="480" controls autoplay>
+                <source src="http://www.an.shimadzu.co.jp/sites/default/files/ckeditor/gcms/tq8040/size.mp4" type="video/mp4">
+                <!--<source src="sample.ogg" type="video/ogg">
+                <source src="sample.webm" type="video/webm">-->
+                <p>ご利用のブラウザはvideo タグによる動画の再生に対応していません。</p>
+                </video>
+            </div>
+
+            <div id="btn_area">
+                <!-- <a id="btn_close" href="#">閉じる</a> -->
+                <span id="btn_close"><img src="images/close_popup.jpg" alt=""></span>
+                <!-- <a id="btn_close" href="#"><img src="images/close_popup.jpg" alt=""></a> -->
+            </div>
+        </div>
+
+
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+		<script>
+			$(document).ready(function(){
+			$(".inline").colorbox({inline:true});
+			$("#click").click(function(){
+			$('#click').css({"background-color":"#000", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+			return false;
+			});
+			});
+		</script>
     </body>
 </html>
